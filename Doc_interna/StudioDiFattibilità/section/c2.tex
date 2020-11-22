@@ -1,0 +1,54 @@
+%DA FARE
+\section{Capitolato C2}
+\subsection{Titolo del capitolato}
+Il capitolato in questione si chiama \textit{"GDP - Gathering Detection Platform"}, il proponente \`e l'azienda \textit{SyncLab} e i committenti sono \VT{} e \CR{}.
+
+\subsection{Descrizione del capitolo}
+Il capitolato presentato si pone come obiettivo finale la realizzazione di una piattaforma in grado di dare all'utilizzatore finale una rappresentazione grafica delle informazioni sulla probabilità di assembramento nelle zone potenzialmente a richio. Questo viene fatto sulla base di alcuni dati che vengono individuati, raccolti ed elaborati. \\
+La piattaforma deve sfruttare tecniche di machine learning e/o deeplearnig in modo da predirre le zone potenzialmente a rischio.
+
+\subsection{Tecnologie coinvolte}
+Sebbene l'azienda non impone tecnologie specifiche per lo sviluppo del server o della UI, vi sono comununque delle scelte preferenziali da considerare nello svolgimento del progetto:
+\begin{itemize}
+\item utilizzo di \glo{Java} e di \glo{Angular} per lo sviluppo della parte di Back-end e di Front-end della componente Web Application del sistema;
+\item per la gestione delle mappe (heatmap ecc.) il framework \glo{Leaflet} (\url{https://leafletjs.com});
+\item utilizzo di protocolli asincroni per le comunicazioni tra le diverse componenti;
+\item utilizzo del pattern Publisher/Subscriber, e adozione del protocollo MQTT (‘MQ Telemetry Transport or Message Queue Telemetry Transport’), caratterizzato per essere open, di facile implementazione e ampia diffusione in applicazioni M2M (MachineToMachine) e IoT (InternetOfThings).
+\end{itemize}
+Per la parte di Machine Learning, l'azienda da ampia libertà, sebbene ci siano delle tecnologie consigliate:
+\begin{itemize}
+\item \glo{Python} come linguaggio di programmazione;
+\item \glo{TensorFlow}, \glo{Pytorch}, \glo{Keras} e \glo{Scikit-learn} come libreria per l'apprendimento automatico;
+\end{itemize}
+Infine, per facilitare la comprensione delle librerie consigliate, l'azienda propone delle guide come cartacee come:
+\begin{itemize}
+\item Hands-on Machine Learning with Stick-Learn, Keras \& TensorFlow;
+\item Phyton Machine Learning,
+\end{itemize}
+e qualche altra risorsa online come Kaggle, Aurelien Geron's Github e Google scholar.
+
+\subsection{Vincoli}
+La proponente suggerisce una architettura in grado di implementare quello che si definisce essere un Sistema Reattivo, in grado cioè di soddisfare le seguenti caratteristiche: 
+\begin{itemize}
+\item responsive: la richiesta di un servizio deve sempre avere una risposta, anche quando si verifica un guasto; 
+\item resilient: i servizi devono poter essere ripristini a seguito di guasti; 
+\item elastic: i servizi devono poter essere scalati in base alla effettiva domanda; 
+\item message-driven: i servizi devono rispondere al mondo, non tentare di controllare ciò che fa.  
+\end{itemize}
+Ed è richiesto che tutte le componenti applicative siano correlate da test unitari e d’integrazione. Inoltre, è richiesto che il sistema venga testato nella sua interezza tramite test \textit{end-to-end}. 
+
+\subsection{Aspetti positivi}
+\begin{itemize}
+\item Il capitolato ha come obiettivo la creazione di una piattaforma di grande aiuto a fronte della situazione che stiamo vivendo;
+\item Nel capitolato si tratta l'argomento del \glo{machine learning}, un argomento molto interessante e che potrebbe risultare molto utile in altri ambiti e in futuro;
+\item L'azienda sembra essere molto disponibile per seguire il gruppo nel percorso di sviluppo del progetto.
+\end{itemize}
+
+\subsection{Aspetti critici}
+\begin{itemize}
+\item Il capitolato richiede l'apprendimento di molti servizi, sconosciuti dai membri del gruppo, che si basano su argomenti non conosciuti (come il \glo{machine learning}) e non affrontati nel corso di laurea triennale. Quindi gran parte del tempo andrebbe dedicato allo studio di questi concetti e strumenti, ed infine di applicare queste conoscenze;
+\item Oltre al tempo impiegato per l'apprendimento di questi strumenti c'è da tenere in considerazione il tempo per addestrare la parte di \glo{machine learning}.
+\end{itemize}
+
+\subsection{Conclusioni}
+Nonostante tale capitolato abbia destato particolare interesse all’interno del gruppo, specialmente per la possibilità di utilizzare tecnologie innovative, il team ha valutato la complessità di tale progetto come molto elevata e ha preferito orientarsi verso un’altra alternativa.
