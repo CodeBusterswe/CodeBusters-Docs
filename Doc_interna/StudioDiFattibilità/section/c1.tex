@@ -8,23 +8,37 @@ Il capitolato uno propone di sviluppare un'applicazione per registrare le presen
 L'obiettivo finale è la creazione di un'applicazione mobile con due interfacce. La prima destinata agli amministratori per la gestione degli uffici e delle postazioni mentre la seconda per due categorie di utenti: il dipendente che registra la sua presenza e l'addetto alle pulizie, il quale riceve la lista delle postazioni da disinfettare.
 
 \subsection{Tecnologie coinvolte}
-((Sebbene l'azienda non impone tecnologie specifiche per lo sviluppo del server o della UI, vi sono comununque delle scelte preferenziali da considerare nello svolgimento del progetto))(?):
+L' azienda non impone tecnologie specifiche per lo sviluppo, ma preferisce consigliare l' uso di:
 \begin{itemize}
 \item	Java (versione 8 o superiori), Python o nodejs per lo sviluppo del server back-end;
 \item	protocolli asincroni per le comunicazioni app mobile-server;
 \item	un sistema blockchain per salvare con opponibilità a terzi i dati di sanificazione;
 \item	IAAS Kubernetes o di un PAAS, Openshift o Rancher, per il rilascio delle componenti del server e la gestione della scalabilità orizzontale.
-\item	Avere il server che esponga delle API Rest attraverso le quali sia possibile utilizzare l'applicativo. In alternativa è possibile utilizzare gRPC come soluzione alternativa al Rest.
 \end{itemize}
 
 \subsection{Vincoli}
-DA FARE
+Gli obiettivi sono:
+\begin{itemize}
+\item	Realizzare un server, e una applicazione mobile, dove è prevista la presenza di due macro-tipologie:
+\begin{itemize}
+\item	Amministratore di sistema, con i permessi di gestire e monitorare postazioni, stanza, utenti;
+\item	Utente, che può essere il dipendete che scansiona il tag presente alla sua postazione e segnala la sua presenza (con la possibilità di prenotarla), o un addetto alle pulizie che può gestire e monitorare le stanze da igienizzare;
+\end{itemize}
+\item	E' richiesto il report dei test effettuati;
+\item	E' richiesta una documentazione sulle scelte, le loro relative motivazioni ed eventuali problemi incontrati con relative soluzioni.
+\end{itemize}
 
 \subsection{Aspetti positivi}
-DA FARE
-
+\begin{itemize}
+\item	Progetto con fine attuale ed utile alla società;
+\item	Stimola molto interesse essendo che richiede l'uso di molti servizi;
+\item	L'azienda risulta essere molto disponibile per seguire il gruppo nello sviluppo del progetto.
+\end{itemize}
 \subsection{Aspetti critici}
-DA FARE
+\begin{itemize}
+\item	Per questo capitolato è presente molto concorrenza;
+\item	Richiede l'apprendimento di molti servizi e linguaggi che i membri del gruppo non conoscono, andando ad incidere molto sul tempo che andrebbe dedicato per l'apprendimento di questi ultimi.
+\end{itemize}
 
 \subsection{Conclusioni}
 Visto il contesto attuale di pandemia un'applicazione su questo campo è quantomai utile e dunque stimola interesse. La valutazione è positiva anche per quanto riguarda le tecnologie che si dovranno esplorare per portare a termine questo capitolato. Il lato negativo risiede nella complessità dello sviluppo dell'applicazione mobile nonché del lato server. 
