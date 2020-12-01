@@ -1,53 +1,51 @@
-%DA FARE
 \section{C6 - RGP: Realtime Gaming Platform}
 
 \subsection{Descrizione del capitolo}
-Il capitolato presentato si pone come obiettivo finale la realizzazione di una piattaforma in grado di dare all'utilizzatore finale una rappresentazione grafica delle informazioni sulla probabilità di assembramento nelle zone potenzialmente a richio. Questo viene fatto sulla base di alcuni dati che vengono individuati, raccolti ed elaborati. \\
-La piattaforma deve sfruttare tecniche di machine learning e/o deeplearnig in modo da predirre le zone potenzialmente a rischio.\\
-L'azienda proponente è \textit{Zero 12}
+L'azienda proponente è \textit{Zero 12}. \\ 
+L'obiettivo del capitolato è la realizzazione di un videogioco a scorrimento verticale, fruibile da cellulare, con due modalità di gioco:
+\begin{itemize}
+\item Single player;
+\item Multiplayer.
+\end{itemize}  
+Il fulcro del progetto si basa sullo sviluppo della parte multiplayer, affinché si possa giocare in sessioni da 2 a 6 giocatori in modalità fantasma, ossia potendo vedere i movimenti degli avversari, ma senza poter interagire con essi.
+Riguardo il single player è necessario creare una modalità "infinita", con livelli di difficoltà crescente, senza interruzioni tra un livello e il successivo.
 
 \subsection{Tecnologie coinvolte}
-Sebbene l'azienda non impone tecnologie specifiche per lo sviluppo del server o della UI, vi sono comununque delle scelte preferenziali da considerare nello svolgimento del progetto:
+L'azienda suggerisce l'utilizzo di tecnologie differenti a seconda della componente da implementare:
 \begin{itemize}
-\item utilizzo di \glo{Java} e di \glo{Angular} per lo sviluppo della parte di Back-end e di Front-end della componente Web Application del sistema;
-\item per la gestione delle mappe (heatmap ecc.) il framework \glo{Leaflet} (\url{https://leafletjs.com});
-\item utilizzo di protocolli asincroni per le comunicazioni tra le diverse componenti;
-\item utilizzo del pattern Publisher/Subscriber, e adozione del protocollo MQTT (‘MQ Telemetry Transport or Message Queue Telemetry Transport’), caratterizzato per essere open, di facile implementazione e ampia diffusione in applicazioni M2M (MachineToMachine) e IoT (InternetOfThings).
-\end{itemize}
-Per la parte di Machine Learning, l'azienda da ampia libertà, sebbene ci siano delle tecnologie consigliate:
+\item Tecnologie \glo{AWS} per la parte server-side, lasciando al fornitore l'analisi sul servizio più adatto per la realizzazione di giochi realtime (per esempio \glo{AWS GameLift}, \glo{AWS Appsync}). \\
+Nel caso dell'utilizzo di servizi che richiedano lo sviluppo di codice è vincolato l'uso del linguaggio \glo{NodeJS};
+\item \glo{DynamoDB} come database NoSQL per il salvataggio delle classifiche e informazioni a supporto dell'applicativo; 
+\item Tecnologie native per la realizzazione della piattaforma mobile. \\ 
+Il fornitore ha la possibilità di scegliere tra iOS (preferenza del proponente) o Android come sistema operativo dove sviluppare l'intefaccia mobile. \\
+A seconda della di quest'ultima scelta i linguaggi da utilizzare sono:
 \begin{itemize}
-\item \glo{Python} come linguaggio di programmazione;
-\item \glo{TensorFlow}, \glo{Pytorch}, \glo{Keras} e \glo{Scikit-learn} come libreria per l'apprendimento automatico;
+\item \glo{Swift} e framework \glo{SwitUI} (engine \glo{SceneKit}/\glo{SpriteKit}) con target minimo iOS 13;
+\item \glo{Kotlin} con target minimo Android 8.
 \end{itemize}
-Infine, per facilitare la comprensione delle librerie consigliate, l'azienda propone delle guide come cartacee come:
-\begin{itemize}
-\item Hands-on Machine Learning with Stick-Learn, Keras \& TensorFlow;
-\item Phyton Machine Learning,
 \end{itemize}
-e qualche altra risorsa online come Kaggle, Aurelien Geron's Github e Google scholar.
 
 \subsection{Vincoli}
-La proponente suggerisce una architettura in grado di implementare quello che si definisce essere un Sistema Reattivo, in grado cioè di soddisfare le seguenti caratteristiche: 
+I vincoli imposti dall'azienda proponente sono:
 \begin{itemize}
-\item responsive: la richiesta di un servizio deve sempre avere una risposta, anche quando si verifica un guasto; 
-\item resilient: i servizi devono poter essere ripristini a seguito di guasti; 
-\item elastic: i servizi devono poter essere scalati in base alla effettiva domanda; 
-\item message-driven: i servizi devono rispondere al mondo, non tentare di controllare ciò che fa.  
+\item Effettuare un analisi preliminare circa la tecnologia da utilizzare per la componente server. Questa analisi deve essere documentata, giustificando la scelta finale. Il team di Zero12 si offre in aiuto al fornitore in caso di perplessità a riguardo;
+\item API sviluppate in NodeJS;
+\item Architettura di progetto basata a micro-servizi, ossia a tante funzioni base indipendenti, utilizzabili singolarmente senza compromettere la funzionalià delle altre;
+\item Sviluppo della mobile app in ambiente iOS o Android per testare tutti i micro-servizi e le dinamiche gaming in realtime. 
 \end{itemize}
-Ed è richiesto che tutte le componenti applicative siano correlate da test unitari e d’integrazione. Inoltre, è richiesto che il sistema venga testato nella sua interezza tramite test \textit{end-to-end}. 
 
 \subsection{Aspetti positivi}
 \begin{itemize}
-\item Il capitolato ha come obiettivo la creazione di una piattaforma di grande aiuto a fronte della situazione che stiamo vivendo;
-\item Nel capitolato si tratta l'argomento del \glo{machine learning}, un argomento molto interessante e che potrebbe risultare molto utile in altri ambiti e in futuro;
-\item L'azienda sembra essere molto disponibile per seguire il gruppo nel percorso di sviluppo del progetto.
+\item Utilizzo di tecnologie innovative e molto usate nell'ambito lavorativo;
+\item Possibilità di osservare i risultati di test dinamici direttamente nell'interfaccia di gioco.
 \end{itemize}
 
 \subsection{Aspetti critici}
 \begin{itemize}
-\item Il capitolato richiede l'apprendimento di molti servizi, sconosciuti dai membri del gruppo, che si basano su argomenti non conosciuti (come il \glo{machine learning}) e non affrontati nel corso di laurea triennale. Quindi gran parte del tempo andrebbe dedicato allo studio di questi concetti e strumenti, ed infine di applicare queste conoscenze;
-\item Oltre al tempo impiegato per l'apprendimento di questi strumenti c'è da tenere in considerazione il tempo per addestrare la parte di \glo{machine learning}.
+\item Il capitolato presenta un progetto molto specifico rispetto ad altri. L'ambito di sviluppo è quello gaming e perchè si lavori al meglio deve essere di interesse a tutti i membri del gruppo;
+\item Le tecnologie consigliate sono nuove a tutti i membri del gruppo e richiedono quindi uno studio preliminare approfondito per essere utilizzate correttamente;
+\item I vincoli imposti risultano essere per lo più generali e se da un lato potrebbe essere un bene per la creatività concessa al gruppo, dall'altro risulta essere anche un rischio durante lo sviluppo. 
 \end{itemize}
 
 \subsection{Conclusioni}
-Nonostante tale capitolato abbia destato particolare interesse all’interno del gruppo, specialmente per la possibilità di utilizzare tecnologie innovative, il team ha valutato la complessità di tale progetto come molto elevata e ha preferito orientarsi verso un’altra alternativa.
+Per la principale causa del generale disinteresse riguardo il game development, è stato deciso di orientarsi verso un'altro capitolato che potesse creare stimoli e curiosità a tutti i membri del gruppo.
