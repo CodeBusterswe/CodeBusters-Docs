@@ -1,35 +1,12 @@
-\section{C5 - PORTACS - Point Of Interest  Oriented Real-Time Anti Collision System}
+%DA FARE
+\section{Capitolato C5}
+\subsection{Titolo del capitolato}
+Il capitolato in questione si chiama \textit{"PORTACS - Point Of Interest  Oriented Real-Time Anti Collision System"}, il proponente \`e l'azienda \textit{Sanmarco Informatica} e i committenti sono \VT{} e \CR{}.
 
 \subsection{Descrizione del capitolo}
-Il capitolato si pone come obiettivo la realizzazione di una piattaforma in grado di fornire un'interfaccia grafica consenta all'utente utilizzatore il monitoraggio delle attività delle seguenti realtà come:\begin{itemize}
-\item Il Robot cameriere: percorre percorsi predefiniti, ritiro e consegna dell'ordine;
-\item Geolocalizzazione del magazzino: ogni mezzo e persona si spostano all'interno del magazzino ed è georeferenziato;  i mezzi devono rispettare il senso di percorrenza della corsia per evitare possibili collisioni,; ogni persona a piedi o su mezzo deve raggiunger varie ubicazioni per poter preparare ordini ;
-\item Geolocalizzazione nei trasporti: ogni mezzo ha un punto di partenza con una lista di consegne deve effettuare; velocità media e deve evitare collisioni; il responsabile è in grado di monitorare lo stato di ogni mezzo in tempo reale;
-\item Auto a guida automatica: bisogna definire la destinazione dell'auto; ogni auto può controllare la propria velocità così da evitare possibili collisioni.
-\end{itemize}
-Queste realtà hanno dei punti in comune: mappatura della posizione in tempo reale e tenere conto dei punti di partenza e destinazione, possibilità di monitorare la velocità ottimale e velocità massima, evitare gli ostacoli/collisioni. 
+Il capitolato si pone come obiettivo finale la realizzazione di una piattaforma real time in grado di dare all'utente utilizzatore una rappresentazione grafica sullo stato delle attività di diverse unità. Ogni unità (può rappresentare un robot, un muletto, un'auto a guida automatica) ha punto di partenza nella griglia e una lista di POI \textit{"Point Of Interest"}  che deve raggiungere. Il sistema centrale dovrà indicare ad ogni unità la prossima mossa da fare in base alla posizione, direzione e velocità che riceve dalle singole unità, in modo tale che il sistema possa pilotare e coordinare tutte le unità per evitare incidenti e ingorghi.
 
 
-Ogni unità (può rappresentare un robot, un muletto, un'auto) ha punti di partenza nella griglia e una lista di POI \textit{"Point Of Interest"} da raggiungere, con una velocità massimae deve inviare al sistema: 
-\begin{itemize}
-\item la propria posizione costantemente;
-\item la direzione e velocità, in modo tale che il sistema centrale possa coordinare e pilotare tutte le unità  per evitare incidenti e ingorghi.
-
-\end{itemize}
-
-La User Interface conterrà ogni singola unità  che dovrà provvedere delle 4 frecce direzionali (si \textit{"accenderà"} quella suggerita dal sistema), il pulsante start/stop e l'indicatore della velocità attuale (limite massimo è  la velocità anagrafica).
-
-Il sistema è corredato da un display in real-time della mappa e relativa posizione di ogni singola unità e inoltre il sistema indicherà ad ogni unità la prossima mossa da compiere, in funzione di: 
-\begin{itemize}
-\item prossimo POI da raggiungere ;
-\item posizione delle altre unità evitando collisioni e vanno rispettati vincoli dimensionali (limite delle corsie);
-\item Plus: posizioni dei pedoni per evitare collisioni.
-\end{itemize}
-Il software dovrà essere in grado di accettare i seguenti input:\begin{itemize}
-\item Schacchiera oppure mappa con percorsi predefiniti e relativi vincoli (sensi unici, numero massimo di unità contemporaneamente);
-\item definizio di POI (aree di carico e scarico, sosta).
-\end{itemize}
-L'azienda proponente è \textit{Sanmarco Informatica}
 
 \subsection{Tecnologie coinvolte}
 Il proponente non impone specifiche tecnologie per lo sviluppo della piattaforma ma invita all'utilizzo di quelle più funzionali e moderne.
@@ -40,18 +17,29 @@ Tra queste si segnala:
 \end{itemize}
 
 \subsection{Vincoli}
-L'azienda proponente non pone vincoli per la scelta degli strumenti e tecnologie di sviluppo ma vi sono alcuni vincoli legati al funzionamento della piattaforma: 
+L'azienda proponente pone i seguenti obiettivi da raggiungere:
+
 \begin{itemize}
-\item il sistema dovrà avere una visualizzazione in real-time la mappa e la posizione delle singole unità;
-\item ogni unità dovrà inviare al sistema centrale costantemente la propria posizione, direzione e velocità;
-\item il sistema deve accettare come input: una Scacchiera o mappa con percorsi.
+\item il sistema dovrà avere una visualizzazione in real-time della mappa e relativa posizione delle singole unità;
+\item ogni unità dovrà inviare al sistema centrale costantemente la propria posizione, direzione e velocità.
+\item l'interfaccia utente rappresenterà ogni singola unità che dovrà prevedere delle 4 frecce direzionali(si \textit{"accenderà"} quella suggerita dal sistema), il pulsante start/stop e l'indicatore della velocità attuale (limite massimo è  la velocità anagrafica).
+\end{itemize}
+
+La versione finale del software dovrà essere in grado di accettare i seguenti input:
+\begin{itemize}
+\item Schacchiera oppure mappa con percorsi predefiniti e relativi vincoli (sensi unici, numero massimo di unità contemporaneamente);
+\item definizione di POI (aree di carico/scarico e sosta).
 \end{itemize}
 
 
 \subsection{Aspetti positivi}
-L'obbiettivo del capitolato è quello di creare una piattaforma real-time che facilita il monitoraggio dello stato delle attività di ogni singola unità (robot, muletto, automobile); inoltre il progetto proposto consente all'utente sviluppatore di apprendere le nuove tecnologie che verranno utilizzate per implementare le varie funzionalità, in particolare l'implementazione del meccanismo real-time.
+\begin{itemize}
+\item Il proponente non richiede l'implementazione di algoritmi di ricerca per l'ottimizzazione dei percorsi;
+\item non richiede la geolocalizzazione interna o esterna e verrà simulata dalla posizione, ciò riduce il tempo per la  codifica;
+\item l progetto proposto consente all'utente sviluppatore di apprendere le nuove tecnologie che verranno utilizzate per implementare le varie funzionalità, in particolare l'implementazione del meccanismo real-time;
+\item l'azienda proponente ha dimostrato disponibilità per ulteriori chiarimenti e/o  informazioni.
+\end{itemize}
 
-Un altro aspetto positivo è dato dal fatto che l'azienda proponente ha dimostrato disponibilità per ulteriori chiarimenti e/o  informazioni.
 
 
 \subsection{Aspetti critici}
