@@ -1,19 +1,17 @@
 %DA FARE
-\section{Capitolato C5}
-\subsection{Titolo del capitolato}
-Il capitolato in questione si chiama \textit{"PORTACS - Point Of Interest  Oriented Real-Time Anti Collision System"}, il proponente \`e l'azienda \textit{Sanmarco Informatica} e i committenti sono \VT{} e \CR{}.
+\section{C5 - PORTACS - Point Of Interest  Oriented Real-Time Anti Collision System}
 
 \subsection{Descrizione del capitolo}
-Il capitolato si pone come obiettivo finale la realizzazione di una piattaforma real time in grado di dare all'utente utilizzatore una rappresentazione grafica sullo stato delle attività di diverse unità. Ogni unità (può rappresentare un robot, un muletto, un'auto a guida automatica) ha punto di partenza nella griglia e una lista di POI \textit{"Point Of Interest"}  che deve raggiungere. Il sistema centrale dovrà indicare ad ogni unità la prossima mossa da fare in base alla posizione, direzione e velocità che riceve dalle singole unità, in modo tale che il sistema possa pilotare e coordinare tutte le unità per evitare incidenti e ingorghi.
-
-
+Il capitolato propone la realizzazione di un sistema per il monitoraggio e la gestione di unità presenti in una mappa(griglia).\\
+Ogni unità (può rappresentare un robot, un muletto, un'auto a guida automatica) ha punto di partenza nella griglia e una lista di POI \textit{"Point Of Interest"}  che deve raggiungere.
+Il sistema dovrà indicare ad ognuna di esse la prossima mossa che dovrà fare, in base alla posizione, direzione e velocità  delle altre unità. Ogni unità dovrà inviare costantemente la propria posizione, direzione e velocità al sistema, così che sia possibile pilotare e coordinare tutte le unità evitando incidenti ed ingorghi.
+L'azienda proponente è \textit{Sanmarco Informatica}
 
 \subsection{Tecnologie coinvolte}
-Il proponente non impone specifiche tecnologie per lo sviluppo della piattaforma ma invita all'utilizzo di quelle più funzionali e moderne.
-Tra queste si segnala: 
+Il proponente non impone specifiche tecnologie per lo sviluppo della piattaforma ma invita all'utilizzo di :
 \begin{itemize}
-\item utilizzo di Nodejs per la parte di Back-end e Reactjs/next.js  per lo sviluppo di Front-end che permettono di creare un SPA \textit{"Single Page Application"} ;
-\item Socket: è una libreria che consente di sviluppare applicazioni real-time e risulta facile da integrare con il Nodejs;
+\item Nodejs per la parte di Back-end e Reactjs/next.js  per lo sviluppo di Front-end che permettono di creare un SPA \textit{"Single Page Application"} ;
+\item Socket: è una libreria che consente di sviluppare applicazioni real-time e risulta facile da integrare con Nodejs;
 \end{itemize}
 
 \subsection{Vincoli}
@@ -21,33 +19,28 @@ L'azienda proponente pone i seguenti obiettivi da raggiungere:
 
 \begin{itemize}
 \item il sistema dovrà avere una visualizzazione in real-time della mappa e relativa posizione delle singole unità;
-\item ogni unità dovrà inviare al sistema centrale costantemente la propria posizione, direzione e velocità.
-\item l'interfaccia utente rappresenterà ogni singola unità che dovrà prevedere delle 4 frecce direzionali(si \textit{"accenderà"} quella suggerita dal sistema), il pulsante start/stop e l'indicatore della velocità attuale (limite massimo è  la velocità anagrafica).
+\item l'interfaccia utente che rappresenterà ogni singola unità  dovrà prevedere 4 frecce direzionali(si \textit{"accenderà"} quella suggerita dal sistema), il pulsante start/stop e l'indicatore della velocità attuale.
 \end{itemize}
 
 La versione finale del software dovrà essere in grado di accettare i seguenti input:
 \begin{itemize}
-\item Schacchiera oppure mappa con percorsi predefiniti e relativi vincoli (sensi unici, numero massimo di unità contemporaneamente);
+\item Schacchiera oppure mappa con percorsi predefiniti e relativi vincoli (sensi unici, numero massimo di unità contemporanee);
 \item definizione di POI (aree di carico/scarico e sosta).
 \end{itemize}
 
-
 \subsection{Aspetti positivi}
 \begin{itemize}
-\item Il proponente non richiede l'implementazione di algoritmi di ricerca per l'ottimizzazione dei percorsi;
-\item non richiede la geolocalizzazione interna o esterna e verrà simulata dalla posizione, ciò riduce il tempo per la  codifica;
-\item l progetto proposto consente all'utente sviluppatore di apprendere le nuove tecnologie che verranno utilizzate per implementare le varie funzionalità, in particolare l'implementazione del meccanismo real-time;
-\item l'azienda proponente ha dimostrato disponibilità per ulteriori chiarimenti e/o  informazioni.
+\item Il proponente non obbliga l'implementazione di algoritmi di ricerca operativa per l'ottimizzazione dei percorsi;
+\item Non si richiede la geolocalizzazione interna o esterna, verrà simulata dalla posizione, ciò riduce il tempo per la  codifica;
+\item L'utilizzo di tecnologie per la gestione del real-time è parso un argomento molto interessante e ha suscitato curiosità nel gruppo;
+\item L'azienda proponente ha dimostrato disponibilità per ulteriori chiarimenti e/o  informazioni.
 \end{itemize}
 
-
-
 \subsection{Aspetti critici}
-L'azienda proponente non segnala tecnologie per lo sviluppo della piattaforma conosciute e apprese in ambito universitario; ciò potrebbe comportare una dilatazione dei tempi per la scelta delle tecnologie più adeguate e per la formazione e l'autoapprendimento da parte dei membri del gruppo.
-
+L'azienda proponente non suggerisce tecnologie per lo sviluppo della piattaforma apprese in ambito universitario o conosciute dai membri del gruppo, ciò potrebbe comportare una dilatazione esagerata dei tempi per la scelta e lo studio delle tecnologie più adeguate.
 
 \subsection{Conclusioni}
-Ciò nonostante, tale capitolato ha attirato l'attenzione e stimolato l'interesse dei membri del gruppo in particolar modo per la possibilità di apprendere nuove tecnologie moderne.
+Tale capitolato ha attirato l'attenzione e stimolato l'interesse dei membri del gruppo in particolar modo per la possibilità di apprendere nuove tecnologie.
 
-Il capitolato in questione presenta un livello di difficoltà elevato e richiede impegno; alla luce di questo il gruppo si rende disponibile a sviluppare quanto richiesto dal proponente. 
+Il capitolato in questione presenta un livello di difficoltà elevato e richiede molto impegno, il gruppo ha ritenuto troppo elevata la mole di lavoro necessaria per svolgerlo e abbiamo deciso quindi di orientarci verso altri capitolati. 
 
