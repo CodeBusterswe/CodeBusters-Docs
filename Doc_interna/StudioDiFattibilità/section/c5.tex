@@ -3,14 +3,14 @@
 
 \subsection{Descrizione del capitolo}
 Il capitolato propone la realizzazione di un sistema per il monitoraggio e la gestione di unità presenti in una mappa(griglia).\\
-Ogni unità (può rappresentare un robot, un muletto, un'auto a guida automatica) ha punto di partenza nella griglia e una lista di POI \textit{"Point Of Interest"}  che deve raggiungere.
-Il sistema dovrà indicare ad ognuna di esse la prossima mossa che dovrà fare, in base alla posizione, direzione e velocità  delle altre unità. Ogni unità dovrà inviare costantemente la propria posizione, direzione e velocità al sistema, così che sia possibile pilotare e coordinare tutte le unità evitando incidenti ed ingorghi.
+Ogni unità (che può essere un robot, un muletto o un'auto a guida automatica) ha un punto di partenza nella griglia e una lista di POI (\textit{"Point Of Interest"})  che deve raggiungere.
+Il sistema dovrà indicare ad ognuna di esse la prossima mossa che dovrà fare in base alla posizione, direzione e velocità  delle altre unità. Ognuna dovrà inviare costantemente questi parametri al sistema, in modo da rendere possibile pilotare e coordinare tutte le unità evitando incidenti ed ingorghi.
 L'azienda proponente è \textit{Sanmarco Informatica}
 
 \subsection{Tecnologie coinvolte}
-Il proponente non impone specifiche tecnologie per lo sviluppo della piattaforma ma invita all'utilizzo di :
+Il proponente non impone specifiche tecnologie per lo sviluppo della piattaforma ma consiglia l'utilizzo di :
 \begin{itemize}
-\item Nodejs per la parte di Back-end e Reactjs/next.js  per lo sviluppo di Front-end che permettono di creare un SPA \textit{"Single Page Application"} ;
+\item Nodejs per la parte di Back-end e Reactjs o Next.js  per lo sviluppo di Front-end che permettono di creare una SPA (\textit{"Single Page Application"}) ;
 \item Socket: è una libreria che consente di sviluppare applicazioni real-time e risulta facile da integrare con Nodejs;
 \end{itemize}
 
@@ -19,28 +19,27 @@ L'azienda proponente pone i seguenti obiettivi da raggiungere:
 
 \begin{itemize}
 \item il sistema dovrà avere una visualizzazione in real-time della mappa e relativa posizione delle singole unità;
-\item l'interfaccia utente che rappresenterà ogni singola unità  dovrà prevedere 4 frecce direzionali(si \textit{"accenderà"} quella suggerita dal sistema), il pulsante start/stop e l'indicatore della velocità attuale.
+\item l'interfaccia utente che rappresenterà ogni singola unità  dovrà prevedere 4 frecce direzionali (si \textit{"accenderà"} quella suggerita dal sistema), il pulsante start/stop e l'indicatore della velocità attuale.
 \end{itemize}
 
 La versione finale del software dovrà essere in grado di accettare i seguenti input:
 \begin{itemize}
-\item Schacchiera oppure mappa con percorsi predefiniti e relativi vincoli (sensi unici, numero massimo di unità contemporanee);
+\item schacchiera oppure mappa con percorsi predefiniti e relativi vincoli (sensi unici, numero massimo di unità contemporanee);
 \item definizione di POI (aree di carico/scarico e sosta).
 \end{itemize}
 
 \subsection{Aspetti positivi}
 \begin{itemize}
 \item Il proponente non obbliga l'implementazione di algoritmi di ricerca operativa per l'ottimizzazione dei percorsi;
-\item Non si richiede la geolocalizzazione interna o esterna, verrà simulata dalla posizione, ciò riduce il tempo per la  codifica;
-\item L'utilizzo di tecnologie per la gestione del real-time è parso un argomento molto interessante e ha suscitato curiosità nel gruppo;
+\item Non si richiede la geolocalizzazione interna o esterna: questa verrà simulata, riducendo il tempo dedicato alla parte di codifica;
+\item L'utilizzo di tecnologie per la gestione real-time è parso un argomento molto interessante e ha suscitato curiosità nel gruppo;
 \item L'azienda proponente ha dimostrato disponibilità per ulteriori chiarimenti e/o  informazioni.
 \end{itemize}
 
 \subsection{Aspetti critici}
-L'azienda proponente non suggerisce tecnologie per lo sviluppo della piattaforma apprese in ambito universitario o conosciute dai membri del gruppo, ciò potrebbe comportare una dilatazione esagerata dei tempi per la scelta e lo studio delle tecnologie più adeguate.
+L'azienda proponente non suggerisce tecnologie per lo sviluppo della piattaforma apprese in ambito universitario o conosciute dai membri del gruppo; inoltre l'ambito risulta avere una complessità elevata rispetto agli altri capitolati e ciò potrebbe comportare una dilatazione eccessiva del tempo dedicato allo sviluppo.
 
 \subsection{Conclusioni}
-Tale capitolato ha attirato l'attenzione e stimolato l'interesse dei membri del gruppo in particolar modo per la possibilità di apprendere nuove tecnologie.
-
-Il capitolato in questione presenta un livello di difficoltà elevato e richiede molto impegno, il gruppo ha ritenuto troppo elevata la mole di lavoro necessaria per svolgerlo e abbiamo deciso quindi di orientarci verso altri capitolati. 
+Tale capitolato ha attirato l'attenzione e stimolato l'interesse di tutti i membri del gruppo, in particolar modo per il contesto applicativo che risulta essere un argomento attuale e molto utile per il futuro.
+Per via del livello di difficoltà e dell'impegno stimato, il gruppo ha ritenuto troppo elevata la mole di lavoro necessaria e ha deciso di orientarsi verso altri capitolati. 
 
