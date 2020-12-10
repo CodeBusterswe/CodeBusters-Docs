@@ -1,20 +1,20 @@
 \section{C4 - HD Viz: visualizzazione di dati multidimensionali}
 
 \subsection{Descrizione del capitolo}
-Il capitolato C4 ha come obiettivo quello di creare un'applicazione di visualizzazione di grandi quantità di dati con numerose dimensioni in un formato comprensibile dall'occhio umano. A questo scopo è necessario sviluppare algoritmi di intelligenza artificiale che, agendo sulla distanza dei vari punti del grafico, riescano a sviluppare un modello semplificato che ne evidenzi i cluster. %cluster: gruppo di elementi omogenei in un insieme di dati 
+Il capitolato C4 ha come obiettivo quello di creare un'applicazione di visualizzazione di grandi quantità di dati con numerose dimensioni in un formato comprensibile dall'occhio umano. A questo scopo è necessario sviluppare algoritmi di intelligenza artificiale che, agendo sulla distanza dei vari punti del grafico, riescano a sviluppare un modello semplificato che ne evidenzi i \glo{cluster}. 
 L'applicazione dovrà inoltre agire su questi grafici creati evidenziando i dati ottenuti.\\
 L'azienda proponente è \textit{Zucchetti}
 
 \subsection{Tecnologie coinvolte}
 L'applicazione “HD Viz” dovrà utilizzare le seguenti tecnologie:
 \begin{itemize}
-\item HTML/CSS/Javascript con libreria D3.js per la parte client;
-\item La parte server e un database (SQL o NOSQL) potranno essere sviluppati in Java con server Tomcat o in Javascript con server Node.js.
+\item \glo{HTML}/\glo{CSS}/\glo{Javascript} con libreria \glo{D3.js} per la parte client;
+\item La parte server e un database (\glo{SQL} o \glo{NOSQL}) potranno essere sviluppati in \glo{Java} con server \glo{Tomcat} o in \glo{Javascript} con server \glo{Node.js}.
 \end{itemize}
 
 \subsection{Vincoli}
 I vincoli del capitolato C4 riguardano, in prima istanza, il numero di dimensioni dei dati da visualizzare. L'applicazione deve riuscire a visualizzare dati con almeno 15 dimensioni. 
-Il formato dei dati da fornire a HD Viz deve essere una query ad un database o anche un file in formato CSV preparato in precedenza.
+Il formato dei dati da fornire a HD Viz deve essere una query ad un database o anche un file in formato \glo{CSV} preparato in precedenza.
 HD Viz dovrà presentare le seguenti visualizzazioni: 
 \begin{itemize}
 \item Scatter plot Matrix (fino ad un massimo di 5 dimensioni): è la presentazione a riquadri disposti a matrice di tutte le combinazioni di scatter plot; 
@@ -35,7 +35,7 @@ Il proponente lascia ampia libertà di esplorazione dell'argomento e accetta alt
 
 \subsection{Aspetti critici}
 \begin{itemize}
-\item Il capitolato potrebbe risultare difficoltoso nella realizzazione degli algoritmi e nel testarli;
+\item Il capitolato potrebbe risultare difficoltoso nel testare gli algoritmi;
 \item Altri capitolati hanno per argomento oggetti o situazioni più reali in confronto all'analisi ed elaborazione dei dati.
 \end{itemize}
 
