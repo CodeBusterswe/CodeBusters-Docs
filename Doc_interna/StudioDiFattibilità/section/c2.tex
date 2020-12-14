@@ -1,26 +1,56 @@
 %DA FARE
-\section{Capitolato C2}
-\subsection{Titolo del capitolato}
-Il capitolato in questione si chiama \textit{" 	EmporioLambda: piattaforma di e-commerce in stile Serverless"}, il proponente \`e l'azienda \textit{Red Babel} e i committenti sono \VT{} e \CR{}.
+\section{C2 - EmporioLambda: piattaforma di e-commerce in stile Serverless}
 
 \subsection{Descrizione del capitolo}
-Nel capitolato due viene proposto di creare una piattaforma di E-Commerce, ovvero la compravendita on-line di prodotti.
-Lo scopo finale del capitolato è avere una piattaforma dove i clienti possano registrarsi, ricercare i prodotti, aggiungerli al carrello (ovvero una pagina che permette di rivedere e considerare i prodotti e l'ammontare complessivo dei prezzi) e l'acquisto. La piattaforma dovrà offrire un'interfaccia per i venditori dove possono aggiungere e modificare i prodotti destinati alla vendita.
+Nel capitolato viene proposto di creare una piattaforma di \glo{E-Commerce}, ovvero la compravendita on-line di prodotti.
+Lo scopo finale è avere una piattaforma dove i clienti possano registrarsi, ricercare i prodotti, aggiungerli al "carrello" (ovvero una pagina che permette di rivedere e considerare i prodotti e l'ammontare complessivo dei prezzi) e l'acquisto. La piattaforma dovrà offrire un'interfaccia per i venditori dove possono aggiungere e modificare i prodotti destinati alla vendita.\\
+L'azienda proponente è \textit{Red Babel}.
 
 \subsection{Tecnologie coinvolte}
-((Sebbene l'azienda non impone tecnologie specifiche per lo sviluppo del server o della UI, vi sono comunque delle scelte preferenziali da considerare nello svolgimento del progetto))(?):
+Il progetto prevede l' adozione di una bozza iniziale dell'architettura dettata dal proponente e di alcune scelte tecnologiche obbligatorie; il fornitore è libero e altamente incoraggiato ad esplorare diverse scelte.
+Questa applicazione deve essere costruita con tecnologia \glo{serverless} con una \glo{API} basata su \glo{HTTP}:
 \begin{itemize}
-\item	Questa applicazione deve essere costruita con la tecnologia serverless con una API basata su HTTP. Per questo scopo si utilizza AWS Lambda e altre componenti di supporto (AWS API Gateway, AWS DynamoDB, AWS S3)
-\item	CloudFormation per la gestione delle risorse sopraelencate
-\item	Serverless Framework per l’implementazione di applicazioni serverless facilitandone alcune difficili strutture (come permessi, sottoscrizioni o accesso)
-\item	Il BFF (Back end for Front end) richiede l’uso di Next.js
+\item	Si utilizzano \glo{AWS} Lambda e altre componenti di supporto (AWS API Gateway, AWS DynamoDB, AWS S3);
+\item	\glo{CloudFormation} per la gestione delle risorse sopraelencate;
+\item	Serverless Framework per l’implementazione di applicazioni \glo{serverless}, facilitandone alcune difficili strutture (come permessi, sottoscrizioni o accesso);
+\item	Il \glo{BFF}(Back end For Front end) sarà implementato in \glo{Next.js} e richiede l' uso di \glo{Typescript} come linguaggio principale;
+\item	il codice sorgente dovrebbe essere pubblicato e aggiornato utilizzando \glo{GitHub} o \glo{GitLab}.
 \end{itemize}
 
 \subsection{Vincoli}
-DA FARE
+\'E richiesto l'uso di un numero minimo di ambienti di lavoro: uno locale di ogni sviluppatore, uno per i test (accessibile a tutti gli sviluppatori) e un ambiente pubblico accessibile dagli utenti.
+\'E richiesta l' implementazione di tutti i moduli di alto livello:
+\begin{itemize}
+\item	EmporioLambda-frontend (EML-FE): modulo che serve le pagine web richieste dal cliente;
+\item	EmporioLambda-backend (EML-BE): modulo che espone i servizi dell'applicazione;
+\item	EmporioLambda-integration (EML-I): rappresenta tutti i servizi di terze parti;
+\item	 EmporioLambda-monitoring (EML-MON): è il set di strumenti usati per monitorare lo stato dell'applicazione.
+\end{itemize}
+E' richiesta la presenza di determinate minime, (ognuna con le proprie funzioni principali):
+\begin{itemize}
+\item	Homepage
+\item	Product Listing Page
+\item	Product Detail Pages
+\item	Shopping Cart
+\item	Account
+\item	Checkout
+\item	Merchant dashboard
+\end{itemize}
+Il sito deve implementare i seguenti ruoli utilizzando AWS Cognito Identity:
+\begin{itemize}
+\item	Amministratore
+\item	Venditore
+\item	Cliente
+\end{itemize}
+L'unica integrazione obbligatoria richiesta è il provider di pagamento, Stripe.
 \subsection{Aspetti positivi}
-DA FARE
+\begin{itemize}
+\item	E' richiesto l' uso di numerosi servizi forniti da AWS, sia comuni che meno, i quali possono risultare utili al nostro futuro;
+\item	Nel capitolato viene richiesto il pagamento elettronico, argomento attualmente di nicchia;
+\item	Linguaggi come TypeScript e JavaScript sono molto utili anche in ambito lavorativo;
+\item	Nel 2020 ormai gli e-commerce sono alla portata di tutti e fanno parte della vita quotidiana delle persone, perciò è un argomento familiare ai membri del gruppo.
+\end{itemize}
 \subsection{Aspetti critici}
-DA FARE
+Discutendo con il gruppo non abbiamo rilevato aspetti critici rilevanti.
 \subsection{Conclusioni}
-er il capitolato due si utilizzano tecnologie alla portata di tutti e, prendendo in considerazione le altre piattaforme di e-commerce esistenti, è relativamente facile progettarla. Proprio perché ci sono già moltissime piattaforme di e-commerce esistenti rende questo capitolato poco appetibile.
+In questo caso si utilizzano tecnologie non troppo complesse e, prendendo in considerazione le altre piattaforme di e-commerce esistenti (per esempio Amazon), è relativamente facile progettarla visto che l' e-commerce è ormai la quotidianità. Il gruppo ha però considerato questo capitolato poco appetibile.
