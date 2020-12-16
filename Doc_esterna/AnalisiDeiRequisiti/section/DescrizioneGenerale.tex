@@ -1,6 +1,6 @@
 \section{Descrizione Generale}
 \subsection{Obbiettivi del prodotto}
-
+L'obbiettivo del progetto è la realizzazione di una applicazione che permette la visualizzazione di dati con molte dimensioni, a supporto della fase esplorativa dell'analisi dei dati, con l'utilizzo di tecnologie web.
 \subsection{Funzioni del prodotto}
 
 \subsection{Caratteristiche degli utenti}
@@ -8,3 +8,33 @@
 \subsection{Piattaforme di esecuzione}
 
 \subsection{Obblighi di progettazione}
+Il prodotto finale è soggetto a vincoli progettuali obbligatori ed opzionali, così
+come specificato all’interno del capitolato C4.
+I vincoli obbligatori sono i seguenti:
+\begin{itemize}
+	\item l'applicazione deve essere sviluppata in tecnologia HTML/CSS/JavaScript utilizzando la libreria D3.js;
+	\item la parte server di supporto alla presentazione nel browser e alle query ad un database SQL o NoSQL
+potrà essere sviluppata in Java con server Tomcat o in Javascript con server Node.js;
+	\item i dati da visualizzare dovranno poter avere almeno fino a 15 dimensioni, ma deve essere possibile anche visualizzare dati con meno dimensioni;
+	\item i dati devono poter essere forniti al sistema di visualizzazione sia con query ad un database che da file in formato CSV preparati precedentemente;
+	\item dovranno essere presentabili almeno le seguenti visualizzazioni:
+	\begin{itemize}
+		\item Scatter plot Matrix (fino ad un massimo di 5 dimensioni);
+		\item Force Field;
+		\item Heat Map;
+		\item Proiezione Lineare Multi Asse.
+	\end{itemize}
+	\item l' applicazione dovrà ordinare i punti nel grafico "Heat map" per evidenziare i "cluster" presenti nei dati.
+\end{itemize}
+Il tema della visualizzazione dei dati multidimensionali è vasto e ricco di spunti, perciò qualunque proposta verrà valutata dall'azienda e accettata come requisito opzionale se ritenuta valida; il proponente elenca comunque delle attività che saranno ben accettate:
+\begin{itemize}
+	\item Altri grafici adatti alla visualizzazione dei dati con più di tre dimensioni;
+	\item Utilizzo di funzioni di calcolo della distanza diverse dalla distanza “Euclidea” in tutte le
+visualizzazioni che dipendono da tale concetto;
+	\item Utilizzo di funzioni di “forza” diverse da quelle previste in automatico dal grafico “force
+based” di D3;
+	\item Analisi automatiche per evidenziare situazioni di particolare interesse. Esempi di questa
+possibilità si possono vedere in “ggobi” e “Orange Canvas”;
+	\item Algoritmi di preparazione del dato per la visualizzazione, cioè anziché eseguire la
+trasformazione direttamente nella visualizzazione far precedere un passo di trasformazione;
+\end{itemize}
