@@ -8,6 +8,7 @@
 \RequirePackage[top=2.0cm, bottom=4.0cm, left=2.2cm, right=2.2cm]{geometry}
 \RequirePackage{graphicx}
 \RequirePackage{hyperref}
+\RequirePackage{lastpage}
 \RequirePackage[table]{xcolor}
 
 %%Pacchetto per creare la tabella delle modifiche
@@ -72,7 +73,7 @@
 \newcommand{\fancydoc}{
 \pagestyle{fancy}
 \fancyhf{} %eliminare le cose già presenti nella pagina (numero)
-\fancyfoot[R]{\thepage} % R=DESTRA L=SINISTRA C=CENTRO foot=pie di pagina
+\fancyfoot[R]{\thepage/\pageref{LastPage}} % R=DESTRA L=SINISTRA C=CENTRO foot=pie di pagina
 \fancyfoot[L]{\Titolo}
 \fancyfoot[C]{}
 \fancyhead[L]{\includegraphics[scale=0.05]{\pathimg}} %head opposto pie
@@ -87,5 +88,5 @@
 
 %%Colori
 \definecolor{coloreGrigio}{HTML}{525252}
+\definecolor{coloreGrigietto}{HTML}{DFBDA1}
 \definecolor{coloreRosso}{HTML}{882B21}
-
