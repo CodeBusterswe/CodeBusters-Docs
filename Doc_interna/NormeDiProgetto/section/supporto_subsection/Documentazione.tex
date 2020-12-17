@@ -1,1 +1,97 @@
 \subsection{Documentazione}
+\subsubsection{Scopo}
+Tutti i processi e le attività di sviluppo devono essere documentate. Questa sezione ha lo scopo di definire le norme, le convenzioni e la struttura organizzativa riguardanti la documentazione, oltre che la definizione degli strumenti necessari alla sua stesura.
+\subsubsection{Aspettative}
+Le aspettative di questo processo sono:
+\begin{itemize}
+	\item avere una chiara struttura per i documenti, in modo da ottenere un risultato uniforme alla fine del puo ciclo di vita;	
+	\item avere delle norme e convenzioni ben precise che coprono tutti gli aspetti della stesura di un documento, in modo che tutti membri di \Gruppo{} possano lavorare senza dover interpellare il gruppo per prendere decisioni riguardo un generico aspetto.
+\end{itemize}
+\subsubsection{Descrizione}
+La documentazione è un processo per registrare le informazioni prodotte da una attività del ciclo di vita. Il processo contiene una serie di attività che pianificano, progettano, sviluppano, producono, modificano, distribuiscono e mantengono quei documenti necessari a tutti gli interessati, come manager, ingegneri e utenti.
+\subsubsection{Ciclo di vita del documento}
+Ogni documento passa per queste fasi:
+\begin{itemize}
+
+	\item \textbf{Pianificazione}: il documento viene pensato e vengono organizzate le varie parti. Questo accade soprattutto quando le informazioni sono numerose e complesse;
+	
+	\item \textbf{Impostazione}: viene creata la bozza e la struttura del documento;
+	
+	\item \textbf{Realizzazione}: viene redatto il contenuto del documento;
+	
+	\item \textbf{Verfica}: ogni sezione del documento è soggetta a revisioni da parte dei verificatori per correggere e, di conseguenza, sistemare;
+	
+	\item \textbf{Approvazione}: l'approvatore stabilisce che il documento è stato completato ed è pronto per essere rilasciato.
+	
+\end{itemize}
+\subsubsection{Template}
+Il gruppo ha deciso di creare un template con l'utilizzo di \LaTeX{}, grazie al quale viene standardizzata la struttura del documento. In questo modo i componenti del gruppo si occupano unicamente di redigere il contenuto dei singoli testi senza doversi di  . Più precisamente, nel template vengono definite la prima pagina, la struttura del registro delle modifiche e l'indicizzazione delle sezioni e sottosezioni.
+
+\subsubsection{Struttura del documento}
+Ogni documento è formato da diverse sezioni, ognuna definita dal proprio file \LaTeX. La parte principale è chiamata "\textit{nomedoc}.tex" (dove \textit{nomedoc} sta ad indicare il nome del documento) ed ha il compito di includere le seguenti componenti:
+\begin{itemize}
+	\item i file \LaTeX delle sezioni, che contengono il contenuto del testo vero e prorpio. Se una sezione contiene numerose sottosezioni, allora il file avrà il compito di includere i file delle varie sottosezioni ;
+	
+	\item il registro delle modifiche, che contiene una lista ;
+	
+	\item "String.tex", che contiene una serie di comandi \LaTeX personalizzati che facilitano la scrittura di parole frequentemente utilizzate;
+	
+	\item "Comandi.tex", che contiene una serie di comandi \LaTeX personalizzati
+\end{itemize}
+
+\paragraph*{Prima pagina}
+La prima pagina di un documento è formata da:
+\begin{itemize}
+	
+	\item \textbf{Logo}: logo di \Gruppo{} posto in alto e centralizzato;
+	
+	\item \textbf{Progetto ed e-mail}: sotto il logo e centralizzato viene scritto il nome del progetto e la mail del gruppo \Gruppo{};
+	
+	\item \textbf{Titolo}: il nome del documento;
+	
+	\item \textbf{Informazioni sul documento}: sotto la titolo è presente una tabella con le seguenti informazioni riguardanti il documento:
+	
+	\begin{itemize}
+		
+		\item \textbf{Versione}: versione del documento;
+		
+		\item \textbf{Approvatori}: nomi dei componenti del gruppo che svolgono il ruolo di \glo{approvatore};
+		
+		\item \textbf{Redattori}: nomi dei componenti del gruppo che svolgono il ruolo di \glo{redattore};
+		
+	 	\item \textbf{Verificatori}: nomi dei componenti del gruppo che svolgono il ruolo di \glo{verificatore};
+	 	
+	 	\item \textbf{Uso}: specifica il tipo di utilizzo che viene fatto di questo documento;
+	 	
+	 	\item \textbf{Distribuzione}: specifica a chi il documento verrà distribuito;
+	 	
+	\end{itemize}
+	
+	\item \textbf{Descrizione}: una breve descrizione del documento posta sotto la tabella.
+\end{itemize}
+
+\paragraph{Registro delle modifiche}
+Il registro delle modifiche è una tabella che riporta ogni modifica effettuata al documento in questione. Una modifica è rappresentata da una riga della tabella avente le seguenti voci:
+\begin{itemize}
+
+	\item \textbf{Versione}: versione attuale del documento;
+	
+	\item \textbf{Data}: data della modifica;
+	
+	\item \textbf{Nominativo}: il nome del \glo{redattore} della modifica;
+	
+	\item \textbf{Ruolo}: il ruolo che il \glo{redattore} ha all'interno del gruppo;
+	
+	\item \textbf{Verificatore}: il nome del componente che si è occupato di verificare la parte modificata;
+	
+	\item \textbf{Descrizione}: una breve descrizione sulla modifica effettuata.
+\end{itemize}
+
+\paragraph*{Indice}
+L'indice rappresenta le sezioni in cui sono divise le diverse parti del documento ed
+
+\subsubsection{Convenzioni}
+
+\subsubsection{Elementi grafici}
+
+\subsubsection{Strumenti}
