@@ -1,19 +1,19 @@
 \section{Modello di sviluppo}
-La scelta del modello di sviluppo è fondamentale alla pianificazione del progetto, il gruppo ha quindi optato per l'utilizzo del modello incrementale.
+Il gruppo ha deciso di utilizzare il modello incrementale.
 \subsection{Modello incrementale}
 Il modello incrementale prevede rilasci multipli e successivi, ciascuno di questi realizza un incremento di funzionalità.
-É richiesta dunque una classificazione preliminare dei requisiti atta ad individuare i più importanti, i quali devono essere sviluppati nei primi incrementi, così da avere fin da subito un prodotto funzionante, che verrà via via integrato con i successivi incrementi.
+É richiesta dunque una classificazione preliminare dei requisiti atta ad individuare i più importanti, i quali devono essere sviluppati nei primi incrementi, così da avere fin da subito un prodotto funzionante, che verrà via via integrato.
 L'adozione di questo modello comporta i seguenti vantaggi:
 \begin{itemize}
 \item le funzionalità primarie hanno priorità nello sviluppo, così facendo queste vengono verificate più volte
 \item l'avere un prodotto funzionante già dai primi incrementi permette subito al proponente di valutarne le funzioni primarie
 \item ogni incremento riduce il rischio di fallimento, con un approccio predisposto ai cambiamenti
-\item l'analisi dei requisiti e la progettazione di dettaglio possono essere raffinate ad ogni incremento
+\item l'analisi dei requisiti può essere raffinata tramite la progettazione di dettaglio ad ogni incremento
 \item le modifiche e la correzione degli errori sono più economiche
-\item le fasi di verifica e test sono facilitate perchè mirate a un singolo incremento
+\item le fasi di verifica e test sono facilitate perché mirate a un singolo incremento
 \end{itemize}
 \subsection{Incrementi individuati}
-In seguito è riportata la tabella con indicati gli incrementi individuati con il rispettivo obiettivo e i requisiti ad esso associati.
+In seguito è riportata la tabella con indicati gli incrementi individuati durante la fase di analisi con il rispettivo obiettivo e i requisiti ad esso associati.
 I requisiti riportati nella tabella includono tutti i requisiti figli. Tutti i requisiti non riportati sono da intendersi soddisfatti, in parte, da ogni incremento.
 Ogni requisito è individuato dal suo codice identificativo, reperibile nel documento \AdR
 \begin{center}
@@ -28,6 +28,12 @@ Tabella 3.1: Tabella degli incrementi
 \endhead
 
 %------------------------------------------
-Incremento 0 & Visualizzazione grafici & RI1\\
-Incremento 1 & DB & RI2\\
+Incremento 0 & Invio dati al back-end attraverso file csv & Requisito 1\\
+Incremento 1 & Pagina scelta grafici & Requisito 2\\
+Incremento 2 & Personalizzazione grafici & Requisito 3 \\
+Incremento 3 & Riduzioni dimensionale & Requisito 4\\
+Incremento 4 & Implementazione sessioni con file json & Requisito 4a\\
+Incremento 5 & Aggiunta database & Requisito 5\\
+Incremento 6 & Confronto tra grafici & Requisito 6\\
+
 \end{longtable}
