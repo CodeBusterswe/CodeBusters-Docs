@@ -30,13 +30,13 @@ Il gruppo ha deciso di creare un template con l'utilizzo di \LaTeX{}, grazie al 
 \subsubsection{Struttura del documento}
 Ogni documento è formato da diverse sezioni, ognuna definita dal proprio file \LaTeX. La parte principale è chiamata "\textit{nomedoc}.tex" (dove \textit{nomedoc} sta ad indicare il nome del documento) ed ha il compito di includere le seguenti componenti:
 \begin{itemize}
-	\item i file \LaTeX delle sezioni, che contengono il contenuto del testo vero e prorpio. Se una sezione contiene numerose sottosezioni, allora il file avrà il compito di includere i file delle varie sottosezioni ;
+	\item i file \LaTeX{} delle sezioni, che contengono il contenuto del testo vero e prorpio. Se una sezione contiene numerose sottosezioni, allora il file avrà il compito di includere i file delle varie sottosezioni ;
 	
-	\item il registro delle modifiche, che contiene una lista ;
+	\item il registro delle modifiche, che contiene una lista delle modifiche effettuate al documento così da rendere tracciabili queste modifiche;
 	
-	\item "String.tex", che contiene una serie di comandi \LaTeX personalizzati che facilitano la scrittura di parole frequentemente utilizzate;
+	\item "String.tex", che contiene una serie di comandi \LaTeX{} personalizzati che facilitano la scrittura di parole frequentemente utilizzate;
 	
-	\item "Comandi.tex", che contiene una serie di comandi \LaTeX personalizzati
+	\item "Comandi.tex", che contiene una serie di comandi \LaTeX{} personalizzati diversi per ogni documento.
 \end{itemize}
 
 \paragraph*{Prima pagina}
@@ -87,11 +87,121 @@ Il registro delle modifiche è una tabella che riporta ogni modifica effettuata 
 	\item \textbf{Descrizione}: una breve descrizione sulla modifica effettuata.
 \end{itemize}
 
-\paragraph*{Indice}
-L'indice rappresenta le sezioni in cui sono divise le diverse parti del documento ed
+\paragraph{Indice}
+L'indice rappresenta uno strumento di consultazione che viene usato per trovare rapidamente e facilmente un'informazione. Oltre ad elencare le sezioni in cui sono divise le diverse parti del documento, l'indice riporta prima le tabelle e successivamente le immagini presenti. L'indice viene posto dopo il registro delle modifiche.
+
+\paragraph{Struttura delle pagine}
+La singola pagina di contenuto è strutturata come segue:
+\begin{itemize}
+
+	\item in alto a sinistra viene posto il logo del gruppo \Gruppo{};
+	
+	\item in basso a sinistra viene scritto il nome del documento;
+	
+	\item in basso a destra viene indicato il numero della pagina corrente sul totale delle pagine;
+	
+	\item il contenuto della pagina è scritto tra l'intestazione e il piè di pagina che lo delimitano con una riga;
+\end{itemize}
+
+\paragraph{Verbali}
+I \textit{Verbali} sono i documento scritti per attestare discorsi, dichiarazioni effettuate durante un incontro con o senza esterni. Prevedono una singola stesura, dato che contengono delle decisioni che non possono essere modificate successivamente. I \textit{Verbali} contengono la prima pagina e il registro delle modifiche come gli altri documenti, viene invece omesso l'indice che il gruppo ha ritenuto poco utile data la brevità del documento. Il contenuto di un \textit{Verbale} è formato da tra sezioni, la prima è l'itroduzione che contiene le seguenti informazioni:
+\begin{itemize}
+	
+	\item \textbf{Motivo della riunione}: il motivo per cui il gruppo ha deciso di organizzare un incontro e che, di conseguenza, contiene le materie che verranno discusse;
+	
+	\item \textbf{Luogo riunione}: il luogo dove viene svolta la riunione;
+	
+	\item \textbf{Data}: la data che indica quando il gruppo ha effettuato la riunione;
+	
+	\item \textbf{Durata}: il tempo che il gruppo ha impiegato per terminare la riunione;
+	
+	\item \textbf{Partecipanti}: l'elenco dei partencipanti al meeting.
+\end{itemize}
+
+La seconda sezione è il resoconto ed ha la funzione di fornire un breve riassunto di quanto discusso e delle decisioni prese. I motivi di discussione vengono riportati in un elenco dove vengono spiegati uno per volta.
+
+Alla fine di ogni \textit{Verbale} è presente una tabella che ha la funzione di tenere traccia delle desicisioni prese durante l'incontro. Ogni riga della tabella prevede una descrizione molto breve della decisione e un identificativo che segue questo formato:
+\begin{center}
+\textbf{[Destinazione]-X.Y}
+\end{center}
+Dove: 
+
+\begin{itemize}
+
+	\item \textbf{[Destinazione]}: è \textbf{Interno}, se il verbale è interno, mentre è \textbf{Esterno}, se il verbale è esterno
+	
+	\item \textbf{X.Y}: dove \textbf{X} è il numero del verbale e \textbf{Y} indica il numero della decisione all'interno del verbale;
+\end{itemize}
 
 \subsubsection{Convenzioni}
 
+\paragraph{Nomi dei file}
+I nomi dei file e delle cartelle seguono tutte la stessa convenzione ad eccezione di alcune cartelle:
+
+\begin{itemize}
+
+	\item I nomi dei file e delle cartelle iniziano per lettera maiuscola;
+	
+	\item Se il nome è composto da più parole, ognuna di queste inizia per lettera maisucola e non è previsto alcun tipo di separazione tra una parola e l'altra;
+	
+	%\item Il nome delle sottocartelle delle cartelle dei documenti viene scritto in minuscolo e se sono presenti più parole queste vengono separate dal carattere underscore.
+	
+\end{itemize}
+
+Esempi corretti:
+
+\begin{itemize}
+
+	\item NormeDiProgetto;
+	
+	\item AnalisiDeiRequisiti;
+	
+\end{itemize}
+
+Esempi non corretti:
+
+\begin{itemize}
+
+	\item Normediprogetto (non tutti le parole iniziano con lettera maiuscola);
+	
+	\item analisi\_dei\_requisiti (sono presenti dei caratteri separatori);
+\end{itemize}
+
+\paragraph{Stile di testo}
+\begin{itemize}
+
+	\item \textbf{Grassetto}: lo stile grassetto viene applicato ai termini negli elenchi puntati, ai titoli e alle parole particolarmente importanti;
+	
+	\item \textbf{Corsivo}: lo stile corsivo si applica al nome del gruppo, al nome del progetto, al nome dei documenti e al nome del proponente;
+	
+	\item \textbf{Nome dei documenti}: il nome dei documenti deve essere scritto in corsivo e deve iniziare per lettera maiuscola, mentre quando si fa riferimenti al documento vero e proprio viene aggiunta anche la versione, anch'essa in corsivo. Se il nome è composto da più parole, ogni parola inizia per lettera maiuscola, ad esclusione delle preposizioni.  Se il nome viene usato come titolo, questi stili non si applicano, ma il redattore deve utilizzare lo stile grassetto.
+
+\end{itemize}
+
+\paragraph{Glossario}
+Le norme relativa al \textit{Glossario} sono:
+\begin{itemize}
+
+	\item Ogni parola del \textit{Glossario} è contrasegnata da una 'G' ad apice;
+	
+	\item Non vengono segnate come termini del \textit{Glossario} le parole che fanno parte di un titolo, che sono presenti nelle tabelle e nelle didascalie;
+
+\end{itemize}
+
+\paragraph{Elenchi puntati}
+Gli elenchi puntati seguono le seguenti norme:
+\begin{itemize}
+
+	\item Ogni voce inizia per lettera maiuscola;
+	
+	\item Ogni voce termina con ';', escludendo l'ultima che termina con '.';
+	
+	\item Se una voce deve decrivere un concetto, un termine o un oggetto allora esso va scritto in grassetto seguito da ':'.
+\end{itemize}
+
 \subsubsection{Elementi grafici}
+\paragraph{Tabelle}
+
+\paragraph{Immagini}
 
 \subsubsection{Strumenti}
