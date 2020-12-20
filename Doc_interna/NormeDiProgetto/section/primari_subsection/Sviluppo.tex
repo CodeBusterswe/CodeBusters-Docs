@@ -1,1 +1,105 @@
 \subsection{Sviluppo}
+\subsubsection{Descrizione}
+Lo scopo del processo di sviluppo è descrivere i task e le attività di analisi, progettazione, codifica, integrazione, test,installazione ed accettazione, relative al prodotto software da sviluppare.
+\subsubsection{Aspettative}
+Le aspettative sono le seguenti:
+\begin{itemize}
+\item determinare vincoli tecnologici;
+\item determinare gli obiettivi di sviluppo;
+\item determinare vincoli di design;
+\item realizzare un prodotto finale che superi i test e soddisfi requisiti e richieste del proponente.
+\end{itemize}
+\subsubsection{Attività}
+Le attività del processo di sviluppo sono tre:
+\begin{itemize}
+\item Studio di fattibilità;
+\item Progettazione;
+\item Codifica.
+\end{itemize}
+\subsubsection{Studio di fattibilità}
+Questo documento, redatto dagli analisti, contiene:
+\begin{itemize}
+\item la descrizione degli attori del sistema;
+\item i casi d'uso individuati a partire dai requisiti;
+\item una visione del problema più chiara possibile per i progettisti;
+\item fornire ai verificatori riferimenti per l'attività di controllo dei test;
+\item calcolare la mole di lavoro per tracciare dei riferimenti per una stima dei costi.
+\end{itemize}
+\paragraph{Finalità}
+Lo scopo dell'attività è redigere tutti i requisiti in un documento.
+\paragraph{Requisiti}
+I requisiti si raccolgono tramite:
+\begin{itemize}
+\item Lettura del capitolato;
+\item Visione della presentazione del capitolato;
+\item Confronto con l'azienda;
+\end{itemize}
+\paragraph{Casi d'uso}
+\'E un diagramma che esprime un comportamento o un modo di utilizzare il prodotto. \'E costituito da:
+\begin{itemize}
+\item Codice identificativo e titolo;
+\item Attore primario;
+\item Precondizioni;
+\item Postcondizioni;
+\item Scenario principale;
+\item Estensioni.
+\end{itemize}
+\paragraph{Codice identificativo casi d'uso}
+Un caso d'uso è così identificato:\\ \\
+		\textbf{UC[Numero caso d'uso].[caso d'uso figlio] - titolo caso d'uso}\\ \\
+Dove caso d'uso figlio è il sottocaso del caso d'uso principale.
+\paragraph{Struttura dei requisiti}
+\begin{itemize}
+\item \textbf{Codice identificativo:} \\ \\
+ 		\textbf{R[Importanza][Tipologia][Codice]}\\ \\
+Per importanza si intende un numero da 1 a 3 che rappresenta:
+\begin{enumerate}
+\item requisito obbligatorio;
+\item requisito desiderabile ma non essenziale per il funzionamento;
+\item requisito opzionale.
+\end{enumerate}
+Per tipologia si intende una lettera che rappresenta la natura del requisito:
+\begin{description}
+\item[V]: Vincolo
+\item[P]: Prestazionale
+\item[Q]: Qualitativo
+\item[F]: Funzionale
+\end{description}
+\item \textbf{classificazione:} per rendere la tabella più esplicativa viene riportata nuovamente l'importanza del requisito nonostante sia già scritta nel codice identificativo;
+\item \textbf{descrizione:} una sintetica descrizione del requisito
+\item \textbf{fonti:} come scritto in precedenza, vi sono diverse fonti da cui possono derivare i requisiti. L'origine dei requisiti viene quindi riportata in questa sezione. 
+\end{itemize}
+\paragraph{UML}
+I diagrammi \glo{UML} devono essere realizzati usando la versione del linguaggio v2.0.
+\subsubsection{Progettazione}
+\paragraph{Scopo}
+Questa attività ha la funzione di definire una soluzione al capitolato proposto basandosi sull'analisi dei requisiti.
+Mentre l'analisi dei requisiti divide il problema nei requisiti da soddisfare, la progettazione incorpora le parti specificando le funzionalità dei sottosistemi e riconducendo ad un'unica soluzione.
+\paragraph{Aspettative}
+Riuscire ad arrivare, al termine di questa attività, ad una architettura di sistema.
+\paragraph{Descrizione}
+\'E formata da due parti:\\ \\
+\textbf{Tecnology Baseline:} motiva le tecnologie, i framework, e le librerie selezionate per la realizzazione del prodotto;\\
+\textbf{Product Baseline:} illustra la baseline architetturale (design e coding) del prodotto, coerente con la Tecnology Baseline.
+\paragraph{Tecnology Baseline}
+Sarà il progettista ad occuparsene e dovrà contenere:
+\begin{itemize}
+\item Diagrammi UML delle classi, di attività, di sequenza e dei package;
+\item Tecnologie adottate, motivando i motivi di tali scelte;
+\item Design pattern accompagnato da una descrizione e un diagramma che ne esponga la struttura;
+\item La relazione tra ciascuna componente e il requisito che soddisfa per avere un tracciamento;  
+\item Proof of Concept, ovvero un dimostratore eseguibile per dimostrare che ogni componente funzioni nel modo voluto.
+\end{itemize}
+\paragraph{Product Baseline}
+Il progettista dovrà occuparsi anche di questa parte che conterrà:
+\begin{itemize}
+\item una definizione delle classi, evitando nomi e funzionalità ridondanti;
+\item tracciamento delle classi, ovvero ciascun requisito deve essere soddisfatto da una classe;
+\item test di unità su ogni componente in modo da verificare il corretto funzionamento.
+\end{itemize}
+\subsubsection{Codifica}
+\paragraph{Scopo}
+L'attività di codifica ha il fine di concretizzare la progettazione con la programmazione del software vero e proprio.
+\paragraph{Aspettative}
+Questa attività dovrà avere come risultato un prodotto software avente le caratteristiche e i requisiti concordati con il proponente. Il codice generato dovrà rispettare alcune norme per poter essere leggibile e poter facilmente intervenire in seguito nelle attività di manutenzione, modifica, verifica e validazione.
+\paragraph{Stile della codifica}
