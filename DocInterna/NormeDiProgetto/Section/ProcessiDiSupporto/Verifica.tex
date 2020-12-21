@@ -7,6 +7,7 @@ Le aspettative del gruppo \Gruppo{} nell'utilizzo di questo processo sono:
 \begin{itemize}
 	\item Verificare ogni fase rispettando criteri precisi, consistenti e modificabili se necessario;
 	\item Automatizzare il più possibile le attività del processo;
+	\item Rispettare gli obiettivi di copertura indicati nel \PdQv.
 	\item Verificare correttamente per ottenere successo in fase di validazione.
 \end{itemize}
 
@@ -18,7 +19,7 @@ Il processo di verifica prevede due attività principali, svolte dai \glo{verifi
 \end{description}
 
 \subsubsection{Verifica della documentazione}
-Il processo di verifica della documentazione consiste in un'analisi statica attraverso due metodi. 
+Il processo di verifica della documentazione consiste in un'analisi statica attraverso strumenti atomatici o condotta a mano (\glo{desk check}) con, in questo caso, due possibili metodi di lettura:   
 
 \rowcolors{2}{coloreGrigietto}{white}
 \renewcommand{\arraystretch}{1.5}
@@ -36,7 +37,6 @@ Il processo di verifica della documentazione consiste in un'analisi statica attr
 		Rilevare errori attraverso letture ad ampio spettro. & 
 		Verificatori \newline Redattori & 
 		Un errore riscontrato dal verificatore comporta una discussione con il redattore "colpevole" riguardo a una possibile soluzione. \\
-		\hline
 		\textbf{Inspection} & 
 		Rilevare specifici errori attraverso letture mirate. & 
 		Verificatori \newline Redattori & 
@@ -62,7 +62,6 @@ Il processo di verifica del codice rappresenta l'unione delle attività di anali
 		Verificare che siano rispettate le regole di buona programmazione preimposte dal gruppo. & 
 		Verificatori \newline Programmatori & 
 		Analisi di flusso dei dati, verifica formale del codice ecc. \\
-		\hline
 		\textbf{Dinamica} & 
 		Trovare bug e errori eseguendo il prodotto software.  & 
 		Verificatori \newline Programmatori & 
@@ -76,20 +75,20 @@ Tipo di analisi statica del codice che accerta che il programma in verifica non 
 Tipo di analisi statica del codice che ne prova la sua correttezza rispetto ai requisiti imposti dalle specifiche. Lo scopo è quello di esplorare tutti i rami possibili di esecuzione, senza doverlo necessariamente eseguire. 
 
 \paragraph{Test} 
-La scrittura dei test coincide con l'analisi dinamica svolta sul codice sviluppato. Tale attività è fondamentale e ha lo scopo di rivelare al programmatore errori o bug riscontrabili a run-time. Di conseguenza i test sono utili solo se falliscono. \\
+La scrittura dei test è la parte essenziale dell'analisi dinamica del codice. Tale attività ha lo scopo di rivelare al programmatore errori o \glo{bug} riscontrabili a run-time. Di conseguenza i test sono utili solo se falliscono. \\
 L'esecuzione dei test deve essere ripetibile. Ottima pratica è renderla il più possibile automatica. \\
 L'obiettivo del gruppo è rispettare gli standard di qualità dettati nel \PdQv. \\
 I test si distinguono in:
 \begin{description}
-	\item[Test di unità] : verificano l'unità, ossia la più piccola parte di codice verificabile indipendentemente dalle altre (singolo metodo o singola classe);
-	\item[Test di integrazione] : verificano le componenti che compongono il sistema, rilevando errori in fase di progettazione;
-	\item[Test di sistema] : verificano il comportamento dell'intero sistema, controllando se rispetta le specifiche tecniche;
-	\item[Test di regressione] : verificano che nuove modifiche apportate non abbiano creato errori in altri parti del programma;
-	\item[Test di accettazione] : verificano errori a livello di \glo{UI}, relativi a requisiti o casi d'uso conocrdati con il proponente.
+	\item[Test di unità (TU)] : verificano l'unità, ossia la più piccola parte di codice verificabile indipendentemente dalle altre (singolo metodo o singola classe);
+	\item[Test di integrazione (TI)] : verificano le componenti che compongono il sistema, rilevando errori in fase di progettazione;
+	\item[Test di sistema (TS)] : verificano il comportamento dell'intero sistema, controllando se rispetta le specifiche tecniche;
+	\item[Test di regressione (TR)] : verificano che nuove modifiche apportate non abbiano creato errori in altri parti del programma;
+	\item[Test di accettazione (TA)] : verificano errori a livello di \glo{UI}, relativi a requisiti o casi d'uso concordati con il proponente.
 \end{description}
 
 \subsubsection{Strumenti}
-Per il processo di verifica applicato ai documenti scritti in \LaTeX{} il gruppo ha deciso di utilizzare il correttore automatico dell'editor TeXMaker, che individua le parole grammaticalmente scorrette sottolineandole in rosso. I verificatori, attraverso i metodi di lettura sopra citati, dovono occuparsi di rilevare possibili ripetizioni, errori di lessico o sintassi.  \\
+Per il processo di verifica applicato ai documenti scritti in \LaTeX{} il gruppo ha deciso di utilizzare il correttore automatico dell'editor TeXmaker, che individua le parole grammaticalmente scorrette sottolineandole in rosso. I verificatori, attraverso i metodi di lettura sopra citati, dovono occuparsi di rilevare possibili ripetizioni, errori di lessico o sintassi.  \\
 \linebreak
 Per il processo di verifica applicato al codice...
 
