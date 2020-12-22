@@ -15,12 +15,23 @@
 	    \endlastfoot
 
 %--------------------------------------------
-R1F1 & Desiderabile & Descrizione del primo requisito bla bla bla & Fonti \\
-R1F1 & Desiderabile & Descrizione del primo requisito bla bla bla & Fonti \\
-R1F1 & Desiderabile & Descrizione del primo requisito bla bla bla & Fonti \\
-R1F1 & Desiderabile & Descrizione del primo requisito bla bla bla & Fonti \\
-R1F1 & Desiderabile & Descrizione del primo requisito bla bla bla & Fonti \\
-R1F1 & Desiderabile & Descrizione del primo requisito bla bla bla & Fonti \\
+R1F1 & Obbligatorio & Caricamento dei dati nel sistema & Capitolato e UC\\
+R1F1.1 & Obbligatorio & Caricamento attraverso l'invio di un file CSV & Capitolato e UC\\
+R2F1.2 & Desiderevole & Caricamento attraverso l'interrogazione a un DB & Capitolato e UC\\
+R1F1.3 & Obbligatorio & Il caricamento fallisce se il file non è corretto o l'interrogazione al DB fallisce & Interno UC\\
+R2F2 & Desiderevole & Aiuti all'utente attraverso widget & Verbale Esterno\\
+R1F3 & Obbligatorio & L'applicazione deve fornire diverse visualizzazioni per i dati & Capitolato\\
+R1F3.1 & Obbligatorio & L'applicazione deve fornire la visualizzazione \glo{Scatter plot Matrix} & Capitolato\\
+R1F3.1.1 & Obbligatorio & L'applicazione deve permettere la scelta delle dimensioni da visualizzare come assi & Verbale esterno\\
+R1F3.2 & Obbligatorio & L'applicazione deve fornire la visualizzazione \glo{Heat Map} & Capitolato\\
+R1F3.2.1 & Obbligatorio & L'applicazione deve ordinare i punti nella visualizzazione Heat Map & Capitolato \\
+R1F3.3 & Obbligatorio & L'applicazione deve fornire la visualizzazione \glo{Force Field} & Capitolato\\
+R1F3.4 & Obbligatorio & L'applicazione deve fornire la visualizzazione \glo{Proiezione Lineare Multi Asse} & Capitolato \\
+R3F3.5 & Opzionale & L'applicazione deve fornire altre visualizzazioni con più di tre dimensioni & Capitolato\\
+R3FX & Opzionale & Utilizzo di funzioni di calcolo della distanza diverse dalla distanza “Euclidea” in tutte le visualizzazioni che dipendono da tale concetto & Capitolato \\
+R3FX & Opzionale & Utilizzo di funzioni di “forza” diverse da quelle previste in automatico dal grafico “forcebased” di D3. & Capitolato\\
+R3FX & Opzionale & Implemenare analisi automatiche per evidenziare situazioni di particolare interesse & Capitolato\\
+R3FX & Opzionale & Utilizzo di algoritmi di preparazione del dato per la visualizzazione & Capitolato\\
 \end{longtable}
 \end{center}
 
