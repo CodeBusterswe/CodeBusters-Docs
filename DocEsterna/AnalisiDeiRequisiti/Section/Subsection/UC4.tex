@@ -1,23 +1,20 @@
-\subsubsection{UC4 - Visualizza grafico}
-\begin{figure}[h]
-\includegraphics[width=\linewidth]{section/Images/UC4VisualizzaGrafico.png}
-\centering
-\caption{UC4 - Visualizza grafico}
-\end{figure}
+\subsubsection{UC4 - Selezione dimensioni da utilizzare}
 \begin{itemize}
 	\item \textbf{Attore primario}: Utente.
-	\item \textbf{Precondizioni}: L'utente ha caricato un file contenente dei dati [UC1] e ha scelto il tipo di grafico da visualizzare [UC5].
-	\item \textbf{Postcondizioni}: Viene visualizzato il grafico richiesto.
+	\item \textbf{Precondizioni}: L'utente ha caricato i dati nel sistema [UC1].
+	\item \textbf{Postcondizioni}: Le dimensioni scelte vengono salvate nel sistema.
 	\item \textbf{Scenario principale}:
 		\begin{enumerate}
-			\item L'utente seleziona la funzionalità "visualizza grafico";
+			\item All'utente viene presentata una schermata con tutte le dimensioni presenti nei dati caricati
+			\item Per ogni dimensione è presente una cella da selezionare nel caso la si voglia utilizzare 
+			\item Una volta che l'utente ha selezionato le dimensioni desiderate dovrà premere sulla funzionalità "Conferma selezione"
 		\end{enumerate}
-	\item \textbf{Estensioni}:
-	\begin{enumerate}[(a)]
-		\item Nel caso in cui non è stato selezionato alcun tipo di grafico o non è stato caricato alcun dato:
-		\begin{enumerate}[1.]
-			\item il grafico non viene visualizzato;
-			\item viene visualizzato un errore esplicativo [UCX3].
+	\item \textbf{Estensioni:}
+		\begin{enumerate}[(a)]
+			\item Nel caso in cui l'utente non abbia selezionato nessuna dimensione:
+			\begin{enumerate}[(1.)]
+				\item Le dimensioni non vengono salvate nel sistema
+				\item Viene visualizzato un messaggio d'errore esplicativo [UC4.1]
+			\end{enumerate}
 		\end{enumerate}
-	\end{enumerate}
 \end{itemize}
