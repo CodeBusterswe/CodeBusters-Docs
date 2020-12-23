@@ -18,23 +18,26 @@ I requisiti riportati nella tabella includono tutti i requisiti figli. Tutti i r
 Ogni requisito è individuato dal suo codice identificativo, reperibile nel documento \AdR
 
 \rowcolors{1}{coloreGrigietto}{colorePanna}
-\begin{longtable}{C{3cm} C{7cm} C{3cm}}
+\begin{longtable}{C{2cm} C{7cm} C{2cm} C{2cm}}
 \rowcolor{coloreRosso}
 \textcolor{white}{\textbf{Incremento}} & 
 \textcolor{white}{\textbf{Obiettivo dell'incremento}} & 
-\textcolor{white}{\textbf{Requisiti}}\\
+\textcolor{white}{\textbf{Requisiti}} &
+\textcolor{white}{\textbf{Casi d'uso}}\\
 \endfirsthead
-\rowcolor{white}\multicolumn{3}{c}{\textit{Continua nella pagina successiva...}}\\
+\rowcolor{white}\multicolumn{4}{c}{\textit{Continua nella pagina successiva...}}\\
 \endfoot
 \rowcolor{white}\caption{Tabella degli incrementi}
 \endlastfoot
 
 %------------------------------------------
-Incremento 0 & Caricamento dati & Requisito 1\\
-Incremento 1 & Visualizzazione Scatter Plot Matrix & Requisito 2\\
-Incremento 2 & Personalizzazione Scatter Plot Matrix & Requisito 3 \\
-Incremento 3 & Visualizzazione Heat Map e Force Field & Requisito 4\\
-Incremento 4 & Personalizzazione Heat Map e Force Field & Requisito 4a\\
-Incremento 5 & Visualizzazione e Personalizzazione Proiezione Lineare Multi Asse & Requisito 5\\
-Incremento 6 & Gestione della sessione & Requisito \\
+Incremento 0 & Caricamento dati tramite file & Requisito n & UC1\\
+Incremento 1 & Selezione dimensioni da utilizzare, implementazione di un algoritmo di riduzione dimensionale nel server & Requisito n & UC1 \\
+Incremento 2 & Visualizzazione e personalizzazione del grafico Scatter Plot Matrix & Requisito 2 & UC2\\
+Incremento 3 & Visualizzazione e personalizzazione del grafico Heat Map & Requisito 4 & UC3\\
+Incremento 4 & Visualizzazione e personalizzazione del grafico Force Field & Requisito 4a & UC4\\
+Incremento 5 & Visualizzazione e Personalizzazione Proiezione Lineare Multi Asse & Requisito 5 & UC2\\
+Incremento 6 & Gestione della sessione & Requisito & UC2\\
+Incremento 7 & Implementazione di un DB per caricamento dati attraverso query & Requisito & UC2\\
+Incremento 8 & Visualizzazione e personalizzazione di altri grafici & Requisit & UC4
 \end{longtable}
