@@ -1,18 +1,24 @@
-\subsubsection{UC1 - Caricamento file}
+\subsubsection{UC1 - Caricamento del dataset}
+
 \begin{figure}[h]
-\includegraphics[width=\linewidth]{section/Images/UC1CaricamentoFile.png}
+%\includegraphics[width=\linewidth]{}
 \centering
-\caption{UC1 - Caricamento file}
+%\caption{UC1 - Caricamento file}
 \end{figure}
+
+
 \begin{itemize}
 	\item \textbf{Attore primario}: Utente.
-	\item \textbf{Precondizioni}: Il sistema è raggiungibile e funzionante. L'utente è in possesso di un file contenente i dati che vuole inserire.
-	\item \textbf{Postcondizioni}: Viene visualizzato un messaggio che avvisa l'utente del corretto caricamento del file e della sua validità. I dati presenti nel file vengono caricati nel sistema.
+	\item \textbf{Precondizioni}: Il sistema è raggiungibile e funzionante.
+	\item \textbf{Postcondizioni}: Viene visualizzato un messaggio che avvisa l'utente del corretto caricamento dei dati e della loro validità.
 	\item \textbf{Scenario principale}:
 		\begin{enumerate}
 			\item L'utente accede al sistema;
+			\item L'utente sceglie come ricavare i dati:
+				\begin{enumerate}[(a)]
 			\item L'utente seleziona la funzionalità "carica file";
-			\item L'utente seleziona il file da caricare.
+			\item L'utente seleziona un dataset tra quelli disponibili nel database.
+				\end{enumerate}
 		\end{enumerate}
 	\item \textbf{Estensioni}:
 	\begin{enumerate}[(a)]
@@ -23,3 +29,26 @@
 		\end{enumerate}
 	\end{enumerate}
 \end{itemize}
+
+\subsubsection{UC1.1 - Caricamento dataset da file}
+
+\begin{itemize}
+	\item \textbf{Attore primario}: Utente.
+	\item \textbf{Precondizioni}: Il sistema è raggiungibile e funzionante. L'utente ha a disposizione un dataset in formato CSV.
+	\item \textbf{Postcondizioni}: I dati presenti nel file vengono caricati nel sistema. Viene visualizzato un messaggio che avvisa l'utente del corretto caricamento e della validità dei dati.
+	\item \textbf{Scenario principale}: L'utente sceglie di caricare un dataset personale o ricavato da altre fonti esterne.
+	
+\end{itemize}
+
+\subsubsection{UC1.2 - Caricamento dataset dal database}
+
+\begin{itemize}
+	\item \textbf{Attore primario}: Utente.
+	\item \textbf{Precondizioni}: Il sistema è raggiungibile e funzionante. L'utente effettua una query dal database disponibile per prelevare il dataset.
+	\item \textbf{Postcondizioni}: I dati vengono caricati nel sistema. Viene visualizzato un messaggio che avvisa l'utente del corretto caricamento e della loro validità.
+	\item \textbf{Scenario principale}: L'utente sceglie di caricare un dataset tra quelli presenti nel database.
+	
+\end{itemize}
+
+
+  
