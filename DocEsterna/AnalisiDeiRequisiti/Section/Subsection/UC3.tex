@@ -1,25 +1,23 @@
-\subsubsection{UC3 - Ripristina sessione}
+\subsubsection{UC3 - Scelta della visualizzazione}
 \begin{figure}[h]
-\includegraphics[width=\linewidth]{section/Images/UC3RipristinaSessione.png}
+\includegraphics[width=\linewidth]{section/Images/UC5SceltaVisualizzazione.png}
 \centering
-\caption{UC3 - Ripristina sessione}
+\caption{UC5 - Scelta della visualizzazione}
 \end{figure}
 \begin{itemize}
 	\item \textbf{Attore primario}: Utente.
-	\item \textbf{Precondizioni}: L'utente è in possesso di un file ottenuto dal salvataggio della sessione [UC2].
-	\item \textbf{Postcondizioni}: Viene visualizzato un messaggio che avvisa l'utente del corretto ripristino della sessione. Viene ripristinata la sessione salvata nel file.
+	\item \textbf{Precondizioni}: L'utente ha caricato un file contenente dei dati [UC1] e ha le dimensioni da utilizzare [UC4].
+	\item \textbf{Postcondizioni}: Viene mostrata la visualizzazione scelta.
 	\item \textbf{Scenario principale}:
 		\begin{enumerate}
-			\item L'utente accede al sistema;
-			\item L'utente seleziona la funzionalità "ripristina sessione";
-			\item L'utente seleziona il file da caricare.
+			\item L'utente seleziona una visualizzazione tra quelle disponibili;
 		\end{enumerate}
 	\item \textbf{Estensioni}:
 	\begin{enumerate}[(a)]
-		\item Nel caso in cui il file abbia un formato sbagliato o contiene dati non validi:
+		\item Nel caso in cui non è stato caricato alcun dato o non è stata scelta alcuna dimensione:
 		\begin{enumerate}[1.]
-			\item la sessione non viene ripristinata;
-			\item viene visualizzato un errore esplicativo [UCX2].
+			\item il grafico non viene visualizzato;
+			\item viene visualizzato un errore esplicativo [UCx.3].
 		\end{enumerate}
 	\end{enumerate}
 \end{itemize}

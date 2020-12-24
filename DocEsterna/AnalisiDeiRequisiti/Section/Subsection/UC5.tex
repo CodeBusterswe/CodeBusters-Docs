@@ -1,23 +1,12 @@
-\subsubsection{UC5 - Scelta della visualizzazione}
-\begin{figure}[h]
-\includegraphics[width=\linewidth]{section/Images/UC5SceltaVisualizzazione.png}
-\centering
-\caption{UC5 - Scelta della visualizzazione}
-\end{figure}
+\subsubsection{UC5 - Salva sessione}
 \begin{itemize}
 	\item \textbf{Attore primario}: Utente.
-	\item \textbf{Precondizioni}: L'utente ha caricato un file contenente dei dati [UC1] e ha le dimensioni da utilizzare [UC4].
-	\item \textbf{Postcondizioni}: Viene mostrata la visualizzazione scelta.
+	\item \textbf{Precondizioni}: L'utente ha caricato un file contenente dei dati [UC1], ha scelto il tipo di grafico da visualizzare [UC5], e ha aperto la visualizzazione di un grafico [UC4].
+	\item \textbf{Postcondizioni}: L'utente possiede un file con la funzione di salvataggio della sessione.
 	\item \textbf{Scenario principale}:
 		\begin{enumerate}
-			\item L'utente seleziona una visualizzazione tra quelle disponibili;
+			\item L'utente ha una sessione di lavoro aperta.
+			\item L'utente seleziona la funzionalità "salva sessione";
+			\item L'utente seleziona la directory in cui salvare il file.
 		\end{enumerate}
-	\item \textbf{Estensioni}:
-	\begin{enumerate}[(a)]
-		\item Nel caso in cui non è stato caricato alcun dato o non è stata scelta alcuna dimensione:
-		\begin{enumerate}[1.]
-			\item il grafico non viene visualizzato;
-			\item viene visualizzato un errore esplicativo [UCx.3].
-		\end{enumerate}
-	\end{enumerate}
 \end{itemize}
