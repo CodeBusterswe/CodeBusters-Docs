@@ -19,14 +19,15 @@ Inoltre il processo si occupa anche di mantenere ordinati i \glo{repository} uti
 \paragraph{Codice di versione}
 La storia di ogni documento avanza nel tempo attraverso una successione di modifiche, verifiche e approvazioni. Ciascuna di queste operazioni comporta il cambiamento della versione del documento stesso. Ogni versione è identificata tramite un codice numerico di tre cifre:
 \begin{center}
-\textbf{X.Y.Z} 
+\textbf{[X].[Y].[Z]} 
 \end{center}
 Singolarmente esse rappresentano:
-\begin{description}
-  	\item[X] : versione stabile, ossia sottoposta ad approvazione del responsabile del documento;
-  	\item[Y] : versione controllata, ossia sottoposta a verifica di un verificatore del documento;
-  	\item[Z] : versione modificata, ossia sottoposta a modifica di un redattore del documento.
-\end{description}
+\begin{itemize}
+	\item \textbf{X}: versione stabile, ossia sottoposta ad approvazione del responsabile del documento;
+  	\item \textbf{Y}: versione controllata, ossia sottoposta a verifica di un verificatore del documento;
+  	\item \textbf{Z}: versione modificata, ossia sottoposta a modifica di un redattore del documento.
+\end{itemize}
+  
 Tutte le cifre iniziano dal valore 0. \\ 
 Ciascuna cifra aumenta di un'unità ogni volta che si compie un'operazione sul documento, inoltre:
 \begin{description}
@@ -71,11 +72,12 @@ L'organizzazione del lavoro collaborativo è così riassunta:
 Nel \textit{main} i file sono contenuti nella cartella RR (Revisione dei Requisiti), con l'obiettivo di crearne una nuova per ogni revisione futura. \\
 Il file \textit{.gitignore} è l'unico esterno a cartelle e dichiara esplicitamente l'estensione dei file automaticamente generati da \LaTeX{} da non tracciare, poiché poco utili allo scopo del \glo{repository}. \\
 Gli altri file sono invece organizzati in ulteriori cartelle dentro la RR:
-\begin{description}
-	\item[Doc\_esterna] : contiene l'\AdRv, il \PdPv, il \Glossariov, i \textit{verbali esterni} ;
-	\item[Doc\_interna] : contiene lo \SdFv, le \NdPv, i \textit{verbali interni};
-	\item[Utility] : contiene file di utilità generale come il template dei documenti, comandi \LaTeX{} per velocizzare la redazione e il logo del gruppo.
-\end{description}
+\begin{itemize}
+	\item \textbf{DocEsterna}: contiene l'\AdRv, il \PdPv, il \Glossariov, i \textit{verbali esterni} ;
+	\item \textbf{DocInterna}: contiene lo \SdFv, le \NdPv, i \textit{verbali interni};
+	\item \textbf{Utility}: contiene file di utilità generale come il template dei documenti, comandi \LaTeX{} per velocizzare la redazione e il logo del gruppo.
+\end{itemize}
+	
 
 \paragraph{Gestione dei cambiamenti in CodeBuster-Docs}
 La separazione del flusso di lavoro tra i vari documenti da redarre permette una notevole diminuzione dei conflitti e quindi delle modifiche da apportare per errore. Il punto focale è che il ramo mian rimanga pulito da ogni tipo di errore, per cui non è utilizzabile da nessun membro del gruppo fino a che ciascun responsbile non abbia dato l'approvazione al corrispettivo documento. Solo in quel momento è permesso il merge del ramo develop nel main. \\
