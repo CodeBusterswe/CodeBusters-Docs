@@ -16,26 +16,29 @@
 
 %--------------------------------------------
 R1F1 & Obbligatorio & L'utente deve poter caricare dei dati nel sistema & UC1\\
-R1F1.1 & Obbligatorio & Caricamento dati attraverso l'invio di un file CSV & Capitolato\\
-R1F1.2 & Obbligatorio & Caricamento dati attraverso l'interrogazione a un DB & Capitolato\\
-R1F1.3 & Obbligatorio & Il caricamento fallisce se il file non è corretto o l'interrogazione al DB fallisce & UC7\\
+R1F1.1 & Obbligatorio & Caricamento dati attraverso l'invio di un file CSV & Capitolato, UC1.1\\
+R1F1.2 & Obbligatorio & Caricamento dati attraverso l'interrogazione a un DB & Capitolato, UC1.2\\
+R1F1.3 & Obbligatorio & In caso di errori verrà visualizzato un messaggio esplicativo per aiutare l'utente & Decisione interna, UC7, UC8, UC9, UC10\\
 R2F2 & Desiderevole & Aiuti all'utente attraverso widget & Verbale Esterno-1.6 \\
-R1F3 & Obbligatorio & L'applicazione deve fornire diverse visualizzazioni per i dati & Capitolato\\
-R1F3.1 & Obbligatorio & L'applicazione deve permettere la scelta delle dimensioni da visualizzare & Verbale Esterno-1.7\\
-R1F3.2 & Obbligatorio & L'applicazione deve fornire la visualizzazione \glo{Scatter plot Matrix} & Capitolato\\
+R1F3 & Obbligatorio & L'applicazione deve permettere la scelta delle dimensioni da visualizzare & Verbale Esterno-1.7, UC2\\
+R2F4 & Desiderevole & L'utente può salvare la sessione in corso per ripristinarla in un secondo momento & Verbale Esterno-1.8, UC5, UC6\\
+R1F5 & Obbligatorio & L'applicazione deve fornire diverse visualizzazioni per i dati & Capitolato, UC3\\
 
-R1F3.3 & Obbligatorio & L'applicazione deve fornire la visualizzazione \glo{Heat Map} & Capitolato\\
-R1F3.3.1 & Obbligatorio & L'applicazione deve ordinare i punti nella visualizzazione Heat Map & Capitolato \\
-R1F3.4 & Obbligatorio & L'applicazione deve fornire la visualizzazione \glo{Force Field} & Capitolato\\
-R3F3.4.1 & Opzionale & Utilizzo di funzioni di “forza” diverse da quelle previste in automatico dal grafico “forcebased” di \glo{D3.js} & Capitolato\\
-R1F3.5 & Obbligatorio & L'applicazione deve fornire la visualizzazione \glo{Proiezione Lineare Multi Asse} & Capitolato \\
-R3F3.6 & Opzionale & L'applicazione deve fornire altre visualizzazioni con più di tre dimensioni & Capitolato\\
-R3F3.7 & Opzionale & Utilizzo di funzioni di calcolo della distanza diverse dalla distanza “Euclidea” in tutte le visualizzazioni che dipendono da tale concetto & Capitolato \\
-R3F4 & Opzionale & Implementare analisi automatiche per evidenziare situazioni di particolare interesse & Capitolato\\
-R3F5 & Opzionale & Utilizzo di algoritmi di preparazione del dato per la visualizzazione & Capitolato\\
-R3F6 & Opzionale & Presenza di una guida introduttiva per l'utente & Verbale Esterno-1.4\\
-R2F7 & Desiderevole & Possibilità di visualizzare contemporaneamente due grafici per confronti & Verbale Esterno-1.5\\
-R2F8 & Desiderevole & L'utente può salvare la sessione in corso per ripristinarla in un secondo momento & Verbale Esterno-1.8\\
+R1F5.1 & Obbligatorio & L'applicazione deve fornire la visualizzazione \glo{Scatter plot Matrix} & Capitolato, UC3.1\\
+
+R1F5.2 & Obbligatorio & L'applicazione deve fornire la visualizzazione \glo{Heat Map} & Capitolato, UC3.2\\
+R1F5.2.1 & Obbligatorio & L'applicazione deve ordinare i punti nella visualizzazione Heat Map & Capitolato \\
+R1F5.3 & Obbligatorio & L'applicazione deve fornire la visualizzazione \glo{Force Field} & Capitolato, UC3.3\\
+R3F5.3.1 & Opzionale & Utilizzo di funzioni di “forza” diverse da quelle previste in automatico dal grafico “forcebased” di \glo{D3.js} & Capitolato\\
+R1F5.4 & Obbligatorio & L'applicazione deve fornire la visualizzazione \glo{Proiezione Lineare Multi Asse} & Capitolato, UC3.4 \\
+R3F5.5 & Opzionale & L'applicazione deve fornire altre visualizzazioni con più di tre dimensioni & Capitolato\\
+R3F5.6 & Opzionale & Utilizzo di funzioni di calcolo della distanza diverse dalla distanza “Euclidea” in tutte le visualizzazioni che dipendono da tale concetto & Capitolato \\
+R3F6 & Opzionale & Implementare analisi automatiche per evidenziare situazioni di particolare interesse & Capitolato\\
+R3F7 & Opzionale & Utilizzo di algoritmi di preparazione del dato per la visualizzazione & Capitolato\\
+R3F8 & Opzionale & Presenza di una guida introduttiva per l'utente & Verbale Esterno-1.4\\
+R2F9 & Desiderevole & Possibilità di visualizzare contemporaneamente due grafici per confronti & Verbale Esterno-1.5\\
+R3F11 & Opzionale & L'utente può personalizzare i grafici ottenuti & Verbale Esterno-1.10, UC4 \\
+R3F10 & Opzionale & Ogni personalizzazione del grafico sarà visibile in tempo reale & Decisione interna \\
 
 
 \end{longtable}
