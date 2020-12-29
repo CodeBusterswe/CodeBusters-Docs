@@ -25,13 +25,16 @@ Il processo di verifica della documentazione consiste in un'analisi statica attr
 \renewcommand{\arraystretch}{1.5}
 \renewcommand\extrarowheight{1.5pt}
 \begin{longtable}{C{3cm} | C{4cm} C{4cm} C{5cm}}
-		\caption{Metodi di lettura} \\
 		\rowcolor{coloreRosso}
 		\textcolor{white}{\textbf{Metodo}} & 
 		\textcolor{white}{\textbf{Obiettivo}} & 
 		\textcolor{white}{\textbf{Attori}} & 
 		\textcolor{white}{\textbf{Caratteristica}} \\
 		\endfirsthead
+		\rowcolor{white}\multicolumn{3}{C{8cm}}{\textit{Continua nella pagina successiva...}}\\
+	    \endfoot
+	    \rowcolor{white}\caption{Metodi di lettura}
+	    \endlastfoot
 		\hline
 		\textbf{Walkthrough} & 
 		Rilevare errori attraverso letture ad ampio spettro. & 
@@ -50,13 +53,16 @@ Il processo di verifica del codice rappresenta l'unione delle attività di anali
 \renewcommand{\arraystretch}{1.5}
 \renewcommand\extrarowheight{1.5pt}
 \begin{longtable}{C{3cm} | C{4cm} C{4cm} C{5cm}}
-		\caption{Analisi del codice} \\
 		\rowcolor{coloreRosso}
 		\textcolor{white}{\textbf{Analisi}} & 
 		\textcolor{white}{\textbf{Obiettivo}} & 
 		\textcolor{white}{\textbf{Attori}} & 
 		\textcolor{white}{\textbf{Esempi}} \\
 		\endfirsthead
+		\rowcolor{white}\multicolumn{3}{C{8cm}}{\textit{Continua nella pagina successiva...}}\\
+	    \endfoot
+	    \rowcolor{white}\caption{Analisi del codice}
+	    \endlastfoot
 		\hline
 		\textbf{Statica} & 
 		Verificare che siano rispettate le regole di buona programmazione preimposte dal gruppo. & 
