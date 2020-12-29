@@ -61,7 +61,9 @@ Alcuni parametri per coprendere le tabelle che seguono:
 	\item \textbf{Actual Cost (CV)}: soldi spesi per il progetto fino al momento del calcolo;
 	\item \textbf{Numero frasi (NF)}: numero di frasi nell'intero documento;
 	\item \textbf{Numero lettere (NL)}: numero di lettere nell'intero documento;
-	\item \textbf{Numero parole (NP)}: numero di parole nell'intero documento.
+	\item \textbf{Numero parole (NP)}: numero di parole nell'intero documento;
+	\item \textbf{Requirements stability index (RSI)}: l'indice di stabilità dei requisiti;
+	\item \textbf{Satisfied obligatory requirements (SOR)}: percentuale di soddisfacimento dei requisiti obbligatori.
 \end{itemize}
 
 \rowcolors{2}{coloreGrigietto}{white}
@@ -84,6 +86,15 @@ Alcuni parametri per coprendere le tabelle che seguono:
 		Cost Variance (CV) & 
 		Descrive se il gruppo sta rispettando o meno i costi prestabiliti per i processi. & 
 		CV = EV-AC \\
+		\textbf{MPC3} &
+		Requirements stability index (RSI) &
+		Indica quanto i requisiti variano nel tempo. &
+		$1 - \frac{Number of changed + Number of deleted + Number of added}{Total number of initial requirements} \cdot 100$ \\
+		\textbf{MPC4} &
+		Satisfied obligatory requirements (SOR) &
+		Descrive se il gruppo ha soddisfatto i requisiti obbligatori o meno. &
+		$\frac{Number of requirements satisfied}{Total number of requirements} \cdot 100$
+		
 \end{longtable}
 
 \rowcolors{2}{coloreGrigietto}{white}
