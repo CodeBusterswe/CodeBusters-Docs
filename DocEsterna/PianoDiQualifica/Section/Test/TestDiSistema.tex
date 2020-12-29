@@ -11,7 +11,7 @@ Il codice utilizzato per l'identificazione dei test è specificato nelle \NdP, m
 \rowcolors{2}{coloreGrigietto}{white}
 \renewcommand{\arraystretch}{1.5}
 \renewcommand\extrarowheight{1.5pt}
-\begin{longtable}{C{2.5cm} | C{12cm} C{2cm}} 
+\begin{longtable}{C{2.5cm} C{12cm} C{2cm}} 
 		\rowcolor{coloreRosso}
 		\textcolor{white}{\textbf{Codice}} & 
 		\textcolor{white}{\textbf{Descrizione}} & 
@@ -22,33 +22,17 @@ Il codice utilizzato per l'identificazione dei test è specificato nelle \NdP, m
 	    \rowcolor{white}\caption{Test di sistema}
 	    \endlastfoot
 		\hline
-\textbf{TS1F1} & L'utente deve poter caricare dei dati nel sistema. Verificare che l'utente possa: 
+\textbf{TS1F1} & L'utente deve poter caricare dei dati nel sistema tramite file CSV o interrogazione al DB. Se tali operazioni non sono eseguite correttamente il caricamento fallisce. Verificare che l'utente possa: 
 					\begin{itemize}
 						\item Visusalizzare correttamente la schermata di inserimento dei dati;
 						\item Inserire i dati attravero file CSV tramite apposito bottone;
-						\item Inserire i dati attraverso una interrogazione al DB tramite query.	
+						\item Il file CSV inserito sia sintatticamente corretto; 
+						\item Inserire i dati attraverso una interrogazione al DB tramite query;
+						\item L'interrogazione sia stata effettuata correttamente;
+						\item Sia visualizzato a schermo un messaggio d'esito dell'operazione;
+						\item In caso di errore sia possibile reinserire i dati tramite file CSV o interrogazione al DB dalla stessa schermata.
 					\end{itemize}					 			    
 			  & NI\\
-\textbf{TS1F1.1} & Caricamento dati attraverso l'invio di un file CSV. Verificare che:
-					\begin{itemize}
-						\item Il file CSV inserito sia sintatticamente corretto; 
-						\item I dati siano correttamente prelevati dal file e pronti per la visualizzazione;
-						\item Sia visualizzato a schermo un messaggio di corretto inserimento dei dati.
-					\end{itemize}													
-		         & NI \\
-\textbf{TS1F1.2} & Caricamento dati attraverso l'interrogazione a un DB. Verificare che:
-					\begin{itemize}
-						\item L'interrogazione sia stata effettuata correttamente; 
-						\item I dati siano stati individuati e ritornati;
-						\item Sia visualizzato a schermo un messaggio che notifica che sono stati trovati i dati.
-					\end{itemize}
- 				 & NI \\ 
-\textbf{TS1F1.3} &  Il caricamento fallisce se il file CSV non è corretto o l'interrogazione al DB fallisce. Verificare che:
-					\begin{itemize}
-						\item Sia visualizzato a schermo un messaggio d'errore parlante; 
-						\item Sia possibile reinserire i dati tramite file CSV o interrogazione al DB dalla stessa schermata.
-					\end{itemize}	
- 				 & NI \\ 
 \textbf{TS2F2} &  Aiuti all'utente attraverso widget. Verificare che:
 					\begin{itemize}
 						\item Siano tutti facilmente localizzabili dall'utente;
@@ -56,22 +40,14 @@ Il codice utilizzato per l'identificazione dei test è specificato nelle \NdP, m
 						\item Siano effettivamente utili per l'utente.
 					\end{itemize}	
  			   & NI \\ 
-\textbf{TS1F3} &  L'applicazione deve fornire diverse visualizzazioni per i dati. Verificare che: 
+\textbf{TS1F3} &  L'applicazione deve fornire diverse visualizzazioni e diversi ridimensionamenti dei dati. Verificare che: 
 					\begin{itemize}
 						\item Siano mostrati a video dei radio button per la selezione del grafico da utilizzare;
-						\item I radio button abbiano nomi parlanti;
-						\item Ogni radio button sia selezionabile e permetta la visualizzazione del grafico corretto;
-						\item Sia possibile selezionare due grafici diversi nel caso in cui si voglia compararli.
+						\item Siano mostrati a video dei bottoni per la selezione delle dimensioni da visualizzare;
+						\item Tutti i bottoni abbiano nomi parlanti;
+						\item Ogni bottone sia selezionabile e permetta la visualizzazione del grafico (eventualmente ridimensionato) corretto.
 					\end{itemize}
 			   &  NI \\
-\textbf{TS1F3.1} & L'applicazione deve permettere la scelta delle dimensioni da visualizzare. Verificare che:
- 					\begin{itemize}
- 						\item Siano mostrati a video dei bottoni per la selezione delle dimensioni da visualizzare;
- 						\item I bottoni devono avere nomi parlanti;
- 						\item Coerenza tra dimensioni visualizzabili e grafico scelto;
- 						\item Ogni bottone deve ridurre/aumentare le dimensioni correttamente rispetto al grafico visualizzato.
- 					\end{itemize}
-           	     & NI \\
 \textbf{TS1F3.2} & L'applicazione deve fornire la visualizzazione \glo{Scatter plot Matrix}. Verificare che:
 					\begin{itemize}
 						\item Gli scatter plot creati siano disposti a matrice;
@@ -81,21 +57,15 @@ Il codice utilizzato per l'identificazione dei test è specificato nelle \NdP, m
 						\item L'utente possa selezionare quali scatter plot evidenziare perché più rilevanti.
 					\end{itemize}	
 				  & NI \\
-\textbf{TS1F3.3} & L'applicazione deve fornire la visualizzazione \glo{Heat Map}. Verificare che:
+\textbf{TS1F3.3} & L'applicazione deve fornire la visualizzazione \glo{Heat Map} e permettere di riordina i punti. Verificare che:
 					\begin{itemize}
 						\item Ogni variabile sia in relazione con tutte le altre; 
 						\item I colori utilizzati rappresentano effettivamente la distanza tra i punti da misurare;
-						\item Sia presente un \glo{dendrogramma} ai bordi della mappa.
+						\item Sia presente un \glo{dendrogramma} ai bordi della mappa;
+						\item L'utente possa ordinare i punti attraverso parametri specifici;
+						\item Il grafico cambi aspetto in real time una volta cambiato parametro d'ordinamento;
 					\end{itemize}	
 				 & NI \\
-\textbf{TS1F3.3.1} & L'applicazione deve ordinare i punti nella visualizzazione \glo{Heat Map}. Verificare che:
-					\begin{itemize}
-						\item L'utente possa ordinare i punti attraverso parametri specifici;
-						\item Il parametro d'odrinamento sia selezionabile da un rudio button;
-						\item Il grafico effettivamente cambi aspetto in real time;
-						\item Il valore dei dati non cambi, ma solo la loro visualizzazione;
-					\end{itemize}	
-				   & NI \\
 \textbf{TS1F3.4} & L'applicazione deve fornire la visualizzazione \glo{Force Field}. Verificare che:
 					\begin{itemize}
 						\item Ogni variabile abbia il suo corrispettivo nodo nel grafico;
@@ -104,13 +74,12 @@ Il codice utilizzato per l'identificazione dei test è specificato nelle \NdP, m
 						\item Il grafico sia bidimensionale (o tridimensionale).
 					\end{itemize}	
 				 & NI \\
-\textbf{TS3F3.4.1} & Utilizzo di funzioni di "forza" diverse da quelle previste in autmatico dal grafico "forcebased" di \glo{D3.js}.
-Verificare che:
+\textbf{TS3F3.4.1} & L'utente deve poter utilizzare funzioni di "forza" diverse da quelle previste in automatico dal grafico "forcebased" di \glo{D3.js} e funzioni di calcolo della distanza diverse da quella standard Euclidea. Verificare che:
 					\begin{itemize}
-						\item 
-						\item 
-						\item 
-					\end{itemize}	
+						\item L'utente possa scegliere la funzione di forza da utilizzare per la riduzione dimensionale da usare nel grafico \glo{Force Field};
+						\item L'utente possa scegliere la funzione di calcolo della distanza da utilizzare per la riduzione dimensionale in ogni grafico che la utilizza;
+						\item Il grafico cambi d'aspetto in real time.
+					\end{itemize}
 				   & NI \\
 \textbf{TS1F3.5} & L'applicazione deve fornire la visualizzazione \glo{Proiezione Lineare Multi Asse}. Verificare che:
 					\begin{itemize}
@@ -122,16 +91,8 @@ Verificare che:
 				   & NI \\
 \textbf{TS3F3.6} & L'applicazione deve fornire altre visualizzazioni con più di tre dimensioni. Verificare che:
 					\begin{itemize}
-						\item 
-						\item 
-						\item 
-					\end{itemize}	
-				   & NI \\
-\textbf{TS3F3.7} & Utilizzo di funzioni di calcolo della distanza diverse dalla distanza “Euclidea” in tutte le visualizzazioni che dipendono da tale concetto. Verificare che:
-					\begin{itemize}
-						\item 
-						\item 
-						\item 
+						\item L'utente possa selezionare un grafico a più di tre dimensioni;
+						\item IL grafico selezionato sia visualizzato correttamente.
 					\end{itemize}	
 				   & NI \\
 \textbf{TS3F4} & Implementare analisi automatiche per evidenziare situazioni di particolare interesse. Verificare che: 
@@ -143,9 +104,8 @@ Verificare che:
 			   & NI \\
 \textbf{TS3F5} & Utilizzo di algoritmi di preparazione del dato per la visualizzazione. Verificare che:
 					\begin{itemize}
-						\item 
-						\item 
-						\item 
+						\item La trasformazione dei dati avvenga correttamnete;
+						\item La trasformazione adottata sia utile alla visualizzazione dei dati.
 					\end{itemize}	
 			   & NI \\
 \textbf{TS3F6} & Presenza di una guida introduttiva per l'utente. Verificare che:
@@ -174,4 +134,34 @@ Verificare che:
 			   & NI \\
 \label{testSistema}
 \end{longtable}
-Come si può notare lo stato di tutti i test è NI ("non implementato") visto che il gruppo non ha ancora iniziato la scrittura del codice. L'implementazione dei test e i loro risultati saranno oggetto della prossima verisone del \PdQv.
+Come si può notare lo stato di tutti i test è NI ("non implementato"). L'implementazione dei test e i loro risultati saranno oggetto della prossima verisone del \PdQv.
+
+\renewcommand{\arraystretch}{1.5}
+\rowcolors{2}{coloreGrigietto}{white}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand\extrarowheight{1.5pt}
+\begin{longtable}{C{2.5cm} C{10cm} } 
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{CodiceTest}} & 
+		\textcolor{white}{\textbf{CodiciRequsiti}} \\
+		\endfirsthead
+		\rowcolor{white}\multicolumn{2}{C{8cm}}{\textit{Continua nella pagina successiva...}} \\
+	    \endfoot
+	    \rowcolor{white}\caption{Tracciamento test - requisiti funzionali}
+	    \endlastfoot
+		\hline
+		\textbf{TS1F1} & R1F1, R1F1.1, R1F1.2, R1F1.3 \\
+		\textbf{TS2F2} & R2F2 \\
+		\textbf{TS1F3} & R1F3, R1F3.1 \\
+		\textbf{TS1F3.2} & R1F3.2 \\
+		\textbf{TS1F3.3} & R1F3.3 \\
+		\textbf{TS1F3.4} & R1F3.4 \\
+		\textbf{TS1F3.4.1} & R1F3.4.1, R1F3.7 \\
+		\textbf{TS1F3.5} & R1F3.5 \\
+		\textbf{TS1F3.6} & R1F3.6 \\
+		\textbf{TS3F4} & R1F4 \\
+		\textbf{TS3F5} & R1F5 \\
+		\textbf{TS3F6} & R1F6 \\
+		\textbf{TS3F7} & R1F7 \\
+		\textbf{TS3F8} & R1F8 \\
+\end{longtable}
