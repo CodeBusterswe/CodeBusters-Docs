@@ -1,15 +1,15 @@
 \section{C1 - BlockCOVID: supporto digitale al contrasto della pandemia}
-\subsection{Descrizione del capitolo}
-Il capitolato propone di sviluppare un'applicazione per registrare le presenze in uffici in modo da permettere la pulizia delle postazioni ed evitare che la stessa sia utilizzata da più persone.
-L'obiettivo finale è la creazione di un'applicazione mobile con due interfacce. La prima destinata agli amministratori per la gestione degli uffici e delle postazioni mentre la seconda per due categorie di utenti: il dipendente che registra la sua presenza e l'addetto alle pulizie, il quale riceve la lista delle postazioni da disinfettare.\\
+\subsection{Descrizione del capitolato}
+Il capitolato propone di sviluppare un'applicazione per registrare le presenze all'interno di locali aziendali, in modo da permettere la pulizia delle postazioni ed evitare siano utilizzate da più persone.
+L'obiettivo finale è la creazione di un'applicazione mobile con due interfacce. La prima è destinata agli amministratori, per la gestione degli uffici e delle postazioni, mentre la seconda è ideata per due categorie di utenti: il dipendente ( per registrare la sua presenza) e l'addetto alle pulizie (che riceve la lista delle postazioni da disinfettare).\\
 L'azienda proponente è \textit{Imola Informatica}.
 
 \subsection{Tecnologie coinvolte}
 L' azienda non impone tecnologie specifiche per lo sviluppo, ma consiglia l'utilizzo di:
 \begin{itemize}
 \item \glo{Java} (versione 8 o superiori), \glo{Python} o \glo{Node.js} per lo sviluppo del server back-end;
-\item	protocolli asincroni per le comunicazioni app mobile-server;
-\item	un sistema \glo{blockchain} per salvare con opponibilità a terzi i dati di sanificazione;
+\item	\glo{Protocolli asincroni} per le comunicazioni app mobile-server;
+\item	Un sistema \glo{blockchain} per salvare con opponibilità a terzi i dati di sanificazione;
 \item	\glo{Kubernetes} o di un \glo{PAAS}, \glo{Openshift} o \glo{Rancher}, per il rilascio delle componenti del server e la gestione della scalabilità orizzontale.
 \end{itemize}
 
@@ -18,17 +18,24 @@ Gli obiettivi sono:
 \begin{itemize}
 \item	Realizzare un server e un'applicazione mobile, dove è prevista la presenza di due macro-tipologie:
 \begin{itemize}
-\item	Amministratore di sistema, con i permessi di gestire e monitorare postazioni, stanze, utenti;
-\item	Utente, che può essere il dipendente che scansiona il tag presente alla sua postazione e segnala la sua presenza (con la possibilità di prenotarla), o un addetto alle pulizie che può gestire e monitorare le stanze da igienizzare;
+\item	\textbf{Amministratore di sistema}: ha i permessi di gestire e monitorare postazioni, stanze e utenti;
+\item	\textbf{Utente}: può essere 
+
+\begin{itemize}
+\item \textbf{Dipendente}: scansiona il tag presente alla sua postazione e segnala la sua presenza, con la possibilità di prenotarla;
+
+\item \textbf{Addetto alle pulizie}: può gestire e monitorare le stanze da igienizzare.
+\end{itemize}
+
 \end{itemize}
 \item	E' richiesto il report dei test effettuati;
-\item	E' richiesta una documentazione sulle scelte, le loro relative motivazioni ed eventuali problemi incontrati con relative soluzioni.
+\item	E' richiesta una documentazione sulle scelte, le loro relative motivazioni ed eventuali problemi incontrati con le soluzioni attutate.
 \end{itemize}
 
 \subsection{Aspetti positivi}
 \begin{itemize}
 \item	Progetto con fine attuale ed utile alla società;
-\item	Stimola molto interesse essendo che richiede l'uso di molti servizi;
+\item	Stimola molto interesse per via dell'uso di molti servizi;
 \item	L'azienda risulta essere molto disponibile per seguire il gruppo nello sviluppo del progetto.
 \end{itemize}
 \subsection{Aspetti critici}

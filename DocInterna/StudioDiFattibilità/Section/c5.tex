@@ -1,30 +1,30 @@
 \section{C5 - PORTACS - Point Of Interest  Oriented Real-Time Anti Collision System}
 
 \subsection{Descrizione del capitolo}
-Il capitolato propone la realizzazione di un sistema per il monitoraggio e la gestione di unità presenti in una mappa(griglia).\\
-Ogni unità (che può essere un robot, un muletto o un'auto a guida automatica) ha un punto di partenza nella griglia e una lista di POI (\textit{"Point Of Interest"})  che deve raggiungere.
-Il sistema dovrà indicare ad ognuna di esse la prossima mossa che dovrà fare in base alla posizione, direzione e velocità  delle altre unità. Ognuna dovrà inviare costantemente questi parametri al sistema, in modo da rendere possibile pilotare e coordinare tutte le unità evitando incidenti ed ingorghi.
+Il capitolato propone la realizzazione di un sistema per il monitoraggio e la gestione di unità presenti in una mappa.\\
+Ogni unità (che può essere un robot, un muletto o un'auto a guida automatica) ha un punto di partenza nella mappa e una lista di \glo{\textit{Point Of Interest}} (POI) che deve raggiungere.
+Il sistema dovrà indicare ad ognuna di esse la prossima mossa che dovrà fare in base alla posizione, direzione e velocità  delle altre unità. Ognuna dovrà inviare costantemente questi parametri al sistema, in modo da rendere possibile pilotare e coordinare tutte le unità, evitando incidenti ed ingorghi.\\
 L'azienda proponente è \textit{Sanmarco Informatica}
 
 \subsection{Tecnologie coinvolte}
 Il proponente non impone specifiche tecnologie per lo sviluppo della piattaforma ma consiglia l'utilizzo di :
 \begin{itemize}
-\item Node.js per la parte di Back-end e Reactjs o Next.js  per lo sviluppo di Front-end che permettono di creare una SPA (\textit{"Single Page Application"}) ;
-\item Socket: è una libreria che consente di sviluppare applicazioni real-time e risulta facile da integrare con Nodejs;
+\item Node.js per la parte di back-end e \glo{React.js} o \glo{Next.js}  per lo sviluppo di front-end che permettono di creare una SPA (\textit{Single Page Application}) ;
+\item \glo{Socket}, libreria per sviluppare applicazioni real-time facilmente integrabile con Node.js;
 \end{itemize}
 
 \subsection{Vincoli}
 L'azienda proponente pone i seguenti obiettivi da raggiungere:
 
 \begin{itemize}
-\item il sistema dovrà avere una visualizzazione in real-time della mappa e relativa posizione delle singole unità;
-\item l'interfaccia utente che rappresenterà ogni singola unità  dovrà prevedere 4 frecce direzionali (si \textit{"accenderà"} quella suggerita dal sistema), il pulsante start/stop e l'indicatore della velocità attuale.
+\item Il sistema dovrà avere una visualizzazione in real-time della mappa e relativa posizione delle singole unità;
+\item L'interfaccia utente che rappresenterà ogni singola unità  dovrà prevedere quattro frecce direzionali (si \textit{"accenderà"} quella suggerita dal sistema), il pulsante start/stop e l'indicatore della velocità attuale.
 \end{itemize}
 
 La versione finale del software dovrà essere in grado di accettare i seguenti input:
 \begin{itemize}
-\item scacchiera oppure mappa con percorsi predefiniti e relativi vincoli (sensi unici, numero massimo di unità contemporanee);
-\item definizione di POI (aree di carico/scarico e sosta).
+\item Scacchiera oppure mappa con percorsi predefiniti e relativi vincoli (sensi unici, numero massimo di unità contemporanee);
+\item Definizione dei POI (aree di carico/scarico e sosta).
 \end{itemize}
 
 \subsection{Aspetti positivi}
