@@ -7,10 +7,11 @@ I documenti dovranno essere comprensibili e corretti ortograficamente e sintatti
 I documenti dovranno poter essere letti e compresi da tutti coloro che hanno una istruzione di base ovvero che abbiano completato la scuola secondaria di secondo grado.
 \paragraph{Correttezza}
 La correttezza dei documenti sarà compito del verificatore con l'ausilio di uno strumento di controllo ortografico.
-\paragraph{Metrica utilizzata}
-
-\textbf{MPD1 Indice Gulpease}: questo indice descrive la leggibilità del documento prodotto e affinché venga accettato il valore deve risiedere tra 50-100.
- 
+\paragraph{Metriche utilizzate}
+\begin{itemize}
+\item \textbf{MPD1 Indice Gulpease}: questo indice descrive la leggibilità del documento prodotto;
+\item \textbf{MPD2 Errori ortografici}: descrive la correttezza ortografica del documento.
+\end{itemize} 
 \subsubsection{Software}
 \paragraph{Funzionalità}
 Capacità del prodotto di offrire tutte le funzioni individuate nell'\AdR{}. Gli obiettivi da perseguire sono:
@@ -18,6 +19,10 @@ Capacità del prodotto di offrire tutte le funzioni individuate nell'\AdR{}. Gli
 \item \textbf{Accuratezza}: il prodotto dovrà ottenere i risultati richiesti;
 \item \textbf{Adeguatezza}: le funzionalità dovranno almeno equivalere le attese.
 \end{itemize}
+\subparagraph{Metrica utilizzata}\mbox{}\\
+\\
+\textbf{MPD3 Copertura dei requisiti}: descrive quanti requisiti sono stati implementati nel software;
+
 \paragraph{Affidabilità}
 Con questo termine si intende la capacità del prodotto di riuscire a svolgere tutte le funzionalità presenti anche in caso di errori o problemi. L'esecuzione, per risultare affidabile, dovrà possedere queste caratteristiche:
 \begin{itemize}
@@ -31,7 +36,10 @@ Il prodotto dovrà essere comprensibile e graficamente armonioso in modo da rend
 \item \textbf{Facilità d'uso}: l'utente deve imparare senza troppe difficoltà come utilizzare l'applicazione;
 \item \textbf{Operabilità}: le funzioni devono essere compatibili con le aspettative dell'utente;
 \item \textbf{Attrattiva}: il software deve essere piacevole all'occhio.
-\end{itemize}
+\end{itemize} 
+\subparagraph{Metrica utilizzata}\mbox{}\\
+\\
+\textbf{MPD6 Average Cyclomatic Complexity}: indica il numero di cammini indipendenti presenti nel programma.
 \paragraph{Efficienza}
 L'efficienza è la capacità di raggiungere un fine con il minor utilizzo di tempo e risorse. Per quanto riguarda il prodotto questo dovrà essere:
 \begin{itemize}
@@ -46,9 +54,55 @@ Un prodotto, per avere tale capacità, dovrà permettere future correzioni e mod
 \item \textbf{Stabilità}: dopo la modifica non devono insorgere altri problemi relativi alla incompatibilità con altre parti di codice;
 \item \textbf{Testabilità}: i test sulle modifiche effettuate devono essere facilmente implementati.
 \end{itemize}
+\subparagraph{Metriche utilizzate}
+\begin{itemize}
+\item \textbf{MPD4 Code Coverage}: descrive quanto il codice prodotto è coperto dalla suite di test dinamici;
+\item \textbf{MPD5 }: indica il numero di linee di codice in un file. 
+\end{itemize}
 \paragraph{Portabilità}
 \'E la capacità di poter funzionare in diversi ambienti. Per avere tale capacità il prodotto dovrà avere le seguenti caratteristiche:
 \begin{itemize}
 \item \textbf{Adattabilità}: il software dovrà poter essere eseguito in numerosi browser senza che debbano essere effettuate delle modifiche;
 \item \textbf{Sostituibilità}: il software deve poter sostituire un prodotto con lo stesso fine e che viene eseguito sullo stesso browser. 
 \end{itemize}
+
+\rowcolors{2}{coloreGrigietto}{white}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand\extrarowheight{1.5pt}
+\begin{longtable}{C{1.5cm} | C{4.5cm} C{5cm} C{5cm}}
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Codice}} & 
+		\textcolor{white}{\textbf{Nome}} & 
+		\textcolor{white}{\textbf{Range Accettazione}} & 
+		\textcolor{white}{\textbf{Range Ottimalità}} \\
+		\endfirsthead
+		\rowcolor{white}\multicolumn{3}{C{8cm}}{\textit{Continua nella pagina successiva...}}\\
+	    \endfoot
+	    \rowcolor{white}\caption{Tabella delle metriche}
+	    \endlastfoot
+		\hline
+		\textbf{MPD1} & 
+		Indice Gulpease & 
+		70-100\% & 
+		90-100\% \\
+		\textbf{MPD2} & 
+		Errori ortografici (EO) & 
+		100\% corretto & 
+		100\% corretto \\
+		\textbf{MPD3} & 
+		Copertura dei requisiti (CDR) & 
+		100\% dei requisiti obbligatori &
+		100\% dei requisiti obbligatori \\
+		\textbf{MPD4} & 
+		Code Coverage (CC) & 
+		100\% &
+		100\% \\
+		\textbf{MPD5} & 
+		Source Line of Code (SLOC) & 
+		da definire &
+		da definire \\
+		\textbf{MPD6} & 
+		Averege Cyclomatic complexity (ACC) & 
+		15 &
+		10 \\
+\end{longtable}
