@@ -58,11 +58,14 @@ Alcuni parametri per comprendere la tabella seguente:
 \begin{itemize}
 	\item \textbf{Earned Value (EV)}: (\% del lavoro svolto fino al momento del calcolo) * (budjet a disposizione);
 	\item \textbf{Planned Value (PV)}: lavoro che si era pianificato di svolgere fino al momento del calcolo;
-	\item \textbf{Actual Cost (CV)}: soldi spesi per il progetto fino al momento del calcolo;
-	\item \textbf{Budget variance (BV)}: differenza tra i costi preventivati e quelli fin'ora sostenuti;
-	\item \textbf{Schedule variace (SV)}: differenza tra il tempo realmente speso rispetto a quello preventivato;
-	\item \textbf{Requirements stability index (RSI)}: l'indice di stabilità dei requisiti;
-	\item \textbf{Satisfied obligatory requirements (SOR)}: percentuale di soddisfacimento dei requisiti obbligatori.
+	\item \textbf{Actual Cost (AC)}: soldi spesi per il progetto fino al momento del calcolo;
+	\item \textbf{Number of Changed (NoC)}: numero di requisiti cambiati;
+	\item \textbf{Number of Deleted (NoD)}: numero di requisiti eliminati;
+	\item \textbf{Number of Added (NoA)}: numero di requisiti aggiunti;
+	\item \textbf{Total Number of Initial Requirement (TNIR)}: numero totale dei requisiti iniziali;
+	\item \textbf{Number of Satisfied (NoS)}: numero totale di requisiti soddisfatti;
+	\item \textbf{Total number of Requirement (TnR)}: numero totale di requisiti.
+	
 \end{itemize}
 
 \rowcolors{2}{coloreGrigietto}{white}
@@ -91,7 +94,7 @@ Alcuni parametri per comprendere la tabella seguente:
 		\textbf{MPC3} &
 		Requirements stability index (RSI) &
 		Indica quanto i requisiti variano nel tempo. &
-		$(1 - \frac{NoC + NoD + NoA}{TnoIR}) \cdot 100$ \\
+		$(1 - \frac{NoC + NoD + NoA}{TNIR}) \cdot 100$ \\
 		\textbf{MPC4} &
 		Satisfied obligatory requirements (SOR) &
 		Descrive se il gruppo ha soddisfatto i requisiti obbligatori o meno. &
