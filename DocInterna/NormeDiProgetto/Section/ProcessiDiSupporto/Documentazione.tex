@@ -4,8 +4,8 @@ Tutti i processi e le attività di sviluppo devono essere documentate. Questa se
 \subsubsection{Aspettative}
 Le aspettative di questo processo sono:
 \begin{itemize}
-	\item avere una chiara struttura per i documenti, in modo da ottenere un risultato uniforme alla fine del suo ciclo di vita;	
-	\item avere delle norme e convenzioni ben precise che coprono tutti gli aspetti della stesura di un documento, in modo che tutti membri di \Gruppo{} possano lavorare senza dover interpellare il gruppo per prendere decisioni riguardo un generico aspetto.
+	\item Avere una chiara struttura per i documenti, in modo da ottenere un risultato uniforme alla fine del suo ciclo di vita;	
+	\item Avere delle norme e convenzioni ben precise che coprono tutti gli aspetti della stesura di un documento, in modo che tutti membri di \Gruppo{} possano lavorare senza dover interpellare il gruppo per prendere decisioni riguardo un generico aspetto.
 \end{itemize}
 \subsubsection{Descrizione}
 La documentazione è un processo per registrare le informazioni prodotte da una attività del ciclo di vita. Il processo contiene una serie di attività che pianificano, progettano, sviluppano, producono, modificano, distribuiscono e mantengono quei documenti necessari a tutti gli interessati, come manager, ingegneri e utenti.
@@ -30,13 +30,13 @@ Il gruppo ha deciso di creare un template con l'utilizzo di \LaTeX{}, grazie al 
 \subsubsection{Struttura del documento}
 Ogni documento è formato da diverse sezioni, ognuna definita dal proprio file \LaTeX. La parte principale è chiamata "\textit{nomedoc}.tex" (dove \textit{nomedoc} sta ad indicare il nome del documento) ed ha il compito di includere le seguenti componenti:
 \begin{itemize}
-	\item i file \LaTeX{} delle sezioni, che contengono il contenuto del testo vero e prorpio. Se una sezione contiene numerose sottosezioni, allora il file avrà il compito di includere i file delle varie sottosezioni;
+	\item I file \LaTeX{} delle sezioni, che contengono il contenuto del testo vero e prorpio. Se una sezione contiene numerose sottosezioni, allora il file avrà il compito di includere i file delle varie sottosezioni;
 	
-	\item il registro delle modifiche, che contiene una lista delle modifiche effettuate al documento così da renderle tracciabili;
+	\item Il registro delle modifiche, che contiene una lista delle modifiche effettuate al documento così da renderle tracciabili;
 	
 	\item "String.tex", che contiene una serie di comandi \LaTeX{} personalizzati che facilitano la scrittura di parole frequentemente utilizzate;
 	
-	\item "Comandi.tex", che contiene una serie di comandi \LaTeX{} personalizzati diversi per ogni documento.
+	\item "Comandi.tex", che contiene una serie di comandi \LaTeX{} personalizzati, diversi per ogni documento.
 \end{itemize}
 
 \paragraph{Prima pagina}
@@ -58,8 +58,6 @@ La prima pagina di un documento è formata da:
 		\item \textbf{Approvatori}: nomi dei componenti del gruppo che svolgono il ruolo di \glo{approvatore};
 		
 		\item \textbf{Redattori}: nomi dei componenti del gruppo che svolgono il ruolo di \glo{redattore};
-		
-	 	\item \textbf{Verificatori}: nomi dei componenti del gruppo che svolgono il ruolo di \glo{verificatore};
 	 	
 	 	\item \textbf{Uso}: specifica il tipo di utilizzo che viene fatto di questo documento;
 	 	
@@ -104,7 +102,7 @@ La singola pagina di contenuto è strutturata come segue:
 \end{itemize}
 
 \paragraph{Verbali}
-I \textit{Verbali} sono i documenti scritti per attestare discorsi, dichiarazioni effettuate durante un incontro con o senza esterni. Prevedono una singola stesura, dato che contengono delle decisioni che non possono essere modificate successivamente. I \textit{Verbali} contengono la prima pagina e il registro delle modifiche come gli altri documenti, viene invece omesso l'indice che il gruppo ha ritenuto poco utile data la brevità del documento. Il contenuto di un \textit{Verbale} è formato da tre sezioni, la prima è l'introduzione che contiene le seguenti informazioni:
+I \textit{Verbali} sono i documenti scritti per attestare discorsi e dichiarazioni effettuate durante un incontro con o senza esterni. Prevedono una singola stesura, dato che contengono delle decisioni che non possono essere modificate successivamente. I \textit{Verbali} contengono la prima pagina e il registro delle modifiche come gli altri documenti; viene invece omesso l'indice che il gruppo ha ritenuto poco utile data la brevità del documento.\\ Il contenuto di un \textit{Verbale} è formato da tre sezioni. La prima è l'introduzione che contiene le seguenti informazioni:
 \begin{itemize}
 	
 	\item \textbf{Motivo della riunione}: il motivo per cui il gruppo ha deciso di organizzare un incontro e che, di conseguenza, contiene le materie che verranno discusse;
@@ -115,12 +113,12 @@ I \textit{Verbali} sono i documenti scritti per attestare discorsi, dichiarazion
 	
 	\item \textbf{Durata}: il tempo che il gruppo ha impiegato per terminare la riunione;
 	
-	\item \textbf{Partecipanti}: l'elenco dei partencipanti al meeting.
+	\item \textbf{Partecipanti}: l'elenco dei partecipanti al meeting.
 \end{itemize}
 
 La seconda sezione è il resoconto ed ha la funzione di fornire un breve riassunto di quanto discusso e delle decisioni prese. I motivi di discussione vengono riportati in un elenco dove vengono spiegati uno per volta.
 
-Alla fine di ogni \textit{Verbale} è presente una tabella che ha la funzione di tenere traccia delle desicisioni prese durante l'incontro. Ogni riga della tabella prevede una descrizione molto breve della decisione e un identificativo che segue questo formato:
+Alla fine di ogni \textit{Verbale} è presente una tabella che ha la funzione di tenere traccia delle decisioni prese durante l'incontro. Ogni riga della tabella prevede una descrizione molto breve della decisione e un identificativo che segue questo formato:
 \begin{center}
 \textbf{[Destinazione]-X.Y}
 \end{center}
@@ -128,23 +126,21 @@ Dove:
 
 \begin{itemize}
 
-	\item \textbf{[Destinazione]}: è \textbf{Interno}, se il verbale è interno, mentre è \textbf{Esterno}, se il verbale è esterno
+	\item \textbf{[Destinazione]}: è \textbf{Interno}, se il verbale è interno, mentre è \textbf{Esterno}, se il verbale è esterno;
 	
-	\item \textbf{X.Y}: dove \textbf{X} è il numero del verbale e \textbf{Y} indica il numero della decisione all'interno del verbale;
+	\item \textbf{X.Y}: dove \textbf{X} è il numero del verbale e \textbf{Y} indica il numero della decisione all'interno del verbale.
 \end{itemize}
 
 \subsubsection{Convenzioni}
 
 \paragraph{Nomi dei file}
-I nomi dei file e delle cartelle seguono tutte la stessa convenzione ad eccezione di alcune cartelle:
+I nomi dei file e delle cartelle seguono tutte la stessa convenzione:
 
 \begin{itemize}
 
 	\item I nomi dei file e delle cartelle iniziano per lettera maiuscola;
 	
-	\item Se il nome è composto da più parole, ognuna di queste inizia per lettera maisucola e non è previsto alcun tipo di separazione tra una parola e l'altra;
-	
-	%\item Il nome delle sottocartelle delle cartelle dei documenti viene scritto in minuscolo e se sono presenti più parole queste vengono separate dal carattere underscore.
+	\item Se il nome è composto da più parole, ognuna di queste inizia per lettera maiuscola e non è previsto alcun tipo di separazione tra una parola e l'altra.
 	
 \end{itemize}
 
@@ -226,26 +222,26 @@ Ad eccezione del registro delle modifiche, le tabelle di un documento seguono le
 
 	\item Ogni tabella è affiancata da una didascalia descrittiva posizionata sotto la tabella corrispondente;
 	
-	\item Ogni tabelle viene identificata da un numero composto dalla sezione a cui fa riferimento e da un numero progressivo che lo identifica all'interno della sezione;
+	\item Ogni tabelle viene identificata da un numero composto dalla sezione a cui fa riferimento e da un numero progressivo che lo identifica all'interno della sezione.
 
 \end{itemize}
 \paragraph{Immagini}
 
-Le immagini sono centralizzate e hanno una didascalia posta sopra la figura corrispondente.
+Le immagini sono centralizzate e presentano un numero e una didascalia esplicativa.
 
 \paragraph{Diagrammi}
 
-Sia i diagrammi \glo{UML} che i diagrammi di \glo{Gantst} vengono riportati come immagini e quindi sono soggetti alle regole esposte alla sezione 3.1.7.3.
+Sia i diagrammi \glo{UML} che i diagrammi di \glo{Gantt} vengono riportati come immagini e quindi sono soggetti alle regole precedentemente esposte.
 
 \subsubsection{Strumenti}
 \paragraph{\LaTeX{}}
 Per la stesura dei documenti, il gruppo utilizza \LaTeX{}, un linguaggio di markup per la preparazione di testi, basato sul programma di composizione tipografica \TeX{}.
 
 \paragraph{Texmaker}
-Per scrivere il codice \LaTeX{}, il gruppo ha utilizzato Texmaker. \Gruppo{} ha deciso di utilizzare questo editor perché è gratis e prevede un compilatore integrato e un visualizzatore PDF, inoltre prevede delle funzionalità interessanti come l'autocompletamento dei comandi \LaTeX{}, il controllo dell'ortografia e il \glo{code folding}.
+Per scrivere il codice \LaTeX{}, il gruppo ha utilizzato Texmaker. \Gruppo{} ha deciso di utilizzare questo editor perché è gratis e prevede un compilatore integrato e un visualizzatore PDF; inoltre prevede delle funzionalità interessanti come l'autocompletamento dei comandi \LaTeX{}, il controllo dell'ortografia e il \glo{code folding}.
 
 \paragraph{Draw.io}
-Un diagramma \glo{UML} viene prodotto con l'utilizzo di Draw.io. Il gruppo ha scelto questo strumento perché non è richiesto scaricare alcun software per progettare un diagramma, inoltre rispetto a molti programmi simili offre maggiori funzionalità.
+Un diagramma \glo{UML} viene prodotto con l'utilizzo di Draw.io. Il gruppo ha scelto questo strumento perché non è richiesto scaricare alcun software per progettare un diagramma; inoltre rispetto a molti programmi simili offre maggiori funzionalità.
 
 
 
