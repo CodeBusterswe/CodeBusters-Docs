@@ -12,29 +12,29 @@ Le aspettative sono le seguenti:
 \subsubsection{Attività}
 Le attività del processo di sviluppo sono tre:
 \begin{itemize}
-\item Studio di fattibilità;
+\item Analisi dei requisiti;
 \item Progettazione;
 \item Codifica.
 \end{itemize}
-\subsubsection{Analisi dei requisiti}
+\paragraph{Analisi dei requisiti}
 Questo documento, redatto dagli analisti, contiene:
 \begin{itemize}
 \item La descrizione degli attori del sistema;
 \item I casi d'uso individuati a partire dai requisiti;
 \item Una visione del problema più chiara possibile per i progettisti;
 \item Riferimenti per l'attività di controllo dei test da fornire ai verificatori;
-\item Calcolare la mole di lavoro per tracciare dei riferimenti per una stima dei costi.
+\item Informazioni utili al calcolo della mole di lavoro.
 \end{itemize}
-\paragraph{Finalità}
+\subparagraph{Finalità}
 Lo scopo dell'attività è redigere tutti i requisiti in un documento.
-\paragraph{Requisiti}
+\subparagraph{Requisiti}
 I requisiti si raccolgono tramite:
 \begin{itemize}
 \item Lettura del capitolato;
 \item Visione della presentazione del capitolato;
 \item Confronto con l'azienda.
 \end{itemize}
-\paragraph{Casi d'uso}
+\subparagraph{Casi d'uso}
 \'E un diagramma che esprime un comportamento o un modo di utilizzare il prodotto. \'E costituito da:
 \begin{itemize}
 \item Codice identificativo e titolo;
@@ -44,7 +44,7 @@ I requisiti si raccolgono tramite:
 \item Scenario principale;
 \item Estensioni.
 \end{itemize}
-\paragraph{Codice identificativo casi d'uso}
+\subparagraph{Codice identificativo casi d'uso}
 Un caso d'uso è così identificato:
 
 \begin{center}
@@ -52,7 +52,7 @@ Un caso d'uso è così identificato:
 \end{center}
 		
 dove "caso d'uso figlio" è il sottocaso del caso d'uso principale.
-\paragraph{Struttura dei requisiti} \label{para:requisiti}
+\subparagraph{Struttura dei requisiti} \label{para:requisiti}
 \begin{itemize}
 \item \textbf{Codice identificativo:} 
 \begin{center}
@@ -76,22 +76,22 @@ Per tipologia s'intende una lettera che rappresenta la natura del requisito:
 \item \textbf{Descrizione:} una sintetica descrizione del requisito;
 \item \textbf{Fonti:} vi sono diverse fonti da cui possono derivare i requisiti; l'origine dei requisiti viene quindi riportata in questa sezione. 
 \end{itemize}
-\paragraph{UML}
+\subparagraph{UML}
 I diagrammi \glo{UML} devono essere realizzati usando la versione del linguaggio v2.0.
-\subsubsection{Progettazione}
-\paragraph{Scopo}
+\paragraph{Progettazione}
+\subparagraph{Scopo}
 Questa attività ha la funzione di definire una soluzione al capitolato proposto basandosi sull'analisi dei requisiti.
 Mentre quest'ultima divide il problema nei requisiti da soddisfare, la progettazione incorpora le parti specificando le funzionalità dei sottosistemi e riconducendo ad un'unica soluzione.
-\paragraph{Aspettative}
+\subparagraph{Aspettative}
 Riuscire ad arrivare, al termine di questa attività, ad una architettura di sistema.
-\paragraph{Descrizione}
+\subparagraph{Descrizione}
 \'E formata da due parti:
 \begin{itemize}
 \item \glo{\textbf{Tecnology Baseline:}} motiva le tecnologie, i framework e le librerie selezionate per la realizzazione del prodotto;
 \item \glo{\textbf{Product Baseline:}} illustra la baseline architetturale (design e coding) del prodotto, coerente con la Tecnology Baseline.
 \end{itemize}
 
-\paragraph{Tecnology Baseline}
+\subparagraph{Tecnology Baseline}
 Sarà il progettista ad occuparsene e dovrà contenere:
 \begin{itemize}
 \item Diagrammi UML delle classi, di attività, di sequenza e dei package;
@@ -100,19 +100,19 @@ Sarà il progettista ad occuparsene e dovrà contenere:
 \item La relazione tra ciascuna componente e il requisito che soddisfa, per avere un tracciamento;  
 \item \glo{Proof of Concept}, ovvero un prototipo per dimostrare le funzionalità del prodotto.
 \end{itemize}
-\paragraph{Product Baseline}
+\subparagraph{Product Baseline}
 Il progettista dovrà occuparsi anche di questa parte, che conterrà:
 \begin{itemize}
 \item Una definizione delle classi, evitando nomi e funzionalità ridondanti;
 \item Tracciamento delle classi, in modo che ciascun requisito sia soddisfatto da una classe;
 \item Test di unità su ogni componente, in modo da verificare il corretto funzionamento.
 \end{itemize}
-\subsubsection{Codifica}
-\paragraph{Scopo}
+\paragraph{Codifica}
+\subparagraph{Scopo}
 L'attività di codifica ha il fine di concretizzare la progettazione con la programmazione del software vero e proprio.
-\paragraph{Aspettative}
+\subparagraph{Aspettative}
 Questa attività dovrà avere come risultato un prodotto software avente le caratteristiche e i requisiti concordati con il proponente. Il codice generato dovrà rispettare alcune norme per poter essere leggibile e per poter facilmente intervenire in seguito nelle attività di manutenzione, modifica, verifica e validazione.
-\paragraph{Stile della codifica}
+\subparagraph{Stile della codifica}
 \begin{itemize}
 \item \textbf{Indentazione}: i blocchi di codice innestati dovranno avere un'indentazione di quattro spazi;
 \item \textbf{Parentesi}: la parentesi aperta dovrà essere inserita nella stessa riga di dichiarazione del costrutto, separate da uno spazio; 
@@ -124,5 +124,5 @@ Questa attività dovrà avere come risultato un prodotto software avente le cara
 \item \textbf{File}: dovranno avere un nome che inizia per lettera maiuscola che ne specifichi il contenuto;
 \item \textbf{Lingua}: i commenti al codice dovranno essere scritti in italiano, i nomi delle variabili possono essere scritti in inglese o italiano.
 \end{itemize}
-\paragraph{Ricorsione}
+\subparagraph{Ricorsione}
 Onde evitare un'eccessiva allocazione di memoria è preferibile, quando possibile, evitare la ricorsione.
