@@ -54,11 +54,7 @@ Un prodotto, per avere tale capacità, dovrà permettere future correzioni e mod
 \item \textbf{Stabilità}: dopo la modifica non devono insorgere altri problemi relativi alla incompatibilità con altre parti di codice;
 \item \textbf{Testabilità}: i test sulle modifiche effettuate devono essere facilmente implementati.
 \end{itemize}
-\subparagraph{Metriche utilizzate}
-\begin{itemize}
-\item \textbf{MPD4 Code Coverage}: descrive quanto il codice prodotto è coperto dalla suite di test dinamici;
-\item \textbf{MPD5 source line of code}: indica il numero di linee di codice in un file. 
-\end{itemize}
+
 \paragraph{Portabilità}
 \'E la capacità di poter funzionare in diversi ambienti. Per avere tale capacità il prodotto dovrà avere le seguenti caratteristiche:
 \begin{itemize}
@@ -68,41 +64,23 @@ Un prodotto, per avere tale capacità, dovrà permettere future correzioni e mod
 
 \rowcolors{2}{coloreGrigietto}{white}
 \renewcommand{\arraystretch}{1.5}
-\renewcommand\extrarowheight{1.5pt}
-\begin{longtable}{C{1.5cm} | C{4.5cm} C{5cm} C{5cm}}
-		\rowcolor{coloreRosso}
-		\textcolor{white}{\textbf{Codice}} & 
-		\textcolor{white}{\textbf{Nome}} & 
-		\textcolor{white}{\textbf{Range Accettazione}} & 
-		\textcolor{white}{\textbf{Range Ottimalità}} \\
-		\endfirsthead
-		\rowcolor{white}\multicolumn{3}{C{8cm}}{\textit{Continua nella pagina successiva...}}\\
-	    \endfoot
-	    \rowcolor{white}\caption{Tabella delle metriche}
-	    \endlastfoot
-		\hline
-		\textbf{MPD1} & 
-		Indice Gulpease & 
+\centering
+\begin{longtable}{C{2.5cm} C{4cm} C{4cm}}
+\rowcolor{coloreRosso}
+\textcolor{white}{\textbf{Metrica}}&
+\textcolor{white}{\textbf{Valori accettabile}}&
+\textcolor{white}{\textbf{Valore ottimale}}\\	
+\endhead
+		MPD1 &  
 		70-100\% & 
 		90-100\% \\
-		\textbf{MPD2} & 
-		Errori ortografici (EO) & 
+		MPD2 & 
 		100\% corretto & 
 		100\% corretto \\
-		\textbf{MPD3} & 
-		Copertura dei requisiti (CDR) & 
+		MPD3 & 
 		100\% dei requisiti obbligatori &
-		100\% dei requisiti obbligatori \\
-		\textbf{MPD4} & 
-		Code Coverage (CC) & 
-		100\% &
-		100\% \\
-		\textbf{MPD5} & 
-		Source Line of Code (SLOC) & 
-		da definire &
-		da definire \\
-		\textbf{MPD6} & 
-		Averege Cyclomatic complexity (ACC) & 
+		100\% di tutti i requisiti \\
+		MPD6 &  
 		15 &
 		10 \\
 \end{longtable}
