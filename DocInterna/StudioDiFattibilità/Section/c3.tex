@@ -9,9 +9,9 @@ L'azienda proponente è \textit{SyncLab}.
 Sebbene l'azienda non impone tecnologie specifiche per lo sviluppo del server o dell'interfaccia, vi sono comunque delle scelte preferenziali da considerare nello svolgimento del progetto:
 \begin{itemize}
 \item Utilizzo di \glo{Java} e di \glo{Angular} per lo sviluppo della parte di \glo{back-end} e di \glo{front-end} della componente web del sistema;
-\item Per la gestione delle mappe (heatmap ecc.) il framework \glo{Leaflet} (\url{https://leafletjs.com});
+\item Per la gestione delle mappe (heatmap ecc.) il \glo{framework} \glo{Leaflet} (\url{https://leafletjs.com});
 \item Utilizzo di protocolli asincroni per le comunicazioni tra le diverse componenti;
-\item Utilizzo del pattern Publisher/Subscriber, e adozione del protocollo \glo{MQTT} ("MQ Telemetry Transport" o "Message Queue Telemetry Transport") di facile implementazione e ampia diffusione in applicazioni \glo{M2M} (MachineToMachine) e \glo{IoT} (InternetOfThings).
+\item Utilizzo del \glo{pattern} Publisher/Subscriber, e adozione del protocollo \glo{MQTT} ("MQ Telemetry Transport" o "Message Queue Telemetry Transport") di facile implementazione e ampia diffusione in applicazioni \glo{M2M} (MachineToMachine) e \glo{IoT} (InternetOfThings).
 \end{itemize}
 Per la parte di machine learning l'azienda dà ampia libertà, sebbene ci siano delle tecnologie consigliate:
 \begin{itemize}
@@ -21,14 +21,14 @@ Per la parte di machine learning l'azienda dà ampia libertà, sebbene ci siano 
 Infine, per facilitare la comprensione delle librerie consigliate, l'azienda propone delle guide e qualche altra risorsa online.
 
 \subsection{Vincoli}
-La proponente suggerisce un'architettura in grado di implementare quello che si definisce essere un sistema reattivo, in grado cioè di soddisfare le seguenti caratteristiche: 
+L' azienda proponente suggerisce un'architettura in grado di implementare quello che si definisce essere un sistema reattivo, in grado cioè di soddisfare le seguenti caratteristiche: 
 \begin{itemize}
 \item \textbf{Responsive}: la richiesta di un servizio deve sempre avere una risposta, anche quando si verifica un guasto; 
 \item \textbf{Resilient}: i servizi devono poter essere ripristinati a seguito di guasti; 
 \item \textbf{Elastic}: i servizi devono poter essere scalati in base all'effettiva domanda; 
 \item \textbf{Message-driven}: i servizi devono rispondere a quello che accade, non tentare di controllare ciò che fa.  
 \end{itemize}
-\'E richiesto che tutte le componenti applicative siano correlate da test unitari e d’integrazione. Inoltre il sistema deve essere testato nella sua interezza tramite test \textit{end-to-end}. 
+É richiesto che tutte le componenti applicative siano correlate da test unitari e d'integrazione. Inoltre il sistema deve essere testato nella sua interezza tramite test \textit{end-to-end}. 
 
 \subsection{Aspetti positivi}
 \begin{itemize}
