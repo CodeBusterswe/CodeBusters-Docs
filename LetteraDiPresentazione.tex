@@ -2,16 +2,13 @@
 \usepackage{eurosym}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{Utility/Template}
 \usepackage{float}
 \usepackage{multirow}
 \usepackage[table]{xcolor} 
 \usepackage{longtable}
-\usepackage[top=2.0cm, bottom=4.0cm, left=2.2cm, right=2.2cm]{geometry}
 \usepackage[italian]{babel}
-\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\definecolor{coloreGrigio}{HTML}{525252}
-\definecolor{coloreGrigietto}{HTML}{DFBDA1}
-\definecolor{coloreRosso}{HTML}{882B21}
+\pagenumbering{gobble}
 \input{Utility/Strings.tex}
 
 
@@ -70,7 +67,7 @@
                 \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Matricola}} & \textcolor{white}{\textbf{Ruolo di progetto}}\\
                 \endhead 
                 \SG{} & 1187566 & Analista \\
-                \BM{} & 9999999 & Responsabile \\
+                \BM{} & 1193109 & Responsabile \\
                 \RA{} & 1187504 & Verificatore \\
                 \SH{} & 1102482 & Analista \\
                 \PA{} & 9999999 & Amministratore \\
@@ -79,6 +76,8 @@
             \end{longtable}
         }
         Cordiali saluti,
-        \closing{\BM{}, \\ \textit{\Responsabile{}}} %\includegraphics[width=.6\linewidth]{DocEsterna/PianoDiProgetto/Section/Images/Enrico.png}}
+        \begin{flushright}
+        	\closing{\BM{}, \\ \textit{\Responsabile{}} \\\includegraphics[width=.6\linewidth]{Utility/Images/firmaBM.png}} 
+        \end{flushright}
     \end{letter}
 \end{document}
