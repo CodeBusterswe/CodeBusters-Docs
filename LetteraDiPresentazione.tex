@@ -1,0 +1,84 @@
+\documentclass[11pt]{letter}
+\usepackage{eurosym}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage[table]{xcolor} 
+\usepackage{longtable}
+\usepackage[top=2.0cm, bottom=4.0cm, left=2.2cm, right=2.2cm]{geometry}
+\usepackage[italian]{babel}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\definecolor{coloreGrigio}{HTML}{525252}
+\definecolor{coloreGrigietto}{HTML}{DFBDA1}
+\definecolor{coloreRosso}{HTML}{882B21}
+\input{Utility/Strings.tex}
+
+
+%logo intestazione
+\address{\VT{} \\ \CR{} \\ Università degli Studi di Padova \\ Dipartimento di Matematica \\ Via Trieste, 63\\ 35121 Padova }
+
+
+\begin{document}
+    \begin{letter}
+        { Egregio \VT{},\\Egregio \CR{},}
+        \begin{minipage}{.4\textwidth}
+            \begin{flushleft}
+                \includegraphics[width=1.5\textwidth]{Utility/Images/logo2.png}
+            \end{flushleft}
+        \end{minipage}
+        \begin{minipage}{.5\textwidth}
+            \begin{flushright}
+                \includegraphics[width=.4\linewidth]{Utility/Images/logoUnipd.png}
+            \end{flushright}
+        \end{minipage}
+        {    
+        \begin{flushleft}
+            Corso di Ingegneria del Software\\ Gruppo \Gruppo{}\\ 
+        \end{flushleft}
+        }
+        \opening{ Con la presente il gruppo \Gruppo{} intende comunicarvi la scelta e l'impegno alla realizzazione del progetto da voi commissionato, denominato:}
+        \begin{center}
+           \textbf{\NomeProgetto{}} 
+        \end{center}
+        proposto dall'azienda \textbf{\Proponente{}}.\\
+        Si allegano tutti i documenti, che trattano in maniera approfondita gli aspetti di pianificazione, normazione, qualifica e analisi:
+        \begin{itemize}
+        	\item \AdRv{1.0.0};
+            \item \Glossariov{1.0.0};
+            \item \PdPv{1.1.0};
+            \item \PdQv{1.0.0}.
+            \item \NdPv{1.0.0};
+            \item \SdFv{1.0.0}.
+        \end{itemize}
+        Inoltre sono allegati anche i verbali esterni ed interni:
+        \begin{itemize}
+            \item VE\_2020\_12\_17;
+            \item VI\_2020\_10\_27;
+            \item VI\_2020\_11\_10;
+            \item VI\_2020\_11\_26;
+            \item VI\_2020\_12\_14;
+            \item VI\_2020\_12\_20.
+        \end{itemize}
+        Il gruppo stima di consegnare il prodotto entro il 03/05/2020 con un preventivo di \euro{} 13.355,00, come specificato nel documento \PdPv{1.0.0}.\\
+        Per completezza, inseriamo di seguito la lista dei membri del gruppo, con nome, cognome, matricola e ruolo principale fino a questo momento.
+        {
+            \rowcolors{2}{coloreGrigietto}{white}
+            \renewcommand{\arraystretch}{2}
+            \begin{longtable}{ C{4cm} C{4cm} C{4cm}}
+                \rowcolor{coloreRosso}
+                \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Matricola}} & \textcolor{white}{\textbf{Ruolo di progetto}}\\
+                \endhead 
+                \SG{} & 1187566 & Analista \\
+                \BM{} & 9999999 & Responsabile \\
+                \RA{} & 1187504 & Verificatore \\
+                \SH{} & 1102482 & Analista \\
+                \PA{} & 9999999 & Amministratore \\
+                \ZM{} & 1123576 & Verificatore \\
+                \SP{} & 1161625 & Analista \\
+            \end{longtable}
+        }
+        Cordiali saluti,
+        \closing{\BM{}, \\ \textit{\Responsabile{}}} %\includegraphics[width=.6\linewidth]{DocEsterna/PianoDiProgetto/Section/Images/Enrico.png}}
+    \end{letter}
+\end{document}
