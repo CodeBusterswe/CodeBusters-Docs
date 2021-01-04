@@ -7,7 +7,7 @@ Le aspettative del gruppo \Gruppo{} nell'utilizzo di questo processo sono:
 \begin{itemize}
 	\item Verificare ogni fase rispettando criteri precisi, consistenti e modificabili se necessario;
 	\item Automatizzare il più possibile le attività del processo;
-	\item Rispettare gli obiettivi di copertura indicati nel \PdQv;
+	\item Rispettare gli obiettivi di copertura indicati nel \PdQv{};
 	\item Verificare correttamente per ottenere successo in fase di validazione.
 \end{itemize}
 
@@ -65,14 +65,23 @@ Il processo di verifica del codice rappresenta l'unione delle attività di anali
 	    \endlastfoot
 		\hline
 		\textbf{Statica} & 
-		Verificare che siano rispettate le regole di buona programmazione preimposte dal gruppo. & 
+		Verificare che siano rispettati i principi di buona programmazione preimpostati dal gruppo. & 
 		Verificatori \newline Programmatori & 
 		Analisi di flusso dei dati, verifica formale del codice ecc. \\
 		\textbf{Dinamica} & 
-		Trovare bug ed errori eseguendo il prodotto software.  & 
+		Trovare \glo{bug} ed errori eseguendo il prodotto software.  & 
 		Verificatori \newline Programmatori & 
 		Test di unità, di integrazione, di sistema, di regressione, di accettazione. \\
 \end{longtable}
+
+\paragraph{Principi di buona programmazione}
+Il gruppo si pone come obiettivo quello di scrivere codice facilmente verificabile, favorendo il parallelismo tra i processi di sviluppo e verifica. I principi da rispettare sono:
+\begin{itemize}
+	\item Riflettere nel codice il \glo{design} progettato, utilizzando una programmazione strutturata;
+	\item Separare le interfacce dalla loro implementazione (interfacce esposte, implementazioni nascoste);
+	\item Massimizzare l'incapsulamento (\glo{information hiding});
+	\item Usare tipi specializzati per specificare dati, aumentando il potere espressivo del sistema. 
+\end{itemize}
 
 \paragraph{Analisi di flusso dei dati} 
 Tipo di analisi statica del codice che accerta che il programma in verifica non acceda in nessuna sua parte a variabili prive di valore, quindi non ancora scritte. Controlla l'assenza di dati globali.
@@ -83,16 +92,17 @@ Tipo di analisi statica del codice che ne prova la sua correttezza rispetto ai r
 \paragraph{Test} 
 La scrittura dei test è la parte essenziale dell'analisi dinamica del codice. Tale attività ha lo scopo di rivelare al programmatore errori o \glo{bug} riscontrabili a run-time. Di conseguenza i test sono utili solo se falliscono. \\
 L'esecuzione dei test deve essere ripetibile. Ottima pratica è renderla il più possibile automatica. \\
-L'obiettivo del gruppo è rispettare gli standard di qualità dettati nel \PdQv. \\
+L'obiettivo del gruppo è rispettare gli standard di qualità dettati nel \PdQv{}. \\
 I test si distinguono in:
 \begin{itemize}
 	\item \textbf{Test di unità (TU)}: verificano l'unità, ossia la più piccola parte di codice verificabile indipendentemente dalle altre (singolo metodo o singola classe);
 	\item \textbf{Test di integrazione (TI)}: verificano le componenti del sistema, rilevando errori in fase di progettazione;
 	\item \textbf{Test di sistema (TS)}: verificano il comportamento dell'intero sistema, controllando se rispetta le specifiche tecniche;
-	\item \textbf{Test di regressione (TR)}: verificano che nuove modifiche apportate non abbiano creato errori in altri parti del programma;
-	\item \textbf{Test di accettazione (TA)}: verificano errori a livello di \glo{UI}, relativi a requisiti o casi d'uso concordati con il proponente.
+	\item \textbf{Test di regressione (TR)}: verificano che nuove modifiche apportate non abbiano creato errori in altre parti del programma, già precedentemente testate e corrette;
+	\item \textbf{Test di accettazione (TA)}: verificano errori a livello di \glo{UI}, relativi a requisiti o casi d'uso concordati con il \glo{proponente}. Coincidono con il collaudo del prodotto finito.
 \end{itemize}
 
+\subparagraph{Classificazione dei test}
 Questi test sono identificati tramite un codice formato dai seguenti campi:
 \begin{center}
 \textbf{T[TipologiaTest][ImportanzaRequisito]*[TipologiaRequisito]*[IdNumerico]} 
@@ -112,7 +122,7 @@ Singolarmente essi rappresentano:
 \end{itemize}
  
 \subsubsection{Strumenti per la verifica}
-Per il processo di verifica applicato ai documenti scritti in \LaTeX{} il gruppo ha deciso di utilizzare il correttore automatico dell'editor TeXmaker, che individua le parole grammaticalmente scorrette sottolineandole in rosso. I verificatori, attraverso i metodi di lettura sopra citati, devono occuparsi di rilevare possibili ripetizioni, errori di lessico o sintassi.  \\
+Per il processo di verifica applicato ai documenti scritti in \LaTeX{} il gruppo ha deciso di utilizzare il correttore automatico dell'editor \glo{Texmaker}, che individua le parole grammaticalmente scorrette sottolineandole in rosso. I \glo{verificatori}, attraverso i metodi di lettura sopra citati, devono occuparsi di rilevare possibili ripetizioni, errori di lessico o sintassi.  \\
 \linebreak
 Per il processo di verifica applicato al codice il gruppo non si è ancora riunito per decidere quali strumenti software utilizzare per effettuare analisi statica e dinamica. Ciò sarà sicuramente argomento di discussione nei prossimi incontri interni.
 
