@@ -1,10 +1,12 @@
 \subsubsection{UC9 - Visualizzazione errore scelta visualizzazione}
 \begin{itemize}
 	\item \textbf{Attore primario}: Utente.
-	\item \textbf{Precondizioni}: L'utente prova a visualizzare un grafico, l'utente non ha caricato alcun dato o non ha scelto alcuna dimensione.
+	\item \textbf{Precondizioni}: L'utente ha caricato i dati e prova a visualizzare un grafico.
 	\item \textbf{Postcondizioni}: L'utente visualizza un messaggio di errore e il grafico non viene visualizzato.
 	\item \textbf{Scenario principale}:
 		\begin{enumerate}
+		\item L'utente non seleziona il tipo di grafico da visualizzare;
+		\item L'utente preme sulla funzionalità "Visualizza".
 			\item L'utente visualizza un messaggio di errore esplicativo;
 			\item L'utente clicca "OK" per continuare.
 		\end{enumerate}

@@ -1,38 +1,38 @@
 \section{Descrizione Generale}
 \subsection{Obbiettivi del prodotto}
-L'obbiettivo del progetto è la realizzazione di una applicazione che permette la visualizzazione di dati con molte dimensioni, a supporto della fase esplorativa dell'analisi dei dati, con l'utilizzo di tecnologie web.
+L'obbiettivo del progetto è la realizzazione di un'applicazione che permette la visualizzazione di dati a molte dimensioni, come supporto della fase esplorativa della loro analisi, con l'utilizzo di tecnologie web.
 \subsection{Funzioni del prodotto}
-L'applicazione si occupa di analizzare dati a molte dimensioni (difficilmente interpretabile dall'uomo) inviati dall'utente e restituirli sotto forma di grafico (di diversi tipi a seconda della richiesta) a dimensioni ridotte, che può quindi essere interpretato facilmente dall'utente. \'E richiesta, perciò, la possibilità di ricevere dei file in input (per esempio di tipo csv) contenenti i dati richiesti.
+L'applicazione si occupa di analizzare dati a molte dimensioni e di restituire dei grafici che, grazie all'aiuto di specifici algoritmi di riduzione dimensionale, risultano essere più comprensibili e significativi. In questo modo il grafico scelto dall'utente può diventare molto utile per estrapolare informazioni che in un primo momento potevano essere nascoste o poco chiare. I \glo{dataset} possono essere reperiti dall'apposito \glo{database} oppure possono essere caricati dall'utente nel caso in cui ne possieda. Per agevolare il processo esplorativo, l'utente ha la possibilità, in base al grafico scelto, di apportare alcune modifiche in modo da raffinare l'elaborazione sullo specifico set di dati in esame.\\ Per un'eventuale gestione di dati in più sessioni di lavoro, sarà possibile salvare le informazioni in un file scaricabile, che potrà essere successivamente caricato sulla piattaforma ripristinando la sessione nel punto in cui era stata interrotta.
 \subsection{Caratteristiche degli utenti}
-Il progetto non prevede come requisito la presenza di diverse categorie di utenza e non è necessaria una funzionalità di autenticazione/registrazione dell'utente.
+Il progetto non prevede come requisito la presenza di diverse categorie di utenza e non è necessaria una funzionalità di autenticazione: chiunque ha accesso alle complete funzionalità del prodotto. 
 \subsection{Piattaforme di esecuzione}
-Il progetto sarà costituito da un insieme di pagine web accessibili dai browser più recenti come Google Chrome o Mozilla Firefox; non è richiesto, come requisito, una completa compatibilità con ulteriori browser.
+Il progetto sarà costituito da un insieme di pagine web accessibili dai browser più recenti come \glo{Google Chrome} o \glo{Mozilla Firefox}; non è richiesto, come requisito, una completa compatibilità con browser meno diffusi.
 \subsection{Obblighi di progettazione}
-Il prodotto finale è soggetto a vincoli progettuali obbligatori ed opzionali, così come specificato all’interno del \glo{capitolato} C4. I vincoli obbligatori sono però da considerare come dei forti consigli che rendono la formazione del progetto molto più semplice rispetto all'uso di diverse tecnologie e non sono regole precise da dover rispettare a tutti i costi.
+Il prodotto finale è soggetto a vincoli progettuali obbligatori ed opzionali, così come specificato all’interno del \glo{capitolato}. I vincoli obbligatori sono però da considerare come dei forti consigli che rendono la formazione del progetto molto più semplice rispetto all'uso di diverse tecnologie.
 I vincoli obbligatori sono i seguenti:
 \begin{itemize}
-	\item l'applicazione deve essere sviluppata in tecnologia \glo{HTML}/\glo{CSS}/\glo{JavaScript} utilizzando la libreria \glo{D3.js};
-	\item la parte server di supporto alla presentazione nel browser e alle query ad un database \glo{SQL} o \glo{NoSQL} potrà essere sviluppata in \glo{Java} con server \glo{Tomcat} o in \glo{Javascript} con server \glo{Node.js};
-	\item i dati da visualizzare dovranno poter avere almeno fino a 15 dimensioni (o un numero di dimensioni tale da permettere l'uso della riduzione dimensionale senza l'utilizzo di scorciatoie), ma deve essere possibile anche visualizzare dati con meno dimensioni;
-	\item i dati devono poter essere forniti al sistema di visualizzazione sia con query ad un database che da file in formato \glo{CSV} preparati precedentemente;
-	\item dovranno essere presentabili almeno le seguenti visualizzazioni:
+	\item L'applicazione deve essere sviluppata in tecnologia \glo{HTML}/\glo{CSS}/\glo{JavaScript} utilizzando la libreria \glo{D3.js};
+	\item La parte server di supporto alla presentazione nel browser e alle query ad un database \glo{SQL} o \glo{NoSQL} potrà essere sviluppata in \glo{Java} con server \glo{Tomcat} o in \glo{Javascript} con server \glo{Node.js};
+	\item I dati da visualizzare dovranno poter avere almeno fino a 15 dimensioni (o un numero di dimensioni tale da permettere l'uso della riduzione dimensionale senza l'utilizzo di scorciatoie), ma deve essere possibile anche visualizzare dati con meno dimensioni;
+	\item I dati devono poter essere forniti al sistema di visualizzazione sia con query ad un database che da file in formato \glo{CSV} preparati precedentemente;
+	\item Dovranno essere presentabili almeno le seguenti visualizzazioni:
 	\begin{itemize}
 		\item \glo{Scatter plot Matrix} (fino ad un massimo di 5 dimensioni);
 		\item \glo{Force Field};
 		\item \glo{Heat Map};
 		\item \glo{Proiezione Lineare Multi Asse}.
 	\end{itemize}
-	\item l' applicazione dovrà ordinare i punti nel grafico "Heat map" per evidenziare i "cluster" presenti nei dati.
+	\item L' applicazione dovrà ordinare i punti nel grafico Heat map per evidenziare i cluster presenti nei dati.
 \end{itemize}
 Il tema della visualizzazione dei dati multidimensionali è vasto e ricco di spunti, perciò qualunque proposta verrà valutata dall'azienda e accettata come requisito opzionale se ritenuta valida; il proponente elenca comunque delle attività che saranno ben accettate:
 \begin{itemize}
 	\item Altri grafici adatti alla visualizzazione dei dati con più di tre dimensioni;
-	\item Utilizzo di funzioni di calcolo della distanza diverse dalla distanza “Euclidea” in tutte le
+	\item Utilizzo di funzioni di calcolo della distanza diverse dalla \glo{distanza “Euclidea”} in tutte le
 visualizzazioni che dipendono da tale concetto;
 	\item Utilizzo di funzioni di “forza” diverse da quelle previste in automatico dal grafico “force
 based” di \glo{D3.js};
 	\item Analisi automatiche per evidenziare situazioni di particolare interesse. Esempi di questa
-possibilità si possono vedere in “ggobi” e “Orange Canvas”;
+possibilità si possono vedere in \glo{ggobi} e \glo{Orange Canvas};
 	\item Algoritmi di preparazione del dato per la visualizzazione, cioè anziché eseguire la
-trasformazione direttamente nella visualizzazione far precedere un passo di trasformazione;
+trasformazione direttamente nella visualizzazione far precedere un passo di trasformazione.
 \end{itemize}
