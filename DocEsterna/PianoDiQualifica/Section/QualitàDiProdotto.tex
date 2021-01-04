@@ -29,6 +29,10 @@ Con questo termine si intende la capacità del prodotto di riuscire a svolgere t
 \item \textbf{Tolleranza agli errori}: la gestione degli errori dovrà essere tale da permettere di avere sempre un alto livello di prestazioni;
 \item \textbf{Previdenza}: evitare che malfunzionamenti o operazioni illegali si manifestino.
 \end{itemize}
+\subparagraph{Metrica utilizzata}
+\begin{itemize}
+\item MPD9 Densità di failure
+\end{itemize}
 \paragraph{Usabilità}
 Il prodotto dovrà essere comprensibile e graficamente armonioso in modo da rendere piacevole l'esperienza dell'utente. Gli obiettivi di usabilità sono:
 \begin{itemize}
@@ -37,15 +41,21 @@ Il prodotto dovrà essere comprensibile e graficamente armonioso in modo da rend
 \item \textbf{Operabilità}: le funzioni devono essere compatibili con le aspettative dell'utente;
 \item \textbf{Attrattiva}: il software deve essere piacevole all'occhio.
 \end{itemize} 
-\subparagraph{Metrica utilizzata}
+\subparagraph{Metriche utilizzate}
 \begin{itemize}
 \item MPD4 Average Cyclomatic Complexity
+\item MPD6 Facilità di utilizzo
+\item MPD7 Facilità apprendimento funzionalità
 \end{itemize}
 \paragraph{Efficienza}
 L'efficienza è la capacità di raggiungere un fine con il minor utilizzo di tempo e risorse. Per quanto riguarda il prodotto questo dovrà essere:
 \begin{itemize}
 \item \textbf{Veloce}: le risposte all'input dell'utente devono essere quanto più possibili veloci e corrette;
 \item \textbf{Leggero}: il software dovrà utilizzare meno risorse possibili dell'utente.
+\end{itemize}
+\subparagraph{Metrica utilizzata}
+\begin{itemize}
+\item MPD5 Tempo medio di risposta
 \end{itemize}
 \paragraph{Manutenibilità}
 Un prodotto, per avere tale capacità, dovrà permettere future correzioni e modifiche senza che ciò rischi di compromettere l'intero progetto. Le caratteristiche che il software deve avere sono:
@@ -55,11 +65,19 @@ Un prodotto, per avere tale capacità, dovrà permettere future correzioni e mod
 \item \textbf{Stabilità}: dopo la modifica non devono insorgere altri problemi relativi alla incompatibilità con altre parti di codice;
 \item \textbf{Testabilità}: i test sulle modifiche effettuate devono essere facilmente implementati.
 \end{itemize}
+\subparagraph{Metrica utilizzata}
+\begin{itemize}
+\item MPD8 Comprensione del codice
+\end{itemize}
 \paragraph{Portabilità}
 \'E la capacità di poter funzionare in diversi ambienti. Per avere tale capacità il prodotto dovrà avere le seguenti caratteristiche:
 \begin{itemize}
 \item \textbf{Adattabilità}: il software dovrà poter essere eseguito in numerosi browser senza che debbano essere effettuate delle modifiche;
 \item \textbf{Sostituibilità}: il software deve poter sostituire un prodotto con lo stesso fine e che viene eseguito sullo stesso browser. 
+\end{itemize}
+\subparagraph{Metrica utilizzata}
+\begin{itemize}
+\item MPD10 Versioni del browser supportate
 \end{itemize}
 
 \rowcolors{2}{coloreGrigietto}{white}
@@ -85,4 +103,22 @@ Un prodotto, per avere tale capacità, dovrà permettere future correzioni e mod
 		MPD4 &  
 		15 &
 		10 \\
+		MPD5 &  
+		5 secondi &
+		4 secondi \\
+		MPD6 &  
+		6 &
+		5 \\
+		MPD7 &  
+		15 minuti &
+		10 minuti\\
+		MPD8 &  
+		60-100\% &
+		80-100\% \\
+		MPD9 &  
+		30\% &
+		20\% \\
+		MPD10 &  
+		80\% &
+		100\% \\
 \end{longtable}
