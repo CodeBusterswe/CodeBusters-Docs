@@ -56,8 +56,7 @@ Per favorire una migliore organizzazione e divisione del lavoro è stato deciso 
 \begin{description}
 	\item[CodeBusters-Docs] : per il versionamento dei documenti. \\
 	Riferimento: \url{https://github.com/Panz99/CodeBusters-Docs}
-	\item[???] : per il versionamento del codice. Il suo utilizzo è successivo alla revisione dei requisiti. \\
-	Riferimento: \url{???}
+	\item[CodeBusters-Codes] : per il versionamento del codice. Il suo utilizzo è successivo alla \textit{Revisione dei Requisiti}, perciò non è ancora stato creato. 
 \end{description}
 In questa prima versione delle \NdPv si tratta la struttura del solo \glo{repository} CodeBusters-Docs. 
 
@@ -65,28 +64,26 @@ In questa prima versione delle \NdPv si tratta la struttura del solo \glo{reposi
 L'organizzazione del lavoro collaborativo è così riassunta:
 \begin{itemize}
 	\item Ramo principale main in cui è presente la sola documentazione pronta alla revisione;	
-	\item Ramo develop in cui effettuare periodicamente il merge dai vari rami minori;
+	\item Ramo develop in cui effettuare periodicamente il \glo{merge} dai vari rami minori;
 	\item Rami derivanti dal develop con nomi parlanti, ognuno dedicato alla stesura di uno specifico documento (l'idea fondante è quella del \glo{Git feature branch workflow});
-	\item Ramo fixTemplate per evitare errori sul template al momento del merge dei rami minori nel develop.
+	\item Ramo ficTemplate per evitare errori sul template al momento del merge dei rami minori nel develop.
 \end{itemize}
-Nel \textit{main} i file sono contenuti nella cartella RR (Revisione dei Requisiti), con l'obiettivo di crearne una nuova per ogni revisione futura. \\
+Nel \textit{main} i file sono contenuti nella cartella RR (\textit{Revisione dei Requisiti}), con l'obiettivo di crearne una nuova per ogni revisione futura. \\
 Il file \textit{.gitignore} è l'unico esterno a cartelle e dichiara esplicitamente l'estensione dei file automaticamente generati da \LaTeX{} da non tracciare, poiché poco utili allo scopo del \glo{repository}. \\
 Gli altri file sono invece organizzati in ulteriori cartelle dentro la RR:
 \begin{itemize}
 	\item \textbf{DocEsterna}: contiene l'\AdRv, il \PdPv, il \PdQv, il \Glossariov, i \textit{verbali esterni} ;
 	\item \textbf{DocInterna}: contiene lo \SdFv, le \NdPv, i \textit{verbali interni};
-	\item \textbf{Utility}: contiene file di utilità generale come il template dei documenti, comandi \LaTeX{} per velocizzare la redazione e il logo del gruppo.
+	\item \textbf{Utility}: contiene file di utilità generale come il template dei documenti, comandi \LaTeX{} per velocizzare la redazione e immagini utilizzate.
 \end{itemize}
 	
-
 \paragraph{Gestione dei cambiamenti in CodeBuster-Docs}
-La separazione del flusso di lavoro tra i vari documenti da redarre permette una notevole diminuzione dei conflitti e quindi delle modifiche da apportare per errore. Il punto focale è che il ramo main rimanga pulito da ogni tipo di errore, per cui non è utilizzabile da nessun membro del gruppo fino a che ciascun responsabile non abbia dato l'approvazione al corrispettivo documento. Solo in quel momento è permesso il merge del ramo develop nel main. \\
+La separazione del flusso di lavoro tra i vari documenti da redarre permette una notevole diminuzione dei conflitti e quindi delle modifiche da apportare per errore. Il punto focale è che il ramo main rimanga pulito da ogni tipo di errore, per cui non è utilizzabile da nessun membro del gruppo fino a che ciascun responsabile non abbia dato l'approvazione al corrispettivo documento. Solo in quel momento è permesso il \glo{merge} del ramo develop nel main. \\
 I cambiamenti da gestire sui documenti possono essere:
-\begin{description}
-	\item[Modifiche minori] : riguardano errori grammaticali, lessicali o di sintassi, che possono essere corretti dai redattori senza l'approvazione del responsabile;
-	\item[Modifiche generali] : riguardano cambiamenti più generali come la struttura del documento o convenzioni da utilizzare, e richiedono il consulto con il responsabile che potrà accettare o declinare la proposta di modifica.
-\end{description} 
-
+\begin{itemize}
+	\item \textbf{Modifiche minori}: riguardano errori grammaticali, lessicali o di sintassi, che possono essere corretti dai redattori senza l'approvazione del responsabile;
+	\item \textbf{Modifiche generali}: riguardano cambiamenti più generali come la struttura del documento o convenzioni da utilizzare, e richiedono il consulto con il responsabile che potrà accettare o declinare la proposta di modifica.
+\end{itemize}
 
 
 
