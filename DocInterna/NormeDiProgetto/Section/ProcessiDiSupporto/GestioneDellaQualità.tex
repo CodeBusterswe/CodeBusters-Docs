@@ -168,8 +168,13 @@ Alcuni parametri per comprendere la tabella seguente:
 	\item \textbf{Numero parole (N\textsubscript{par})}: numero di parole nell'intero documento;
 	\item \textbf{Funzionalità mancanti (N\textsubscript{fm})}: numero di funzionalità non implementate;
 	\item \textbf{Funzionalità individuate (N\textsubscript{fi})}: numero di funzionalità individuate;
+	\item \textbf{Linee di commento (N\textsubscript{com})}: numero di righe di commento;
+	\item \textbf{Linee di commento (N\textsubscript{cod})}: numero di righe di codice;
+	\item \textbf{Test falliti (T\textsubscript{fal})}: test eseguiti sul programma ma falliti;
+	\item \textbf{Test eseguiti (T\textsubscript{ese})}: test totali eseguiti sul programma;
+	\item \textbf{\glo{Browser} supportati (B\textsubscript{sup})}: browser dove il software può essere eseguito;
+	\item \textbf{Browser richiesti (B\textsubscript{ric})}: numero di browser richiesti dal proponente.*\
 \end{itemize}
-
 \rowcolors{2}{coloreGrigietto}{white}
 \renewcommand{\arraystretch}{1.5}
 \renewcommand\extrarowheight{1.5pt}
@@ -200,7 +205,28 @@ Alcuni parametri per comprendere la tabella seguente:
 		Averege Cyclomatic complexity (ACC) & 
 		Indica in numero di cammini indipendenti presenti nel programma (misurabile attraverso il grafo di controllo di flusso). &
 		- \\
+		\textbf{MPD5} & 
+		Tempo medio di risposta & 
+		Tempo medio impiegato dal software per rispondere a una richiesta utente o svolgere un'attività di sistema. &
+		- \\
+		\textbf{MPD6} & 
+		Facilità di utilizzo & 
+		Numero di click necessari con cui l'utente raggiunge la funzionalità cercata. &
+		- \\
+		\textbf{MPD7} & 
+		Facilità apprendimento funzionalità & 
+		Numero di minuti necessari all'utente per apprendere le funzionalità del prodotto software. &
+		- \\
+		\textbf{MPD8} & 
+		Comprensione del codice & 
+		Può essere compresa dal rapporto tra linee di codice e linee di commenti. &
+		$(\frac{N_{com}}{N_{cod}}) \cdot 100 $ \\
+		\textbf{MPD8} & 
+		Densità di failure & 
+		Indica l'affidabilità del prodotto e si può ricavare dalla percentuale di test falliti sui test eseguiti. &
+		$(\frac{T_{fal}}{T_{ese}}) \cdot 100 $ \\
+		\textbf{MPD9} & 
+		Versioni del browser supportate & 
+		La percentuale di versioni di browser supportate rispetto a quelle richieste. &
+		$(\frac{B_{sup}}{B_{ric}}) \cdot 100 $  \\
 \end{longtable}
- 
-
-  
