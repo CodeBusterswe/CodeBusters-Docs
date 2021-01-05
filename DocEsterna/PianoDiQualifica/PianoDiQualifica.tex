@@ -12,6 +12,7 @@
 \titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
 \titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{0.5em}
 
+\definecolor{apricot}{rgb}{0.94, 0.87, 0.8}
 
 \begin{document}
 \input{Section/Comandi.tex}
@@ -25,6 +26,8 @@
 \newpage
 \listoftables
 \newpage
+\listoffigures
+\newpage
 \input{Section/Introduzione.tex}
 \newpage
 \input{Section/QualitàDiProcesso.tex}
@@ -37,6 +40,7 @@
 \input{Section/ResocontoAttivitàDiVerifica.tex}
 \newpage
 \appendix
+\setcounter{section}{1}%
 \input{Section/ValutazioneMiglioramento.tex}
 
 \end{document}
