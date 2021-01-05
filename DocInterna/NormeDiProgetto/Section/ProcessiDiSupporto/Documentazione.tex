@@ -239,7 +239,37 @@ Le immagini sono centralizzate e presentano un numero e una didascalia esplicati
 \paragraph{Diagrammi}
 
 Sia i diagrammi \glo{UML} che i diagrammi di \glo{Gantt} vengono riportati come immagini e quindi sono soggetti alle regole precedentemente esposte.
-
+\subsubsection{Metriche}
+Per poter ottenere una documentazione con una buona qualità si è deciso di utilizzare le seguenti metriche.
+\rowcolors{2}{coloreGrigietto}{white}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand\extrarowheight{1.5pt}
+\begin{longtable}{C{1.5cm} C{4.5cm} C{5.5cm} C{5cm}}
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Codice}} & 
+		\textcolor{white}{\textbf{Nome}} & 
+		\textcolor{white}{\textbf{Descrizione}} & 
+		\textcolor{white}{\textbf{Formula}} \\
+		\endfirsthead
+	    \endfoot
+	    \rowcolor{white}\caption{Metriche per la qualità dei documenti}
+	    \endlastfoot
+		\hline
+		\textbf{MPD1} & 
+		Indice Gulpease & 
+		Descrive la leggibilità del documento. & 
+		$ 89 + \frac{300 \cdot N_{fr} - 10 \cdot N_{lett}}{N_{par}}$ \\
+		\textbf{MPD2} & 
+		Errori ortografici (EO) & 
+		Verifica sulla presenza di errori ortografici. & 
+		- \\
+\end{longtable}
+		Alcuni parametri per comprendere la tabella seguente:
+	\begin{itemize}
+		\item \textbf{Numero frasi (N\textsubscript{fr})}: numero di frasi nell'intero documento;
+		\item \textbf{Numero lettere (N\textsubscript{lett})}: numero di lettere nell'intero documento;
+		\item \textbf{Numero parole (N\textsubscript{par})}: numero di parole nell'intero documento;
+	\end{itemize}
 \subsubsection{Strumenti}
 \paragraph{\LaTeX{}}
 Per la stesura dei documenti, il gruppo utilizza \LaTeX{}, un linguaggio di markup per la preparazione di testi, basato sul programma di composizione tipografica \TeX{}.
@@ -249,12 +279,3 @@ Per scrivere il codice \LaTeX{}, il gruppo ha utilizzato Texmaker. \Gruppo{} ha 
 
 \paragraph{Draw.io}
 Un diagramma \glo{UML} viene prodotto con l'utilizzo di Draw.io. Il gruppo ha scelto questo strumento perché non è richiesto scaricare alcun software per progettare un diagramma; inoltre rispetto a molti programmi simili offre maggiori funzionalità.
-
-
-
-
-
-
-
-
-

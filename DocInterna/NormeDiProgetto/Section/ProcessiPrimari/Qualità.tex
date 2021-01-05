@@ -1,17 +1,145 @@
-\subsection{Qualità}
+\subsection{Qualità nei processi primari}
 \subsubsection{Descrizione}
 In questa sezione si tratterà dei modi con cui si cercherà di mantenere la qualità nelle varie fasi del progetto. Queste sono delle dichiarazioni di intenti, dunque potrebbero subire aggiunte, in caso se ne ritenesse necessario, nelle prossime versioni del documento.
 \subsubsection{Analisi dei requisiti}
 Questa attività ha lo scopo di elencare e tracciare i requisiti e i casi d'uso richiesti dal proponente. Dopo averli formulati e approvati è necessario tracciare i loro cambiamenti. \\
-Per verificare che il software sia di qualità è necessario che tutti i requisiti, almeno quelli obbligatori, siano rispettati.
+Per verificare che il software sia di qualità è necessario che tutti i requisiti, almeno quelli obbligatori, siano rispettati.		
 \subsubsection{Progettazione}
 Al termine della progettazione si dovrà avere un'architettura che ha tradotto i requisiti in unità di codice. \'E importante che ciascuna componente di codice si riferisca ad un requisito, in modo da verificare facilmente che venga soddisfatto. I compiti del programmatore dovranno essere organizzati in modo che ciascuno si occupi di un singolo modulo e non si creino interferenze.\\
-\'E buona prassi scomporre le varie componenti in piccole parti per favorire la manutenibilità. 
-\subsubsection{Codifica}
-In questa fase di elaborazione vera e propria del prodotto dovranno essere seguite delle norme per rendere il codice più leggibile e favorire la manutenibilità:
+\'E buona prassi scomporre le varie componenti in piccole parti per favorire la manutenibilità.
+\paragraph{Metriche}
+Alcuni parametri per capire meglio la tabella seguente:
 \begin{itemize}
-\item \textbf{Linee di commento}: un rapporto basso tra linee di codice e linee di commento può essere spia di carenza di informazioni;
-\item \textbf{Profondità della gerarchia}: avere una gerarchia molto profonda aumenta il numero di dipendenze, meglio limitarla;
-\item \textbf{Complessità dei moduli}: è preferibile avere moduli più semplici e scorporare moduli con più funzionalità per rendere il codice più leggibile e favorire le modifiche. 
-\item \textbf{Numero dei parametri in un metodo}: un numero troppo elevato di parametri in un metodo potrebbe denotare un grado di complessità troppo elevato.
+\item \textbf{Funzionalità mancanti (N\textsubscript{fm})}: numero di funzionalità non implementate;
+\item \textbf{Funzionalità individuate (N\textsubscript{fi})}: numero di funzionalità individuate;
+\item \textbf{\glo{Browser} supportati (B\textsubscript{sup})}: browser dove il software può essere eseguito;
+	\item \textbf{\glo{Browser} richiesti (B\textsubscript{ric})}: numero di browser compatibili con il programma richiesti dal proponente.
 \end{itemize}
+\rowcolors{2}{coloreGrigietto}{white}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand\extrarowheight{1.5pt}
+\begin{longtable}{C{1.5cm} C{4.5cm} C{5.5cm} C{5cm}}
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Codice}} & 
+		\textcolor{white}{\textbf{Nome}} & 
+		\textcolor{white}{\textbf{Descrizione}} & 
+		\textcolor{white}{\textbf{Formula}} \\
+		\endfirsthead
+	    \endfoot
+	    \rowcolor{white}\caption{Metriche per garantire che i requisiti siano rispettati}
+	    \endlastfoot
+		\hline
+		\textbf{MPD3} & 
+		Copertura dei requisiti (CDR) & 
+		Descrive quanti requisiti sono stati implementati nel prodotto software. &
+		$(1 - \frac{N_{fm}}{N_{fi}}) \cdot 100 $ \\
+		\textbf{MPD10} & 
+		Versioni del browser supportate & 
+		La percentuale di versioni di browser supportate rispetto a quelle richieste. &
+		$(\frac{B_{sup}}{B_{ric}}) \cdot 100 $  \\
+\end{longtable} 
+\subsubsection{Codifica}
+In questa fase di elaborazione vera e propria del prodotto dovranno essere seguite delle norme per favorire:
+\begin{itemize}
+\item \textbf{Manutenibilità}: capacità di poter essere facilmente modificato nel tempo e poter aggiungere agevolmente nuove funzionalità;
+\item \textbf{Efficienza}: capacità di ottenere il risultato voluto senza spreco di risorse;
+\item \textbf{Usabilità}: caratteristica di programmi di cui è facile l'apprendimento delle funzionalità e del loro utilizzo;
+\item \textbf{Affidabilità}: capacità del software di operare nonostante errori o malfunzionamenti. 
+\end{itemize}
+\paragraph{Metriche per la manutenibilità}
+Alcuni parametri per comprendere la tabella seguente:
+\begin{itemize}
+	\item \textbf{Linee di commento (N\textsubscript{com})}: numero di righe di commento;
+	\item \textbf{Linee di commento (N\textsubscript{cod})}: numero di righe di codice;
+\end{itemize}
+\rowcolors{2}{coloreGrigietto}{white}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand\extrarowheight{1.5pt}
+\begin{longtable}{C{1.5cm} C{4.5cm} C{5.5cm} C{5cm}}
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Codice}} & 
+		\textcolor{white}{\textbf{Nome}} & 
+		\textcolor{white}{\textbf{Descrizione}} & 
+		\textcolor{white}{\textbf{Formula}} \\
+		\endfirsthead
+	    \endfoot
+	    \rowcolor{white}\caption{Metriche per garantire manutenibilità del prodotto}
+	    \endlastfoot
+		\hline
+		\textbf{MPD4} & 
+		Averege Cyclomatic complexity (ACC) & 
+		Indica in numero di cammini indipendenti presenti nel programma (misurabile attraverso il grafo di controllo di flusso). & -\\
+		\textbf{MPD8} & 
+		Comprensione del codice & 
+		Può essere dedotta dal rapporto tra linee di codice e linee di commenti. &
+		$(\frac{N_{com}}{N_{cod}}) \cdot 100 $ \\
+		
+\end{longtable}
+\paragraph{Metrica per l'efficienza}
+\rowcolors{2}{coloreGrigietto}{white}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand\extrarowheight{1.5pt}
+\begin{longtable}{C{1.5cm} C{4.5cm} C{5.5cm} C{5cm}}
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Codice}} & 
+		\textcolor{white}{\textbf{Nome}} & 
+		\textcolor{white}{\textbf{Descrizione}} & 
+		\textcolor{white}{\textbf{Formula}} \\
+		\endfirsthead
+	    \endfoot
+	    \rowcolor{white}\caption{Metrica per garantire efficienza del prodotto}
+	    \endlastfoot
+		\hline
+		\textbf{MPD5} & 
+		Tempo medio di risposta & 
+		Tempo medio impiegato dal software per rispondere a una richiesta utente o svolgere un'attività di sistema. &
+		- \\
+\end{longtable}		
+\paragraph{Metriche per l'usabilità}
+\rowcolors{2}{coloreGrigietto}{white}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand\extrarowheight{1.5pt}
+\begin{longtable}{C{1.5cm} C{4.5cm} C{5.5cm} C{5cm}}
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Codice}} & 
+		\textcolor{white}{\textbf{Nome}} & 
+		\textcolor{white}{\textbf{Descrizione}} & 
+		\textcolor{white}{\textbf{Formula}} \\
+		\endfirsthead
+	    \endfoot
+	    \rowcolor{white}\caption{Metriche per garantire usabilità del prodotto}
+	    \endlastfoot
+		\hline
+		\textbf{MPD6} & 
+		Facilità di utilizzo & 
+		Numero di click necessari con cui l'utente raggiunge la funzionalità cercata. &
+		- \\
+		\textbf{MPD7} & 
+		Facilità apprendimento funzionalità & 
+		Numero di minuti necessari all'utente per apprendere le funzionalità del prodotto software. & - \\
+\end{longtable}
+\paragraph{Metrica per l'affidabilità}
+Alcuni parametri per comprendere la tabella seguente:
+\begin{itemize}
+\item \textbf{Test falliti (T\textsubscript{fal})}: test eseguiti sul programma ma falliti;
+	\item \textbf{Test eseguiti (T\textsubscript{ese})}: test totali eseguiti sul programma;
+\end{itemize}
+\rowcolors{2}{coloreGrigietto}{white}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand\extrarowheight{1.5pt}
+\begin{longtable}{C{1.5cm} C{4.5cm} C{5.5cm} C{5cm}}
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Codice}} & 
+		\textcolor{white}{\textbf{Nome}} & 
+		\textcolor{white}{\textbf{Descrizione}} & 
+		\textcolor{white}{\textbf{Formula}} \\
+		\endfirsthead
+	    \endfoot
+	    \rowcolor{white}\caption{Metrica per garantire affidabilità del prodotto}
+	    \endlastfoot
+		\hline
+		\textbf{MPD9} & 
+		Densità di failure & 
+		Indica l'affidabilità del prodotto e si può ricavare dalla percentuale di test falliti sui test eseguiti. &
+		$(\frac{T_{fal}}{T_{ese}}) \cdot 100 $ \\
+\end{longtable}		
