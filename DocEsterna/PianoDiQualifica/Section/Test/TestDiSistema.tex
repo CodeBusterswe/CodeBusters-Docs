@@ -8,32 +8,31 @@ Il codice utilizzato per l'identificazione dei test è specificato nelle \NdPv{}
 
 \newpage
 \renewcommand{\arraystretch}{1.5}
-\rowcolors{2}{coloreGrigietto}{white}
-\renewcommand{\arraystretch}{1.5}
+\rowcolors{2}{coloreGrigietto}{apricot}
+%\renewcommand{\arraystretch}{1.5}
 \renewcommand\extrarowheight{1.5pt}
-\begin{longtable}{C{2.5cm} C{12cm} C{2cm}} 
+\begin{longtable}{C{2cm} C{12cm} C{1.5cm}} 
 		\rowcolor{coloreRosso}
 		\textcolor{white}{\textbf{Codice}} & 
 		\textcolor{white}{\textbf{Descrizione}} & 
 		\textcolor{white}{\textbf{Stato}} \\
 		\endfirsthead
-		\rowcolor{white}\multicolumn{3}{C{8cm}}{\textit{Continua nella pagina successiva...}}\\
+		\rowcolor{white}\multicolumn{3}{C{15.5cm}}{\textit{Continua nella pagina successiva...}}\\
 	    \endfoot
-	    \rowcolor{white}\caption{Test di sistema}
 	    \endlastfoot
 		\hline
-\textbf{TS1F1} & L'utente deve poter caricare dei dati nel sistema tramite file CSV o interrogazione al DB. Se tali operazioni non sono eseguite correttamente il caricamento fallisce. Verificare che l'utente possa: 
+\textbf{TS1F1} & L'utente deve poter caricare dei dati nel sistema tramite file \glo{CSV} o interrogazione al \glo{database}. Se tali operazioni non sono eseguite correttamente il caricamento fallisce. Verificare che l'utente possa: 
 					\begin{itemize}
 						\item Visualizzare correttamente la schermata di inserimento dei dati;
-						\item Inserire i dati attraverso file CSV tramite apposito bottone;
-						\item Il file CSV inserito sia sintatticamente corretto; 
-						\item Inserire i dati attraverso una interrogazione al DB tramite query;
+						\item Inserire i dati attraverso file \glo{CSV} tramite apposito bottone;
+						\item Il file \glo{CSV} inserito sia sintatticamente corretto; 
+						\item Inserire i dati attraverso una interrogazione al \glo{database} tramite \glo{query};
 						\item L'interrogazione sia stata effettuata correttamente;
 						\item Sia visualizzato a schermo un messaggio d'esito dell'operazione;
-						\item In caso di errore sia possibile reinserire i dati tramite file CSV o interrogazione al DB dalla stessa schermata.
+						\item In caso di errore sia possibile reinserire i dati tramite file \glo{CSV} o interrogazione al \glo{database} dalla stessa schermata.
 					\end{itemize}					 			    
 			  & NI\\
-\textbf{TS2F2} &  Aiuti all'utente attraverso widget. Verificare che:
+\textbf{TS2F2} &  Aiuti all'utente attraverso \glo{widget}. Verificare che:
 					\begin{itemize}
 						\item Siano tutti facilmente localizzabili dall'utente;
 						\item Siano tutti facilmente utilizzabili dall'utente;
@@ -42,7 +41,7 @@ Il codice utilizzato per l'identificazione dei test è specificato nelle \NdPv{}
  			   & NI \\ 
 \textbf{TS1F3} &  L'applicazione deve fornire diverse visualizzazioni e diversi ridimensionamenti dei dati. Verificare che: 
 					\begin{itemize}
-						\item Siano mostrati a video dei radio button per la selezione del grafico da utilizzare;
+						\item Siano mostrati a video dei bottoni per la selezione del grafico da utilizzare;
 						\item Siano mostrati a video dei bottoni per la selezione delle dimensioni da visualizzare;
 						\item Tutti i bottoni abbiano nomi parlanti;
 						\item Ogni bottone sia selezionabile e permetta la visualizzazione del grafico (eventualmente ridimensionato) corretto.
@@ -50,9 +49,9 @@ Il codice utilizzato per l'identificazione dei test è specificato nelle \NdPv{}
 			   &  NI \\
 \textbf{TS1F3.2} & L'applicazione deve fornire la visualizzazione \glo{Scatter plot Matrix}. Verificare che:
 					\begin{itemize}
-						\item Ogni scatter plot sia corretto rispetto ai dati da rappresentare;
-						\item Ogni variabile sia in relazione con tutte le altre nei diversi scatter plot;
-						\item L'utente possa selezionare quali scatter plot evidenziare perché più rilevanti.
+						\item Ogni \glo{scatter plot} sia corretto rispetto ai dati da rappresentare;
+						\item Ogni variabile sia in relazione con tutte le altre nei diversi \glo{scatter plot};
+						\item L'utente possa selezionare quali \glo{scatter plot} evidenziare perché più rilevanti.
 					\end{itemize}	
 				  & NI \\
 \textbf{TS1F3.3} & L'applicazione deve fornire la visualizzazione \glo{Heat Map} e permettere di riordinare i punti. Verificare che:
@@ -61,7 +60,7 @@ Il codice utilizzato per l'identificazione dei test è specificato nelle \NdPv{}
 						\item I colori utilizzati rappresentano effettivamente la distanza tra i punti da misurare;
 						\item Sia presente un \glo{dendrogramma} ai bordi della mappa;
 						\item L'utente possa ordinare i punti attraverso parametri specifici;
-						\item Il grafico cambi aspetto in real time una volta cambiato parametro d'ordinamento;
+						\item Il grafico cambi aspetto in \glo{real time} una volta cambiato parametro d'ordinamento;
 					\end{itemize}	
 				 & NI \\
 \textbf{TS1F3.4} & L'applicazione deve fornire la visualizzazione \glo{Force Field}. Verificare che:
@@ -90,13 +89,13 @@ Il codice utilizzato per l'identificazione dei test è specificato nelle \NdPv{}
 \textbf{TS3F3.6} & L'applicazione deve fornire altre visualizzazioni con più di tre dimensioni. Verificare che:
 					\begin{itemize}
 						\item L'utente possa selezionare un grafico a più di tre dimensioni;
-						\item IL grafico selezionato sia visualizzato correttamente.
+						\item Il grafico selezionato sia visualizzato correttamente.
 					\end{itemize}	
 				   & NI \\
 \textbf{TS3F4} & Implementare analisi automatiche per evidenziare situazioni di particolare interesse. Verificare che: 
 					\begin{itemize}
 						\item In ogni tipo di grafico sia possibile la visualizzazione dei dati rilevanti;
-						\item Vengano effettivamente esclusi tutti i dati outlier;
+						\item Vengano effettivamente esclusi tutti i \glo{dati outlier};
 						\item Il variare delle dimensioni non modifichi i dati rilevanti.
 					\end{itemize}		
 			   & NI \\
@@ -117,7 +116,7 @@ Il codice utilizzato per l'identificazione dei test è specificato nelle \NdPv{}
 \textbf{TS2F7} & Possibilità di visualizzare contemporaneamente due grafici per confronti. Verificare che: 
 					\begin{itemize}
 						\item Sia presente un bottone che permetta la visualizzazione di un secondo grafico;
-						\item L'utente possa effettivamente selezionare due grafici diversi nel radio button;
+						\item L'utente possa effettivamente selezionare due grafici diversi;
 						\item Il secondo grafico corrisponda a quello selezionato;
 						\item I dati rilevanti siano evidenziati correttamente anche nel secondo grafico.
 					\end{itemize}	
@@ -130,12 +129,14 @@ Il codice utilizzato per l'identificazione dei test è specificato nelle \NdPv{}
 						\item La sessione sia effettivamente ripristinabile;
 					\end{itemize}	
 			   & NI \\
+			   
+			   \rowcolor{white}\caption{Test di sistema}
 \label{testSistema}
 \end{longtable}
-Come si può notare lo stato di tutti i test è NI ("non implementato"). L'implementazione dei test e i loro risultati saranno oggetto della prossima versione del \PdQv.
+Come si può notare lo stato di tutti i test è NI ("non implementato"). L'implementazione dei test e i loro risultati saranno oggetto della prossima versione del \PdQv{}.
 
 \renewcommand{\arraystretch}{1.5}
-\rowcolors{2}{coloreGrigietto}{white}
+\rowcolors{2}{coloreGrigietto}{apricot}
 \renewcommand{\arraystretch}{1.5}
 \renewcommand\extrarowheight{1.5pt}
 \begin{longtable}{C{2.5cm} C{10cm} } 
