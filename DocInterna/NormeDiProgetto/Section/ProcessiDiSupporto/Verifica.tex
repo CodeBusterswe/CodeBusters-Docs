@@ -121,6 +121,114 @@ Singolarmente essi rappresentano:
 	\item \textbf{IdNumerico}: codice numerico crescente che parte da 1 e distingue i test dello stesso tipo (U, I, S, R, A).
 \end{itemize}
  
+\subsubsection{Metriche}
+Alcuni parametri per comprendere la tabella seguente:
+\begin{itemize}
+	\item \textbf{Budget at Completion (BAC)}: numero intero, corrisponde al budget totale allocato per il progetto ;
+
+	\item \textbf{Earned Value (EV) o Budget totale allocato per il progetto}: (\% del lavoro svolto fino al momento del calcolo) * (budjet a disposizione);
+	
+	\item \textbf{Planned Value (PV) o Budgeted Cost of Work Scheduled (BCWS)}: lavoro che si era pianificato di svolgere fino al momento del calcolo;
+	
+	\item \textbf{Actual Cost (AC)}: soldi spesi per il progetto fino al momento del calcolo;
+	
+	\item \textbf{Number of Changed (NoC)}: numero di requisiti cambiati;
+	
+	\item \textbf{Number of Deleted (NoD)}: numero di requisiti eliminati;
+	
+	\item \textbf{Number of Added (NoA)}: numero di requisiti aggiunti;
+	
+	\item \textbf{Total Number of Initial Requirement (TNIR)}: numero totale dei requisiti iniziali;
+	
+	\item \textbf{Number of Satisfied (NoS)}: numero totale di requisiti soddisfatti;
+	
+	\item \textbf{Total number of Requirement (TnR)}: numero totale di requisiti;
+	
+	\item \textbf{Number of Quality Metrics Satisfied (NQMS)}: numero di metriche di qualità soddisfatte;
+	
+	\item \textbf{Total number of Quality Metrics (TQM)}: numero totale di metriche di qualità;
+	
+	\item \textbf{Passed test cases percentage (PTCP)}: numero totale di metriche di qualità;
+	
+	\item \textbf{Failed test cases percentage (FTCP)}: numero totale di metriche di qualità.
+	
+\end{itemize}
+
+\rowcolors{2}{coloreGrigietto}{white}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand\extrarowheight{1.5pt}
+\begin{longtable}{C{1.5cm} C{4.5cm} C{5cm} C{4.5cm}}
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Codice}} & 
+		\textcolor{white}{\textbf{Nome}} & 
+		\textcolor{white}{\textbf{Descrizione}} & 
+		\textcolor{white}{\textbf{Formula}} \\
+		\endfirsthead
+	    \endfoot
+	    \rowcolor{white}\caption{Metriche per i processi}
+	    \endlastfoot
+		\hline
+		\textbf{MPC1} & 
+		Schedule Variance (SV)  & 
+		Descrive se il gruppo sta rispettando o meno i tempi prestabiliti per i processi. & 
+		EV - PV \\
+		
+		\textbf{MPC2} & 
+		Budget Variance (BV) & 
+		Descrive se il gruppo sta rispettando o meno i costi prestabiliti per i processi. & 
+		EV - AC \\
+		
+		\textbf{MPC3} &
+		Budget at Completion (BAC) &
+		Indica il budget totale allocato per il progetto. &
+		Numero intero \\
+		
+		\textbf{MPC4} &
+		Earned Value (EV) &
+		Rappresenta il valore prodotto dal progetto fino al momento della misurazione in seguito alle attività svolte.  &
+		\% completamento $ \cdot BAC $\\
+				
+		\textbf{MPC5} &
+		Planned Value (PV) &
+		Corrisponde al denaro che si dovrebbe guadagnare al momento della misurazione.  &
+		\% lavoro pianificato $ \cdot BAC $ \\	
+			
+		
+		\textbf{MPC6} &
+		Requirements stability index (RSI) &
+		Indica quanto i requisiti variano nel tempo. &
+		$(1 - \frac{NoC + NoD + NoA}{TNIR}) \cdot 100$ \\
+		
+		\textbf{MPC7} &
+		Satisfied obligatory requirements (SOR) &
+		Descrive se il gruppo ha soddisfatto i requisiti obbligatori o meno. &
+		$\frac{NoS}{TnR} \cdot 100$ \\ 
+		
+		\textbf{MPC8} &
+		Code Coverage (CC) &
+		Descrive quanto il codice prodotto è coperto dalla suite di test dinamici. & - \\ 
+		
+		\textbf{MPC9} &
+		Passed test cases percentage (PTCP) &
+		Corrisponde alla percentuale di test passati rispetto alla suite di test dinamici. &
+		Test passati / Test totali \\ 
+		
+		\textbf{MPC10} &
+		Failed test cases percentage (FTCP) &
+		Corrisponde alla percentuale di test falliti rispetto alla suite di test dinamici. &
+		Test falliti / Test Totali \\ 
+		
+		\textbf{MPC11} &
+		Qaulity Metrics Satisfied (QMS) &
+		Descrive la percentuale di metriche di qualità soddisfatte. &
+		$\frac{NQMS}{TQM} \cdot 100$ \\
+		
+		\textbf{MPC12} &
+		Non-calculated Risk (NR) &
+		Indica il numero di rischi non preventivati. &
+		- 
+\end{longtable}
+
 \subsubsection{Strumenti per la verifica}
 Per il processo di verifica applicato ai documenti scritti in \LaTeX{} il gruppo ha deciso di utilizzare il correttore automatico dell'editor \glo{Texmaker}, che individua le parole grammaticalmente scorrette sottolineandole in rosso. I \glo{verificatori}, attraverso i metodi di lettura sopra citati, devono occuparsi di rilevare possibili ripetizioni, errori di lessico o sintassi.  \\
 \linebreak
