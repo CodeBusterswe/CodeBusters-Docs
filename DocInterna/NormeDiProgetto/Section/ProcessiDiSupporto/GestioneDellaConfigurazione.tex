@@ -66,7 +66,7 @@ L'organizzazione del lavoro collaborativo è così riassunta:
 	\item Ramo principale main in cui è presente la sola documentazione pronta alla revisione;	
 	\item Ramo develop in cui effettuare periodicamente il \glo{merge} dai vari rami minori;
 	\item Rami derivanti dal develop con nomi parlanti, ognuno dedicato alla stesura di uno specifico documento (l'idea fondante è quella del \glo{Git feature branch workflow});
-	\item Ramo ficTemplate per evitare errori sul template al momento del merge dei rami minori nel develop.
+	\item Ramo fixTemplate per evitare errori sul template al momento del merge dei rami minori nel develop.
 \end{itemize}
 Nel \textit{main} i file sono contenuti nella cartella RR (\textit{Revisione dei Requisiti}), con l'obiettivo di crearne una nuova per ogni revisione futura. \\
 Il file \textit{.gitignore} è l'unico esterno a cartelle e dichiara esplicitamente l'estensione dei file automaticamente generati da \LaTeX{} da non tracciare, poiché poco utili allo scopo del \glo{repository}. \\
@@ -82,7 +82,7 @@ La separazione del flusso di lavoro tra i vari documenti da redarre permette una
 I cambiamenti da gestire sui documenti possono essere:
 \begin{itemize}
 	\item \textbf{Modifiche minori}: riguardano errori grammaticali, lessicali o di sintassi, che possono essere corretti dai redattori senza l'approvazione del responsabile;
-	\item \textbf{Modifiche generali}: riguardano cambiamenti più generali come la struttura del documento o convenzioni da utilizzare, e richiedono il consulto con il responsabile che potrà accettare o declinare la proposta di modifica.
+	\item \textbf{Modifiche generali}: riguardano cambiamenti più generali come la struttura del documento o convenzioni da utilizzare e richiedono il consulto con il responsabile che potrà accettare o declinare la proposta di modifica.
 \end{itemize}
 
 

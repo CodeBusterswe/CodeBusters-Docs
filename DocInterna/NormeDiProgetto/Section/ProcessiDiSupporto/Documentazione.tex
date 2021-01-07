@@ -19,7 +19,7 @@ Ogni documento passa per queste fasi:
 	
 	\item \textbf{Realizzazione}: viene redatto il contenuto del documento;
 	
-	\item \textbf{Verfica}: ogni sezione del documento è soggetta a revisioni da parte dei verificatori per correggere e, di conseguenza, sistemare;
+	\item \textbf{Verifica}: ogni sezione del documento è soggetta a revisioni da parte dei verificatori per correggere e, di conseguenza, sistemare;
 	
 	\item \textbf{Approvazione}: l'approvatore stabilisce che il documento è stato completato ed è pronto per essere rilasciato.
 	
@@ -30,7 +30,7 @@ Il gruppo ha deciso di creare un template con l'utilizzo di \LaTeX{}, grazie al 
 \subsubsection{Struttura del documento}
 Ogni documento è formato da diverse sezioni, ognuna definita dal proprio file \LaTeX. La parte principale è chiamata "\textit{nomedoc}.tex" (dove \textit{nomedoc} sta ad indicare il nome del documento) ed ha il compito di includere le seguenti componenti:
 \begin{itemize}
-	\item I file \LaTeX{} delle sezioni, che contengono il contenuto del testo vero e prorpio. Se una sezione contiene numerose sottosezioni, allora il file avrà il compito di includere i file delle varie sottosezioni;
+	\item I file \LaTeX{} delle sezioni, che contengono il contenuto del testo vero e proprio. Se una sezione contiene numerose sottosezioni, allora il file avrà il compito di includere i file delle varie sottosezioni;
 	
 	\item Il registro delle modifiche, che contiene una lista delle modifiche effettuate al documento così da renderle tracciabili;
 	
@@ -240,7 +240,13 @@ Le immagini sono centralizzate e presentano un numero e una didascalia esplicati
 
 Sia i diagrammi \glo{UML} che i diagrammi di \glo{Gantt} vengono riportati come immagini e quindi sono soggetti alle regole precedentemente esposte.
 \subsubsection{Metriche}
-Per poter ottenere una documentazione con una buona qualità si è deciso di utilizzare le seguenti metriche.
+Per poter ottenere una documentazione con una buona qualità si è deciso di utilizzare le seguenti metriche.\\
+Alcuni parametri per comprendere la tabella seguente:
+	\begin{itemize}
+		\item \textbf{Numero frasi (N\textsubscript{fr})}: numero di frasi nell'intero documento;
+		\item \textbf{Numero lettere (N\textsubscript{lett})}: numero di lettere nell'intero documento;
+		\item \textbf{Numero parole (N\textsubscript{par})}: numero di parole nell'intero documento;
+	\end{itemize}
 \rowcolors{2}{coloreGrigietto}{white}
 \renewcommand{\arraystretch}{1.5}
 \renewcommand\extrarowheight{1.5pt}
@@ -264,12 +270,6 @@ Per poter ottenere una documentazione con una buona qualità si è deciso di uti
 		Verifica sulla presenza di errori ortografici. & 
 		- \\
 \end{longtable}
-		Alcuni parametri per comprendere la tabella seguente:
-	\begin{itemize}
-		\item \textbf{Numero frasi (N\textsubscript{fr})}: numero di frasi nell'intero documento;
-		\item \textbf{Numero lettere (N\textsubscript{lett})}: numero di lettere nell'intero documento;
-		\item \textbf{Numero parole (N\textsubscript{par})}: numero di parole nell'intero documento;
-	\end{itemize}
 \subsubsection{Strumenti}
 \paragraph{\LaTeX{}}
 Per la stesura dei documenti, il gruppo utilizza \LaTeX{}, un linguaggio di markup per la preparazione di testi, basato sul programma di composizione tipografica \TeX{}.
