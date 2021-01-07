@@ -6,19 +6,19 @@ Lo scopo finale è avere una piattaforma dove i clienti possano registrarsi, ric
 L'azienda proponente è \textit{Red Babel}.
 
 \subsection{Tecnologie coinvolte}
-Il progetto prevede l' adozione di una bozza iniziale dell'architettura dettata dal proponente e di alcune scelte tecnologiche obbligatorie; il fornitore è libero e altamente incoraggiato ad esplorare diverse scelte.
+Il progetto prevede l'adozione di una bozza iniziale dell'architettura dettata dal proponente e di alcune scelte tecnologiche obbligatorie; il fornitore è libero e altamente incoraggiato ad esplorare diverse scelte.
 Questa applicazione deve essere costruita con tecnologia \glo{server-less} con una \glo{API} basata su \glo{HTTP}:
 \begin{itemize}
 \item	Si utilizzano \glo{AWS Lambda} e altre componenti di supporto (\glo{AWS API Gateway}, \glo{AWS DynamoDB}, \glo{AWS S3});
 \item	\glo{CloudFormation} per la gestione delle risorse sopraelencate;
-\item	Serverless \glo{Framework} per l’implementazione di applicazioni \glo{serverless}, facilitandone alcune difficili strutture (come permessi, sottoscrizioni o accesso);
+\item	Serverless \glo{Framework} per l'implementazione di applicazioni \glo{serverless}, facilitandone alcune difficili strutture (come permessi, sottoscrizioni o accesso);
 \item	Il \glo{BFF}(Back end For Front end) sarà implementato in \glo{Next.js} e richiede l' uso di \glo{Typescript} come linguaggio principale;
 \item	il codice sorgente dovrebbe essere pubblicato e aggiornato utilizzando \glo{GitHub} o \glo{GitLab}.
 \end{itemize}
 
 \subsection{Vincoli}
 \'E richiesto l'uso di un numero minimo di ambienti di lavoro: uno locale di ogni sviluppatore, uno per i test (accessibile a tutti gli sviluppatori) e un ambiente pubblico accessibile dagli utenti.
-\'E richiesta l' implementazione di tutti i moduli di alto livello:
+\'E richiesta l'implementazione di tutti i moduli di alto livello:
 \begin{itemize}
 \item	\textbf{EmporioLambda-frontend} (EML-FE): modulo che serve le pagine web richieste dal cliente;
 \item	\textbf{EmporioLambda-backend} (EML-BE): modulo che espone i servizi dell'applicazione;
