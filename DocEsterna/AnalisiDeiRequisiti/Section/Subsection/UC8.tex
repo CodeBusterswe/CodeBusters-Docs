@@ -1,20 +1,32 @@
-\subsubsection{UC8 - Ripristina sessione}
+\subsubsection{UC8 - Personalizzazione Force Field}
 \begin{itemize}
 	\item \textbf{Attore primario}: Utente.
-	\item \textbf{Precondizioni}: L'utente è in possesso di un file \glo{JSON} ottenuto dal salvataggio della sessione [UC7].
-	\item \textbf{Postcondizioni}: Viene visualizzato un messaggio che avvisa l'utente del corretto ripristino della sessione. Viene ripristinata la sessione salvata nel file.
-	\item \textbf{Scenario principale}:
+	
+	\item \textbf{Precondizioni}: L'utente ha scelto il grafico \textit{Force Field} [UC5.3].
+	
+	\item \textbf{Postcondizioni}: Il grafico viene aggiornato.
+	
+	\item \textbf{Scenario principale}: L'utente visualizza:
+	
+\begin{enumerate}
+	\item Una lista con le funzioni di forza fornite dal sistema e può scegliere quale utilizzare tra quelle disponibili; 
+	\item Una lista con tutte i tipi di distanza disponibili nel sistema e può scegliere quale utilizzare per il calcolo. 
+\end{enumerate}	
+	Inoltre l'utente può decidere alcuni stili del grafico, tra cui:
 		\begin{enumerate}
-			\item L'utente accede al sistema;
-			\item L'utente seleziona la funzionalità "ripristina sessione";
-			\item L'utente seleziona il file da caricare.
+			\item Scegliere quale dimensione utilizzare per il colore dei punti nel grafico;
+				
+			\item Scegliere quale dimensione utilizzare per la forma dei punti nel grafico;
+			
+			\item Scegliere quale dimensione utilizzare per l'etichetta dei punti nel grafico;
+			
+			\item Scegliere quale dimensione utilizzare per la dimensione dei punti nel grafico;
+				
 		\end{enumerate}
+		
 	\item \textbf{Estensioni}:
 	\begin{enumerate}[(a)]
-		\item Nel caso in cui il file abbia un formato sbagliato o contiene dati non validi:
-		\begin{enumerate}[1.]
-			\item La sessione non viene ripristinata;
-			\item Viene visualizzato un errore esplicativo [UCX].
-		\end{enumerate}
+		\item ...
 	\end{enumerate}
 \end{itemize}
+

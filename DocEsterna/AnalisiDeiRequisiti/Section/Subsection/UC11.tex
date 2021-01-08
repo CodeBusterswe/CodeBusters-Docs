@@ -1,0 +1,20 @@
+\subsubsection{UC11 - Ripristina sessione}
+\begin{itemize}
+	\item \textbf{Attore primario}: Utente.
+	\item \textbf{Precondizioni}: L'utente è in possesso di un file \glo{JSON} ottenuto dal salvataggio della sessione [UC7].
+	\item \textbf{Postcondizioni}: Viene visualizzato un messaggio che avvisa l'utente del corretto ripristino della sessione. Viene ripristinata la sessione salvata nel file.
+	\item \textbf{Scenario principale}:
+		\begin{enumerate}
+			\item L'utente accede al sistema;
+			\item L'utente seleziona la funzionalità "ripristina sessione";
+			\item L'utente seleziona il file da caricare.
+		\end{enumerate}
+	\item \textbf{Estensioni}:
+	\begin{enumerate}[(a)]
+		\item Nel caso in cui il file abbia un formato sbagliato o contiene dati non validi:
+		\begin{enumerate}[1.]
+			\item La sessione non viene ripristinata;
+			\item Viene visualizzato un errore esplicativo [UCX].
+		\end{enumerate}
+	\end{enumerate}
+\end{itemize}
