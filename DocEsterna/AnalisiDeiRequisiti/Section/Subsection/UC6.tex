@@ -1,31 +1,21 @@
-\subsection{UC6 - Personalizzazione Scatter Plot Matrix}
+\subsection{UC6 - Personalizzazione della visualizzazione scelta}
 \begin{itemize}
 	\item \textbf{Attore primario}: Utente.
 	
-	\item \textbf{Precondizioni}: L'utente ha scelto il grafico \textit{Scatter Plot Matrix} [UC5.1].
+	\item \textbf{Precondizioni}: L'utente ha scelto il grafico tra quelli a disposizione nel sistema [UC5].
 	
 	\item \textbf{Postcondizioni}: Il grafico viene aggiornato con le personalizzazioni impostate dall'utente.
 	
-	\item \textbf{Scenario principale}: L'utente decide quali dimensioni associare ad ogni asse del grafico tra quelle a disposizione. Inoltre può decidere alcune stili del grafico, tra cui:
-		\begin{enumerate}
-			\item Scegliere quale dimensione utilizzare per il colore dei punti nel grafico;
-				
-			\item Scegliere quale dimensione utilizzare per la forma dei punti nel grafico;
-			
-			\item Scegliere quale dimensione utilizzare per l'etichetta dei punti nel grafico;
-			
-			\item Scegliere quale dimensione utilizzare per la dimensione dei punti nel grafico.
-				
-		\end{enumerate}
-		
-	\item \textbf{Estensioni}:
-	\begin{enumerate}[(a)]
-		\item Nel caso in cui l'utente non abbia associato nessuna dimensione in un numero minimo di campi tra quelli disposizione:
-		\begin{enumerate}
-			\item Nessun dato per la modifica della visualizzazione viene inviato al sistema;
-			\item Viene visualizzato un messaggio d'errore esplicativo [UC15]
-		\end{enumerate}
+	\item \textbf{Scenario principale}: L’utente sceglie come impostare le opzioni di personalizzazione del grafico. Verranno applicati, per ciascun campo, dei valori di default che l'utente può decidere di modificare o meno. In caso fosse stato precedentemente caricato un file di ripristino sessione [UCxxxx] i valori di default iniziali diventerebbero quindi quelli specificati in questo file, lasciando comunque l'utente la possibilità di modificarli.
+	
+	\item \textbf{Generalizzazioni}: L'utente imposta i parametri di personalizzazione della visualizzazione scelta:
+	\begin{enumerate}
+	\item Personalizzazione \textit{Scatter Plot Matrix} [UC6.1];
+	\item Personalizzazione \textit{Heat Map} [UC6.2];
+	\item Personalizzazione \textit{Force Field} [UC6.3];
+	\item Personalizzazione \textit{Proiezione Lineare Multi Asse} [UC6.4].
 	\end{enumerate}
+		
 \end{itemize}
 
 
