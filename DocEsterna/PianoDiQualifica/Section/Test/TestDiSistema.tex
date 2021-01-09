@@ -39,73 +39,93 @@ Il codice utilizzato per l'identificazione dei test è specificato nelle \NdPv{}
 						\item Siano effettivamente utili per l'utente.
 					\end{itemize}	
  			   & NI \\ 
-\textbf{TS1F3} &  L'applicazione deve fornire diverse visualizzazioni e diversi ridimensionamenti dei dati. Verificare che: 
+
+\textbf{TS1F3} &  L'utente deve poter selezionare le dimensioni (presenti nel dataset caricato) che desidera utilizzare per l'analisi. Verificare che: 
 					\begin{itemize}
-						\item Siano mostrati a video dei bottoni per la selezione del grafico da utilizzare;
-						\item Siano mostrati a video dei bottoni per la selezione delle dimensioni da visualizzare;
-						\item Tutti i bottoni abbiano nomi parlanti;
-						\item Ogni bottone sia selezionabile e permetta la visualizzazione del grafico (eventualmente ridimensionato) corretto.
+						\item Siano mostrate tutte le dimensioni presenti nel dataset;			   
+						\item Ogni dimensione sia selezionabile;
+						\item Le dimensioni scelte vengano salvate nel sistema.
 					\end{itemize}
 			   &  NI \\
-\textbf{TS1F3.2} & L'applicazione deve fornire la visualizzazione \glo{Scatter plot Matrix}. Verificare che:
+
+
+\textbf{TS2F4} &  L'applicazione deve fornire la possibilità di scegliere l'algoritmo di riduzione dimensionale. Verificare che: 
 					\begin{itemize}
+						\item Sia mostrata a video una lista con tutti gli algoritmi disponibili;			   
+						\item Qualsiasi voce sia selezionabile;
+						\item Che le voci siano specifiche;
+						\item I parametri dell'algoritmo siano personalizzabili;
+						\item Le modifiche vengano effettivamente applicate.
+					\end{itemize}
+			   &  NI \\
+
+\textbf{TS1F5} &  L'applicazione deve fornire diverse visualizzazioni dei dati. Verificare che: 
+					\begin{itemize}
+						\item Siano mostrati a video dei bottoni per la selezione del grafico da utilizzare;
+						\item Tutti i bottoni abbiano nomi parlanti;
+						\item Ogni bottone sia selezionabile e permetta la visualizzazione del grafico corretto.
+					\end{itemize}
+			   &  NI \\
+			   
+			   
+\textbf{TS1F5.1} & L'applicazione deve fornire la visualizzazione \glo{Scatter plot Matrix}. Verificare che:
+					\begin{itemize}
+					\item L'utente possa associare le dimensioni agli assi tra quelle disponibili;						
 						\item Ogni \glo{scatter plot} sia corretto rispetto ai dati da rappresentare;
 						\item Ogni variabile sia in relazione con tutte le altre nei diversi \glo{scatter plot};
 						\item L'utente possa selezionare quali \glo{scatter plot} evidenziare perché più rilevanti.
 					\end{itemize}	
 				  & NI \\
-\textbf{TS1F3.3} & L'applicazione deve fornire la visualizzazione \glo{Heat Map} e permettere di riordinare i punti. Verificare che:
+\textbf{TS1F5.2} & L'applicazione deve fornire la visualizzazione \glo{Heat Map} e permettere di riordinare i punti. Verificare che:
 					\begin{itemize}
+						\item L'utente possa scegliere il tipo di distanza per il calcolo tra quelle disponibili;						
 						\item Ogni variabile sia in relazione con tutte le altre; 
-						\item I colori utilizzati rappresentano effettivamente la distanza tra i punti da misurare;
-						\item Sia presente un \glo{dendrogramma} ai bordi della mappa;
-						\item L'utente possa ordinare i punti attraverso parametri specifici;
-						\item Il grafico cambi aspetto in \glo{real time} una volta cambiato parametro d'ordinamento.
+						\item L'intensità dei colori utilizzati rappresentano effettivamente la distanza tra i punti da misurare;
+						\item L'utente possa ordinare i punti in modo da evidenziare le strutture presenti. Fatta questa operazione, l'utente possa inserire un \glo{dendrogramma} ai bordi del grafico;
 					\end{itemize}	
 				 & NI \\
-\textbf{TS1F3.4} & L'applicazione deve fornire la visualizzazione \glo{Force Field}. Verificare che:
+\textbf{TS1F5.3} & L'applicazione deve fornire la visualizzazione \glo{Force Field}. Verificare che:
 					\begin{itemize}
+					\item L'utente possa scegliere il tipo di distanza per il calcolo tra quelle disponibili;	
 						\item Ogni variabile abbia il suo corrispettivo nodo nel grafico;
 						\item Ogni relazione sia identificata da una linea di collegamento tra i nodi;
 						\item Le distanze nello spazio a molte dimensioni siano correttamente tradotte in forze di attrazione e repulsione tra i nodi;
 						\item Il grafico sia bidimensionale (o tridimensionale).
 					\end{itemize}	
 				 & NI \\
-\textbf{TS3F3.4.1} & L'utente deve poter utilizzare funzioni di "forza" diverse da quelle previste in automatico dal grafico "forcebased" di \glo{D3.js} e funzioni di calcolo della distanza diverse da quella standard Euclidea. Verificare che:
+\textbf{TS3F5.3.1} & L'utente deve poter utilizzare funzioni di "forza" diverse da quelle previste in automatico dal grafico "forcebased" di \glo{D3.js} e funzioni di calcolo della distanza diverse da quella standard Euclidea. Verificare che:
 					\begin{itemize}
 						\item L'utente possa scegliere la funzione di forza da utilizzare per la riduzione dimensionale da usare nel grafico \glo{Force Field};
 						\item L'utente possa scegliere la funzione di calcolo della distanza da utilizzare per la riduzione dimensionale in ogni grafico che la utilizza;
-						\item Il grafico cambi d'aspetto in real time.
+						\item Il grafico cambi d'aspetto in \glo{real time}.
 					\end{itemize}
 				   & NI \\
-\textbf{TS1F3.5} & L'applicazione deve fornire la visualizzazione \glo{Proiezione Lineare Multi Asse}. Verificare che:
+\textbf{TS1F5.4} & L'applicazione deve fornire la visualizzazione \glo{Proiezione Lineare Multi Asse}. Verificare che:
 					\begin{itemize}
 						\item I punti dello spazio multidimensionale siano correttamente posizionati nel piano cartesiano;
-						\item La riduzione a due dimensioni sia corretta;
+						\item L'utente possa inserire sia dimensioni originali che ridotte dall'algoritmo;
 						\item L'utente possa spostare gli assi per individuare le strutture di dati di suo interesse;
 						\item Lo spostamento degli assi avvenga spostando manualmente le frecce degli assi.
 					\end{itemize}	
 				   & NI \\
-\textbf{TS3F3.6} & L'applicazione deve fornire altre visualizzazioni con più di tre dimensioni. Verificare che:
+\textbf{TS3F5.6} & L'applicazione deve fornire altre visualizzazioni con più di tre dimensioni. Verificare che:
 					\begin{itemize}
 						\item L'utente possa selezionare un grafico a più di tre dimensioni;
 						\item Il grafico selezionato sia visualizzato correttamente.
 					\end{itemize}	
 				   & NI \\
-\textbf{TS3F4} & Implementare analisi automatiche per evidenziare situazioni di particolare interesse. Verificare che: 
+\textbf{TS3F6} & Implementare analisi automatiche per evidenziare situazioni di particolare interesse. Verificare che: 
 					\begin{itemize}
 						\item In ogni tipo di grafico sia possibile la visualizzazione dei dati rilevanti;
 						\item Vengano effettivamente esclusi tutti i \glo{dati outlier};
 						\item Il variare delle dimensioni non modifichi i dati rilevanti.
 					\end{itemize}		
 			   & NI \\
-\textbf{TS3F5} & Utilizzo di algoritmi di preparazione del dato per la visualizzazione. Verificare che:
-					\begin{itemize}
-						\item La trasformazione dei dati avvenga correttamente;
-						\item La trasformazione adottata sia utile alla visualizzazione dei dati.
-					\end{itemize}	
+\textbf{TS3F7} & Utilizzo di algoritmi di preparazione del dato per la visualizzazione. Verificare che la trasformazione dei dati avvenga correttamente.
+					
 			   & NI \\
-\textbf{TS3F6} & Presenza di una guida introduttiva per l'utente. Verificare che:
+			   
+\textbf{TS3F8} & Presenza di una guida introduttiva per l'utente. Verificare che:
 					\begin{itemize}
 						\item L'utente possa facilmente trovare e consultare la guida;
 						\item La guida sia scritta un italiano corretto;
@@ -113,7 +133,7 @@ Il codice utilizzato per l'identificazione dei test è specificato nelle \NdPv{}
 						\item La guida spieghi tutti gli utilizzi dell'applicazione.
 					\end{itemize}
 			   & NI \\
-\textbf{TS2F7} & Possibilità di visualizzare contemporaneamente due grafici per confronti. Verificare che: 
+\textbf{TS2F9} & Possibilità di visualizzare contemporaneamente due grafici per confronti. Verificare che: 
 					\begin{itemize}
 						\item Sia presente un bottone che permetta la visualizzazione di un secondo grafico;
 						\item L'utente possa effettivamente selezionare due grafici diversi;
@@ -121,7 +141,7 @@ Il codice utilizzato per l'identificazione dei test è specificato nelle \NdPv{}
 						\item I dati rilevanti siano evidenziati correttamente anche nel secondo grafico.
 					\end{itemize}	
 			   & NI \\
-\textbf{TS2F8} & L'utente può salvare la sessione in corso per ripristinarla in un secondo momento. Verificare che: 
+\textbf{TS2F10} & L'utente può salvare la sessione in corso per ripristinarla in un secondo momento. Verificare che: 
 					\begin{itemize}
 						\item Sia disponibile un bottone per il salvataggio della sessione; 
 						\item Sia disponibile un bottone per il ripristino della sessione;
@@ -141,26 +161,28 @@ Come si può notare lo stato di tutti i test è NI ("non implementato"). L'imple
 \renewcommand\extrarowheight{1.5pt}
 \begin{longtable}{C{2.5cm} C{10cm} } 
 		\rowcolor{coloreRosso}
-		\textcolor{white}{\textbf{CodiceTest}} & 
-		\textcolor{white}{\textbf{CodiciRequsiti}} \\
+		\textcolor{white}{\textbf{Codice Test}} & 
+		\textcolor{white}{\textbf{Codici Requisiti}} \\
 		\endfirsthead
-		\rowcolor{white}\multicolumn{2}{C{8cm}}{\textit{Continua nella pagina successiva...}} \\
+		\rowcolor{white}\multicolumn{2}{C{12.5cm}}{\textit{Continua nella pagina successiva...}} \\
 	    \endfoot
 	    \rowcolor{white}\caption{Tracciamento test - requisiti funzionali}
 	    \endlastfoot
 		\hline
-		\textbf{TS1F1} & R1F1, R1F1.1, R1F1.2, R1F1.3 \\
-		\textbf{TS2F2} & R2F2 \\
-		\textbf{TS1F3} & R1F3, R1F3.1 \\
-		\textbf{TS1F3.2} & R1F3.2 \\
-		\textbf{TS1F3.3} & R1F3.3 \\
-		\textbf{TS1F3.4} & R1F3.4 \\
-		\textbf{TS1F3.4.1} & R1F3.4.1, R1F3.7 \\
-		\textbf{TS1F3.5} & R1F3.5 \\
-		\textbf{TS1F3.6} & R1F3.6 \\
-		\textbf{TS3F4} & R1F4 \\
-		\textbf{TS3F5} & R1F5 \\
-		\textbf{TS3F6} & R1F6 \\
-		\textbf{TS3F7} & R1F7 \\
-		\textbf{TS3F8} & R1F8 \\
+		\textbf{TS1F1} & R1F1, R1F1.1, R1F1.2 \\
+		\textbf{TS2F2} & R2F4 \\
+		\textbf{TS1F3} & R1F5 \\
+		\textbf{TS2F4} & R2F2, R2F15 \\
+		\textbf{TS1F5} &  R1F7 \\
+		\textbf{TS1F5.1} & R1F7.1, R1F7.1.1 \\
+		\textbf{TS1F5.2} & R1F5, R1F7.2, R1F7.2.1 \\
+		\textbf{TS1F5.3} &  R1F5, R1F7.3\\
+		\textbf{TS3F5.3.1} & R3F7.3.1, R3F7.6 \\
+		\textbf{TS1F5.4} & R1F7.4 \\
+		\textbf{TS3F5.6} & R3F7.5 \\
+		\textbf{TS3F6} & R3F8 \\
+		\textbf{TS3F7} & R3F9 \\
+		\textbf{TS3F8} & R3F10 \\
+		\textbf{TS2F9} & R2F11 \\
+		\textbf{TS2F10} & R2F6 
 \end{longtable}
