@@ -1,8 +1,29 @@
-\subsubsection{UC1.1 - Caricamento da file}
+\subsection{UC1.1 - Caricamento dataset}
+
 \begin{itemize}
 	\item \textbf{Attore primario}: Utente.
-	\item \textbf{Precondizioni}: Il sistema è raggiungibile e funzionante. L'utente ha a disposizione un dataset in formato \glo{CSV}.
-	\item \textbf{Postcondizioni}: I dati presenti nel file vengono caricati nel sistema. Viene visualizzato un messaggio che avvisa l'utente del corretto caricamento e della validità dei dati.
-	\item \textbf{Scenario principale}: L'utente sceglie di caricare un dataset personale o ricavato da altre fonti esterne.
+	\item \textbf{Precondizioni}: Il sistema è raggiungibile e funzionante.
+	\item \textbf{Postcondizioni}: Viene visualizzato un messaggio che avvisa l'utente del corretto caricamento dei dati e della loro validità. I dati vengono caricati nel sistema.
+	\item \textbf{Scenario principale}:
+		\begin{enumerate}
+			\item L'utente accede al sistema;
+			\item L'utente sceglie come importare i dati nel sistema.
+			
+		\end{enumerate}
+		
+	\item \textbf{Generalizzazioni}:L'utente sceglie:
+	\begin{enumerate}[(a)]
+			\item La funzionalità caricamento da file [UC1.1.1];
+			\item Sceglie un dataset tra quelli presenti nel database [UC1.1.2].
+			\end{enumerate}
 	
+	\item \textbf{Estensioni}:
+	\begin{enumerate}[(a)]
+		\item Nel caso in cui il file sia in un formato sbagliato o i dati non sono validi:
+		\begin{enumerate}[1.]
+			\item I dati non vengono caricati nel sistema;
+			\item Viene visualizzato un errore esplicativo [UCxxx].
+		\end{enumerate}
+	\end{enumerate}
 \end{itemize}
+
