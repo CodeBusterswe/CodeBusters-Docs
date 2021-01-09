@@ -6,18 +6,18 @@ L'obiettivo del capitolato è la realizzazione di un videogioco a scorrimento ve
 \item Single player;
 \item Multiplayer.
 \end{itemize}  
-Il fulcro del progetto si basa sullo sviluppo della parte multiplayer, affinché si possa giocare in sessioni da 2 a 6 giocatori in modalità fantasma, ossia potendo vedere i movimenti degli avversari ma senza poter interagire con essi.\\
+Il fulcro del progetto è lo sviluppo della parte multiplayer, affinché si possa giocare in sessioni da 2 a 6 giocatori in modalità fantasma, ossia potendo vedere i movimenti degli avversari ma senza poter interagire con essi.\\
 Riguardo il single player, è necessario creare una modalità "infinita", con livelli di difficoltà crescente, senza interruzioni tra un livello e il successivo.\\
 L'azienda proponente è \textit{Zero12}. 
 
 \subsection{Tecnologie coinvolte}
 L'azienda suggerisce l'utilizzo di tecnologie differenti a seconda della componente da implementare:
 \begin{itemize}
-\item Tecnologie \glo{AWS} per la parte server-side, lasciando al fornitore l'analisi sul servizio più adatto per la realizzazione di giochi realtime (per esempio \glo{AWS GameLift}, \glo{AWS Appsync}). \\
+\item Tecnologie \glo{AWS} per la parte server-side, lasciando al fornitore l'analisi sul servizio più adatto per la realizzazione di giochi \glo{real-time} (per esempio \glo{AWS GameLift}, \glo{AWS Appsync}). \\
 Nel caso dell'utilizzo di servizi che richiedano lo sviluppo di codice è vincolato l'uso del linguaggio \glo{Node.js};
-\item \glo{DynamoDB} come database \glo{NoSQL} per il salvataggio delle classifiche e informazioni a supporto dell'applicativo; 
+\item \glo{DynamoDB} come \glo{database} \glo{NoSQL} per il salvataggio delle classifiche e informazioni a supporto dell'applicativo; 
 \item Tecnologie native per la realizzazione della piattaforma mobile. \\ 
-Il fornitore ha la possibilità di scegliere tra \glo{iOS} (preferenza del proponente) o \glo{Android} come sistema operativo dove sviluppare l'interfaccia mobile. \\
+Il fornitore ha la possibilità di scegliere tra \glo{iOS} (preferenza del proponente) o \glo{Android} come sistema operativo dove sviluppare l'interfaccia. \\
 A seconda del sistema operativo i linguaggi da utilizzare sono:
 \begin{itemize}
 \item \glo{Swift} e framework \glo{SwiftUI} (engine \glo{SceneKit}/\glo{SpriteKit}) con target minimo iOS 13;
@@ -31,7 +31,7 @@ I vincoli imposti dall'azienda proponente sono:
 \item Effettuare un'analisi preliminare circa la tecnologia da utilizzare per la componente server. Questa analisi deve essere documentata, giustificando la scelta finale. Il team di \textit{Zero12} si offre in aiuto al fornitore in caso di perplessità a riguardo;
 \item \glo{API} sviluppate in \glo{Node.js};
 \item Architettura di progetto basata a micro-servizi, ossia a tante funzioni base indipendenti, utilizzabili singolarmente senza compromettere la funzionalità delle altre;
-\item Sviluppo della mobile app in ambiente \glo{iOS} o \glo{Android} per testare tutti i micro-servizi e le dinamiche gaming in real-time. 
+\item Sviluppo della mobile app in ambiente \glo{iOS} o \glo{Android} per testare tutti i micro-servizi e le dinamiche gaming in \glo{real-time}. 
 \end{itemize}
 
 \subsection{Aspetti positivi}
@@ -42,7 +42,7 @@ I vincoli imposti dall'azienda proponente sono:
 
 \subsection{Aspetti critici}
 \begin{itemize}
-\item Il capitolato presenta un progetto molto specifico rispetto ad altri. L'ambito di sviluppo è quello gaming e perché si lavori al meglio deve essere d'interesse a tutti i membri del gruppo;
+\item Il capitolato presenta un progetto molto specifico rispetto ad altri. L'ambito di sviluppo è quello gaming e affinché si lavori al meglio deve essere d'interesse a tutti i membri del gruppo;
 \item Le tecnologie consigliate sono nuove a tutti i membri del gruppo e richiedono quindi uno studio preliminare approfondito per essere utilizzate correttamente;
 \item I vincoli imposti risultano essere per lo più generali e se da un lato potrebbe essere un bene per la creatività concessa al gruppo, dall'altro risulta essere anche un rischio durante lo sviluppo. 
 \end{itemize}
