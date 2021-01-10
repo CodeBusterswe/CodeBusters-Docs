@@ -1,0 +1,73 @@
+
+\subsection{Introduzione}
+Per garantire la qualità dei processi è stato utilizzato come riferimento lo standard ISO/IEC/IEEE 12207:1995. Tra i processi elencati dal modello, il gruppo ne ha scelti alcuni che sono stati semplificati e adattati alle necessità del progetto. Questa sezione espone i valori di qualità accettabili sulla base di metriche elencate nelle \NdPv{v 1.0.0}. Di seguito sono esposti i processi selezionati.
+
+\subsection{Processi Primari}
+
+\subsubsection{Fornitura}
+Il processo di fornitura consiste nel scegliere le procedure e le risorse atte a perseguire lo sviluppo del progetto. Successivamente sono riportate le metriche utilizzate, che possono essere consultate dettagliatamente nel documento \NdPv{v 1.0.0}.
+
+\paragraph{Metriche}
+\begin{itemize}
+	\item MPC1 - Schedule Variance (SV);
+	\item MPC2 - Budget Variance (BV);
+	\item MPC3 - Budget at Completion (BAC);
+	\item MPC4 - Earned Value (EV) o Budgeted Cost of Work Performed (BCWP);
+	\item MCP5 - Planned Value (PV) o BCWS (Budgeted Cost of Work Scheduled).
+\end{itemize}
+
+\paragraph{Valori ammissibili}
+{
+\rowcolors{2}{coloreGrigietto}{white}
+\renewcommand{\arraystretch}{1.5}
+\centering
+\begin{longtable}{C{2.5cm} C{7cm} C{4cm}}
+\rowcolor{coloreRosso}
+\textcolor{white}{\textbf{Metrica}}&
+\textcolor{white}{\textbf{Valore accettabile}}&
+\textcolor{white}{\textbf{Valore ottimale}}\\	
+\endhead
+\endfoot
+\rowcolor{white}\caption{Metriche di qualità del processo di fornitura}
+\endlastfoot
+
+MPC1 & $\geq 5\%$ & $\geq 0\%$ \\
+MPC2 & $\geq 5\%$ & $\geq 0\%$ \\
+MPC3 & prev. - 5 \% $ \leq $ BAC $ \leq $ prev. + 5\% & Pari al preventivo  \\
+MPC4 & $\geq 0$  & $\geq 0$ \\
+MPC5 & $\geq 0$  & $\geq 0$ \\
+\end{longtable}
+}
+
+
+
+\subsubsection{Sviluppo}
+Il processo di sviluppo contiene le attività e i compiti per realizzare il prodotto software richiesto. Successivamente sono riportate le metriche utilizzate, che possono essere consultate dettagliatamente nel documento \NdPv{v 1.0.0}.
+
+\paragraph{Metriche}
+\begin{itemize}
+	\item MPC6 - Requirements stability index (RSI);
+	\item MPC7 - Satisfied obligatory requirements (SOR).
+\end{itemize}
+
+
+\paragraph{Valori ammissibili}
+{
+\rowcolors{2}{coloreGrigietto}{white}
+\renewcommand{\arraystretch}{1.5}
+\centering
+\begin{longtable}{C{2.5cm} C{4cm} C{4cm}}
+\rowcolor{coloreRosso}
+\textcolor{white}{\textbf{Metrica}}&
+\textcolor{white}{\textbf{Valore accettabile}}&
+\textcolor{white}{\textbf{Valore ottimale}}\\	
+\endhead
+\endfoot
+\rowcolor{white}\caption{Metriche di qualità del processo di sviluppo}
+\endlastfoot
+
+MPC6 & 70\% & 100\% \\
+MPC7 & 100\% & 100\%
+\end{longtable}
+}
+
