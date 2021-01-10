@@ -1,19 +1,15 @@
 \documentclass[11pt]{letter}
 \usepackage{eurosym}
 \usepackage[utf8]{inputenc}
-\usepackage{graphicx}
 \usepackage{Utility/Template}
 \usepackage{float}
-\usepackage{multirow}
-\usepackage[table]{xcolor} 
-\usepackage{longtable}
-\usepackage[italian]{babel}
 \pagenumbering{gobble}
 \input{Utility/Strings.tex}
 
 
 %logo intestazione
-\address{\VT{} \\ \CR{} \\ Università degli Studi di Padova \\ Dipartimento di Matematica \\ Via Trieste, 63\\ 35121 Padova }
+\rowcolors{2}{white}{white}
+\address{\\ \VT{} \\ \CR{} \\ Università degli Studi di Padova \\ Dipartimento di Matematica \\ Via Trieste, 63\\ 35121 Padova }
 
 
 \begin{document}
@@ -56,13 +52,12 @@
             \item VI\_2020\_11\_26;
             \item VI\_2020\_12\_14;
             \item VI\_2020\_12\_20;
-            \item VI\_2020\_12\_30;
             \item VI\_2021\_01\_07.
         \end{itemize}
         Il gruppo stima di consegnare il prodotto entro il 03-05-2020 con un preventivo di \euro{} 13.355,00, come specificato nel documento \PdPv{1.0.0}.\\
         Per completezza, inseriamo di seguito la lista dei membri del gruppo, con nome, cognome, matricola e ruolo principale fino a questo momento.
         {
-            \rowcolors{2}{coloreGrigietto}{white}
+         	\rowcolors{2}{cPari}{cDispari}
             \renewcommand{\arraystretch}{2}
             \begin{longtable}{ C{4cm} C{4cm} C{4cm}}
                 \rowcolor{coloreRosso}
