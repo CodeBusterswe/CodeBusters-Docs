@@ -52,6 +52,7 @@ pdflatex LetteraDiPresentazione >NUL
 echo Copio i compilati
 copy DocEsterna\AnalisiDeiRequisiti\AnalisiDeiRequisiti.pdf pdf
 copy DocEsterna\PianoDiProgetto\PianoDiProgetto.pdf pdf
+copy DocEsterna\Glossario\Glossario.pdf pdf
 copy DocEsterna\PianoDiQualifica\PianoDiQualifica.pdf pdf
 copy DocEsterna\Verbali\VE_2020_12_17\VE_2020_12_17.pdf pdf
 copy DocInterna\StudioDiFattibilità\StudioDiFattibilità.pdf pdf
