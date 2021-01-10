@@ -7,6 +7,7 @@
 \RequirePackage[italian]{babel}
 \RequirePackage[top=2.0cm, bottom=4.0cm, left=2.2cm, right=2.2cm]{geometry}
 \RequirePackage{graphicx}
+\RequirePackage{fancyhdr}
 \RequirePackage{hyperref}
 \RequirePackage{lastpage}
 \RequirePackage[table]{xcolor}
@@ -15,6 +16,7 @@
 \usepackage{multirow}
 \usepackage[table]{xcolor} 
 \usepackage{longtable}
+\rowcolors{2}{cPari}{cDispari}
 
 \newcommand{\frontespizio}{
 \begin{titlepage}
@@ -42,14 +44,16 @@
 \bgroup
 \def\arraystretch{1.3}
 \centering
-\begin{tabular}{r|L{5cm}}
+\rowcolors{2}{white}{white}
+\setlength\arrayrulewidth{1.5pt}
+\begin{tabular}{r|L{4cm}}
 		\multicolumn{2}{c}{\textbf{Informazioni sul documento} } \\
-		\hline %linea separatrice orrizzontale
-		\textbf{Versione}			& \Versionedoc{}\\ \\
-		\textbf{Approvatori}		& \Approvatore{}\\ \\
-		\textbf{Redattori} 			& \Redattori{}\\ \\
-		\textbf{Verificatori}		& \Verificatori{}\\ \\
-		\textbf{Uso} 				& \Uso \\ \\
+		\hline %linea separatrice orizzontale
+		\textbf{Versione}			& \Versionedoc{}\\
+		\textbf{Approvatori}		& \Approvatore{}\\
+		\textbf{Redattori} 			& \Redattori{}\\
+		\textbf{Verificatori}		& \Verificatori{}\\
+		\textbf{Uso} 				& \Uso \\
 		\textbf{Distribuzione} 		& \Distribuzione{}
 \end{tabular}
 \egroup
@@ -87,7 +91,6 @@
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 %%Colori
-\definecolor{coloreGrigio}{HTML}{525252}
-\definecolor{coloreGrigietto}{HTML}{DFBDA1}
+\definecolor{cDispari}{HTML}{dbd3d3}	%Grigietto
 \definecolor{coloreRosso}{HTML}{882B21}
-\definecolor{colorePanna}{HTML}{f4e1be}
+\definecolor{cPari}{HTML}{fff5f5}	%Rosa chiaro
