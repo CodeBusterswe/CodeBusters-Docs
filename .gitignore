@@ -274,4 +274,8 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
 DocEsterna/PianoDiQualifica/PianoDiQualifica.pdf
+
+# macOS
+.DS_Store
