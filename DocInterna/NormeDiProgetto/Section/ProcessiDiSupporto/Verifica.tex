@@ -1,0 +1,236 @@
+\subsection{Verifica}
+\subsubsection{Scopo}
+Lo scopo di questa sezione è definire come il gruppo ha deciso di attuare il processo di \glo{verifica}. Questo accerta che non siano stati introdotti errori durante lo sviluppo. Essa è svolta ripetutamente su tutti i processi in esecuzione (a ogni incremento della \glo{baseline}).
+
+\subsubsection{Aspettative}
+Le aspettative del gruppo \Gruppo{} nell'utilizzo di questo processo sono:
+\begin{itemize}
+	\item Verificare ogni fase rispettando criteri precisi, consistenti e modificabili se necessario;
+	\item Automatizzare il più possibile le attività del processo;
+	\item Rispettare gli obiettivi di copertura indicati nel \PdQ{};
+	\item Verificare correttamente per ottenere successo in fase di validazione.
+\end{itemize}
+
+\subsubsection{Descrizione}
+Il processo di verifica prevede due attività principali, svolte dai \glo{verificatori}:
+\begin{itemize}
+	\item \textbf{Analisi statica}: non richiede l'esecuzione dell'oggetto di verifica. Per questo motivo è applicabile ad ogni prodotto, accertando la conformità agli standard e convenzioni di stile;
+	\item \textbf{Analisi dinamica}: richiede l'esecuzione dell'oggetto di verifica. Per questo motivo è applicabile al codice sviluppato ma non ai documenti. Accerta, tramite test, il funzionamento di ogni unità del codice presa singolarmente ma anche dell'intero sistema nella sua complessità.
+\end{itemize}
+
+\subsubsection{Verifica della documentazione}
+Il processo di verifica della documentazione consiste in un'analisi statica attraverso strumenti automatici o condotta a mano (\glo{desk check}) con, in questo caso, due possibili metodi di lettura:   
+
+\renewcommand{\arraystretch}{1.5}
+\renewcommand\extrarowheight{1.5pt}
+\begin{longtable}{C{3cm} | C{4cm} C{3cm} C{5cm}}
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Metodo}} & 
+		\textcolor{white}{\textbf{Obiettivo}} & 
+		\textcolor{white}{\textbf{Attori}} & 
+		\textcolor{white}{\textbf{Caratteristica}} \\
+		\endfirsthead
+		\rowcolor{white}\multicolumn{3}{C{8cm}}{\textit{Continua nella pagina successiva...}}\\
+	    \endfoot
+	    \rowcolor{white}\caption{Metodi di lettura}
+	    \endlastfoot
+		\hline
+		\textbf{Walkthrough} & 
+		Rilevare errori attraverso letture ad ampio spettro. & 
+		Verificatori \newline Redattori & 
+		Un errore riscontrato dal verificatore comporta una discussione con il redattore "colpevole" riguardo a una possibile soluzione. \\
+		\textbf{Inspection} & 
+		Rilevare specifici errori attraverso letture mirate. & 
+		Verificatori \newline Redattori & 
+		Il verificatore utilizza una lista di controllo, ossia un elenco di cosa va verificato in modo selettivo. \\
+\end{longtable}
+
+\subsubsection{Verifica del codice}
+Il processo di verifica del codice rappresenta l'unione delle attività di analisi statica e dinamica. 
+
+\renewcommand{\arraystretch}{1.5}
+\renewcommand\extrarowheight{1.5pt}
+\begin{longtable}{C{3cm} | C{4cm} C{3cm} C{5cm}}
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Analisi}} & 
+		\textcolor{white}{\textbf{Obiettivo}} & 
+		\textcolor{white}{\textbf{Attori}} & 
+		\textcolor{white}{\textbf{Esempi}} \\
+		\endfirsthead
+		\rowcolor{white}\multicolumn{3}{C{8cm}}{\textit{Continua nella pagina successiva...}}\\
+	    \endfoot
+	    \rowcolor{white}\caption{Analisi del codice}
+	    \endlastfoot
+		\hline
+		\textbf{Statica} & 
+		Verificare che siano rispettati i principi di buona programmazione preimpostati dal gruppo. & 
+		Verificatori \newline Programmatori & 
+		Analisi di flusso dei dati, verifica formale del codice ecc. \\
+		\textbf{Dinamica} & 
+		Trovare \glo{bug} ed errori eseguendo il prodotto software.  & 
+		Verificatori \newline Programmatori & 
+		Test di unità, di integrazione, di sistema, di regressione, di accettazione. \\
+\end{longtable}
+
+\paragraph{Principi di buona programmazione}
+Il gruppo si pone come obiettivo quello di scrivere codice facilmente verificabile, favorendo il parallelismo tra i processi di sviluppo e verifica. I principi da rispettare sono:
+\begin{itemize}
+	\item Riflettere nel codice il \glo{design} progettato, utilizzando una programmazione strutturata;
+	\item Separare le interfacce dalla loro implementazione (interfacce esposte, implementazioni nascoste);
+	\item Massimizzare l'incapsulamento (\glo{information hiding});
+	\item Usare tipi specializzati per specificare dati, aumentando il potere espressivo del sistema. 
+\end{itemize}
+
+\paragraph{Analisi di flusso dei dati} 
+Tipo di analisi statica del codice che accerta che il programma in verifica non acceda in nessuna sua parte a variabili prive di valore, quindi non ancora scritte. Controlla l'assenza di dati globali.
+
+\paragraph{Verifica formale} 
+Tipo di analisi statica del codice che ne prova la sua correttezza rispetto ai requisiti imposti dalle specifiche. Lo scopo è quello di esplorare tutti i rami possibili di esecuzione, senza doverlo necessariamente eseguire. 
+
+\paragraph{Test} 
+La scrittura dei test è la parte essenziale dell'analisi dinamica del codice. Tale attività ha lo scopo di rivelare al programmatore errori o \glo{bug} riscontrabili a run-time. Di conseguenza i test sono utili solo se falliscono. \\
+L'esecuzione dei test deve essere ripetibile. Ottima pratica è renderla il più possibile automatica. \\
+L'obiettivo del gruppo è rispettare gli standard di qualità dettati nel \PdQ{}. \\
+I test si distinguono in:
+\begin{itemize}
+	\item \textbf{Test di unità (TU)}: verificano l'unità, ossia la più piccola parte di codice verificabile indipendentemente dalle altre (singolo metodo o singola classe);
+	\item \textbf{Test di integrazione (TI)}: verificano le componenti del sistema, rilevando errori in fase di progettazione;
+	\item \textbf{Test di sistema (TS)}: verificano il comportamento dell'intero sistema, controllando se rispetta le specifiche tecniche;
+	\item \textbf{Test di regressione (TR)}: verificano che nuove modifiche apportate non abbiano creato errori in altre parti del programma, già precedentemente testate e corrette;
+	\item \textbf{Test di accettazione (TA)}: verificano errori a livello di \glo{UI}, relativi a requisiti o casi d'uso concordati con il \glo{proponente}. Coincidono con il collaudo del prodotto finito.
+\end{itemize}
+
+\subparagraph{Classificazione dei test}
+Questi test sono identificati tramite un codice formato dai seguenti campi:
+\begin{center}
+\textbf{T[TipologiaTest][ImportanzaRequisito]*[TipologiaRequisito]*[IdNumerico]} 
+\end{center}
+Singolarmente essi rappresentano:
+\begin{itemize}
+	\item \textbf{TipologiaTest}: identifica la tipologia di test tra quelli prima citati:
+		\begin{itemize}
+			\item \textbf{U} : unità;
+			\item \textbf{I} : integrazione;
+			\item \textbf{S} : sistema;
+			\item \textbf{R} : regressione;
+			\item \textbf{A} : accettazione.			 
+		\end{itemize}
+	\item \textbf{ImportanzaRequisito \& TipologiaRequisito}: sono seguiti da '*' perché presenti solo nei codici per i test di sistema e accettazione. Questi campi identificano il requisito che si vuole testare (o più requisiti con la stessa importanza e stessa tipologia), seguendo ciò che è riportato al paragrafo \ref{para:requisiti};
+	\item \textbf{IdNumerico}: codice numerico crescente che parte da 1 e distingue i test dello stesso tipo (U, I, S, R, A).
+\end{itemize}
+ 
+\subsubsection{Metriche}
+Alcuni parametri per comprendere la tabella seguente:
+\begin{itemize}
+	\item \textbf{Budget at Completion (BAC)}: numero intero, corrisponde al budget totale allocato per il progetto;
+
+	\item \textbf{Earned Value (EV) o Budget totale allocato per il progetto}: (\% del lavoro svolto fino al momento del calcolo) * (budjet a disposizione);
+	
+	\item \textbf{Planned Value (PV) o Budgeted Cost of Work Scheduled (BCWS)}: lavoro che si era pianificato di svolgere fino al momento del calcolo;
+	
+	\item \textbf{Actual Cost (AC)}: soldi spesi per il progetto fino al momento del calcolo;
+	
+	\item \textbf{Number of Changed (NoC)}: numero di requisiti cambiati;
+	
+	\item \textbf{Number of Deleted (NoD)}: numero di requisiti eliminati;
+	
+	\item \textbf{Number of Added (NoA)}: numero di requisiti aggiunti;
+	
+	\item \textbf{Total Number of Initial Requirement (TNIR)}: numero totale dei requisiti iniziali;
+	
+	\item \textbf{Number of Satisfied (NoS)}: numero totale di requisiti soddisfatti;
+	
+	\item \textbf{Total number of Requirement (TnR)}: numero totale di requisiti;
+	
+	\item \textbf{Line of Code Executed (LCE)}: linee di codice eseguite dagli algoritmi di test;
+	
+	\item \textbf{Line of Code(LC)}: linee di codice totali;
+	
+	\item \textbf{Number of Quality Metrics Satisfied (NQMS)}: numero di metriche di qualità soddisfatte;
+	
+	\item \textbf{Total number of Quality Metrics (TQM)}: numero totale di metriche di qualità;
+	
+	\item \textbf{Passed test cases percentage (PTCP)}: numero totale di metriche di qualità;
+	
+	\item \textbf{Failed test cases percentage (FTCP)}: numero totale di metriche di qualità.
+	
+\end{itemize}
+
+\renewcommand{\arraystretch}{1.5}
+\renewcommand\extrarowheight{1.5pt}
+\begin{longtable}{C{1.5cm} C{4.5cm} C{5cm} C{4.5cm}}
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Codice}} & 
+		\textcolor{white}{\textbf{Nome}} & 
+		\textcolor{white}{\textbf{Descrizione}} & 
+		\textcolor{white}{\textbf{Formula}} \\
+		\endfirsthead
+	    \endfoot
+	    \rowcolor{white}\caption{Metriche per i processi}
+	    \endlastfoot
+		\hline
+		\textbf{MPC1} & 
+		Schedule Variance (SV)  & 
+		Descrive se il gruppo sta rispettando o meno i tempi prestabiliti per i processi. & 
+		EV - PV \\
+		
+		\textbf{MPC2} & 
+		Budget Variance (BV) & 
+		Descrive se il gruppo sta rispettando o meno i costi prestabiliti per i processi. & 
+		EV - AC \\
+		
+		\textbf{MPC3} &
+		Budget at Completion (BAC) &
+		Indica il budget totale allocato per il progetto. &
+		Numero intero \\
+		
+		\textbf{MPC4} &
+		Earned Value (EV) &
+		Rappresenta il valore prodotto dal progetto fino al momento della misurazione in seguito alle attività svolte.  &
+		\% completamento $ \cdot BAC $\\
+				
+		\textbf{MPC5} &
+		Planned Value (PV) &
+		Corrisponde al denaro che si dovrebbe guadagnare al momento della misurazione.  &
+		\% lavoro pianificato $ \cdot BAC $ \\	
+			
+		
+		\textbf{MPC6} &
+		Requirements stability index (RSI) &
+		Indica quanto i requisiti variano nel tempo. &
+		$(1 - \frac{NoC + NoD + NoA}{TNIR}) \cdot 100$ \\
+		
+		\textbf{MPC7} &
+		Satisfied obligatory requirements (SOR) &
+		Descrive se il gruppo ha soddisfatto i requisiti obbligatori o meno. &
+		$\frac{NoS}{TnR} \cdot 100$ \\ 
+		
+		\textbf{MPC8} &
+		Code Coverage (CC) &
+		Descrive quanto il codice prodotto è coperto dalla suite di test dinamici. & $\frac{LCE}{LC}\cdot 100$ \\ 
+		
+		\textbf{MPC9} &
+		Passed test cases percentage (PTCP) &
+		Corrisponde alla percentuale di test passati rispetto alla suite di test dinamici. &
+		Test passati / Test totali \\ 
+		
+		\textbf{MPC10} &
+		Failed test cases percentage (FTCP) &
+		Corrisponde alla percentuale di test falliti rispetto alla suite di test dinamici. &
+		Test falliti / Test Totali \\ 
+		
+		\textbf{MPC11} &
+		Quality Metrics Satisfied (QMS) &
+		Descrive la percentuale di metriche di qualità soddisfatte. &
+		$\frac{NQMS}{TQM} \cdot 100$ \\
+		
+		\textbf{MPC12} &
+		Non-calculated Risk (NR) &
+		Indica il numero di rischi non preventivati. &
+		Numero intero 
+\end{longtable}
+
+\subsubsection{Strumenti per la verifica}
+Per il processo di verifica applicato ai documenti scritti in \LaTeX{} il gruppo ha deciso di utilizzare il correttore automatico dell'editor \glo{Texmaker}, che individua le parole grammaticalmente scorrette sottolineandole in rosso. I \glo{verificatori}, attraverso i metodi di lettura sopra citati, devono occuparsi di rilevare possibili ripetizioni, errori di lessico o sintassi.  \\
+\linebreak
+Per il processo di verifica applicato al codice il gruppo non si è ancora riunito per decidere quali strumenti software utilizzare per effettuare analisi statica e dinamica. Ciò sarà sicuramente argomento di discussione nei prossimi incontri interni.

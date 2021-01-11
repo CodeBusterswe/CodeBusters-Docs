@@ -1,0 +1,184 @@
+\subsection{Test di sistema}
+In base ai requisiti trovati e riportati nell'\AdRv{v 1.0.0}, il gruppo ha stilato una lista di test di sistema da effettuare per verificarne la correttezza.
+Il codice utilizzato per l'identificazione dei test è specificato dettagliatamente nelle \NdPv{v 1.0.0}, mentre delle sigle utili per comprendere la tabella seguente sono:
+\begin{itemize}
+	\item \textbf{I}: test implementato;
+	\item \textbf{NI}: test non implementato.
+\end{itemize} 
+
+\newpage
+\renewcommand{\arraystretch}{1.5}
+\renewcommand\extrarowheight{1.5pt}
+\begin{longtable}{C{2cm} C{12cm} C{1.5cm}} 
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Codice}} & 
+		\textcolor{white}{\textbf{Descrizione}} & 
+		\textcolor{white}{\textbf{Stato}} \\
+		\endfirsthead
+		\rowcolor{white}\multicolumn{3}{C{15.5cm}}{\textit{Continua nella pagina successiva...}}\\
+	    \endfoot
+	    \endlastfoot
+		\hline
+\textbf{TS1F1} & L'utente deve poter caricare dei dati nel sistema tramite file \glo{CSV} o interrogazione al \glo{database}. Se tali operazioni non sono eseguite correttamente il caricamento fallisce. Verificare che l'utente possa: 
+					\begin{itemize}
+						\item Visualizzare correttamente la schermata di inserimento dei dati;
+						\item Inserire i dati attraverso file \glo{CSV} tramite apposito bottone;
+						\item Il file \glo{CSV} inserito sia sintatticamente corretto; 
+						\item Inserire i dati attraverso una interrogazione al \glo{database} tramite \glo{query};
+						\item L'interrogazione sia stata effettuata correttamente;
+						\item Sia visualizzato a schermo un messaggio d'esito dell'operazione;
+						\item In caso di errore sia possibile reinserire i dati tramite file \glo{CSV} o interrogazione al \glo{database} dalla stessa schermata.
+					\end{itemize}					 			    
+			  & NI\\
+\textbf{TS2F2} &  Aiuti all'utente attraverso \glo{widget}. Verificare che:
+					\begin{itemize}
+						\item Siano tutti facilmente localizzabili dall'utente;
+						\item Siano tutti facilmente utilizzabili dall'utente;
+						\item Siano effettivamente utili per l'utente.
+					\end{itemize}	
+ 			   & NI \\ 
+
+\textbf{TS1F3} &  L'utente deve poter selezionare le dimensioni (presenti nel \glo{dataset} caricato) che desidera utilizzare per l'analisi. Verificare che: 
+					\begin{itemize}
+						\item Siano mostrate tutte le dimensioni presenti nel \glo{dataset};			   
+						\item Ogni dimensione sia selezionabile;
+						\item Le dimensioni scelte vengano salvate nel sistema.
+					\end{itemize}
+			   &  NI \\
+
+
+\textbf{TS2F4} &  L'applicazione deve fornire la possibilità di scegliere l'algoritmo di riduzione dimensionale. Verificare che: 
+					\begin{itemize}
+						\item Sia mostrata a video una lista con tutti gli algoritmi disponibili;			   
+						\item Qualsiasi voce sia selezionabile;
+						\item Che le voci siano specifiche;
+						\item I parametri dell'algoritmo siano personalizzabili;
+						\item Le modifiche vengano effettivamente applicate.
+					\end{itemize}
+			   &  NI \\
+
+\textbf{TS1F5} &  L'applicazione deve fornire diverse visualizzazioni dei dati. Verificare che: 
+					\begin{itemize}
+						\item Siano mostrati a video dei bottoni per la selezione del grafico da utilizzare;
+						\item Tutti i bottoni abbiano nomi parlanti;
+						\item Ogni bottone sia selezionabile e permetta la visualizzazione del grafico corretto.
+					\end{itemize}
+			   &  NI \\
+			   
+			   
+\textbf{TS1F5.1} & L'applicazione deve fornire la visualizzazione \glo{Scatter plot Matrix}. Verificare che:
+					\begin{itemize}
+					\item L'utente possa associare le dimensioni agli assi tra quelle disponibili;						
+						\item Ogni \glo{scatter plot} sia corretto rispetto ai dati da rappresentare;
+						\item Ogni variabile sia in relazione con tutte le altre nei diversi \glo{scatter plot};
+						\item L'utente possa selezionare quali \glo{scatter plot} evidenziare perché più rilevanti.
+					\end{itemize}	
+				  & NI \\
+\textbf{TS1F5.2} & L'applicazione deve fornire la visualizzazione \glo{Heat Map} e permettere di riordinare i punti. Verificare che:
+					\begin{itemize}
+						\item L'utente possa scegliere il tipo di distanza per il calcolo tra quelle disponibili;						
+						\item Ogni variabile sia in relazione con tutte le altre; 
+						\item L'intensità dei colori utilizzati rappresentano effettivamente la distanza tra i punti da misurare;
+						\item L'utente possa ordinare i punti in modo da evidenziare le strutture presenti. Fatta questa operazione, l'utente possa inserire un \glo{dendrogramma} ai bordi del grafico.
+					\end{itemize}	
+				 & NI \\
+\textbf{TS1F5.3} & L'applicazione deve fornire la visualizzazione \glo{Force Field}. Verificare che:
+					\begin{itemize}
+					\item L'utente possa scegliere il tipo di distanza per il calcolo tra quelle disponibili;	
+						\item Ogni variabile abbia il suo corrispettivo nodo nel grafico;
+						\item Ogni relazione sia identificata da una linea di collegamento tra i nodi;
+						\item Le distanze nello spazio a molte dimensioni siano correttamente tradotte in forze di attrazione e repulsione tra i nodi;
+						\item Il grafico sia bidimensionale (o tridimensionale).
+					\end{itemize}	
+				 & NI \\
+\textbf{TS3F5.3.1} & L'utente deve poter utilizzare funzioni di "forza" diverse da quelle previste in automatico dal grafico "forcebased" di \glo{D3.js} e funzioni di calcolo della distanza diverse da quella standard \glo{Euclidea}. Verificare che:
+					\begin{itemize}
+						\item L'utente possa scegliere la funzione di forza da utilizzare per la riduzione dimensionale da usare nel grafico \glo{Force Field};
+						\item L'utente possa scegliere la funzione di calcolo della distanza da utilizzare per la riduzione dimensionale in ogni grafico che la utilizza;
+						\item Il grafico cambi d'aspetto in \glo{real-time}.
+					\end{itemize}
+				   & NI \\
+\textbf{TS1F5.4} & L'applicazione deve fornire la visualizzazione \glo{Proiezione Lineare Multi Asse}. Verificare che:
+					\begin{itemize}
+						\item I punti dello spazio multidimensionale siano correttamente posizionati nel piano cartesiano;
+						\item L'utente possa inserire sia dimensioni originali che ridotte dall'algoritmo;
+						\item L'utente possa spostare gli assi per individuare le strutture di dati di suo interesse;
+						\item Lo spostamento degli assi avvenga spostando manualmente le frecce degli assi.
+					\end{itemize}	
+				   & NI \\
+\textbf{TS3F5.6} & L'applicazione deve fornire altre visualizzazioni con più di tre dimensioni. Verificare che:
+					\begin{itemize}
+						\item L'utente possa selezionare un grafico a più di tre dimensioni;
+						\item Il grafico selezionato sia visualizzato correttamente.
+					\end{itemize}	
+				   & NI \\
+\textbf{TS3F6} & Implementare analisi automatiche per evidenziare situazioni di particolare interesse. Verificare che: 
+					\begin{itemize}
+						\item In ogni tipo di grafico sia possibile la visualizzazione dei dati rilevanti;
+						\item Vengano effettivamente esclusi tutti i \glo{dati outlier};
+						\item Il variare delle dimensioni non modifichi i dati rilevanti.
+					\end{itemize}		
+			   & NI \\
+\textbf{TS3F7} & Utilizzo di algoritmi di preparazione del dato per la visualizzazione. Verificare che la trasformazione dei dati avvenga correttamente.
+					
+			   & NI \\
+			   
+\textbf{TS3F8} & Presenza di una guida introduttiva per l'utente. Verificare che:
+					\begin{itemize}
+						\item L'utente possa facilmente trovare e consultare la guida;
+						\item La guida sia scritta in un italiano corretto;
+						\item La guida sia fruibile da ogni tipo di utente, anche quello meno esperto; 
+						\item La guida spieghi tutti gli utilizzi dell'applicazione.
+					\end{itemize}
+			   & NI \\
+\textbf{TS2F9} & Possibilità di visualizzare contemporaneamente due grafici per confronti. Verificare che: 
+					\begin{itemize}
+						\item Sia presente un bottone che permetta la visualizzazione di un secondo grafico;
+						\item L'utente possa effettivamente selezionare due grafici diversi;
+						\item Il secondo grafico corrisponda a quello selezionato;
+						\item I dati rilevanti siano evidenziati correttamente anche nel secondo grafico.
+					\end{itemize}	
+			   & NI \\
+\textbf{TS2F10} & L'utente può salvare la sessione in corso per ripristinarla in un secondo momento. Verificare che: 
+					\begin{itemize}
+						\item Sia disponibile un bottone per il salvataggio della sessione; 
+						\item Sia disponibile un bottone per il ripristino della sessione;
+						\item La sessione sia salvata correttamente;
+						\item La sessione sia effettivamente ripristinabile.
+					\end{itemize}	
+			   & NI \\
+			   
+			   \rowcolor{white}\caption{Test di sistema}
+\label{testSistema}
+\end{longtable}
+Come si può notare lo stato di tutti i test è NI ("non implementato"). L'implementazione dei test e i loro risultati saranno oggetto della prossima versione del \PdQv{}.
+
+\renewcommand{\arraystretch}{1.5}
+\renewcommand\extrarowheight{1.5pt}
+\begin{longtable}{C{2.5cm} C{10cm} } 
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Codice Test}} & 
+		\textcolor{white}{\textbf{Codici Requisiti}} \\
+		\endfirsthead
+		\rowcolor{white}\multicolumn{2}{C{12.5cm}}{\textit{Continua nella pagina successiva...}} \\
+	    \endfoot
+	    \rowcolor{white}\caption{Tracciamento test - requisiti funzionali}
+	    \endlastfoot
+		\hline
+		\textbf{TS1F1} & R1F1, R1F1.1, R1F1.2 \\
+		\textbf{TS2F2} & R2F4 \\
+		\textbf{TS1F3} & R1F5 \\
+		\textbf{TS2F4} & R2F2, R2F15 \\
+		\textbf{TS1F5} &  R1F7 \\
+		\textbf{TS1F5.1} & R1F7.1, R1F7.1.1 \\
+		\textbf{TS1F5.2} & R1F5, R1F7.2, R1F7.2.1 \\
+		\textbf{TS1F5.3} &  R1F5, R1F7.3\\
+		\textbf{TS3F5.3.1} & R3F7.3.1, R3F7.6 \\
+		\textbf{TS1F5.4} & R1F7.4 \\
+		\textbf{TS3F5.6} & R3F7.5 \\
+		\textbf{TS3F6} & R3F8 \\
+		\textbf{TS3F7} & R3F9 \\
+		\textbf{TS3F8} & R3F10 \\
+		\textbf{TS2F9} & R2F11 \\
+		\textbf{TS2F10} & R2F6 
+\end{longtable}

@@ -1,0 +1,78 @@
+\section{Modello di sviluppo}
+Il gruppo ha deciso di utilizzare il modello incrementale.
+\subsection{Modello incrementale}
+Il modello incrementale prevede rilasci multipli e successivi, ciascuno di questi realizza un incremento di funzionalità.
+\'E richiesta dunque una classificazione preliminare dei requisiti atta ad individuare i più importanti, i quali devono essere sviluppati nei primi incrementi, così da avere fin da subito un prodotto funzionante, che verrà via via integrato.
+L'adozione di questo modello comporta i seguenti vantaggi:
+\begin{itemize}
+\item Le funzionalità primarie hanno priorità nello sviluppo, così facendo queste vengono verificate più volte;
+\item L'avere un prodotto funzionante già dai primi incrementi permette subito al proponente di valutarne le funzioni primarie;
+\item Ogni incremento riduce il rischio di fallimento, con un approccio predisposto ai cambiamenti;
+\item L'analisi dei requisiti può essere raffinata tramite la progettazione di dettaglio ad ogni incremento;
+\item Le modifiche e la correzione degli errori sono più economiche;
+\item Le fasi di verifica e test sono facilitate perché mirate a un singolo incremento.
+\end{itemize}
+\subsection{Incrementi individuati}
+In seguito è riportata la tabella con indicati gli incrementi individuati durante la fase di analisi con il rispettivo obiettivo e i requisiti ad esso associati.
+I requisiti riportati nella tabella includono tutti i requisiti figli. Tutti i requisiti non riportati sono da intendersi soddisfatti, in parte, da ogni incremento.
+Ogni requisito è individuato dal suo codice identificativo, reperibile nel documento \AdRv{}.
+
+\begin{longtable}{C{3cm} C{7cm} C{2cm} C{2cm}}
+\rowcolor{coloreRosso}
+\textcolor{white}{\textbf{Incremento}} & 
+\textcolor{white}{\textbf{Obiettivo dell'incremento}} & 
+\textcolor{white}{\textbf{Requisiti}} &
+\textcolor{white}{\textbf{Casi d'uso}}\\
+\endfirsthead
+\rowcolor{white}\multicolumn{4}{c}{\textit{Continua nella pagina successiva...}}\\
+\endfoot
+\rowcolor{white}\caption{Tabella degli incrementi}
+\endlastfoot
+
+%------------------------------------------
+Incremento 0 & 
+Caricamento dati tramite file e selezione delle dimensioni da utilizzare & 
+R1F1.1 \newline R1F5 & 
+UC1.1.1 \newline UC2\\
+%-----------------------------------------
+Incremento 1 &
+Visualizzazione \glo{Scatter Plot Matrix} & 
+R1F7.1 &  
+UC5.1 \\
+%------------------------------------------
+Incremento 2 & 
+Personalizzazione della visualizzazione Scatter Plot Matrix & 
+R1F7.1.1 \newline R3F12 \newline R3F13& 
+UC6.1\\
+%------------------------------------------
+Incremento 3 & 
+Visualizzazione \glo{Heat Map} e relativa personalizzazione & 
+R1F7.2 \newline R1F7.2.1 \newline R3F7.6 \newline R3F12 \newline R3F13& 
+UC5.2 \newline UC6.2\\
+%------------------------------------------
+Incremento 4 & 
+Visualizzazione \glo{Force Field} e relativa personalizzazione & 
+R1F7.3 \newline R1F7.3.1 \newline R3F7.6 \newline R3F12 \newline R3F13& 
+UC5.3 \newline UC6.3\\
+%------------------------------------------
+Incremento 5 & 
+Visualizzazione \glo{Proiezione Lineare Multi Asse} e relativa personalizzazione & 
+R1F7.4 \newline R1F7.4.1 \newline R3F12 \newline R3F13& 
+UC5.4 \newline UC6.4\\
+%------------------------------------------
+Incremento 6 & 
+Gestione della sessione & 
+R2F6 & 
+UC1.2 \newline UC7\\
+%------------------------------------------
+Incremento 7 & 
+Implementazione di un \glo{database} per il caricamento dati attraverso \glo{query} & 
+R1F1.2 & 
+UC1.1.2\\
+%------------------------------------------
+Incremento 8 & 
+Perfezionamento del codice con correzioni ricevute durante la \textit{Technology Baseline} e dal proponente & 
+Non saranno aggiunte nuove funzionalità software & 
+Non saranno aggiunte nuove funzionalità software\\
+
+\end{longtable}
