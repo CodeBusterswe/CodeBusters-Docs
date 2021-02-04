@@ -1,5 +1,5 @@
 \section{Modello di sviluppo}
-Il gruppo ha deciso di utilizzare il modello incrementale.
+
 \subsection{Modello incrementale}
 Il modello incrementale prevede rilasci multipli e successivi, ciascuno di questi realizza un incremento di funzionalità.
 È richiesta dunque una classificazione preliminare dei requisiti atta ad individuare i più importanti, i quali devono essere sviluppati nei primi incrementi, così da avere fin da subito un prodotto funzionante, che verrà via via integrato.
@@ -12,82 +12,88 @@ L'adozione di questo modello comporta i seguenti vantaggi:
 \item Le modifiche e la correzione degli errori sono più economiche;
 \item Le fasi di verifica e test sono facilitate perché mirate a un singolo incremento.
 \end{itemize}
+
 \subsection{Incrementi individuati}
-In seguito è riportata la tabella con indicati gli incrementi individuati durante la fase di analisi con il rispettivo obiettivo e i requisiti ad esso associati.
-I requisiti riportati nella tabella includono tutti i requisiti figli. Tutti i requisiti non riportati sono da intendersi soddisfatti, in parte, da ogni incremento.
-Ogni requisito è individuato dal suo codice identificativo, reperibile nel documento \AdRv{}.
+In seguito è riportata la tabella con indicati gli incrementi individuati, con il rispettivo obiettivo e i requisiti ad esso associati. 
+I requisiti riportati includono tutti i requisiti figli. Tutti i requisiti non riportati sono da intendersi soddisfatti, in parte, da ogni incremento.
+Ogni requisito è individuato dal suo codice identificativo; per maggiori informazioni fare riferimento all' \AdRv{}.
 
-\begin{longtable}{C{3cm} C{7cm} C{2cm} C{2cm}}
-\rowcolor{coloreRosso}
-\textcolor{white}{\textbf{Incremento}} & 
-\textcolor{white}{\textbf{Obiettivo dell'incremento}} & 
-\textcolor{white}{\textbf{Requisiti}} &
-\textcolor{white}{\textbf{Casi d'uso}}\\
-\endfirsthead
-\rowcolor{white}\multicolumn{4}{c}{\textit{Continua nella pagina successiva...}}\\
-\endfoot
-\rowcolor{white}\caption{Tabella degli incrementi}
-\endlastfoot
+\setlength\colA{1.5cm}
+\setlength\colB{8cm}
+\setlength\colC{4cm}
+\setlength\colD{2cm}
+\setlength\total{\dimexpr\colA+\colB+\colC+\colD+6\tabcolsep\relax}
+\begin{longtable}{C{\colA} C{\colB} C{\colC} C{\colD}}
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Incr.}} & 
+		\textcolor{white}{\textbf{Obbiettivo}} & 
+		\textcolor{white}{\textbf{Requisiti}} & 
+		\textcolor{white}{\textbf{Casi d'uso}} \\
+		\endfirsthead
+	    \rowcolor{white}\multicolumn{4}{C{\total}}{\textit{Continua nella pagina successiva...}}\\
+	    \endfoot
+	    \rowcolor{white}\caption{Tabella dei rischi tecnologici}
+	    \endlastfoot
 
 
-\rowcolor{coloreRosso}\multicolumn{4}{c}{\textcolor{white}{\textbf{Fase di progettazione architetturale}}}\\
+\rowcolor{coloreRossoChiaro}\multicolumn{4}{C{\total}}{\textcolor{white}{\textbf{Fase di progettazione architetturale}}}\\
 %------------------------------------------
-Incremento I &
+I &
 Caricamento dati tramite file e selezione delle dimensioni da utilizzare.& 
-R1F1.1 \newline R1F5 & 
+R1F1.1, R1F5 & 
 UC1.1.1 \newline UC2\\
 %------------------------------------------
-Incremento II &
+II &
 Visualizzazione \glo{Scatter Plot Matrix}.& 
 R1F7.1 & 
 UC5.1\\
 %-----------------------------------------
-\rowcolor{coloreRosso}\multicolumn{4}{c}{\textcolor{white}{\textbf{Fase di progettazione di dettaglio e codifica}}}\\
+\rowcolor{coloreRossoChiaro}\multicolumn{4}{C{\total}}{\textcolor{white}{\textbf{Fase di progettazione di dettaglio e codifica}}}\\
 %-----------------------------------------
-Incremento III &
+III &
 Preparazione alle attività di progettazione e codifica di dettaglio; incremento della documentazione per verifica  e miglioramento continuo.& 
-Non saranno aggiunte nuove funzionalità software & 
-Non saranno aggiunte nuove funzionalità software\\
+- & 
+- \\
 %------------------------------------------
-Incremento IV & 
+IV & 
 Personalizzazione della visualizzazione Scatter Plot Matrix & 
-R1F7.1.1 \newline R3F12 \newline R3F13& 
+R1F7.1.1, R3F12, R3F13 & 
 UC6.1\\
 %------------------------------------------
-Incremento V & 
+V & 
 Visualizzazione \glo{Heat Map} e relativa personalizzazione & 
-R1F7.2 \newline R1F7.2.1 \newline R3F7.6 \newline R3F12 \newline R3F13& 
-UC5.2 \newline UC6.2\\
+R1F7.2, R1F7.2.1, R3F7.6, R3F12, R3F13 & 
+UC5.2, UC6.2\\
 %------------------------------------------
-Incremento VI & 
+VI & 
 Visualizzazione \glo{Force Field} e relativa personalizzazione & 
-R1F7.3 \newline R1F7.3.1 \newline R3F7.6 \newline R3F12 \newline R3F13& 
-UC5.3 \newline UC6.3\\
+R1F7.3, R1F7.3.1, R3F7.6, R3F12, R3F13& 
+UC5.3, UC6.3\\
 %------------------------------------------
-Incremento VII & 
+VII & 
 Visualizzazione \glo{Proiezione Lineare Multi Asse} e relativa personalizzazione & 
-R1F7.4 \newline R1F7.4.1 \newline R3F12 \newline R3F13& 
-UC5.4 \newline UC6.4\\
+R1F7.4, R1F7.4.1, R3F12, R3F13& 
+UC5.4, UC6.4\\
 %------------------------------------------
-Incremento VIII & 
+VIII & 
 Implementazione di un \glo{database} per il caricamento dati attraverso \glo{query}. & 
 R1F1.2 & 
 UC1.1.2\\
 %------------------------------------------
-Incremento IX &
-Incremento della documentazione da allegare al prodotto, preparazione all'esposizioen della \textit{Revisione di Qualifica} e perfezionamento del codice.& 
-Non saranno aggiunte nuove funzionalità software & 
-Non saranno aggiunte nuove funzionalità software\\
-\rowcolor{coloreRosso}\multicolumn{4}{c}{\textcolor{white}{\textbf{Fase di validazione e collaudo}}}\\
+IX &
+Incremento della documentazione da allegare al prodotto, preparazione all'esposizione della \textit{Revisione di Qualifica} e perfezionamento del codice.& 
+- & 
+-\\
+\rowcolor{coloreRossoChiaro}\multicolumn{4}{C{\total}}{\textcolor{white}{\textbf{Fase di validazione e collaudo}}}\\
 %------------------------------------------
-Incremento X & 
+X & 
 Gestione della sessione & 
 R2F6 & 
-UC1.2 \newline UC7\\
+UC1.2, UC7\\
 %------------------------------------------
-Incremento XI & 
+XI & 
 Preparazione all'esposizione della \textit{Revisione di Accettazione}, preparazione al collaudo e incremento della documentazione per verifica e miglioramento continuo.& 
-Non saranno aggiunte nuove funzionalità software & 
-Non saranno aggiunte nuove funzionalità software\\
+- & 
+- \\
 
 \end{longtable}
