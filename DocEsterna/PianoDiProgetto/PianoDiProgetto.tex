@@ -6,6 +6,15 @@
 \usepackage{caption}
 \usepackage{lastpage}
 \usepackage{pdflscape} 
+\usepackage{tikz}
+
+\usepackage{xcolor,pifont}
+\newcommand*\colourcheck[1]{%
+  \expandafter\newcommand\csname #1check\endcsname{\textcolor{#1}{\ding{52}}}%
+}
+\colourcheck{blue}
+\colourcheck{green}
+\colourcheck{red}
 
 \definecolor{coloreRossoChiaro}{HTML}{934037}
 
