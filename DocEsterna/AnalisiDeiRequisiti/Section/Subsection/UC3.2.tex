@@ -2,11 +2,15 @@
 \begin{itemize}
 	\item \textbf{Attore primario}: Utente;
 	\item \textbf{Precondizioni}: L'utente ha caricato i dati e le dimensioni nel sistema [UC1];
-	\item \textbf{Postcondizioni}: 
+	\item \textbf{Postcondizioni}: La nuova dimensione viene salvata nel sistema e resa disponibili all'utente per procedere con la visualizzazione [UC5];
 
-%La scelta viene memorizzata nel sistema e viene resa disponibile una sezione per la personalizzazione dei parametri del calcolo di riduzione dimensionale selezionato [UC4];
-
-La nuove dimensioni vengono salvate nel sistema e rese disponibili all'utente.
-
-	\item \textbf{Scenario principale}: L'utente seleziona un tipo di distanza per la riduzione dimensionale dei dati delle dimensioni selezionate.
+	\item \textbf{Scenario principale}: L'utente seleziona tra le dimensioni disponibili (originarie e derivate da eventuali processi di riduzione dimensionale precedenti) quelle che saranno interessate dal processo di calcolo della distanza. Successivamente, l'utente seleziona un tipo di distanza tra quelle a disposizione.
+	
+	\item \textbf{Generalizzazioni}: L'utente seleziona una delle seguenti opzioni:
+	
+	\begin{enumerate}
+		\item distanza di \glo{\textit{Manhattan}} [UC3.2.1];
+		\item distanza di \glo{\textit{Canberra}} [UC3.2.2];
+		\item distanza di \glo{\textit{Chebyshev}} [UC3.2.3].
+	\end{enumerate}
 \end{itemize}
