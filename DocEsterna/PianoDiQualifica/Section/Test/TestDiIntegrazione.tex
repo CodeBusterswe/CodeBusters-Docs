@@ -1,3 +1,40 @@
 \subsection{Test di integrazione}
 %I test di integrazione verificano come le componenti software si integrino tra di loro.
 %In questa prima versione del \PdQ{} il gruppo non è in grado di stabilire dei test di integrazione, non avendo individuato e testato le componenti del prodotto software.
+Sigle utili per comprendere la tabella seguente:
+\begin{itemize}
+	\item \textbf{I}: test implementato;
+	\item \textbf{NI}: test non implementato.
+\end{itemize} 
+
+\renewcommand{\arraystretch}{1.5}
+\renewcommand\extrarowheight{1.5pt}
+\begin{longtable}{ c|C{12cm}|c } 
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Codice}} & 
+		\textcolor{white}{\textbf{Descrizione}} & 
+		\textcolor{white}{\textbf{Stato}} \\
+		\endfirsthead
+		\rowcolor{white}\multicolumn{3}{c}{\textit{Continua nella pagina successiva...}}\\
+	    \endfoot
+	    \endlastfoot
+
+\textbf{TI1} & 
+Integrazione tra \NomeProgetto{} e database gestita correttamente & 
+NI\\
+
+\textbf{TI2} & 
+\NomeProgetto{} accede ai dati del database & 
+NI\\
+
+\textbf{TI3} & 
+\NomeProgetto{} accede ai dati del database utilizzando una query & 
+NI\\
+
+\textbf{TI4} & 
+\NomeProgetto{} utilizza i dati caricati dal database & 
+NI\\
+
+\rowcolor{white}\caption{Test di integrazione}
+\label{testIntegrazione}
+\end{longtable}
