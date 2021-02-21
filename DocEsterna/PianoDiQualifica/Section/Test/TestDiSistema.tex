@@ -1,14 +1,11 @@
 \subsection{Test di sistema}
 %In base ai requisiti trovati e riportati nell'\AdRv{v 1.0.0}, il gruppo ha stilato una lista di test di sistema da effettuare per verificarne la correttezza.
-Il codice utilizzato per l'identificazione dei test è specificato dettagliatamente nelle \NdPv{v 1.0.0}, mentre delle sigle utili per comprendere la tabella seguente sono:
-\begin{itemize}
-	\item \textbf{I}: test implementato;
-	\item \textbf{NI}: test non implementato.
-\end{itemize} 
 
+{
 \renewcommand{\arraystretch}{1.5}
 \renewcommand\extrarowheight{1.5pt}
-\begin{longtable}{ c|C{12cm}|c } 
+\setlength\arrayrulewidth{1pt}
+\begin{longtable}{ C{2cm} | C{12cm}| C{1.5cm} } 
 		\rowcolor{coloreRosso}
 		\textcolor{white}{\textbf{Codice}} & 
 		\textcolor{white}{\textbf{Descrizione}} & 
@@ -42,6 +39,18 @@ NI\\
 L'utente deve poter calcolare la distanza tra le dimensioni caricate. & 
 NI\\	
 
+\textbf{} & 
+L'utente deve poter calcolare la distanza tra dimensioni tramite distanza di \textit{\glo{Manhattan}}. & 
+NI\\
+
+\textbf{} & 
+L'utente deve poter calcolare la distanza tra dimensioni tramite distanza di \textit{\glo{Canberra}}. & 
+NI\\
+
+\textbf{} & 
+L'utente deve poter calcolare la distanza tra dimensioni tramite distanza di \textit{\glo{Chebyshev}}. & 
+NI\\
+
 \textbf{TS3F7} & 
 L'utente deve poter utilizzare funzioni di calcolo della distanza diverse da quella \glo{Euclidea}. & 
 NI\\	
@@ -50,12 +59,32 @@ NI\\
 L'utente deve poter ridurre le dimensioni caricate attraverso un algoritmo di riduzione dimensionale. & 
 NI\\
 
-\textbf{TS1F-} & 
-L'utente deve poter scegliere l'algoritmo di riduzione dimensionale tra quelli disponibili. & 
+\textbf{} & 
+L'utente deve poter selezionare \textit{\glo{IsoMap}} come algoritmo di riduzione dimensionale. & 
 NI\\
 
-\textbf{TS1F-} & 
-L'utente deve poter modificare i parametri dell'algoritmo di riduzione dimensionale scelto. & 
+\textbf{} & 
+L'utente deve poter selezionare \textit{\glo{LLE}} come algoritmo di riduzione dimensionale. & 
+NI\\
+
+\textbf{} & 
+L'utente deve poter selezionare \textit{\glo{FastMap}} come algoritmo di riduzione dimensionale. & 
+NI\\
+
+\textbf{} & 
+L'utente deve poter selezionare \textit{\glo{t-SNE}} come algoritmo di riduzione dimensionale. & 
+NI\\
+
+\textbf{} & 
+L'utente deve poter modificare il tasso di apprendimento per l'algoritmo \textit{t-SNE}. & 
+NI\\
+
+\textbf{} & 
+L'utente deve poter modificare la \textit{perplessità} per l'algoritmo \textit{t-SNE}. & 
+NI\\
+
+\textbf{} & 
+L'utente deve poter modificare il numero di \textit{\glo{neighbors}} per gli algoritmi \textit{IsoMap} ed \textit{LLE}. & 
 NI\\
 
 \textbf{TS1F-} & 
@@ -70,12 +99,16 @@ NI\\
 L'utente deve poter scegliere la visualizzazione \glo{\textit{Scatter Plot Matrix}}. & 
 NI\\
 
+\textbf{} & 
+L'utente deve poter personalizzare lo stile della visualizzazione scelta. & 
+NI\\
+
 \textbf{TS1F-.1} & 
 In uno \glo{\textit{Scatter Plot Matrix}} l'utente deve poter associare le dimensioni agli assi tra quelle disponibili. & 
 NI\\
 
 \textbf{TS3F-.2} & 
-In uno \textit{Scatter Plot Matrix} l'utente deve poter selezionare i punti per vedere la relazione in ciascun \glo{Scatter Plot} presente. & 
+In uno \textit{Scatter Plot Matrix} l'utente deve poter selezionare i punti per vedere la loro relazione in ciascun \glo{Scatter Plot} presente. & 
 NI\\
 
 \textbf{TS1F-} & 
@@ -139,19 +172,19 @@ L'utente deve poter ripristinare una sessione di lavoro tramite caricamento di u
 NI\\
 
 \textbf{TS1F-} & 
-Si verifichi che la web app sia compatibile con il browser \glo{Firefox} dalla versione xxx. & 
+Verificare che la web app sia compatibile con il browser \glo{Firefox} dalla versione 84. & 
 NI\\
 
 \textbf{TS1F-} & 
-Si verifichi che la \textit{web app} sia compatibile con il browser \glo{Chrome} dalla versione xxx. & 
+Si verifichi che la \textit{web app} sia compatibile con il browser \glo{Chrome} dalla versione 87. & 
 NI\\
 
 \textbf{TS1F-} & 
-Si verifichi che la \textit{web app} sia compatibile con il browser \glo{Safari} dalla versione xxx. & 
+Verificare che la \textit{web app} sia compatibile con il browser \glo{Safari} dalla versione 13.1. & 
 NI\\
 
 \textbf{TS1F-} & 
-Si verifichi che la \textit{web app} sia compatibile con il browser \glo{Edge} dalla versione xxx. & 
+Verificare che la \textit{web app} sia compatibile con il browser \glo{Edge} dalla versione 79. & 
 NI\\
 		   
 \rowcolor{white}\caption{Test di sistema}
@@ -187,3 +220,4 @@ NI\\
 		\textbf{TS2F9} & R2F11 \\
 		\textbf{TS2F10} & R2F6 
 \end{longtable}
+}
