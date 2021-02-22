@@ -28,23 +28,19 @@
 \newpage
 \section{Resoconto}
 \begin{itemize}
-\item \textbf{Proof of Concept}: raggiunto l'incremento I, il gruppo è a buon punto anche nella realizzazione dell'incremento II. Infatti è già possibile visualizzare i dati in uno \glo{Scatter Plot Matrix}. Non sono stati ancora aggiunti dei controlli per la configurazione dei parametri. Si dovrà inoltre effettuare qualche modifica del layout grafico per rendere il prodotto più godibile visivamente. 
+\item \textbf{Proof of Concept}: il gruppo è a buon punto nella realizzazione dell'incremento II ed è già possibile visualizzare i dati in uno \glo{Scatter Plot Matrix}. Il prossimo obbiettivo è l'aggiunta dei controlli per la configurazione di alcuni parametri e della visualizzazione. Si dovrà inoltre effettuare qualche modifica del layout grafico per rendere il prodotto più ordinato e godibile visivamente. 
 
-\item\textbf{Documentazione}: l'\textit{Analisi dei Requisiti} è stata incrementata con nuovi grafici. Nel \textit{Piano di Qualifica} sono stati aggiunti dei grafici al cruscotto, dovranno essere aggiornati appena terminerà l'incremento II.
+\item\textbf{Documentazione}: poiché l'attività di verifica dell'\textit{Analisi dei Requisiti} è quasi ultimata, verranno aggiunti i diagrammi dei nuovi casi d'uso. Anche coloro che stanno lavorando nel \textit{Piano di Qualifica} nei giorni a seguire dovranno iniziare ad aggiornare i grafici delle attività di verifica.
 
-\item\textbf{Distanza euclidea}: è stato deciso di aggiungere la distanza euclidea alla lista degli algoritmi che possono essere applicati ai dataset per la creazione di nuove dimensioni.
+\item\textbf{Versionamento}: il gruppo ha deciso di modificare il metodo di versionamento dei documenti e del software, procedendo con la registrazione di sole versioni già verificate e garantendo così un prodotto sempre corretto e funzionante. Saranno dunque apportati dei cambiamenti ai registri delle modifiche di ciascun documento ed aggiornata l'apposita sezione delle \textit{Norme di Progetto}, così da rendere più ordinato ed esplicativo il cambio di versione.
 
-\item\textbf{Versionamento}: il gruppo ha deciso di modificare il metodo di versionamento dei documenti, saranno dunque apportati dei cambiamenti ai registri delle modifiche di ciascun documento così da rendere più ordinato ed esplicativo il cambio di versione.
+\item \textbf{Requisiti prestazionali}: vista la notevole dimensione di alcuni dataset si è deciso di stabilire dei requisiti prestazionali riguardanti i tempi di risposta. Poiché l'azienda proponente ha messo a disposizione un dataset per fare dei test, il gruppo ha avuto modo di fare alcuni tentativi di possibile utilizzo con le funzionalità finora implementate. Grazie all'utilizzo di alcuni strumenti tutti i dati necessari sono stati registrati per integrare l'\textit{Analisi dei Requisiti}.
 
-\item \textbf{Requisiti prestazionali}: a fronte della verifica di tempi di attesa lunghi per alcuni dataset, si è deciso di stabilire dei requisiti prestazionali riguardanti i tempi di risposta.
-
-\item \textbf{Assegnazione dei ruoli}: il responsabile ha poi comunicato la nuova suddivisione dei ruoli. Si è deciso come suddividere i lavori da completare e sono state assegnate le \glo{tasks} per il prossimo incremento.
-
-\item\textbf{Valutazioni per il miglioramento}: il gruppo ha svolto un'autovalutazione riguardo al lavoro svolto finora e le problematiche che si sono riscontrate. Per ogni problema si è dunque cercato un possibile modo per migliorare la situazione evitando che ciò possa riaccadere in futuro, come illustrato nelle seguenti tabelle.
+\item\textbf{Valutazioni per il miglioramento}: visto l'imminente termine della revisione di progettazione, il gruppo ha svolto un'autovalutazione riguardo al lavoro svolto finora e alle problematiche che si sono riscontrate. Per ogni problema si è dunque riflettuto su come è stato affrontato e su qualche altra possibile soluzione, in modo da evitare rallentamenti in futuro.
 
 \renewcommand{\arraystretch}{1.5}
 \centering
-\begin{longtable}{C{2.5cm} C{6cm} C{5cm}}
+\begin{longtable}{C{3cm} C{6cm} C{6cm}}
 \rowcolor{coloreRosso}
 \textcolor{white}{\textbf{Problema}} &
 \textcolor{white}{\textbf{Descrizione}} &	
@@ -52,16 +48,16 @@
 \endhead
 
 Covid-19 &
-A causa della situazione di emergenza sanitaria dovuta al virus \textit{Covid-19}, fin dall'inizio gli incontri tra i membri si sono dovuti svolgere in modalità virtuale.&
-Il gruppo continuerà ad usare \textit{Discord} e \textit{Telegram} per tenersi costantemente aggiornati sull'andamento dei lavori. \\
+Visto l'andamento della situazione di emergenza sanitaria gli incontri tra i membri si dovranno svolgere ancora in modalità virtuale.&
+Il gruppo continuerà ad usare \textit{Discord} e \textit{Telegram} per tenersi costantemente aggiornato sull'andamento dei lavori. \\
 
-Esami universitari & 
-Alcuni componenti del gruppo hanno dovuto svolgere esami universitari. &
-Il gruppo si è organizzato in modo da redistribuire equamente il carico di lavoro. \\
+Impegni universitari & 
+Alcuni componenti del gruppo hanno dovuto svolgere esami universitari e dovranno seguire nuovi corsi. &
+Il gruppo farà in modo di garantire una corretta distribuzione del carico di lavoro, evitando situazioni di stallo. \\
 
-Analisi dei Requisiti & 
-Non era stata svolta un'\AdR{} dettagliata. &
-Il gruppo ha studiato gli algoritmi di riduzione dimensionale da inserire. \\
+Documentazione & 
+La stesura di alcuni documenti effettuata nel periodo precedente non era dettagliata. &
+Presa visione dell'esito, il gruppo ha studiato maggiormente e ha capito il livello di approfondimento da raggiungere. \\
 
 \rowcolor{white}
  \caption{Valutazioni sull'organizzazione}
@@ -76,13 +72,13 @@ Il gruppo ha studiato gli algoritmi di riduzione dimensionale da inserire. \\
 \textcolor{white}{\textbf{Soluzione}} \\	
 \endhead
 
-\glo{React Hooks} e \glo{D3.js} & 
-Riscontrati problemi nel passaggio a \glo{React Hooks} e nella nuova versione della libreria \glo{D3.js}. &
-Tutto il gruppo si è adoperato nel trovare informazioni condividendo i risultati con gli altri membri.  \\
+\glo{React} e \glo{D3.js} & 
+Riscontrati problemi nell'apprendere le recenti funzionalità di React e quelle offerte dalla nuova versione della libreria D3.js. &
+Tutto il gruppo si è adoperato nel trovare informazioni e a condividerle. Ciascun componente dovrà comunicare e rendere disponibile materiale utile individuato.  \\
 
 \glo{Poc} e \glo{GitHub Actions} & 
-Sono state trovate difficoltà nell'ambiente di sviluppo del \glo{Poc} e per le \glo{GitHub Actions}. &
-Tutto il gruppo si è adoperato nel trovare informazioni condividendo i risultati con gli altri membri.   \\
+Riscontrate difficoltà nel configurare l'ambiente di sviluppo del PoC e nell'uso delle GitHub Actions. &
+I programmatori si sono dedicati alla risoluzione immediata del problema e s'impegnano nel perseguire anche in futuro la \glo{\textit{continuos integration}}.  \\
 
 \rowcolor{white}
  \caption{Valutazioni sugli strumenti usati}
@@ -90,4 +86,3 @@ Tutto il gruppo si è adoperato nel trovare informazioni condividendo i risultat
 
 \end{itemize}
 
-\newpage
