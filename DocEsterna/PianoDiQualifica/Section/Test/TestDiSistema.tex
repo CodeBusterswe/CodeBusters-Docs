@@ -200,17 +200,24 @@ NI\\
 \label{testSistema}
 \end{longtable}
 
+
+
+
+
+
+
+\begin{minipage}[b]{0.3\linewidth}
 \renewcommand{\arraystretch}{1.5}
 \renewcommand\extrarowheight{1.5pt}
-\begin{longtable}{C{2.5cm} | C{10cm} } 
+\begin{longtable}{C{2.5cm} | C{5cm} } 
 		\rowcolor{coloreRosso}
 		\textcolor{white}{\textbf{Codice Test}} & 
 		\textcolor{white}{\textbf{Codici Requisiti}} \\
 		\endfirsthead
-		\rowcolor{white}\multicolumn{2}{C{12.5cm}}{\textit{Continua nella pagina successiva...}} \\
+		\rowcolor{white}\multicolumn{2}{c}{\textit{Continua nella pagina successiva...}} \\
 	    \endfoot
-	    \rowcolor{white}\caption{Tracciamento test - requisiti funzionali}
-	    \endlastfoot
+	    
+	    
 		\textbf{TS1F1} & R1F1\\
 		\textbf{TS1F1.1} & R1F1.1\\
 		\textbf{TS1F1.2} & R1F1.2\\
@@ -231,9 +238,26 @@ NI\\
 		\textbf{TS2F9} & R2F15.6\\
 		\textbf{TS1F10} & R1F18\\
 		\textbf{TS3F11} & R3F15.4.1, R3F15.4.2\\
-		\textbf{TS3F12} & R3F15.5\\
+					\textbf{TS3F12} & R3F15.5\\
 		\textbf{TS1F13} & R1F7\\
 		\textbf{TS1F14} & R1F17\\
+		
+		\rowcolor{white}\caption{Tracciamento test - requisiti (1)}
+
+\end{longtable}
+\end{minipage}
+\begin{minipage}[b]{.9\linewidth}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand\extrarowheight{1.5pt}
+\begin{longtable}{C{2.5cm} | C{5cm} } 
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Codice Test}} & 
+		\textcolor{white}{\textbf{Codici Requisiti}} \\
+		\endfirsthead
+		\rowcolor{white}\multicolumn{2}{c}{\textit{Continua nella pagina successiva...}} \\
+	    \endfoot
+	    
+
 		\textbf{TS1F15} & R3F12, R3F13\\
 		\textbf{TS3F16} & R1F7.1, R1F7.1.4\\
 		\textbf{TS1F16.1} & R1F7.1.1\\
@@ -256,6 +280,8 @@ NI\\
 		\textbf{TS1F27} & R1V10\\
 		\textbf{TS1F28} & R1V11\\
 		\textbf{TS1F29} & R1V12\\
-
-\end{longtable}
+		
+		\rowcolor{white}\caption{Tracciamento test - requisiti (2)}
+	\end{longtable}
+\end{minipage}
 }
