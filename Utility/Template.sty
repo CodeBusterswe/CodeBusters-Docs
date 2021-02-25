@@ -12,6 +12,12 @@
 \RequirePackage{lastpage}
 \RequirePackage[table]{xcolor}
 
+%*****************TOGLIERE PER IL MERGE*************************
+\usepackage{graphicx}
+\usepackage{watermark}
+\usepackage{transparent}
+%***************************************************************
+
 %%Pacchetto per creare la tabella delle modifiche
 \usepackage{multirow}
 \usepackage[table]{xcolor} 
@@ -19,6 +25,9 @@
 \rowcolors{2}{cPari}{cDispari}
 
 \newcommand{\frontespizio}{
+%*****************TOGLIERE PER IL MERGE*************************
+\thiswatermark{\centering \transparent{0.4} \put(-80,-800){\includegraphics[scale=1.6]{back3.JPG}} }
+%***************************************************************
 \begin{titlepage}
 \begin{center}
 \begin{center}
