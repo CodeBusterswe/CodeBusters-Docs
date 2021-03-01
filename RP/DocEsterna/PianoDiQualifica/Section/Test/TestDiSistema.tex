@@ -1,0 +1,282 @@
+\subsection{Test di sistema}
+%In base ai requisiti trovati e riportati nell'\AdRv{v 1.0.0}, il gruppo ha stilato una lista di test di sistema da effettuare per verificarne la correttezza.
+
+{
+\renewcommand{\arraystretch}{1.5}
+\renewcommand\extrarowheight{1.5pt}
+\setlength\arrayrulewidth{1pt}
+\begin{longtable}{ C{2cm} | C{12cm}| C{1.5cm} } 
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Codice}} & 
+		\textcolor{white}{\textbf{Descrizione}} & 
+		\textcolor{white}{\textbf{Stato}} \\
+		\endfirsthead
+		\rowcolor{white}\multicolumn{3}{c}{\textit{Continua nella pagina successiva...}}\\
+	    \endfoot
+	    \endlastfoot
+
+\textbf{TS1F1} & 
+L'utente deve poter utilizzare i suoi \glo{dataset}. & 
+NI\\
+
+\textbf{TS1F1.1} & 
+L'utente deve poter caricare dei dati nel sistema tramite file \glo{CSV}. & 
+NI\\
+
+\textbf{TS1F1.2} & 
+L'utente deve poter caricare dei dati nel sistema tramite interrogazione al \glo{database}. & 
+NI\\
+
+\textbf{TS1F2} & 
+L'utente deve visualizzare a schermo un messaggio d'esito dell'operazione. & 
+NI\\
+		
+\textbf{TS2F3} & 
+Verificare che gli aiuti all'utente siano utilizzabili e localizzabili. & 
+NI\\		
+
+\textbf{TS1F4} & 
+L'utente deve poter selezionare le dimensioni che desidera utilizzare per l'analisi del \glo{dataset} caricato. & 
+NI\\	
+
+\textbf{TS1F5} & 
+L'utente deve poter calcolare la distanza tra le dimensioni caricate per crearne di nuove. & 
+NI\\	
+
+\textbf{TS1F6} & 
+L'utente deve poter calcolare la distanza tra dimensioni tramite distanza di \textit{\glo{Euclidea}}. & 
+NI\\
+
+\textbf{TS3F7} & 
+L'utente deve poter selezionare funzioni di calcolo della distanza diverse da quella \glo{Euclidea}. & 
+NI\\	
+
+\textbf{TS3F7.1} & 
+L'utente deve poter calcolare la distanza tra dimensioni tramite distanza di \glo{\textit{Manhattan}}. & 
+NI\\
+
+\textbf{TS3F7.2} & 
+L'utente deve poter calcolare la distanza tra dimensioni tramite distanza di \glo{\textit{Canberra}}. & 
+NI\\
+
+\textbf{TS3F7.3} & 
+L'utente deve poter calcolare la distanza tra dimensioni tramite distanza di \glo{\textit{Chebyshev}}. & 
+NI\\
+
+\textbf{TS1F8} & 
+L'utente deve poter ridurre le dimensioni caricate attraverso un algoritmo di riduzione dimensionale, di cui può cambiarne i parametri. & 
+NI\\
+
+\textbf{TS1F8.1} & 
+L'utente deve poter selezionare \glo{\textit{IsoMap}} come algoritmo di riduzione dimensionale. & 
+NI\\
+
+\textbf{TS1F8.2} & 
+L'utente deve poter selezionare \glo{\textit{LLE}} come algoritmo di riduzione dimensionale. & 
+NI\\
+
+\textbf{TS1F8.3} & 
+L'utente deve poter selezionare \glo{\textit{FastMap}} come algoritmo di riduzione dimensionale. & 
+NI\\
+
+\textbf{TS1F8.4} & 
+L'utente deve poter selezionare \glo{\textit{t-SNE}} come algoritmo di riduzione dimensionale. & 
+NI\\
+
+\textbf{TS2F9} & 
+L'utente deve poter decidere il numero di dimensioni da ottenere come risultato dell'algoritmo di riduzione. & 
+NI\\
+
+\textbf{TS1F10} & 
+L'utente deve poter cambiare il nome delle dimensioni create dalla riduzione dimensionale. & 
+NI\\
+
+\textbf{TS3F11} & 
+L'utente deve poter modificare il tasso di apprendimento e la \glo{\textit{perplessità}} per l'algoritmo \glo{\textit{t-SNE}}. & 
+NI\\
+
+\textbf{TS3F12} & 
+L'utente deve poter modificare il numero di \glo{\textit{neighbors}} per gli algoritmi \textit{IsoMap} ed \textit{LLE}. & 
+NI\\
+
+\textbf{TS1F13} & 
+L'utente deve poter scegliere la visualizzazione per i dati tra quelle disponibili. & 
+NI\\
+
+\textbf{TS3F14} & 
+L'utente deve poter visualizzare le dimensioni originali, ridotte e di cui si è calcolata una distanza. & 
+NI\\
+
+\textbf{TS1F15} & 
+L'utente deve poter personalizzare lo stile della visualizzazione scelta osservando i cambiamenti in tempo reale. & 
+NI\\
+
+\textbf{TS1F16} & 
+L'utente deve poter scegliere la visualizzazione \glo{\textit{Scatter Plot Matrix}} per visualizzare \glo{dataset} al massimo 5 dimensioni. & 
+NI\\
+
+\textbf{TS1F16.1} & 
+In uno \glo{\textit{Scatter Plot Matrix}} l'utente deve poter associare le dimensioni agli assi tra quelle disponibili. & 
+NI\\
+
+\textbf{TS2F16.2} & 
+In uno \glo{\textit{Scatter Plot Matrix}} l'utente deve poter selezionare i punti per vedere la loro relazione in ciascun \glo{Scatter Plot} presente. & 
+NI\\
+
+\textbf{TS2F16.3} & 
+L'utente deve poter visualizzare i valori di un punto passandoci sopra con il cursore. & 
+NI\\
+
+\textbf{TS2F16.4} & 
+L'utente deve poter decidere il colore da attribuire a ciascuna dimensione utilizzata. & 
+NI\\
+
+\textbf{TS1F17} & 
+L'utente deve poter scegliere la visualizzazione \glo{\textit{Heat Map}}. & 
+NI\\
+
+\textbf{TS1F17.1} & 
+In un \glo{\textit{Heat Map}} l'utente deve poter ordinare i punti in modo da evidenziare le strutture presenti e applicare un \glo{dendrogramma} ai bordi del grafico. & 
+NI\\
+
+\textbf{TS1F18} & 
+L'utente deve poter scegliere la visualizzazione \glo{\textit{Force Field}}. & 
+NI\\
+
+\textbf{TS3F18.1} & 
+In un \glo{\textit{Force Field}} l'utente deve poter utilizzare funzioni di forza diverse da quelle previste in automatico dal grafico \textit{"forcebased"} di \glo{D3.js}. & 
+NI\\
+
+\textbf{TS1F19} & 
+L'utente deve poter scegliere la visualizzazione \glo{\textit{Proiezione Lineare Multi Asse}}. & 
+NI\\
+
+\textbf{TS2F19.1} & 
+Nella visualizzazione \glo{\textit{Proiezione Lineare Multi Asse}} l'utente deve poter interagire con gli assi per evidenziare i punti d'interesse. & 
+NI\\
+
+\textbf{TS3F20} & 
+L'utente può utilizzare altri tipi di visualizzazione dei dati con più di tre dimensioni. & 
+NI\\
+
+\textbf{TS3F21} & 
+L'applicazione, tramite analisi automatiche, deve evidenziare situazioni di particolare interesse. & 
+NI\\
+
+\textbf{TS3F22} & 
+L'applicazione, tramite specifici algoritmi, deve preparare i dati scartando quelli meno rilevanti per l'analisi. & 
+NI\\
+
+\textbf{TS3F23} & 
+L'utente deve avere a disposizione una guida introduttiva. & 
+NI\\
+
+\textbf{TS2F24} & 
+L'utente deve poter visualizzare contemporaneamente due grafici per un confronto. & 
+NI\\
+
+\textbf{TS2F25} & 
+L'utente deve poter salvare la sessione di lavoro in corso in un file \glo{JSON} o ripristinarne una precedente. & 
+NI\\
+
+\textbf{TS1F26} & 
+Si verifichi che la \glo{\textit{web app}} sia compatibile con il browser \glo{Chrome} dalla versione 87. & 
+NI\\
+
+\textbf{TS1F27} & 
+Verificare che la \glo{\textit{web app}} sia compatibile con il browser \glo{Edge} dalla versione 79. & 
+NI\\
+		   
+\textbf{TS1F28} & 
+Verificare che la \glo{\textit{web app}} sia compatibile con il browser \glo{Firefox} dalla versione 84. & 
+NI\\
+
+\textbf{TS1F29} & 
+Verificare che la \glo{\textit{web app}} sia compatibile con il browser \glo{Safari} dalla versione 13.1. & 
+NI\\
+
+
+\rowcolor{white}\caption{Test di sistema}
+\label{testSistema}
+\end{longtable}
+
+\subsubsection{Tracciamento test di sistema}
+\begin{minipage}[b]{0.3\linewidth}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand\extrarowheight{1.5pt}
+\begin{longtable}{C{2.5cm} | C{5cm} } 
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Codice Test}} & 
+		\textcolor{white}{\textbf{Codici Requisiti}} \\
+		\endfirsthead
+		\rowcolor{white}\multicolumn{2}{c}{\textit{Continua nella pagina successiva...}} \\
+	    \endfoot
+	    
+	    
+		\textbf{TS1F1} & R1F1\\
+		\textbf{TS1F1.1} & R1F1.1\\
+		\textbf{TS1F1.2} & R1F1.2\\
+		\textbf{TS1F2} & R1F14\\
+		\textbf{TS2F3} & R2F4\\
+		\textbf{TS1F4} & R1F5\\
+		\textbf{TS1F5} & R1F3, R1F16\\
+		\textbf{TS1F6} & R1F16.4\\
+		\textbf{TS3F7} & R3F7.6\\
+		\textbf{TS1F7.1} & R2F16.1\\
+		\textbf{TS1F7.2} & R2F16.2\\
+		\textbf{TS1F7.3} & R2F16.3\\
+		\textbf{TS1F8} & R1F2, R1F15\\
+		\textbf{TS1F8.1} & R1F15.1\\
+		\textbf{TS1F8.2} & R1F15.2\\
+		\textbf{TS1F8.3} & R1F15.3\\
+		\textbf{TS1F8.4} & R1F15.4\\
+		\textbf{TS2F9} & R2F15.6\\
+		\textbf{TS1F10} & R1F18\\
+		\textbf{TS3F11} & R3F15.4.1, R3F15.4.2\\
+					\textbf{TS3F12} & R3F15.5\\
+		\textbf{TS1F13} & R1F7\\
+		\textbf{TS1F14} & R1F17\\
+		
+		\rowcolor{white}\caption{Tracciamento test - requisiti (1)}
+
+\end{longtable}
+\end{minipage}
+\begin{minipage}[b]{.9\linewidth}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand\extrarowheight{1.5pt}
+\begin{longtable}{C{2.5cm} | C{5cm} } 
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Codice Test}} & 
+		\textcolor{white}{\textbf{Codici Requisiti}} \\
+		\endfirsthead
+		\rowcolor{white}\multicolumn{2}{c}{\textit{Continua nella pagina successiva...}} \\
+	    \endfoot
+	    
+
+		\textbf{TS1F15} & R3F12, R3F13\\
+		\textbf{TS1F16} & R1F7.1, R1F7.1.4\\
+		\textbf{TS1F16.1} & R1F7.1.1\\
+		\textbf{TS2F16.2} & R2F7.1.2\\
+		\textbf{TS2F16.3} & R2F7.1.3\\				
+		\textbf{TS2F16.4} & R2F7.1.5\\	
+		\textbf{TS1F17} & R1F7.2\\
+		\textbf{TS1F17.1} & R1F7.2.1\\
+		\textbf{TS1F18} & R1F7.3\\
+		\textbf{TS3F18.1} & R3F7.3.1\\
+		\textbf{TS1F19} & R1F7.4\\
+		\textbf{TS2F19.1} & R2F7.4.1\\
+		\textbf{TS3F20} & R3F7.5\\
+		\textbf{TS3F21} & R3F8\\
+		\textbf{TS3F22} & R3F9\\
+		\textbf{TS3F23} & R3F10\\
+		\textbf{TS2F24} & R2F11\\
+		\textbf{TS2F25} & R2F6\\
+		\textbf{TS1F26} & R1V9\\
+		\textbf{TS1F27} & R1V10\\
+		\textbf{TS1F28} & R1V11\\
+		\textbf{TS1F29} & R1V12\\
+		
+		\rowcolor{white}\caption{Tracciamento test - requisiti (2)}
+	\end{longtable}
+\end{minipage}
+}

@@ -1,0 +1,318 @@
+\subsection{Sviluppo}
+\subsubsection{Scopo}
+In questa sezione vengono descritte le attività che compongono il processo di sviluppo, le norme e le convenzioni adottate per ognuna di esse.
+\subsubsection{Aspettative}
+Le aspettative nell'applicazione del processo di sviluppo sono:
+\begin{itemize}
+\item Determinare vincoli tecnologici;
+\item Determinare gli obiettivi di sviluppo;
+\item Determinare vincoli di design;
+\item Realizzare un prodotto finale che superi i test e soddisfi requisiti e richieste del proponente.
+\end{itemize}
+\subsubsection{Descrizione}
+Il processo di sviluppo contiene le attività e i compiti dello sviluppatore, tra cui le attività per l'analisi dei requisiti, la progettazione, la codifica, l'integrazione, il test, l'installazione e l'accettazione relative ai prodotti software. 
+\subsubsection{Attività}
+Le attività del processo di sviluppo sono tre:
+\begin{itemize}
+\item Analisi dei requisiti;
+\item Progettazione;
+\item Codifica.
+\end{itemize}
+\paragraph{Analisi dei requisiti}
+\subparagraph{Scopo} \mbox{} \\
+Lo scopo dell'analisi dei requisiti è individuare e poi riportare in un documento tutti i requisiti individuati e i casi d'uso del sistema.
+\subparagraph{Aspettative} \mbox{} \\
+L'obiettivo dell'attività di analisi dei requisiti consiste nella creazione della documentazione formale contenente tutti i requisiti richiesti dal proponente.
+\subparagraph{Requisiti} \mbox{} \\
+I requisiti si raccolgono tramite:
+\begin{itemize}
+\item Lettura del capitolato;
+\item Visione della presentazione del capitolato;
+\item Confronto interno tra i membri del gruppo;
+\item Confronto con l'azienda.
+\end{itemize}
+\subparagraph{Casi d'uso} \mbox{} \\
+È un diagramma che esprime un comportamento o un modo di utilizzare il prodotto. È costituito da:
+\begin{itemize}
+\item Codice identificativo e titolo;
+\item Attore primario;
+\item Precondizioni;
+\item Postcondizioni;
+\item Scenario principale;
+\item Generalizzazioni;
+\item Estensioni.
+\end{itemize}
+\subparagraph{Codice identificativo casi d'uso} \mbox{} \\
+Un caso d'uso è così identificato:
+
+\begin{center}
+\textbf{UC[Numero caso d'uso].[Caso d'uso figlio] - [Titolo caso d'uso}]
+\end{center}
+		
+dove "caso d'uso figlio" è il sottocaso del caso d'uso principale.
+\subparagraph{Struttura dei requisiti} \label{para:requisiti}
+\begin{itemize}
+\item \textbf{Codice identificativo:} 
+\begin{center}
+\textbf{R[Importanza][Tipologia][Codice]}
+\end{center}
+ 		
+Per \textbf{Importanza} s'intende un numero da 1 a 3 che rappresenta:
+\begin{enumerate}
+\item Requisito obbligatorio;
+\item Requisito desiderabile ma non essenziale per il funzionamento;
+\item Requisito opzionale.
+\end{enumerate}
+Per \textbf{Tipologia} s'intende una lettera che rappresenta la natura del requisito:
+\begin{itemize}
+\item \textbf{V}: Vincolo;
+\item \textbf{P}: Prestazionale;
+\item \textbf{Q}: Qualitativo;
+\item \textbf{F}: Funzionale.
+\end{itemize}
+
+Per \textbf{Codice} s'intende un identificativo univoco del requisito espresso in forma gerarchica padre/figlio.
+\item \textbf{Classe:} per rendere la tabella più esplicativa viene riportata nuovamente l'importanza del requisito, nonostante sia già scritta nel codice identificativo;
+\item \textbf{Descrizione:} una sintetica descrizione del requisito;
+\item \textbf{Fonti:} vi sono diverse fonti da cui possono derivare i requisiti; l'origine dei requisiti viene quindi riportata in questa sezione. 
+\end{itemize}
+\subparagraph{UML} \mbox{} \\
+I diagrammi \glo{UML} devono essere realizzati usando la versione del linguaggio v2.0.
+\paragraph{Progettazione}
+\subparagraph{Scopo} \mbox{} \\
+Questa attività ha la funzione di definire una soluzione al capitolato proposto basandosi sull'analisi dei requisiti.
+Mentre quest'ultima divide il problema nei requisiti da soddisfare, la progettazione incorpora le parti specificando le funzionalità dei sottosistemi e riconducendo ad un'unica soluzione.
+\subparagraph{Aspettative} \mbox{} \\
+Riuscire ad arrivare, al termine di questa attività, ad una architettura di sistema.
+
+\subparagraph{Tecnology Baseline} \mbox{} \\
+Motiva le tecnologie, i \glo{framework} e le librerie selezionate per la realizzazione del prodotto. Sarà il progettista ad occuparsene e dovrà contenere:
+\begin{itemize}
+\item Diagrammi UML delle classi, di attività, di sequenza e dei package;
+\item Tecnologie adottate, motivando le scelte;
+\item \glo{Design pattern} accompagnato da una descrizione e un diagramma che ne esponga la struttura;
+\item La relazione tra ciascuna componente e il requisito che soddisfa, per avere un tracciamento;  
+\item \glo{Proof of Concept}, ovvero un prototipo per dimostrare le funzionalità del prodotto.
+\end{itemize}
+\subparagraph{Product Baseline} \mbox{} \\
+Illustra la baseline architetturale (design e coding) del prodotto, coerente con la Tecnology Baseline. Il progettista dovrà occuparsi anche di questa parte, che conterrà:
+\begin{itemize}
+\item Una definizione delle classi, evitando nomi e funzionalità ridondanti;
+\item Tracciamento delle classi, in modo che ciascun requisito sia soddisfatto da una classe;
+\item Test di unità su ogni componente, in modo da verificare il corretto funzionamento.
+\end{itemize}
+\paragraph{Codifica}
+
+\subparagraph{Scopo}  \mbox{} \\
+L'attività di codifica ha il fine di concretizzare la progettazione con la programmazione del software vero e proprio.
+
+\subparagraph{Aspettative} \mbox{} \\
+Questa attività dovrà avere come risultato un prodotto software avente le caratteristiche e i requisiti concordati con il proponente. Il codice generato dovrà rispettare alcune norme per poter essere leggibile e per poter facilmente intervenire in seguito nelle attività di manutenzione, modifica, verifica e validazione.
+%\subparagraph{Descrizione}
+
+\subparagraph{Stile della codifica}
+\begin{itemize}
+\item \textbf{Indentazione}: i blocchi di codice innestati dovranno avere un'indentazione di quattro spazi;
+\item \textbf{Parentesi}: la parentesi aperta dovrà essere inserita nella stessa riga di dichiarazione del costrutto, separate da uno spazio; 
+\item \textbf{Metodi}: il nome dei metodi dovrà iniziare con lettera minuscola e, se composto da più parole, le successive dovranno iniziare con lettera maiuscola. È preferibile mantenere metodi brevi, con poche righe di codice;
+\item \textbf{Classi}: il nome delle classi dovrà sempre iniziare con la lettera maiuscola e, come per i metodi, se composto da più parole, le successive dovranno iniziare con la lettere maiuscola;
+\item \textbf{Variabili}: il nome delle variabili deve sempre essere scritto in minuscolo e in inglese. Se il nome è composta da più parole, la seconda dovrà iniziare con la lettera maiuscola;
+\item \textbf{Costanti}: il nome deve essere sempre scritto in maiuscolo e in inglese. Se il nome è composto da più parole, queste dovranno essere separate dal carattere "\_";
+\item \textbf{Univocità dei nomi}: tutti i costrutti dovranno avere nomi univoci e significativi;
+\item \textbf{Commenti}: i commenti dovranno essere inseriti prima dell'inizio del costrutto e presentati in lingua italiana;
+\item \textbf{File}: dovranno avere un nome che inizia per lettera maiuscola che ne specifichi il contenuto;
+\item \textbf{Altro}:
+	\begin{itemize}
+		\item Utilizzare la \glo{method chaining} per l'invocazione dei metodi. Se la catena di metodi è formata da più di due metodi, scrivere un metodo per riga.
+	\end{itemize}
+\end{itemize}
+\subparagraph{Ricorsione} \mbox{} \\
+Onde evitare un'eccessiva allocazione di memoria è preferibile, quando possibile, evitare la ricorsione.
+
+\subsubsection{Metriche}
+\paragraph{Metriche per la portabilità}
+Alcuni parametri per capire meglio la tabella seguente:
+\begin{itemize}
+\item \textbf{\glo{Browser} supportati (B\textsubscript{sup})}: browser dove il software può essere eseguito;
+	\item \textbf{\glo{Browser} richiesti (B\textsubscript{ric})}: numero di browser compatibili con il programma richiesti dal proponente.
+\end{itemize}
+\newpage
+\renewcommand{\arraystretch}{1.5}
+\renewcommand\extrarowheight{1.5pt}
+\begin{longtable}{C{1.5cm} C{4.5cm} C{5.5cm} C{5cm}}
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Codice}} & 
+		\textcolor{white}{\textbf{Nome}} & 
+		\textcolor{white}{\textbf{Descrizione}} & 
+		\textcolor{white}{\textbf{Formula}} \\
+		\endfirsthead
+	    \endfoot
+	    \rowcolor{white}\caption{Metriche per garantire la portabilità del prodotto}
+	    \endlastfoot
+		\textbf{MPD10} & 
+		Versioni del browser supportate & 
+		La percentuale di versioni di browser supportate dal prodotto. &
+		$(\frac{B_{sup}}{B_{ric}}) \cdot 100 $  \\
+\end{longtable} 
+
+\paragraph{Metriche per la funzionalità}
+
+Alcuni parametri per capire meglio la tabella seguente:
+\begin{itemize}
+\item \textbf{Funzionalità mancanti (N\textsubscript{fm})}: numero di funzionalità non implementate;
+\item \textbf{Funzionalità individuate (N\textsubscript{fi})}: numero di funzionalità individuate.
+
+\end{itemize}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand\extrarowheight{1.5pt}
+\begin{longtable}{C{1.5cm} C{4.5cm} C{5.5cm} C{5cm}}
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Codice}} & 
+		\textcolor{white}{\textbf{Nome}} & 
+		\textcolor{white}{\textbf{Descrizione}} & 
+		\textcolor{white}{\textbf{Formula}} \\
+		\endfirsthead
+	    \endfoot
+	    \rowcolor{white}\caption{Metriche per garantire che i requisiti siano rispettati}
+	    \endlastfoot
+		\textbf{MPD3} & 
+		Copertura dei requisiti (CDR) & 
+		Descrive quanti requisiti sono stati implementati nel prodotto software. &
+		$(1 - \frac{N_{fm}}{N_{fi}}) \cdot 100 $ \\
+\end{longtable} 
+
+\paragraph{Metriche per la manutenibilità}
+Alcuni parametri per comprendere la tabella seguente:
+\begin{itemize}
+	\item \textbf{Linee di commento (N\textsubscript{com})}: numero di righe di commento;
+	\item \textbf{Linee di commento (N\textsubscript{cod})}: numero di righe di codice.
+\end{itemize}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand\extrarowheight{1.5pt}
+\begin{longtable}{C{1.5cm} C{4.5cm} C{5.5cm} C{5cm}}
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Codice}} & 
+		\textcolor{white}{\textbf{Nome}} & 
+		\textcolor{white}{\textbf{Descrizione}} & 
+		\textcolor{white}{\textbf{Formula}} \\
+		\endfirsthead
+	    \endfoot
+	    \rowcolor{white}\caption{Metriche per garantire manutenibilità del prodotto}
+	    \endlastfoot
+		\textbf{MPD5} & 
+		Average Cyclomatic complexity (ACC) & 
+		Indica in numero di cammini indipendenti presenti nel programma. & Misurabile attraverso il grafo di controllo di flusso.\\
+		\textbf{MPD9} & 
+		Comprensione del codice & 
+		Può essere dedotta dal rapporto tra linee di codice e linee di commenti. &
+		$(\frac{N_{com}}{N_{cod}}) \cdot 100 $ \\
+		
+\end{longtable}
+\paragraph{Metrica per l'efficienza}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand\extrarowheight{1.5pt}
+\begin{longtable}{C{1.5cm} C{4.5cm} C{5.5cm} C{5cm}}
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Codice}} & 
+		\textcolor{white}{\textbf{Nome}} & 
+		\textcolor{white}{\textbf{Descrizione}} & 
+		\textcolor{white}{\textbf{Formula}} \\
+		\endfirsthead
+	    \endfoot
+	    \rowcolor{white}\caption{Metrica per garantire efficienza del prodotto}
+	    \endlastfoot
+		\textbf{MPD8} & 
+		Tempo medio di risposta & 
+		Tempo medio impiegato dal software per rispondere a una richiesta utente o svolgere un'attività di sistema. &
+		- \\
+\end{longtable}		
+\paragraph{Metriche per l'usabilità}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand\extrarowheight{1.5pt}
+\begin{longtable}{C{1.5cm} C{4.5cm} C{5.5cm} C{5cm}}
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Codice}} & 
+		\textcolor{white}{\textbf{Nome}} & 
+		\textcolor{white}{\textbf{Descrizione}} & 
+		\textcolor{white}{\textbf{Formula}} \\
+		\endfirsthead
+	    \endfoot
+	    \rowcolor{white}\caption{Metriche per garantire usabilità del prodotto}
+	    \endlastfoot
+		\textbf{MPD6} & 
+		Facilità di utilizzo & 
+		Numero di click necessari con cui l'utente raggiunge la funzionalità cercata. &
+		- \\
+		\textbf{MPD7} & 
+		Facilità apprendimento funzionalità & 
+		Numero di minuti necessari all'utente per apprendere le funzionalità del prodotto software. & - \\
+\end{longtable}
+\paragraph{Metrica per l'affidabilità}
+Alcuni parametri per comprendere la tabella seguente:
+\begin{itemize}
+\item \textbf{Test falliti (T\textsubscript{fal})}: test eseguiti sul programma ma falliti;
+	\item \textbf{Test eseguiti (T\textsubscript{ese})}: test totali eseguiti sul programma.
+\end{itemize}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand\extrarowheight{1.5pt}
+\begin{longtable}{C{1.5cm} C{4.5cm} C{5.5cm} C{5cm}}
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Codice}} & 
+		\textcolor{white}{\textbf{Nome}} & 
+		\textcolor{white}{\textbf{Descrizione}} & 
+		\textcolor{white}{\textbf{Formula}} \\
+		\endfirsthead
+	    \endfoot
+	    \rowcolor{white}\caption{Metrica per garantire affidabilità del prodotto}
+	    \endlastfoot
+		\textbf{MPD4} & 
+		Densità di failure & 
+		Indica l'affidabilità del prodotto e si può ricavare dalla percentuale di test falliti sui test eseguiti. &
+		$(\frac{T_{fal}}{T_{ese}}) \cdot 100 $ \\
+\end{longtable}		
+
+\subsubsection{Strumenti}
+Gli strumenti utilizzati in questo processo comprendono:
+\begin{itemize}
+	\item \textbf{DruidJS}: libreria per la riduzione dimensionale sui dati caricati nella \glo{web app}. Essa fornisce diversi algoritmi a questo scopo, tra cui i più interessanti e utilizzati in ambienti reali di analisi dei dati;
+	\begin{center}
+		\textcolor{blue}{\url{https://github.com/saehm/DruidJS}}
+	\end{center}	  
+	\item \textbf{D3.js}: libreria per la manipolazione del DOM (Document Object Model). Permette la realizzazione di molti tipi diversi di grafici da dati reali;
+	\begin{center}
+		\textcolor{blue}{\url{https://d3js.org/}}
+	\end{center}
+	\item \textbf{Node.js}: runtime \glo{JavaScript} utilizzato per creare applicazioni di rete scalabili;
+	\begin{center}
+		\textcolor{blue}{\url{https://nodejs.org/it/}}
+	\end{center}
+	\item \textbf{Express.js}: \glo{framework} standard per le applicazioni che utilizzano \glo{Node.js} per la comunicazione tra \glo{front-end} e \glo{back-end};
+	\begin{center}
+		\textcolor{blue}{\url{https://expressjs.com/it/}}
+	\end{center}
+	\item \textbf{PostgreSQL}: \glo{database} scelto per la sua efficienza e affidabilità nel lungo periodo;
+		\begin{center}
+		\textcolor{blue}{\url{https://www.postgresql.org/}}
+	\end{center}
+	\item \textbf{Babel}: transcompiler {JavaScript} per compilare tutte le nuove istruzioni introdotte con ES6 in istruzioni retrocompatibili;
+	\begin{center}
+		\textcolor{blue}{\url{https://babeljs.io/}}
+	\end{center}
+	\item \textbf{Npm}: packet manager per il linguaggio \glo{JavaScript};
+	\begin{center}
+		\textcolor{blue}{\url{https://www.npmjs.com/}}
+	\end{center}
+	\item \textbf{Bootstrap}: \glo{framework} \glo{CSS} che velocizza la scrittura della parte di presentazione della \glo{web app} con classi predefinite per elementi \glo{HTML} specifici;
+	\begin{center}
+		\textcolor{blue}{\url{https://getbootstrap.com/}}
+	\end{center}
+	\item \textbf{React}: libreria \glo{JavaScript} per facilitare la creazione di interfacce utente, migliorare i tempi di renderizzazione della pagina, aumentare la manutenibilità e la facilità di testing;
+	\begin{center}
+		\textcolor{blue}{\url{https://it.reactjs.org/}}
+	\end{center}
+	\item \textbf{Visual Studio Code}: IDE versatile ed estendibile scelto per lo sviluppo del codice.
+	\begin{center}
+		\textcolor{blue}{\url{https://code.visualstudio.com/}}
+	\end{center}
+\end{itemize}
+

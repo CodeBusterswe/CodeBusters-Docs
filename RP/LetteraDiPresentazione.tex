@@ -1,0 +1,77 @@
+\documentclass[11pt]{letter}
+\usepackage{eurosym}
+\usepackage[utf8]{inputenc}
+\usepackage{Utility/Template}
+\usepackage{float}
+\pagenumbering{gobble}
+\input{Utility/Strings.tex}
+
+
+%logo intestazione
+\rowcolors{2}{white}{white}
+\address{\\ \VT{} \\ \CR{} \\ Università degli Studi di Padova \\ Dipartimento di Matematica \\ Via Trieste, 63\\ 35121 Padova }
+
+
+\begin{document}
+    \begin{letter}
+        { Egregio \VT{},\\Egregio \CR{},}
+        \begin{minipage}{.4\textwidth}
+            \begin{flushleft}
+                \includegraphics[width=1.5\textwidth]{Utility/Images/logo2.png}
+            \end{flushleft}
+        \end{minipage}
+        \begin{minipage}{.5\textwidth}
+            \begin{flushright}
+                \includegraphics[width=.4\linewidth]{Utility/Images/logoUnipd.png}
+            \end{flushright}
+        \end{minipage}
+        {    
+        \begin{flushleft}
+            Corso di Ingegneria del Software\\ Gruppo \Gruppo{}\\ 
+        \end{flushleft}
+        }
+        \opening{ Con la presente il gruppo \Gruppo{} intende comunicarvi la partecipazione alla Revisione di Progettazione, al fine di esporvi l'avanzamento dello sviluppo del progetto, denominato:}
+        \begin{center}
+           \textbf{\NomeProgetto{}} 
+        \end{center}
+        proposto dall'azienda \textbf{\Proponente{}}.\\
+        Si allegano tutti i documenti, che trattano in maniera approfondita gli aspetti di pianificazione, normazione, qualifica e analisi:
+        \begin{itemize}
+        	\item \AdRv{2.0.0-0.2};
+            \item \Glossariov{2.0.0-0.2};
+            \item \PdPv{2.0.0-0.2};
+            \item \PdQv{2.0.0-0.2};
+            \item \NdPv{2.0.0-0.2}.
+        \end{itemize}
+        Inoltre sono allegati anche i verbali esterni ed interni:
+        \begin{itemize}
+            \item \textit{Verbale esterno del 05-02-2021};
+            \item \textit{Verbale esterno del 18-02-2021};
+            \item \textit{Verbale interno del 08-02-2021};
+            \item \textit{Verbale interno del 17-02-2021};
+            \item \textit{Verbale interno del 23-02-2021}.
+        \end{itemize}
+        Il gruppo stima di consegnare il prodotto entro il 03-05-2020 con un preventivo di \euro{} 13.431,00, come specificato nel documento \PdPv{2.0.0-0.2}.\\
+        Per completezza, inseriamo di seguito la lista dei membri del gruppo, con nome, cognome, matricola e ruolo principale fino a questo momento.
+        {
+         	\rowcolors{2}{cPari}{cDispari}
+            \renewcommand{\arraystretch}{2}
+            \begin{longtable}{ C{4cm} C{4cm} C{4cm}}
+                \rowcolor{coloreRosso}
+                \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Matricola}} & \textcolor{white}{\textbf{Ruolo di progetto}}\\
+                \endhead 
+                \SG{} & 1187566 & Programmatore\\
+                \BM{} & 1193109 & Analista\\
+                \RA{} & 1187504 & Verificatore\\
+                \SH{} & 1102482 & Progettista\\
+                \PA{} & 1193361 & Progettista \\
+                \ZM{} & 1123576 & Responsabile\\
+                \SP{} & 1161625 & Amministratore \\
+            \end{longtable}
+        }
+        Cordiali saluti,
+        \begin{flushright}
+        	\closing{\ZM{}, \\ \textit{\Responsabile{}} \\\includegraphics[width=.6\linewidth]{Utility/Images/firmaZM.png}} 
+        \end{flushright}
+    \end{letter}
+\end{document}

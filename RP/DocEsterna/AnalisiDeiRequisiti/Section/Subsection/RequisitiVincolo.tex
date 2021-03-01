@@ -1,0 +1,35 @@
+\subsection{Requisiti di vincolo}
+{
+\setlength\arrayrulewidth{1pt}
+\begin{longtable}{C{2cm} | C{1.5cm} | C{9cm} | C{3.3cm}}
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Codice}} & 
+		\textcolor{white}{\textbf{Classe}} & 
+		\textcolor{white}{\textbf{Descrizione}} & 
+		\textcolor{white}{\textbf{Fonti}} \\
+		\endfirsthead
+	    \rowcolor{white}\multicolumn{4}{c}{\textit{Continua nella pagina successiva...}}\\
+	    \endfoot
+	    \rowcolor{white}\caption{Tabella dei requisiti di vincolo}
+	    \endlastfoot
+
+%--------------------------------------------
+R1V1 & OB & L'applicazione \textit{HD Viz} deve avere il \glo{front-end} sviluppato attraverso l'uso di tecnologie web. & Capitolato \\
+R1V1.1 & OB & Le visualizzazioni dei grafici sono sviluppate in \glo{Javascript} utilizzando la libreria \glo{D3.js} & Capitolato\\
+R1V2 & OB & Il \glo{back-end} dovrà essere sviluppato in \glo{Java} con server \glo{Tomcat} o in \glo{Javascript} con server \glo{Node.js}. & Capitolato \\
+R1V3 & OB & Deve essere presente un \glo{database} \glo{SQL} o \glo{NoSQL}. & Capitolato\\
+R2V4 & DE & Per il salvataggio e il ripristino della sessione si utilizzerà un file in formato \glo{JSON}. & Verb. Interno-5.10\\
+R2V5 & DE & Il \glo{database} dovrà essere di tipo relazionale e implementato con \textit{\glo{PostgreSQL}}. & Verbale Interno-7.1\\
+R2V6 & DE & La parte server sarà implementata con \textit{Node.js} ed \textit{\glo{Express.js}} per agevolare il collegamento al \glo{database}. & Verbale Interno-7.2 \\
+
+R3V7 & OP & L'applicativo deve essere utilizzabile anche da dispositivi mobili, come tablet e cellulari. & Verb. Interno-5.11\\
+R1V8 & OB & Lo sviluppo deve basarsi su browser aggiornati all'ultima versione disponibile. & Verb. Interno-5.12\\
+R1V9 & OB & La web app deve funzionare con il browser \glo{Google Chrome} dalla v87. & Supporto browser \glo{SVG} 1.1 \\
+R1V10 & OB & La web app deve funzionare con il browser \glo{Microsoft Edge} dalla v79. & Supporto browser SVG 1.1 \\
+R1V11 & OB & La web app deve essere compatibile con il browser \glo{Mozilla Firefox} dalla v84. & Supporto browser SVG 1.1\\
+R1V12 & OB & La web app deve essere compatibile con il browser \glo{Safari} dalla v13.1. & Supporto browser SVG 1.1\\
+R1V13 & OB & La web app deve essere sviluppata con l'ultimo rilascio della libreria \textit{D3.js} (v6). & Verbale Interno-7.6\\
+R1V14 & OB & La web app sarà sviluppata utilizzando \textit{React.js} e \textit{\glo{Bootstrap}}. & Verbale Interno-7.3\\
+
+\end{longtable}
+}

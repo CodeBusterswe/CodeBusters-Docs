@@ -1,0 +1,61 @@
+\section{Descrizione Generale}
+\subsection{Obiettivi del prodotto}
+L'obiettivo del progetto è la realizzazione di un'applicazione che permette la visualizzazione di dati a molte dimensioni, come supporto della fase esplorativa della loro analisi, con l'utilizzo di tecnologie web.
+\subsection{Funzioni del prodotto}
+L'applicazione si occupa di analizzare dati a molte dimensioni e di restituire dei grafici che, grazie all'aiuto di specifici algoritmi di riduzione dimensionale, risultano essere più comprensibili e significativi. In questo modo il grafico scelto dall'utente può diventare molto utile per estrapolare informazioni che in un primo momento potevano essere nascoste o poco chiare. I \glo{dataset} possono essere reperiti dall'apposito \glo{database} oppure possono essere caricati dall'utente nel caso in cui ne possieda in formato \glo{CSV}. Per agevolare il processo esplorativo, l'utente ha la possibilità, in base al grafico scelto, di apportare alcune modifiche in modo da raffinare l'elaborazione sullo specifico set di dati in esame.\\ Per un'eventuale gestione di dati in più sessioni di lavoro, sarà possibile salvare le informazioni in un file scaricabile, che potrà essere successivamente caricato sulla piattaforma ripristinando la sessione nel punto in cui era stata interrotta.
+
+\subsection{Database}
+Visto il potenziale di questa web app per l'analisi dei dati, in reali contesti lavorativi la quantità di \glo{dataset} studiati sarà notevole, ciascuno costituito da molti campi e valori. Per questa ragione la presenza di un database, contenente tutti i dataset raggiungibili tramite \glo{query}, risulta essere essenziale e l'utilizzo di file \glo{CSV} sarà solo l'eccezione. \\
+La web app dovrà essere predisposta per la comunicazione con un database, di tipo relazionale, solamente per la ricezione dei dati; la sua gestione di amministrazione e mantenimento sarà gestita separatamente e non è richiesta come vincolo.
+
+\subsection{Caratteristiche degli utenti}
+Il progetto non prevede come requisito la presenza di diverse categorie di utenza e non è necessaria una funzionalità di autenticazione: chiunque ha accesso alle complete funzionalità del prodotto. 
+\subsection{Piattaforme di esecuzione}
+Il progetto sarà costituito da un insieme di pagine web accessibili dai browser più diffusi, nelle loro versioni recenti, come \glo{Google Chrome}, \glo{Mozilla Firefox}, \glo{Safari} o \glo{Edge}. Non è richiesto, come requisito, una completa compatibilità con browser meno diffusi.
+
+\newpage
+
+\subsection{Vincoli di progettazione}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{C{4cm} | C{11.5cm}}
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Tipologia}} & 
+		\textcolor{white}{\textbf{Descrizione}} \\
+		\endfirsthead
+	    \rowcolor{white}\multicolumn{2}{c}{\textit{Continua nella pagina successiva...}}\\
+	    \endfoot
+	    \rowcolor{white}\caption{Tabella dei requisiti di progettazione}
+	    \endlastfoot
+
+\rowcolor{coloreRossoChiaro}\multicolumn{2}{c}{\textcolor{white}{\textbf{Requisiti obbligatori}}}\\	    
+	    
+Implementazione del \glo{front-end} & Utilizzo di \glo{HTML}, \glo{CSS} e \glo{JavaScript}\\
+
+Implementazione dei grafici & Utilizzo della libreria \glo{D3.js} per creare visualizzazioni almeno fino a 15 dimensioni\\
+
+Tipi di grafici & 
+1. \glo{Scatter plot Matrix} (massimo 5 dimensioni);
+\newline 2. \glo{Force Field}  ;
+\newline 3. \glo{Heat Map} (con ordinamento dei dati per evidenziare i \glo{cluster});
+\newline 4. \glo{Proiezione Lineare Multi Asse} 
+\\
+
+Recupero dati & Il sistema deve accettare dati sia tramite \glo{query} ad un database che caricamento di file in formato \glo{CSV} \\
+
+Implementazione del \glo{back-end} & Utilizzo di un \glo{database} \glo{SQL} o \glo{NoSQL} con server \glo{Tomcat} o \glo{Node.js} \\
+	    
+\rowcolor{coloreRossoChiaro}\multicolumn{2}{c}{\textcolor{white}{\textbf{Requisiti opzionali}}}\\	
+
+Tipi di grafici & Implementazione di altri grafici adatti alla visualizzazione dei dati con più di tre dimensioni \\
+
+Modifiche alla visualizzazione & 1. Utilizzo di funzioni di calcolo della distanza diverse dalla \glo{distanza “Euclidea”}; \newline
+2. Utilizzo di funzioni di “forza” diverse da quelle previste in automatico dal grafico “Force Based” di \glo{D3.js} \\
+
+Preparazione dei dati & 1. Utilizzo di algoritmi di pulizia dei dati poco rilevanti; \newline
+2. Analisi automatiche per evidenziare situazioni di particolare interesse\\
+
+\end{longtable}
+
+
+

@@ -1,0 +1,95 @@
+
+Per garantire la qualità dei processi è stato utilizzato come riferimento lo standard ISO/IEC/IEEE 12207:1995. Tra i processi elencati dal modello, il gruppo ne ha scelti alcuni che sono stati semplificati e adattati alle necessità del progetto. Questa sezione espone i valori di qualità accettabili e ottimali sulla base di metriche elencate nelle \NdP{}.\\ Successivamente sono riportati i processi selezionati con le relative metriche utilizzate, che possono essere consultate dettagliatamente nel documento \NdPv{v2.0.0-0.2}.
+
+\subsection{Obiettivi di qualità di processo}
+{
+\setlength\arrayrulewidth{0.95pt}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{C{3cm} | C{9.5cm} | C{2.5cm}}
+\rowcolor{coloreRosso}
+
+\textcolor{white}{\textbf{Processo}}&
+\textcolor{white}{\textbf{Descrizione}}&
+\textcolor{white}{\textbf{Metriche}} \\
+\endfirsthead
+\rowcolor{white}\multicolumn{3}{C{15cm}}{\textit{Continua nella pagina successiva...}}\\
+\endfoot
+\rowcolor{white}\caption{Obiettivi di qualità di processo}
+\endlastfoot
+	
+\rowcolor{coloreRossoChiaro}
+ & \textcolor{white}{\textbf{Processi primari}} &  \\
+
+	\textbf{Fornitura} &
+	 Processo che consiste nel scegliere le procedure e le risorse atte a perseguire lo sviluppo del progetto. &
+	MPC1, MPC2 \newline MPC3, MPC4 \newline MPC5, MPC6 \newline MPC7  \\
+	
+		\textbf{Sviluppo} &
+	 Processo che contiene le attività e i compiti per realizzare il prodotto software richiesto. &
+	MPC8, MPC9 \\
+ 
+ \rowcolor{coloreRossoChiaro}
+ & \textcolor{white}{\textbf{Processi di supporto}} &  \\
+ 
+	\textbf{Verifica} & 
+	Processo che si pone come obbiettivo il controllo dello sviluppo software a livello di codifica. &
+	MPC10, MPC11 \newline MPC12 \\
+	
+	\textbf{Gestione qualità} &
+	 Processo che consiste nel garantire gli obbiettivi di qualità del prodotto e dei servizi che offre. &
+	MPC13 \\
+	
+	\rowcolor{coloreRossoChiaro}
+ & \textcolor{white}{\textbf{Processi Organizzativi}} &  \\
+ 
+	\textbf{Gestione organizzativa} & 
+	Processo che si occupa di esporre le modalità di coordinamento del gruppo. &
+	MPC14 \\
+	
+\end{longtable}	
+
+}
+
+\newpage
+
+\subsection{Metriche utilizzate}
+
+
+\subsubsection{Processi Primari}
+
+{
+\renewcommand{\arraystretch}{1.5}
+\centering
+\begin{longtable}{C{2.5cm} | C{4cm} | C{5cm} | C{3.5cm}}
+\rowcolor{coloreRosso}
+\textcolor{white}{\textbf{Codice}}&
+\textcolor{white}{\textbf{Nome metrica}}&
+\textcolor{white}{\textbf{Valore accettabile}}&
+\textcolor{white}{\textbf{Valore ottimale}}\\	
+
+\endhead
+\endfoot
+
+\rowcolor{white}\caption{Metriche di qualità dei processi primari}
+\endlastfoot
+
+\rowcolor{coloreRossoChiaro}
+\multicolumn{4}{c}{\textcolor{white}{Fornitura}} \\
+
+\textbf{MPC1} & Schedule Variance (SV) & $\geq -10\%$ & $\leq 0\%$ \\
+\textbf{MPC2} & Budget Variance (BV) & $\geq -10\%$ & $\leq 0\%$ \\
+\textbf{MPC3} & Estimated at Completion (EAC) & preventivo - 2,5\% $ \leq $ EAC \newline EAC $ \leq $ preventivo + 5\% & Pari al preventivo  \\
+\textbf{MPC4} & Earned Value (EV) & $\geq 0$  & $\leq $ EAC \\
+\textbf{MPC5} & Planned Value (PV) & $\geq 0$  & $\leq $ Budget at Completion\\
+\textbf{MPC6} & Actual Cost (AC) & $\geq 0$  & $\leq $ EAC\\
+\textbf{MPC7} & Estimate to Complete (ETC) & $\geq 0$  & $\leq $ EAC\\
+
+\rowcolor{coloreRossoChiaro}
+\multicolumn{4}{c}{\textcolor{white}{Sviluppo}} \\
+
+\textbf{MPC8} & Requirements stability index (RSI) & 70\% & 100\% \\
+\textbf{MPC9} & Satisfied obligatory requirements (SOR) & 100\% & 100\%
+\end{longtable}
+}
+
+

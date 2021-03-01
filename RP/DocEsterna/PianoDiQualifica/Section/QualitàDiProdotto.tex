@@ -1,0 +1,104 @@
+\section{Qualità di prodotto}
+
+Dallo standard ISO/IEC 9126, il gruppo \Gruppo{} ha identificato le qualità che ritiene necessarie nell'intero ciclo di vita del prodotto e ne ha tratto delle metriche e degli obiettivi per il loro perseguimento.\\
+Di seguito sono riportati gli obiettivi di qualità con le relative metriche utilizzate, che possono essere consultate dettagliatamente nel documento \NdPv{v2.0.0-0.2}.
+
+
+\subsection{Obiettivi di qualità di prodotto}
+{
+\setlength\arrayrulewidth{0.95pt}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{C{3cm} | C{9.5cm} | C{2.5cm}}
+\rowcolor{coloreRosso}
+
+\textcolor{white}{\textbf{Obbiettivo}}&
+\textcolor{white}{\textbf{Descrizione}}&
+\textcolor{white}{\textbf{Metriche}} \\
+\endfirsthead
+\rowcolor{white}\multicolumn{3}{C{15cm}}{\textit{Continua nella pagina successiva...}}\\
+\endfoot
+\rowcolor{white}\caption{Obiettivi di qualità di prodotto}
+\endlastfoot
+	
+\rowcolor{coloreRossoChiaro}
+ & \textcolor{white}{\textbf{Monitoraggio documentazione}} &  \\
+
+	\textbf{Comprensione} &
+	 Tutti i documenti devono essere leggibili e comprensibili; qualità che derivano dalla correttezza lessicale e grammaticale. &
+	MPD1 \newline MPD2 \\
+ 
+ \rowcolor{coloreRossoChiaro}
+ & \textcolor{white}{\textbf{Monitoraggio software}} &  \\
+ 
+	\textbf{Funzionalità} & 
+	Capacità del prodotto di offrire tutte le funzioni individuate nell'\AdR{}, perseguendo accuratezza e adeguatezza. &
+	MPD3 \\
+	
+	\textbf{Affidabilità} &
+	 Capacità del prodotto di riuscire a svolgere tutte le funzionalità anche in caso di errori o problemi, cercando di evitare che si manifestino. &
+	MPD4 \\
+	
+	\textbf{Usabilità} &
+	Capacità di essere comprensibile e graficamente armonioso in modo da rendere piacevole l'esperienza dell'utente. Le funzionalità devono essere compatibili con le aspettative. &
+    MPD5 \newline MPD6 \newline MPD7 \\
+    
+	\textbf{Efficienza} & 
+	Capacità di raggiungere un fine con il minor utilizzo di tempo e risorse, puntando alla velocità e alla leggerezza. &
+	MPD8 \\
+	
+	\textbf{Manutenibilità} & 
+	Capacità di permettere future correzioni e modifiche senza che ciò rischi di compromettere l'intero progetto; l'individuazione degli errori deve essere facile e deve essere possibile modificare o aggiungere nuove parti. &
+ 	MPD9 \\
+ 	
+	\textbf{Portabilità} & 
+	Capacità di poter funzionare in diversi ambienti di esecuzione. Gli obiettivi da perseguire sono adattabilità e sostituibilità. &
+	MPD10 \\
+	
+\end{longtable}	
+
+}
+
+\newpage
+
+\subsection{Metriche utilizzate}
+{
+\renewcommand{\arraystretch}{1.5}
+\setlength\arrayrulewidth{0.9pt}
+\begin{longtable}{C{2.5cm} | C{5cm} | C{4cm} | C{4cm}}
+\rowcolor{coloreRosso}
+\textcolor{white}{\textbf{Codice}}&
+\textcolor{white}{\textbf{Nome metrica}}&
+\textcolor{white}{\textbf{Valore accettabile}}&
+\textcolor{white}{\textbf{Valore ottimale}}\\	
+\endhead
+\endfoot
+\rowcolor{white}\caption{Metriche di qualità di prodotto}
+\endlastfoot
+
+\rowcolor{coloreRossoChiaro}
+\multicolumn{4}{c}{\textcolor{white}{\textbf{Documenti}}} \\
+
+	\textbf{MPD1} & Indice di Gulpease & $\geq$ 60 & $\geq$ 80\\
+	\textbf{MPD2} & Errori ortografici & 100\% corretto & 100\% corretto \\
+	
+\rowcolor{coloreRossoChiaro}
+\multicolumn{4}{c}{\textcolor{white}{\textbf{Software}}} \\
+
+	\textbf{MPD3} & Copertura dei requisiti & 100\% requisiti obbl. & 100\% di tutti i requisiti \\
+		
+	\textbf{MPD4} & Densità di failure & 30\% & 20\% \\
+
+	\textbf{MPD5} & Average Cyclomatic Complexity & 15 & 10 \\		
+	\textbf{MPD6} & Facilità di utilizzo & 6 & 5 \\
+	\textbf{MPD7} & Facilità apprendimento funzionalità & 15 minuti & 10 minuti\\
+
+ 	\textbf{MPD8} & Tempo medio di risposta & 5 secondi & 4 secondi \\
+	
+ 	\textbf{MPD9} & Comprensione del codice & 60-100\% & 80-100\% \\
+
+	\textbf{MPD10} & Versioni del browser supportate & 80\% & 100\% \\
+\end{longtable}
+
+
+	
+}
