@@ -1,3 +1,148 @@
 \section{Configurazione}
-\subsection{Requisiti di sistema}
+In questa sezione vengono trattati in primo luogo i requisiti minimi necessari per l'utilizzo dell'applicazione \textit{HDViz} e successivamente come poter installare il prodotto in locale direttamente dal repository pubblico in GitHub.  
+\subsection{Requisiti minimi}
+\subsubsection{Requisiti di sistema}
+Per far si che le operazioni di installazione e avvio del prodotto avvengano correttamente e che si possa aver accesso a tutte le funzionalità, è necessario avere nella propria macchina i seguenti software.
+{
+\setlength\arrayrulewidth{0.95pt}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{C{3cm} C{3cm} C{9cm}}
+\rowcolor{coloreRosso}
+
+\textcolor{white}{\textbf{Software}}&
+\textcolor{white}{\textbf{Versione}}&
+\textcolor{white}{\textbf{Riferimento per il downlaod}} \\
+\endfirsthead
+\rowcolor{white}\multicolumn{3}{C{15cm}}{\textit{Continua nella pagina successiva...}}\\
+\endfoot
+\rowcolor{white}\caption{Requisiti di sistema}
+\endlastfoot
+	
+	\textbf{Node.js} &
+	14.16.x &
+	\textcolor{blue}{\url{https://nodejs.org/it/}} \\
+ 
+	\textbf{Npm} & 
+	7.x &
+	Integrato nel download di Node.js \\
+	
+	\textbf{PostgreSQL} &
+	13.x &
+	\textcolor{blue}{\url{https://www.postgresql.org/download/}} \\
+\end{longtable}	
+
+}
+\subsubsection{Requisiti hardware}
+Come definito nell'analisi dei requisti, per avere delle prestazioni accettabili dell'applicazione è preferibile avere almeno i seguenti componenti hardware.
+{
+\setlength\arrayrulewidth{0.95pt}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{C{4cm} C{4cm}}
+\rowcolor{coloreRosso}
+
+\textcolor{white}{\textbf{Componente}}&
+\textcolor{white}{\textbf{Requisito}} \\
+\endfirsthead
+\endfoot
+\rowcolor{white}\caption{Requisiti hardware}
+\endlastfoot
+	
+	\textbf{Processore} &
+	 Quad-Core 3,2 GHz \\
+ 
+	\textbf{RAM} & 
+	8GB DDR4 \\
+
+\end{longtable}	
+}
+
+La connessione internet ideale dovrebbe essere di almeno 80Mb/s in download per assicurare i seguenti tempi di risposta (in secondi) della web app. 
+{
+\setlength\arrayrulewidth{0.95pt}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{C{2cm} C{10cm}}
+\rowcolor{coloreRosso}
+
+\textcolor{white}{\textbf{Tempo}}&
+\textcolor{white}{\textbf{Operazione}} \\
+\endfirsthead
+\endfoot
+\rowcolor{white}\caption{Prestazioni ottimali}
+\endlastfoot
+	
+	\textbf{2} &
+	Caricamento di un dataset di 2Mb;  \\
+ 
+	\textbf{7} & 
+	Applicazione di un algoritmo  di riduzione dimensionale con 4 dimensioni e 500 punti in totale; \\
+	
+	\textbf{2} &
+	Visualizzazione di un grafico con 500 punti.  \\	
+	
+\end{longtable}	
+}
+
+\subsubsection{Browser}
+L'applicazione è stata testata e quindi resa compatibile con le ultime versioni dei browser maggiormente utilizzati al momento.
+{
+\setlength\arrayrulewidth{0.95pt}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{C{4cm} C{4cm}}
+\rowcolor{coloreRosso}
+
+\textcolor{white}{\textbf{Browser}}&
+\textcolor{white}{\textbf{Versione}} \\
+\endfirsthead
+\endfoot
+\rowcolor{white}\caption{Browser e versioni compatibili}
+\endlastfoot
+	
+	\textbf{Chrome} &
+	 87 \\
+ 
+	\textbf{Edge} & 
+	79\\
+	
+	\textbf{Mozilla Firefox} &
+	 84 \\
+ 
+	\textbf{Safari} & 
+	13.1 \\
+	
+\end{longtable}	
+}
+
 \subsection{Installazione}
+Per installare il prodotto in locale è necessario seguire i passi qui riportati.
+\begin{enumerate}
+	\item Scaricare il codice come file .zip direttamente dal repository di CodeBusters-HDViz:
+		\begin{center}
+			\textcolor{blue}{\url{https://github.com/CodeBusterswe/CodeBusters-HDviz}}
+		\end{center}	
+	Oppure, con Git installato in locale, è possibile clonare il repositoty con il comando:
+		\begin{lstlisting}
+      git clone https://github.com/CodeBusterswe/CodeBusters-HDviz
+		\end{lstlisting}
+	\item Localizzare da terminale la cartella in cui si è stato estratto/clonato il prodotto:  
+		\begin{lstlisting}
+ 			   cd percorso\HDViz
+		\end{lstlisting}
+	\item Entrare nella cartella "client":
+		\begin{lstlisting}
+ 			       cd client
+		\end{lstlisting}
+	\item A questo punto è necessario installare tutti i "node\_ modules", ossia tutte le dipendenze dichiarate nel "package.json". Questo è possibile lanciando il comando:
+		\begin{lstlisting}
+ 			      npm install
+		\end{lstlisting}
+	Ci vorrà al massimo qualche minuto. 
+	\item Terminata l'installazione è subito possibile avviare l'applicazione con il comando:
+		\begin{lstlisting}
+ 			       npm start
+		\end{lstlisting}
+	Al termine dell'operazione dovrebbe aprirsi in automatico l'applicazione. In caso contrario aprire un browser e inserire l'indirizzo:
+	\begin{center}
+		localhost:3000.
+	\end{center}		
+\end{enumerate}
+  			
