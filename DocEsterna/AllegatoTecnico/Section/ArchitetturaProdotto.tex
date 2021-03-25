@@ -1,5 +1,7 @@
 \section{Architettura del prodotto}
 \subsection{Descrizione generale}
+Il passaggio di dati da \textbf{Model}, composto da \textit{Model.js}, \textit{DistanceMatricesModel.js} e \textit{Preferences} alle varie \textbf{View} avviene attraverso l'utilizzo di un \textit{Context React}, al quale viene passato un'istanza del \textbf{ViewModel}. L'utilizzo di un \textit{Context React} ci permette di accedere al valore corrente del \textbf{ViewModel} in qualsiasi \textbf{View}, senza doverlo passare di componente in componente attraverso \textit{props}. Nella radice dell'applicazione viene infatti creata un'istanza di\textbf{ViewModel}, che viene passata ad un \textit{Context.Provider}, che fa contenitore per tutta la \textbf{View}. All'interno di tale contenitore ogni \textit{component} può utilizzare un \textit{hook} per accedere al \textit{Context React} ed utilizzare il valore più recente del \textbf{ViewModel}. È stato scelto di utilizzare un \textit{Context React} per il passaggio dei dati in quanto la nostra applicazione é molto profonda e non ci era conveniente passare i dati per molti componenti, magari anche senza utilizzarli, per utilizzarli nell'ultimo componente figlio.
+Per l'aggiornamento della \textit{View} in seguito al cambiamento dei dati del \textit{Model} abbiamo usato la libreria \textit{Mobx}, questa ci permette di implementare il meccanismo degli Observer non supportato di default da \textit{React}
 \subsection{Diagrammi delle classi}
 \subsection{Diagrammi dei package}
 \subsection{Diagrammi di attività}
