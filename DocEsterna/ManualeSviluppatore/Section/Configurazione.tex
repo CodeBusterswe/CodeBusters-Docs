@@ -1,7 +1,6 @@
 \section{Configurazione}
 In questa sezione vengono trattati in primo luogo i requisiti minimi necessari per l'utilizzo dell'applicazione \textit{HDViz} e successivamente come poter installare il prodotto in locale direttamente dal repository pubblico in GitHub.  
-\subsection{Requisiti minimi}
-\subsubsection{Requisiti di sistema}
+\subsection{Requisiti di sistema}
 Per far si che le operazioni di installazione e avvio del prodotto avvengano correttamente e che si possa aver accesso a tutte le funzionalità, è necessario avere nella propria macchina i seguenti software.
 {
 \setlength\arrayrulewidth{0.95pt}
@@ -32,7 +31,7 @@ Per far si che le operazioni di installazione e avvio del prodotto avvengano cor
 \end{longtable}	
 
 }
-\subsubsection{Requisiti hardware}
+\subsection{Requisiti hardware}
 Come definito nell'analisi dei requisti, per avere delle prestazioni accettabili dell'applicazione è preferibile avere almeno i seguenti componenti hardware.
 {
 \setlength\arrayrulewidth{0.95pt}
@@ -82,7 +81,7 @@ La connessione internet ideale dovrebbe essere di almeno 80Mb/s in download per 
 \end{longtable}	
 }
 
-\subsubsection{Browser}
+\subsection{Browser}
 L'applicazione è stata testata e quindi resa compatibile con le ultime versioni dei browser maggiormente utilizzati al momento.
 {
 \setlength\arrayrulewidth{0.95pt}
@@ -120,29 +119,30 @@ Per installare il prodotto in locale è necessario seguire i passi qui riportati
 			\textcolor{blue}{\url{https://github.com/CodeBusterswe/CodeBusters-HDviz}}
 		\end{center}	
 	Oppure, con Git installato in locale, è possibile clonare il repositoty con il comando:
-		\begin{lstlisting}
-      git clone https://github.com/CodeBusterswe/CodeBusters-HDviz
-		\end{lstlisting}
+		\begin{center}
+			\textcolor{darkgray}{\textbf{git clone https://github.com/CodeBusterswe/CodeBusters-HDviz}}
+		\end{center}
+      
 	\item Localizzare da terminale la cartella in cui si è stato estratto/clonato il prodotto:  
-		\begin{lstlisting}
- 			   cd percorso\HDViz
-		\end{lstlisting}
+		\begin{center}
+			\textcolor{darkgray}{\textbf{cd percorso\textbackslash HDViz}}
+ 		\end{center}	
 	\item Entrare nella cartella "client":
-		\begin{lstlisting}
- 			       cd client
-		\end{lstlisting}
+		\begin{center}
+			\textcolor{darkgray}{\textbf{cd client}}
+ 		\end{center}	     
 	\item A questo punto è necessario installare tutti i "node\_ modules", ossia tutte le dipendenze dichiarate nel "package.json". Questo è possibile lanciando il comando:
-		\begin{lstlisting}
- 			      npm install
-		\end{lstlisting}
+		\begin{center}
+			\textcolor{darkgray}{\textbf{npm install}}
+ 		\end{center}		
 	Ci vorrà al massimo qualche minuto. 
 	\item Terminata l'installazione è subito possibile avviare l'applicazione con il comando:
-		\begin{lstlisting}
- 			       npm start
-		\end{lstlisting}
+		\begin{center}
+			\textcolor{darkgray}{\textbf{npm start}}
+ 		\end{center}
 	Al termine dell'operazione dovrebbe aprirsi in automatico l'applicazione. In caso contrario aprire un browser e inserire l'indirizzo:
 	\begin{center}
-		localhost:3000.
+		\textbf{localhost:3000} .
 	\end{center}		
 \end{enumerate}
   			
