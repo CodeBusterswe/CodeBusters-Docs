@@ -10,9 +10,34 @@ Il pattern architetturale scelto dal gruppo per lo sviluppo del progetto è il M
 \end{itemize}
 
 Il passaggio dei dati dal \textit{Model} alle varie componenti grafiche avviene attraverso l'utilizzo di un \textit{Context React}, al quale viene passato un'istanza del \textit{ViewModel}. L'utilizzo di un \glo{\textit{Context React}} ci permette di accedere al valore corrente del \textit{ViewModel} in qualsiasi porzione della \textit{View}, senza doverlo passare di componente in componente attraverso le \glo{props}. Nella radice dell'applicazione viene infatti creata un'istanza del \textit{ViewModel}, che viene passata ad un \textit{Context.Provider}, che fa da contenitore per tutta la \textit{View}. All'interno di tale contenitore ogni \glo{component} può utilizzare un \glo{hook} per accedere al \textit{Context React} ed utilizzare il valore più recente del \textit{ViewModel}.\\ È stato scelto di utilizzare un \textit{Context React} per il passaggio dei dati in quanto la nostra applicazione é molto profonda e non risultava conveniente passare i dati per molti componenti rischiando, nel peggiore dei casi, di doverli utilizzare nell'ultimo della gerarchia.\\
-Per poter far si che una componente della \textit{View} si renderizzi non solo al cambiamento del suo stato interno, ma anche al cambiamento dei dati nel \textit{Model}, abbiato utilizzato la libreria \glo{\textit{Mobx}}. Questa ci permette di implementare l'\textit{observer pattern} non supportato di default da \textit{React}. A tale scopo questa libreria permette di segnare delle classi, o attributi di esse, come "Observable"; e di costruire dei componenti della \textit{View} come "Observer". Questi componenti vengono automaticamente ri-renderizzati al cambiamento di un qualsiasi attributo "Observable".
+Per poter fare in modo che una componente della \textit{View} si renderizzi non solo al cambiamento del suo stato interno ma anche al cambiamento dei dati nel \textit{Model}, abbiamo utilizzato la libreria \glo{\textit{Mobx}}. Questa ci permette di implementare l'\textbf{observer pattern}, non supportato di default da \textit{React}. A tale scopo, Mobx permette di segnare delle classi (o attributi di esse) come "\textit{observable}" e di costruire dei componenti della View come "\textit{observer}". Quest'ultimi vengono automaticamente ri-renderizzati al cambiamento di un qualsiasi attributo \textit{observable}.
 \subsection{Diagrammi delle classi}
 \subsection{Diagrammi dei package}
 \subsection{Diagrammi di attività}
 \subsection{Diagrammi di sequenza}
+\begin{figure}[hb]
+\includegraphics[width=15.8cm]{Extra/Allegato Tecnico-Sequenza-DR}
+\centering
+\caption{Diagramma di sequenza che modella il processo di riduzione dimensionale}
+\end{figure}
+
+\begin{figure}[hb]
+\includegraphics[width=18cm]{Extra/Allegato Tecnico-Sequenza-PLMApref}
+\centering
+\caption{Diagramma di sequenza che modella .............}
+\end{figure}
+
+\begin{figure}[hb]
+\includegraphics[width=18cm]{Extra/Allegato Tecnico-Sequenza-PLMA}
+\centering
+\caption{Diagramma di sequenza che modella .............}
+\end{figure}
 \subsection{Design pattern utilizzati}
+Per implementare il processo di riduzione dimensionale è stato utilizzato il design pattern \textbf{strategy}. Questo è stato possibile perché l'unica sostanziale differenza era determinata dalla tipologia di algoritmo applicato. Definire una famiglia di algoritmi e isolarli all'interno di un oggetto ci ha permesso di renderli interscambiabili dinamicamente ed evitare duplicazione di codice. 
+\begin{itemize}
+\item \textbf{DimReduction.js}: rappresenta il \textit{Context}, ovvero la classe concreta che invoca la \textit{ConcreteStrategy} sotto richiesta del client;
+\item \textbf{AlgorithmStrategy.js}: interfaccia comune a tutti gli algoritmi ed utilizzata da \textit{DimReduction} per settarli ed invocarli;
+\item \textbf{FastmapStrategy.js, IsomapStrategy.js, LLEStrategy.js, TsneStrategy.js}: rappresentano gli algoritmi concreti ed espongono l'interfaccia comune.
+\end{itemize}
+
+Nel nostro caso, il pattern si basa sul metodo \textbf{startDR()} che esegue la riduzione dimensionale sui dati scelti e ritorna le nuove dimensioni. La strategy viene passata come stringa e, una volta creata la classe concreta dell'algoritmo scelto, viene costruita l'apposita istanza dalla libreria \textit{Druid.js}.\\Eventuali integrazioni con ulteriori algoritmi di riduzione dimensionale potranno essere effettuate derivando nuove classi concrete dall'interfaccia esposta.
