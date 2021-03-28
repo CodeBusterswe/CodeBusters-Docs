@@ -1,33 +1,112 @@
 \section{Requisiti minimi di sistema}
 Per poter utilizzare l'applicazione web HDViz è necessario avere i seguenti requisiti:
-\subsection{Prerequisiti}
-\begin{itemize}
-	\item Node.js v14.16.0 LTS o v15.12.0;
-	\item Npm v6.x o v7.x;
-	\item Craco v6.1.1.
-\end{itemize}
-\subsection{Requisiti hardware}
-\begin{itemize}
-	
-	\item Processore (CPU): Dual core a 2Ghz;
-	\item Memoria (RAM): 4GB;
-	\item Connessione internet: attiva (7 Mb/s);
-\end{itemize}
+\subsection{Requisiti di sistema}
+Per far si che le operazioni di installazione e avvio del prodotto avvengano correttamente e che si possa aver accesso a tutte le funzionalità, è necessario avere nella propria macchina i seguenti software.
+{
+\setlength\arrayrulewidth{0.95pt}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{C{3cm} C{3cm} C{9cm}}
+\rowcolor{coloreRosso}
 
-\subsection{Requisiti software}
-\begin{itemize}
-	\item Sistema operativo: Windows 10, Debian, Ubuntu, MacOs;
-	\begin{itemize}
-		\item  \textit{Windows} 10;
-		\item \textit{Debian} dalla versione 9 in poi;
-		\item \textit{Ubuntu} versione 20.04 LTS o 20.10
-		\item \textit{MacOs} dalla versione 10.13 High Sierra in poi.
-	\end{itemize}
-	\item Browser: 
-	\begin{itemize}
-		\item  \textit{Google Chrome} dalla versione 75.0 in poi;
-		\item \textit{Mozilla Firefox} dalla versione 69.0 in poi;
-		\item \textit{Microsoft Edge} dalla versione 81.0.416 in poi;
-		\item \textit{Safari} dalla versione 13.1 in poi.
-	\end{itemize}	 
-\end{itemize}
+\textcolor{white}{\textbf{Software}}&
+\textcolor{white}{\textbf{Versione}}&
+\textcolor{white}{\textbf{Riferimento per il downlaod}} \\
+\endfirsthead
+\rowcolor{white}\multicolumn{3}{C{15cm}}{\textit{Continua nella pagina successiva...}}\\
+\endfoot
+\rowcolor{white}\caption{Requisiti di sistema}
+\endlastfoot
+	
+	\textbf{Node.js} &
+	14.16.x &
+	\textcolor{blue}{\url{https://nodejs.org/it/}} \\
+ 
+	\textbf{Npm} & 
+	7.x &
+	Integrato nel download di Node.js \\
+	
+	\textbf{PostgreSQL} &
+	13.x &
+	\textcolor{blue}{\url{https://www.postgresql.org/download/}} \\
+\end{longtable}	
+
+}
+\subsection{Requisiti hardware}
+Per avere delle prestazioni accettabili dell'applicazione è preferibile avere almeno i seguenti componenti hardware.
+{
+\setlength\arrayrulewidth{0.95pt}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{C{4cm} C{4cm}}
+\rowcolor{coloreRosso}
+
+\textcolor{white}{\textbf{Componente}}&
+\textcolor{white}{\textbf{Requisito}} \\
+\endfirsthead
+\endfoot
+\rowcolor{white}\caption{Requisiti hardware}
+\endlastfoot
+	
+	\textbf{Processore} &
+	 Quad-Core 3,2 GHz \\
+ 
+	\textbf{RAM} & 
+	8GB DDR4 \\
+
+\end{longtable}	
+}
+
+La connessione internet ideale dovrebbe essere di almeno 80Mb/s in download per assicurare i seguenti tempi di risposta (in secondi) della web app. 
+{
+\setlength\arrayrulewidth{0.95pt}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{C{2cm} C{10cm}}
+\rowcolor{coloreRosso}
+
+\textcolor{white}{\textbf{Tempo}}&
+\textcolor{white}{\textbf{Operazione}} \\
+\endfirsthead
+\endfoot
+\rowcolor{white}\caption{Prestazioni ottimali}
+\endlastfoot
+	
+	\textbf{2} &
+	Caricamento di un dataset di 2Mb;  \\
+ 
+	\textbf{7} & 
+	Applicazione di un algoritmo  di riduzione dimensionale con 4 dimensioni e 500 punti in totale; \\
+	
+	\textbf{2} &
+	Visualizzazione di un grafico con 500 punti.  \\	
+	
+\end{longtable}	
+}
+
+\subsection{Browser}
+L'applicazione è stata testata e quindi resa compatibile con le ultime versioni dei browser maggiormente utilizzati al momento.
+{
+\setlength\arrayrulewidth{0.95pt}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{C{4cm} C{4cm}}
+\rowcolor{coloreRosso}
+
+\textcolor{white}{\textbf{Browser}}&
+\textcolor{white}{\textbf{Versione}} \\
+\endfirsthead
+\endfoot
+\rowcolor{white}\caption{Browser e versioni compatibili}
+\endlastfoot
+	
+	\textbf{Chrome} &
+	 87 \\
+ 
+	\textbf{Edge} & 
+	79\\
+	
+	\textbf{Mozilla Firefox} &
+	 84 \\
+ 
+	\textbf{Safari} & 
+	13.1 \\
+	
+\end{longtable}	
+}
