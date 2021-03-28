@@ -11,27 +11,78 @@ Il pattern architetturale scelto dal gruppo per lo sviluppo del progetto è il M
 
 Il passaggio dei dati dal \textit{Model} alle varie componenti grafiche avviene attraverso l'utilizzo di un \textit{Context React}, al quale viene passato un'istanza del \textit{ViewModel}. L'utilizzo di un \glo{\textit{Context React}} ci permette di accedere al valore corrente del \textit{ViewModel} in qualsiasi porzione della \textit{View}, senza doverlo passare di componente in componente attraverso le \glo{props}. Nella radice dell'applicazione viene infatti creata un'istanza del \textit{ViewModel}, che viene passata ad un \textit{Context.Provider}, che fa da contenitore per tutta la \textit{View}. All'interno di tale contenitore ogni \glo{component} può utilizzare un \glo{hook} per accedere al \textit{Context React} ed utilizzare il valore più recente del \textit{ViewModel}.\\ È stato scelto di utilizzare un \textit{Context React} per il passaggio dei dati in quanto la nostra applicazione é molto profonda e non risultava conveniente passare i dati per molti componenti rischiando, nel peggiore dei casi, di doverli utilizzare nell'ultimo della gerarchia.\\
 Per poter fare in modo che una componente della \textit{View} si renderizzi non solo al cambiamento del suo stato interno ma anche al cambiamento dei dati nel \textit{Model}, abbiamo utilizzato la libreria \glo{\textit{Mobx}}. Questa ci permette di implementare l'\textbf{observer pattern}, non supportato di default da \textit{React}. A tale scopo, Mobx permette di segnare delle classi (o attributi di esse) come "\textit{observable}" e di costruire dei componenti della View come "\textit{observer}". Quest'ultimi vengono automaticamente ri-renderizzati al cambiamento di un qualsiasi attributo \textit{observable}.
+\newpage
+
+\subsection{Diagramma dei package}
+\begin{figure}[hb]
+\includegraphics[width=18cm]{Extra/Allegato Tecnico-Package}
+\centering
+\caption{Diagramma dei package ....}
+\end{figure}
+\begin{figure}[hb]
+\includegraphics[width=12cm]{Extra/Allegato Tecnico-Package 2}
+\centering
+\caption{Diagramma dei package .....}
+\end{figure}
+\newpage
+
 \subsection{Diagrammi delle classi}
-\subsection{Diagrammi dei package}
-\subsection{Diagrammi di attività}
+\begin{figure}[hb]
+\includegraphics[width=14.8cm]{Extra/Allegato Tecnico-Class}
+\centering
+\caption{Diagramma delle classi generale}
+\end{figure}
+
+\begin{landscape}
+\vspace*{\fill}
+\begin{figure}[hb]
+\includegraphics[width=\linewidth]{Extra/Allegato Tecnico-Model}
+\centering
+\caption{Diagramma delle classi, zoom sul modello}
+\end{figure}
+\vfill
+\end{landscape}
+
+\begin{landscape}
+\vspace*{\fill}
+\begin{figure}[hb]
+\includegraphics[width=21cm]{Extra/Allegato Tecnico-View}
+\centering
+\caption{Diagramma delle classi, zoom sulla vista}
+\end{figure}
+\vfill
+\end{landscape}
+
+\begin{landscape}
+\vspace*{\fill}
+\begin{figure}[hb]
+\includegraphics[width=\linewidth ]{Extra/Allegato Tecnico-ViewModel}
+\centering
+\caption{Diagramma delle classi, zoom sul view-model}
+\end{figure}
+\vfill
+\end{landscape}
+\newpage
 \subsection{Diagrammi di sequenza}
 \begin{figure}[hb]
-\includegraphics[width=15.8cm]{Extra/Allegato Tecnico-Sequenza-DR}
+\includegraphics[width=12cm]{Extra/Allegato Tecnico-Sequenza-DR}
 \centering
 \caption{Diagramma di sequenza che modella il processo di riduzione dimensionale}
 \end{figure}
-
+\newpage
 \begin{figure}[hb]
-\includegraphics[width=18cm]{Extra/Allegato Tecnico-Sequenza-PLMApref}
+\includegraphics[width=16cm]{Extra/Allegato Tecnico-Sequenza-PLMApref}
 \centering
 \caption{Diagramma di sequenza che modella .............}
 \end{figure}
-
+\newpage
 \begin{figure}[hb]
-\includegraphics[width=18cm]{Extra/Allegato Tecnico-Sequenza-PLMA}
+\includegraphics[width=15.5cm]{Extra/Allegato Tecnico-Sequenza-PLMA}
 \centering
 \caption{Diagramma di sequenza che modella .............}
 \end{figure}
+\newpage
+
 \subsection{Design pattern utilizzati}
 Per implementare il processo di riduzione dimensionale è stato utilizzato il design pattern \textbf{strategy}. Questo è stato possibile perché l'unica sostanziale differenza era determinata dalla tipologia di algoritmo applicato. Definire una famiglia di algoritmi e isolarli all'interno di un oggetto ci ha permesso di renderli interscambiabili dinamicamente ed evitare duplicazione di codice. 
 \begin{itemize}
@@ -41,40 +92,3 @@ Per implementare il processo di riduzione dimensionale è stato utilizzato il de
 \end{itemize}
 
 Nel nostro caso, il pattern si basa sul metodo \textbf{startDR()} che esegue la riduzione dimensionale sui dati scelti e ritorna le nuove dimensioni. La strategy viene passata come stringa e, una volta creata la classe concreta dell'algoritmo scelto, viene costruita l'apposita istanza dalla libreria \textit{Druid.js}.\\Eventuali integrazioni con ulteriori algoritmi di riduzione dimensionale potranno essere effettuate derivando nuove classi concrete dall'interfaccia esposta.
-
-\begin{figure}[hb]
-\includegraphics[width=18cm]{Extra/Allegato Tecnico-Class}
-\centering
-\caption{Diagramma ...............................}
-\end{figure}
-
-\begin{landscape}
-\vspace*{\fill}
-\begin{figure}[hb]
-\includegraphics[width=\linewidth]{Extra/Allegato Tecnico-Model}
-\centering
-\caption{Diagramma ...............................}
-\end{figure}
-\vfill
-\end{landscape}
-
-
-\begin{landscape}
-\vspace*{\fill}
-\begin{figure}[hb]
-\includegraphics[width=\linewidth]{Extra/Allegato Tecnico-View}
-\centering
-\caption{Diagramma ...............................}
-\end{figure}
-\vfill
-\end{landscape}
-
-\begin{landscape}
-\vspace*{\fill}
-\begin{figure}[hb]
-\includegraphics[width=\linewidth]{Extra/Allegato Tecnico-ViewModel}
-\centering
-\caption{Diagramma ...............................}
-\end{figure}
-\vfill
-\end{landscape}
