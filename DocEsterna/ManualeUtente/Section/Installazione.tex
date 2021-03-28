@@ -1,23 +1,34 @@
 \section{Installazione}
 Per accedere all'applicazione web è necessario:
-\begin{itemize}
-	\item Scaricare la \glo{repository}
+Per installare il prodotto in locale è necessario seguire i passi qui riportati.
+\begin{enumerate}
+	\item Scaricare il codice come file .zip direttamente dal repository di CodeBusters-HDViz:
+		\begin{center}
+			\textcolor{blue}{\url{https://github.com/CodeBusterswe/CodeBusters-HDviz}}
+		\end{center}	
+	\item Estrarre il contenuto della cartella a piacere;
+	\item Localizzare da terminale la cartella in cui si è stato estratto il prodotto:  
+		\begin{center}
+			\textcolor{darkgray}{\textbf{cd percorso\textbackslash HDViz}}
+ 		\end{center}	
+	\item Entrare nella cartella "client":
+		\begin{center}
+			\textcolor{darkgray}{\textbf{cd client}}
+ 		\end{center}	     
+	\item A questo punto è necessario installare tutti i "node\_ modules", ossia tutte le dipendenze dichiarate nel "package.json". Questo è possibile lanciando il comando:
+		\begin{center}
+			\textcolor{darkgray}{\textbf{npm install}}
+ 		\end{center}		
+	Ci vorrà al massimo qualche minuto. 
+	\item Terminata l'installazione è subito possibile avviare l'applicazione con il comando:
+		\begin{center}
+			\textcolor{darkgray}{\textbf{npm start}}
+ 		\end{center}
+	Al termine dell'operazione dovrebbe aprirsi in automatico l'applicazione. In caso contrario aprire un browser e inserire l'indirizzo:
 	\begin{center}
-		\textcolor{blue}{\url{https://github.com/CodeBusterswe/CodeBusters-HDviz.git}}
-	\end{center}
-	
-	\item Estrarre il contenuto del file .zip scaricato in una cartella a piacere;
-	
-	\item A seconda del vostro sistema operativo, aprite il Prompt dei comandi o il terminale;
-	
-	\item Posizionarsi all'interno della cartella contenente i file scaricati e andare nella cartella (......da completare....)
-	
-	\item Digitare il comando {\fontfamily{pcr}\selectfont
-npm start
-} e si aprirà l'applicazione web nel browser.
-
-	
-\end{itemize}
+		\textbf{localhost:3000} .
+	\end{center}		
+\end{enumerate}
 
 
 
