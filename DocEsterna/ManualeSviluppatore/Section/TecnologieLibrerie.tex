@@ -1,86 +1,101 @@
 \section{Tecnologie coinvolte}
-\subsection{Linguaggi}
-\subsubsection{Javascript}
-JavaScript è un linguaggio di programmazione  comunemente utilizzato nella programmazione Web per la creazione di effetti dinamici interattivi tramite funzioni di script invocati da eventi innescati a loro volta in vari modi dall'utente sulla pagina web in uso (mouse, tastiera, caricamento della pagina, ecc...).
-\subsubsection{HTML5}
-HTML5 è un linguaggio di markup per la strutturazione di pagine web. Viene utilizzato
-nel progetto \NomeProgetto{} assieme a React per definire il frontend.
-\subsubsection{CSS3}
-Il CSS è un linguaggio usato per definire la formattazione di documenti HTML5, XHTML e XML, come ad esempio siti web e le relative pagine web.
-Essendo il progetto \NomeProgetto{} composto di elementi HTML viene utilizzato il CSS per la loro stilizzazione. L’uso del CSS all'interno del progetto permette la separazione dei contenuti delle pagine HTML dal loro layout e permette una programmazione più chiara e facile da utilizzare, sia per gli autori delle pagine stesse sia per gli utenti, garantendo contemporaneamente anche il riutilizzo di codice ed una sua più facile manutenzione.
 
-\subsection{Strumenti}
-\subsubsection{PostgreSQL}
-PostgreSQL è un completo \glo{DBMS} ad oggetti ed offre caratteristiche uniche nel suo genere che lo pongono per alcuni aspetti all'avanguardia nel settore delle basi di dati. Viene utilizzato nel progetto per il caricamento nell'applicazione di basi di dati prefatte a disposizione dell'utente.
-\begin{itemize}
-\item \textbf{Versione utilizzata:} 13.x .
-\end{itemize}
-\subsubsection{Npm}
-Npm è un gestore di pacchetti per il linguaggio di programmazione JavaScript. È il gestore di pacchetti predefinito per l'ambiente di runtime JavaScript Node.js. Consiste in un client da linea di comando, chiamato anch'esso npm, e un database online di pacchetti pubblici e privati, chiamato npm registry.
-Viene utilizzato dal gruppo per effettuare le operazioni di build del codice.
-\begin{itemize}
-\item \textbf{Versione utilizzata:} 7.x .
-\end{itemize}
-\subsubsection{ESLint}
-ESLint è uno strumento di analisi del codice statico per identificare i modelli problematici trovati nel codice JavaScript. Le regole in ESLint sono configurabili e le regole personalizzate possono essere definite e caricate.
-Nel progetto \NomeProgetto{} è stato utilizzato questo strumento principalmente per la segnalazione degli errori di sintassi, import che non vengono usati all'interno del progetto oppure variabili non utilizzate.
-\begin{itemize}
-\item \textbf{Versione utilizzata:} 7.15.0 .
-\end{itemize}
-\subsubsection{Babel}
-Babel è un transcompiler JavaScript gratuito e open source che viene utilizzato principalmente per convertire il codice ECMAScript 2015+ in una versione compatibile con le versioni precedenti di JavaScript che può essere eseguita da motori JavaScript meno recenti.
-\begin{itemize}
-\item \textbf{Versione utilizzata:} 7.11.0 .
-\end{itemize}
+{
+\setlength\arrayrulewidth{0.95pt}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{C{3cm} C{2cm} C{10cm}}
+\rowcolor{coloreRosso}
 
-\subsection{Librerie e framework}
-\subsubsection{D3.js}
-D3.js è una libreria JavaScript per creare visualizzazioni dinamiche ed interattive partendo da dati organizzati, visibili attraverso un comune browser.
-Questa libreria è stata utilizzata nel progetto \NomeProgetto{} per la creazione dei grafici per le rappresentazioni dei dati richiesti.
-\begin{itemize}
-\item \textbf{Versione utilizzata:} 6.x .
-\end{itemize}
-\subsubsection{React}
-React è una libreria glo{JavaScript} per la creazione di interfacce utente utilizzato principalmente come base nello sviluppo di applicazioni a pagina singola o mobile.
-Questa libreria è stata scelta per la realizzazione del progetto per poter facilitare lo sviluppo del frontend e avere più performance grazie al suo metodo di renderizzazione dei dati.
-\begin{itemize}
-\item \textbf{Versione utilizzata:} 17.0.1 .
-\end{itemize}
-\subsubsection{Node.js}
-Node.js è un runtime system open source multipiattaforma orientato agli eventi per l'esecuzione di codice JavaScript, costruita sul motore JavaScript V8 di Google Chrome.
-Node.js è stato utilizzato per lo sviluppo del progetto \NomeProgetto{} come strumento per l'utilizzio di Javascript lato server.
-\begin{itemize}
-\item \textbf{Versione utilizzata:} 14.16.0 .
-\end{itemize}
-\subsubsection{React Bootstrap}
-Bootstrap è un framework che permette la creazione di siti e applicazioni per il Web responsive. Questa libreria chiamata React Bootstrap permette di costruire componenti come se fossero componenti React veri e propri senza dipendenze non necessarie. Essa è stata utilizzata per il progetto perchè contiene modelli di progettazione basati su HTML e CSS, sia per la tipografia, che per le varie componenti dell'interfaccia, come modal, pulsanti, burger menù e form.
-\begin{itemize}
-\item \textbf{Versione utilizzata:} 1.5.2 .
-\end{itemize}
-\subsubsection{MobX}
-MobX è una libreria appositamente creata per React che permette la gestione dello \glo{state} dei componenti in maniera semplice e scalabile. Nel progetto \NomeProgetto{} è stata utilizza questa libreria per l'implementazione del design pattern Observer.
-\begin{itemize}
-\item \textbf{Versione utilizzata:} 6.1.x .
-\end{itemize}
-\subsubsection{Druid.js}
-DruidJS è una libreria JavaScript per la riduzione della dimensionalità. Con la riduzione della dimesionalità è possibile proiettare dati ad alta dimensionalità su una dimensionalità inferiore mantenendo le proprietà dei dati specifiche del metodo. DruidJS semplifica la proiezione di un set di dati con i metodi di riduzione della dimensionalità implementati.
-Nel progetto \NomeProgetto questa libreria viene usata per implementare il processo di riduzione dimensionale.
-\begin{itemize}
-\item \textbf{Versione utilizzata:} 0.3.5 .
-\end{itemize}
-\subsubsection{Express}
-Express è un framework open source per applicazioni web per Node.js. È stato progettato per creare web application e API ed è ormai definito il server framework standard de facto per Node.js.
-Nel progetto \NomeProgetto Express fa da intermediario tra web app e database, agevolando il collegamento.
-\begin{itemize}
-\item \textbf{Versione utilizzata:} 4.17.1 .
-\end{itemize}
-\subsubsection{Jest} 
-Jest è un framework di test JavaScript open-source gestito da Facebook. Funziona con progetti che utilizzano Babel, TypeScript, Node.js, React, Angular, Vue.js e Svelte.
-\begin{itemize}
-\item \textbf{Versione utilizzata:} 26.x .
-\end{itemize}
-\subsubsection{React Testing Library}
-La libreria React Testing Library è una soluzione per testare i componenti React; viene utilizzata nel progetto \NomeProgetto{} per la stesura dei test.
-\begin{itemize}
-\item \textbf{Versione utilizzata:} 11.2.x .
-\end{itemize}
+\textcolor{white}{\textbf{Tecnologia}}&
+\textcolor{white}{\textbf{Versione}}&
+\textcolor{white}{\textbf{Descrizione}} \\
+\endfirsthead
+\rowcolor{white}\multicolumn{3}{C{15cm}}{\textit{Continua nella pagina successiva...}}\\
+\endfoot
+\rowcolor{white}\caption{Tecnologie coinvolte}
+\endlastfoot
+	
+\rowcolor{coloreRossoChiaro}
+\multicolumn{3}{|c|}{\textcolor{white}{\textbf{Linguaggi}}} \\
+
+	\textbf{JavaScript} & 
+	ES6 &
+	JavaScript è un linguaggio di programmazione utilizzato nella programmazione web per la creazione di effetti dinamici e interattivi tramite eventi invocati dall'utente. È il linguaggio della libreria React, utilizzata per costruire l'UI di \NomeProgetto{}.\\
+
+	\textbf{HTML} &
+	5 &
+	HTML5 è un linguaggio di markup per la strutturazione di pagine web. Viene utilizzato nel progetto \NomeProgetto{} assieme a React per definire l'interfaccia grafica. In particolare React utilizza HTML e JavaScript in una sintassi chiamata \glo{JSX} che unisce i due linguaggi in singoli statement.\\
+	
+	\textbf{CSS} &
+	3 & 
+	CSS è un linguaggio usato per definire la formattazione di documenti HTML5, XHTML e XML, come ad esempio siti web.
+Essendo il progetto \NomeProgetto{} composto di elementi HTML viene utilizzato il CSS per definirne lo stile. \\
+	
+ \rowcolor{coloreRossoChiaro}
+\multicolumn{3}{|c|}{\textcolor{white}{\textbf{Strumenti}}} \\
+
+	\textbf{PostgreSQL} & 
+	13.x &
+	PostgreSQL è un \glo{DBMS} ad oggetti ed offre caratteristiche all'avanguardia nel settore delle basi di dati. Viene utilizzato nel progetto per il caricamento nell'applicazione di basi di dati prefatte a disposizione dell'utente. \\
+ 
+ 	\textbf{Npm} & 
+	7.x &
+	Npm è un gestore di pacchetti per il linguaggio di programmazione JavaScript. Consiste in un client da linea di comando e un database online di pacchetti pubblici e privati, chiamato npm registry. Viene utilizzato dal gruppo per effettuare le operazioni di build del codice. \\
+ 
+ \textbf{ESLint} & 
+	7.15.0  &
+	ESLint è uno strumento di analisi statica per identificare i modelli problematici trovati nel codice. Le regole in ESLint sono configurabili e personalizzabili a seconda delle esigenze del progetto.
+In \NomeProgetto{} è stato utilizzato questo strumento principalmente per la segnalazione degli errori di sintassi, per avere regole  d'indentazione uguali in tutti i file e per notifiche su variabili, funzioni, componenti non utilizzati. \\
+ 
+	\textbf{Babel} & 
+	7.11.0 &
+	Babel è un transcompiler JavaScript open source che viene utilizzato per convertire il codice ECMAScript 2015+ in una versione retro compatibile, così da rendere \NomeProgetto{} utilizzabile anche in browser non aggiornati. \\
+  
+ \rowcolor{coloreRossoChiaro}
+\multicolumn{3}{|c|}{\textcolor{white}{\textbf{Librerie e framework}}}\\
+ 
+	\textbf{React} & 
+	17.0.1 &
+	React è una libreria JavaScript per la creazione di UI utilizzata principalmente come base nello sviluppo di applicazioni web.
+Questa libreria è stata scelta per facilitare lo sviluppo del frontend e avere performance migliori grazie al suo metodo di renderizzazione dei componenti grafici.\\ 
+ 
+ 	\textbf{D3.js} & 
+	6.x &
+	D3.js è una libreria JavaScript per creare visualizzazioni dinamiche ed interattive partendo da dati organizzati.
+Questa libreria è stata utilizzata nel progetto \NomeProgetto{} per la creazione delle visualizzazione dei dati richiesti.\\
+
+	\textbf{Node.js} & 
+	14.16.0 &
+	Node.js è un runtime system open source multipiattaforma orientato agli eventi per l'esecuzione di codice JavaScript, costruito sul motore JavaScript V8 di Google Chrome.
+Node.js è stato utilizzato per lo sviluppo del progetto \NomeProgetto{} come strumento per l'utilizzo di Javascript lato server.\\
+ 
+	\textbf{React Bootstrap} & 
+	1.5.2 &
+	Bootstrap è un framework che permette la creazione di applicazioni web responsive. In particolare React Bootstrap fornisce componenti React con uno stile già integrato, senza quindi dover scrivere codice CSS. Essa è stata utilizzata per il progetto per componenti dell'interfaccia, come modal, pulsanti e form.\\
+		
+	\textbf{MobX} & 
+	6.1.x &
+	MobX è una libreria appositamente creata per React che permette la gestione dello \glo{state} dei componenti in maniera semplice e scalabile. Nel progetto \NomeProgetto{} è stata utilizza questa libreria per l'implementazione del design pattern Observer.\\
+	
+	\textbf{Druid.js} & 
+	0.3.5 &
+	DruidJS è una libreria JavaScript per la riduzione della dimensionalità. DruidJS semplifica la proiezione di un dataset con i metodi di riduzione della dimensionalità implementati.
+Nel progetto \NomeProgetto{} questa libreria viene usata per implementare il processo di riduzione dimensionale attraverso gli algoritmi \textit{IsoMap}, \textit{FastMap}, \textit{tSNE} e \textit{LLE}.\\
+
+	\textbf{Express} & 
+	4.17.1 &
+	Express è il framework standard open source per la comunicazione tra front-end e back-end di applicazioni web basate su server Node.js. 
+Nel progetto \NomeProgetto{} Express fa da intermediario tra web app e database, agevolando il collegamento.\\
+
+	\textbf{Jest} & 
+	26.x &
+	Jest è un framework open-source di test JavaScript gestito da Facebook. Funziona con progetti che utilizzano Babel, TypeScript, Node.js, React, Angular, Vue.js e Svelte. In \NomeProgetto{} è utilizzato per l'analisi dinamica del codice.\\
+
+	\textbf{React Testing Library} & 
+	11.2.x &
+	La libreria React Testing Library è una soluzione per testare i componenti React. Anch'essa viene utilizzata in \NomeProgetto{} per la stesura dei test.\\
+\end{longtable}	
+}
+
+
+
