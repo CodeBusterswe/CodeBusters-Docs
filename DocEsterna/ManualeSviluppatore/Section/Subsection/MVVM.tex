@@ -4,7 +4,7 @@ L'architettura di \textit{HDViz} è basata sul design architetturale \textit{Mod
 	\item Favorisce la separazione tra \textit{business logic} e \textit{presentational logic}, facendo comunicare \textit{Model} e \textit{View} solo attraverso il \textit{ViewModel};  
 	\item Permette di non avere un unico controller con cui dover gestire tutta la \textit{application logic}. Essa è infatti suddivisa nei vari componenti che compongono la vista, fornendo diversi vantaggi: 
 	\begin{itemize}
-		\item Minor numero di conflitti in fase di codifica (non di deve accedere a uno stesso file dove è contenuta tutta la logica);
+		\item Minor numero di conflitti in fase di codifica (non si deve accedere a uno stesso file dove è contenuta tutta la logica);
 		\item Performance migliori (viene renderizzato solo il componente che effettivamente subisce modifiche del proprio stato interno).
 	\end{itemize}
 	\item Adatto per le web app la cui interfaccia utente viene sviluppata con la libreria React.
