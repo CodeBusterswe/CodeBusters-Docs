@@ -1,4 +1,11 @@
 \section{Test}
-\subsection{D3.js}
-
-\subsection{React}
+Questa sezione ha lo scopo di indicare agli sviluppatori quali sono gli strumenti utilizzati per effettuare i test.
+\subsection{Jest}
+Il framework di testing Jest viene utilizzato per effettuare i test di unità. La configurazione del framework è presente nella directory principale del progetto con il nome " jest.congig.js " e per eseguire i testi sarà sufficiente eseguire il comando " npm test ".
+\subsection{ESLint}
+ESLint è uno strumento che è stato usato per l'analisi statica del codice, per controllare quindi la qualità del codice scritto.
+Per effettuare i test sul codice è necessario eseguire il comando " eslint " seguito dal percorso che conduce alla directory contentente i file di configurazione.
+\subsection{SonarCloud}
+SonarCloud è una piattaforma per il controllo continuo della qualità del codice, è stata usata nel progetto per svolgere l'attività di \glo{code coverage}. Ogni volta che verranno eseguiti i test verrà eseguita anche l'attività di SonarCloud senza la necessita di utilizzare alcun comando.
+\subsection{GitHub Actions}
+Per il progetto è stato deciso di utilizzare la pratica della \glo{Continuos Integration}, per implementarla è stato usato GitHub Actions, fornito direttamente da \glo{GitHub}.
