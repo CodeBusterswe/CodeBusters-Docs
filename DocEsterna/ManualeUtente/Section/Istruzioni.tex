@@ -5,7 +5,7 @@ Tutte le funzionalità di HDViz sono facilmente reperibili ed nel menu laterale 
 Inizialmente sono utilizzabili solo le prime voci:
 \begin{itemize}
 	\item Salva/Carica sessione;
-	\item Carica dati dal database;
+	\item Carica dati dal \glo{database};
 	\item Carica dati da \glo{CSV};
 \end{itemize}
 \begin{figure}[H]
@@ -16,7 +16,12 @@ Inizialmente sono utilizzabili solo le prime voci:
 
 Tutte e tre aprono una finestra di dialogo per compiere le operazioni indicate. In particolare:
 \begin{itemize}
-	\item La finestra per il caricamento dei dati dal database permette di scegliere uno dei dataset presenti nel database ed effettuare immediatamente una selezione delle dimensioni da caricare;
+	\item La finestra per il caricamento dei dati dal \glo{database} permette di scegliere uno dei dataset presenti nel \glo{database} ed effettuare immediatamente una selezione delle dimensioni da caricare;
+	\begin{figure}[H]
+		\includegraphics[scale=0.5]{Images/CaricamentoDB.png}
+		\centering
+		\caption{Caricamento dati da database}
+	\end{figure}
 	\item  La finestra per il caricamento dei dati da file \glo{CSV} permette anche la selezione delle dimensioni che si desidera utilizzare (di default vengono utilizzate tutte quelle caricate)
 	\begin{figure}[H]
 		\includegraphics[scale=0.5]{Images/CaricamentoCSV.png}
@@ -40,7 +45,7 @@ Una volta caricati i dati è possibile selezionare anche tutte le altre voci del
 \end{figure}
 
 In ogni caso l'applicazione di algoritmi di riduzione dimensionale o funzioni per il calcolo della distanza \textbf{non sono obbligatori} per la visualizzazione dei dati. Se non si è interessati ai suddetti algoritmi si può passare direttamente a scegliere il grafico che più si preferisce tra quelli proposti.
-
+\newpage
 \subsection{Riduzione dimensionale} 
 Cliccando sulla voce "riduci dimensioni", si apre una finestra che permette di scegliere quali dimensioni utilizzare per la riduzione, quale algoritmo (tra \glo{Fastmap}, \glo{LLE}, \glo{Isomap} e \glo{TSNE}) e, in base a questa ultima scelta una serie di parametri per eseguire la riduzione come più si preferisce.
 \begin{figure}[H]
@@ -48,7 +53,7 @@ Cliccando sulla voce "riduci dimensioni", si apre una finestra che permette di s
 		\centering
 		\caption{Finestra per la riduzione dimensionale}
 \end{figure}
-
+\newpage
 \subsection{Calcolo della distanza}
 Cliccando sulla voce "calcola distanza", si apre una finestra che permette di scegliere quali dimensioni utilizzare per effettuare il calcolo, quale funzione di distanza (tra Euclidea, Camberra, Chebyshev e Manhattan) e il nome da dare alla nuova matrice delle distanze creata.
 \begin{figure}[H]
@@ -56,7 +61,7 @@ Cliccando sulla voce "calcola distanza", si apre una finestra che permette di sc
 		\centering
 		\caption{Finestra per la riduzione dimensionale tramite il calcolo delle distanze}
 \end{figure}
-
+\newpage
 \subsection{Scelta del grafico e visualizzazione dei dati}
 Una volta applicati gli algoritmi o meno, si può scegliere il grafico che più si preferisce tra quelli proposti:
 \begin{itemize}
