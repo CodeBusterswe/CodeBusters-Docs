@@ -1,28 +1,91 @@
 \appendix
 \section{Glossario}
 \section*{A}
+\subsection*{Application logic}
+Rappresenta tutta logica della vista. Ogni elemento grafico con cui l'utente può interagire (un pulsante, un campo input, una checkbox) possiede una logica interna che permette di far eseguire ciò che è stato richiesto dall'interfaccia. 
+
 \section*{B}
+\subsection*{Business logic}
+Rappresenta la logica che da il valore al prodotto. Essa costituisce i metodi/funzioni in grado per esempio di mettere in comunicazione la web app con il database e quindi di estrapolarne i dati, gestirli, modificarli e restituirli a chi li deve utilizzare.
+
 \section*{C}
+\subsection*{Code Coverage}
+È la percentuale di linee di codice verificate attraverso test di unità rispetto quelle totali che compongono un prodotto software. Maggiore è tale percentuale, minore è la probabilità di rilevare bug o errori in fase di rilascio.
+
+\subsection*{Context Provider}
+È il componente fornito da React utilizzato per consumare i dati contenuti nel \glo{Context React} attraverso dei componenti denominati "consumatori".
+
+\subsection*{Context React}
+È un metodo fornito da React per evitare di dover passare dati (variabili, costanti, funzioni ecc.) da componente padre a componente figlio attraverso le \glo{props}. Bensì permette di inserire dentro a questo contesto un set di dati utilizzabili ovunque semplicemente chiamando l'hook \texttt{useContext()}(da non confondere con variabili globali).
+
+\subsection*{Continuos Integration}
+È una pratica che si applica in contesti in cui lo sviluppo di un prodotto software avviene attraverso un sistema di controllo versione. L'obiettivo del team nell'applicare questa pratica è essere sempre tutti allineati alla stessa versione e avere in ogni momento un prodotto funzionante. 
+
 \section*{D}
+\subsection*{DBMS}
+Acronimo di Database Management System. È un sistema software che consente la creazione, la manipolazione e l'interrogazione in modo efficiente di un database. Un esempio è PostgreSQL.
+
 \section*{E}
+\subsection*{ES6}
+Acronimo di ECMAScript 6. È una versione di JavaScript che ha introdotto molti cambiamenti rispetto alla precedente, tra cui arrow functions, le keyworks "let" e "const", "spread" e "rest" operator.  
 \section*{F}
+\subsection*{Framework}
+Architettura di supporto a un software, che ne facilita l'utilizzo a un programmatore. Solitamente tale architettura è composta da una serie di librerie contenenti classi astratte facilmente implementabili.
+
 \section*{G}
-\section*{H}
-\section*{I}
-\section*{J}
-\section*{K}
-\section*{L}
-\section*{M}
-\section*{N}
+\subsection*{Git}
+Software di controllo di versione distribuito utilizzabile da interfaccia a riga di comando, creato da Linus Torvalds nel 2005. 
+\subsection*{GitHub}
+Servizio di hosting per sviluppatori. Fornisce uno strumento di controllo versione e permette lo sviluppo distribuito del software.
+%\section*{H}
+%\section*{I}
+%\section*{J}
+
+
+\subsection*{JSX}
+Sintassi utilizzata in React per unire i linguaggi HTML e JavaScript. Questa permette per esempio di rendere elementi HTML dinamici, applicandoci condizioni tipiche del linguaggio JS. 
+%\section*{K}
+%\section*{L}
+%\section*{M}
+\subsection*{Model-View-Controller(MVC)}
+Pattern architetturale molto diffuso nello sviluppo di software. Consiste nel dividere il prodotto in tre parti fondamenti: il modello (che contiene la business logic), il controller (che contiene l'application logic) e la vista (che contiene la presentation logic). Il controller si occupa di far comunicare vista e modello, ricevendo gli input dell'utente attraverso la vista e avvisando il modello dei cambiamenti avvenuti. La view in questo caso è in grado di visualizzare direttamente i dati contenuti nel modello.
+\subsection*{Model-View-ViewModel(MVVM)}
+Pattern architetturale derivato dal \glo{Model-View-Controller(MVC)} che prevede l'utilizzo di un ViewModel per far comunicare vista e modello. In questo caso la vista non ha alcuna comunicazione con il modello quindi il disaccoppiamento è maggiore rispetto a MVC.
+
+%\section*{N}
 \section*{O}
+\subsection*{Observable}
+È l'oggetto osservato nel desing pattern \glo{Observer}, detto anche "Subject". 
+\subsection*{Observer}
+È l'oggetto osservatore nel desing pattern \glo{Observer}.
+\subsection*{Observer design pattern}
+È un design pattern software utilizzato per far si che un oggetto (o nel caso di React un componente) \glo{observerable}("osservato") notifichi modifiche interne all'\glo{observer} ("osservatore"), che reagirà di conseguenza, solitamente chiamando un suo metodo interno.
+
 \section*{P}
-\section*{Q}
-\section*{R}
+\subsection*{Pattern architetturale}
+È una modellazione architetturale di un prodotto software. Ne esistono diversi e permettono di separare il comportamento delle componenti che lo compongono , aumentando il disaccoppiamento e favorendo lo unit-test delle varie componenti. 
+
+\subsection*{Presentation logic}
+Rappresenta come i componenti grafici vengono visualizzati nell'interfaccia grafica di una applicazione web.
+
+\subsection*{Props}
+Sono i dati che vengono passati dal componente padre al componente figlio. Si possono paragonare agli argomenti che si passano 
+ad una normale funzione o metodo.
+%\section*{Q}
+%\section*{R}
+\subsection*{Repository}
+Ambiente di un sistema informativo, in cui vengono gestiti i metadati, attraverso tabelle relazionali; l'insieme di tabelle, regole e motori di calcolo tramite cui si gestiscono i metadati prende il nome di metabase.
+
 \section*{S}
-\section*{T}
-\section*{U}
-\section*{V}
-\section*{W}
-\section*{X}
-\section*{Y}
-\section*{Z}
+\subsection*{Stato interno/State}
+Un componente React può possedere uno stato interno (\textit{stateful}) oppure no (\textit{stateless}). Questo stato è un insieme più o meno numeroso di dati, i quali possono essere modificati attraverso interazioni dell'utente con questo componente (nella vista). La modifica di tali dati causa la rirenderizzare del componente stesso e dei suoi figli. 
+
+\subsection*{Strategy design pattern}
+Design pattern che definisce una famiglia di algoritmi che possono essere fra di loro interscambiabili. Essi infatti differiscono per il comportamento ma non per l'interfaccia. 
+%\section*{T}
+%\section*{U}
+%\section*{V}
+%\section*{W}
+%\section*{X}
+%\section*{Y}
+%\section*{Z}
