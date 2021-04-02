@@ -11,6 +11,7 @@ Il pattern architetturale scelto dal gruppo per lo sviluppo del progetto è il M
 
 Il passaggio dei dati dal \textit{Model} alle varie componenti grafiche avviene attraverso l'utilizzo di un \textit{Context React}, al quale viene passato un'istanza del \textit{ViewModel}. L'utilizzo di un \textit{Context React} ci permette di accedere al valore corrente del \textit{ViewModel} in qualsiasi porzione della \textit{View}, senza doverlo passare di componente in componente attraverso le props (ossia gli argomenti dei componenti che compongono la vista). Nella radice dell'applicazione viene infatti creata un'istanza del \textit{ViewModel}, che viene passata ad un \textit{Context.Provider}, che fa da contenitore per tutta la \textit{View}. All'interno di tale contenitore ogni componente può utilizzare un hook per accedere al \textit{Context React} ed utilizzare il valore più recente del \textit{ViewModel}.\\ È stato scelto di utilizzare un \textit{Context React} per il passaggio dei dati in quanto la nostra applicazione è molto profonda e non risultava conveniente passare i dati per molti componenti rischiando, nel peggiore dei casi, di doverli utilizzare nell'ultimo della gerarchia.\\
 Per poter fare in modo che una componente della \textit{View} si renderizzi non solo al cambiamento del suo stato interno ma anche al cambiamento dei dati nel \textit{Model}, abbiamo utilizzato la libreria \textit{Mobx}. Questa ci permette di implementare l'\textbf{observer pattern}, non supportato di default da \textit{React}. A tale scopo, Mobx permette di segnare delle classi (o attributi di esse) come "\textit{observable}" e di costruire dei componenti della View come "\textit{observer}". Quest'ultimi vengono automaticamente ri-renderizzati al cambiamento di un qualsiasi attributo \textit{observable}.
+
 \newpage
 
 \subsection{Diagramma dei package}
@@ -28,7 +29,7 @@ Per poter fare in modo che una componente della \textit{View} si renderizzi non 
 
 \subsection{Diagrammi delle classi}
 \begin{figure}[hb]
-\includegraphics[width=14.8cm]{Images/Allegato Tecnico-Class}
+\includegraphics[width=14.7cm]{Images/Allegato Tecnico-Class}
 \centering
 \caption{Diagramma delle classi generale}
 \end{figure}
@@ -71,20 +72,24 @@ Qui di seguito vengono rappresentati i diagrammi di sequenza per le 3 operazioni
 \caption{Diagramma di sequenza che modella il processo di riduzione dimensionale}
 \end{figure}
 \newpage
+\vspace*{\fill}
 \begin{figure}[hb]
 \includegraphics[width=15.5cm]{Images/Allegato Tecnico-Sequenza-PLMApref}
 \centering
 \caption{Diagramma di sequenza che modella il processo di visualizzazione delle preferenze per il grafico PLMA}
 \end{figure}
+\vfill
 \newpage
+\vspace*{\fill}
 \begin{figure}[hb]
 \includegraphics[width=15.5cm]{Images/Allegato Tecnico-Sequenza-PLMA}
 \centering
 \caption{Diagramma di sequenza che modella il processo per la visualizzazione del grafico PLMA}
 \end{figure}
+\vfill
 \newpage
 
-\subsection{Design pattern utilizzati}
+\subsection{Strategy Pattern}
 Per implementare il processo di riduzione dimensionale è stato utilizzato il design pattern \textbf{strategy}. Questo è stato possibile perché l'unica sostanziale differenza era determinata dalla tipologia di algoritmo applicato. Definire una famiglia di algoritmi e isolarli all'interno di un oggetto ci ha permesso di renderli interscambiabili dinamicamente ed evitare duplicazione di codice. 
 \begin{itemize}
 \item \textbf{DimReduction.js}: rappresenta il \textit{Context}, ovvero la classe concreta che invoca la \textit{ConcreteStrategy} sotto richiesta del client;
