@@ -27,14 +27,8 @@ Per poter fare in modo che una componente della \textit{View} si renderizzi non 
 \end{figure}
 \newpage
 
-\subsection{Diagrammi delle classi}
-\begin{figure}[hb]
-\includegraphics[width=14.7cm]{Images/Allegato Tecnico-Class}
-\centering
-\caption{Diagramma delle classi generale}
-\end{figure}
-
 \begin{landscape}
+\subsection{Diagrammi delle classi}
 \vspace*{\fill}
 \begin{figure}[hb]
 \includegraphics[width=\linewidth]{Images/Allegato Tecnico-Model}
@@ -56,37 +50,23 @@ Per poter fare in modo che una componente della \textit{View} si renderizzi non 
 
 \begin{landscape}
 \vspace*{\fill}
-\begin{figure}[hb]
-\includegraphics[width=\linewidth ]{Images/Allegato Tecnico-ViewModel}
-\centering
-\caption{Diagramma delle classi, zoom sul view-model e implementazione del pattern strategy}
-\end{figure}
-\vfill
-\end{landscape}
-\newpage
 \subsection{Diagrammi di sequenza}
 Qui di seguito vengono rappresentati i diagrammi di sequenza per le 3 operazioni più importanti nel progetto:
 \begin{figure}[hb]
-\includegraphics[width=12cm]{Images/Allegato Tecnico-Sequenza-DR}
+\includegraphics[width=17.5cm]{Images/Allegato Tecnico-Sequenza-DR}
 \centering
 \caption{Diagramma di sequenza che modella il processo di riduzione dimensionale}
 \end{figure}
-\newpage
-\vspace*{\fill}
-\begin{figure}[hb]
-\includegraphics[width=15.5cm]{Images/Allegato Tecnico-Sequenza-PLMApref}
-\centering
-\caption{Diagramma di sequenza che modella il processo di visualizzazione delle preferenze per il grafico PLMA}
-\end{figure}
 \vfill
 \newpage
 \vspace*{\fill}
 \begin{figure}[hb]
-\includegraphics[width=15.5cm]{Images/Allegato Tecnico-Sequenza-PLMA}
+\includegraphics[width=19cm]{Images/Allegato Tecnico-Sequenza-PLMA}
 \centering
-\caption{Diagramma di sequenza che modella il processo per la visualizzazione del grafico PLMA}
+\caption{Diagramma di sequenza che modella il processo per la visualizzazione delle preferenze e del grafico PLMA}
 \end{figure}
 \vfill
+\end{landscape}
 \newpage
 
 \subsection{Strategy Pattern}
@@ -98,3 +78,10 @@ Per implementare il processo di riduzione dimensionale è stato utilizzato il de
 \end{itemize}
 
 Nel nostro caso, il pattern si basa sul metodo \texttt{startDR()} che esegue la riduzione dimensionale sui dati scelti e ritorna le nuove dimensioni. La strategy viene passata come stringa e, una volta creata la classe concreta dell'algoritmo scelto, viene costruita l'apposita istanza dalla libreria \textit{Druid.js}.\\Eventuali integrazioni con ulteriori algoritmi di riduzione dimensionale potranno essere effettuate derivando nuove classi concrete dall'interfaccia esposta.
+\begin{figure}[hb]
+\includegraphics[width=\linewidth ]{Images/Allegato Tecnico-Strategy}
+\centering
+\caption{Diagramma delle classi, zoom sul view-model e implementazione del pattern strategy}
+\end{figure}
+\vfill
+\newpage
