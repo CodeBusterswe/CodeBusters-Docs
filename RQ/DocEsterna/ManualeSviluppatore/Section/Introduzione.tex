@@ -1,0 +1,90 @@
+\section{Introduzione}
+\subsection{Scopo del documento}
+Questo documento ha lo scopo di servire da linea guida per gli sviluppatori che andranno ad estendere o manutenere il prodotto \NomeProgetto{}. Di seguito lo sviluppatore troverà nel documento tutte le informazioni riguardanti i linguaggi e le tecnologie utilizzate, l'architettura del sistema e le scelte progettuali effettuate per il prodotto. Questo documento ha anche il fine di illustrare le procedure per l'installazione e lo sviluppo in locale.
+
+\subsection{Scopo del prodotto}
+Oggigiorno anche i programmi più tradizionali gestiscono e memorizzano una grande mole di dati; di conseguenza servono software in grado di eseguire un'analisi e un'interpretazione delle informazioni.\\
+Il prodotto \NomeProgetto{} ha come obiettivo quello di creare un'applicazione di visualizzazione di dati con numerose dimensioni in modo da renderle comprensibili all'occhio umano.  Lo scopo del prodotto sarà quello di fornire all'utente diversi tipi di visualizzazioni e di algoritmi per la riduzione dimensionale in modo che, attraverso un processo esplorativo, l'utilizzatore del prodotto possa studiare tali dati ed evidenziarne degli eventuali cluster. 
+
+\subsection{Glossario}
+Per evitare ambiguità relative alle terminologie utilizzate, queste verranno evidenziati da una 'G' ad apice e riportate nel glossario presente nell'appendice \S A.
+
+\subsection{Riferimenti}
+\subsubsection{Riferimenti normativi}
+\begin{itemize}
+	\item	Capitolato d'appalto C4 - HD Viz: visualizzazione di dati multidimensionali: \\
+	\textcolor{blue}{\url{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C4.pdf}}
+\end{itemize}
+
+\subsubsection{Riferimenti informativi} \label{riferimenti}
+\begin{itemize}
+	\item \textbf{Slide E1 del corso di Ingegneria del Software - Diagrammi delle classi e dei package}\\
+	\textcolor{blue}{\url{https://www.math.unipd.it/~rcardin/swea/2021/Diagrammi\%20delle\%20Classi_4x4.pdf}}
+	
+	\begin{itemize}
+		\item Proprietà, slide 11 - 15;
+		\item Operazioni, slide 15 - 17;
+		\item Relazioni di dipendenza, slide 20 - 24.
+	\end{itemize}
+	
+	\textcolor{blue}{\url{https://www.math.unipd.it/~rcardin/swea/2021/Diagrammi\%20dei\%20Package_4x4.pdf}}
+	
+	\begin{itemize}
+		\item Dipendenze, slide 6 - 15.
+	\end{itemize}
+	
+	\newpage
+	
+	\item \textbf{Slide E2 del corso di Ingegneria del Software - Diagrammi di sequenza}\\
+	\textcolor{blue}{\url{https://www.math.unipd.it/~rcardin/swea/2021/Diagrammi\%20di\%20Sequenza_4x4.pdf}}
+	
+	\begin{itemize}
+		\item Messaggi, slide 9 - 16;
+		\item Cicli e condizione, slide 19 - 21.
+	\end{itemize}
+	
+	\item \textbf{Slide E7 del corso di Ingegneria del Software - Principi di programmazione SOLID}\\
+\textcolor{blue}{\url{https://www.math.unipd.it/~rcardin/swea/2021/SOLID\%20Principles\%20of\%20Object-Oriented\%20Design_4x4.pdf}}
+
+	\begin{itemize}
+		\item Single responsibility principle, slide 5 - 9;
+		\item Open-closed principle, slide 11 - 17.
+	\end{itemize}
+	
+	
+	\item \textbf{Slide E10 del corso di Ingegneria del Software - Design pattern comportamentali}\\
+\textcolor{blue}{\url{https://www.math.unipd.it/~rcardin/swea/2021/Design\%20Pattern\%20Comportamentali_4x4.pdf}}	
+	
+		\begin{itemize}
+			\item Observer Pattern, slide 22-31;
+			\item Strategy Pattern, slide 32-40.
+		\end{itemize}
+	\item \textbf{Slide L02 del corso di Ingengeria del Software - Design pattern architetturali: Model View Controller e derivati}\\
+	\textcolor{blue}{\url{https://www.math.unipd.it/~rcardin/sweb/2020/L02.pdf}}	
+
+\begin{itemize}
+			\item MVVM, slide 29-40.
+		\end{itemize}
+	
+	\item \textbf{API libreria per la visualizzazione dei grafici:}\\
+	\textcolor{blue}{\url{https://github.com/d3/d3/blob/master/API.md}}
+	
+	\item \textbf{Libreria per gli algoritmi di riduzione dimensionale:}\\
+	\textcolor{blue}{\url{https://github.com/saehm/DruidJS}}
+	
+	\item \textbf{Libreria per l'implementazione dell'observer pattern:}\\
+	\textcolor{blue}{\url{https://mobx.js.org/README.html}}
+	
+	\item \textbf{Node.js API:}\\
+	\textcolor{blue}{\url{https://nodejs.org/dist/latest-v16.x/docs/api/}}
+	
+	\item \textbf{PostgreSQL API:}\\
+	\textcolor{blue}{\url{https://www.postgresql.org/about/news/postgresql-restful-api-1616/}}
+\end{itemize}
+
+\subsubsection{Riferimenti legali}
+\begin{itemize}
+\item \textbf{Licenza MIT:}\\
+\textcolor{blue}{\url{https://opensource.org/licenses/MIT}}
+\end{itemize}
+	

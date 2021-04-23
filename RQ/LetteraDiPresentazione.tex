@@ -1,0 +1,80 @@
+\documentclass[11pt]{letter}
+\usepackage{eurosym}
+\usepackage[utf8]{inputenc}
+\usepackage{Utility/Template}
+\usepackage{float}
+\pagenumbering{gobble}
+\input{Utility/Strings.tex}
+
+
+%logo intestazione
+\rowcolors{2}{white}{white}
+\address{\\ \VT{} \\ \CR{} \\ Università degli Studi di Padova \\ Dipartimento di Matematica \\ Via Trieste, 63\\ 35121 Padova }
+
+
+\begin{document}
+    \begin{letter}
+        { Egregio \VT{},\\Egregio \CR{},}
+        \begin{minipage}{.4\textwidth}
+            \begin{flushleft}
+                \includegraphics[width=1.5\textwidth]{Utility/Images/logo2.png}
+            \end{flushleft}
+        \end{minipage}
+        \begin{minipage}{.5\textwidth}
+            \begin{flushright}
+                \includegraphics[width=.4\linewidth]{Utility/Images/logoUnipd.png}
+            \end{flushright}
+        \end{minipage}
+        {    
+        \begin{flushleft}
+            Corso di Ingegneria del Software\\ Gruppo \Gruppo{}\\ 
+        \end{flushleft}
+        }
+        \opening{ Con la presente il gruppo \Gruppo{} intende comunicarvi la partecipazione alla Revisione di Qualifica, al fine di esporvi l'avanzamento dello sviluppo del progetto, denominato:}
+        \begin{center}
+           \textbf{\NomeProgetto{}} 
+        \end{center}
+        proposto dall'azienda \textbf{\Proponente{}}.\\
+        Si allegano tutti i documenti, che trattano in maniera approfondita gli aspetti di pianificazione, normazione, qualifica e analisi:
+        \begin{itemize}
+        	\item \AdRv{3.0.0-1.7};
+            \item \Glossariov{3.0.0-1.7};
+            \item \PdPv{3.0.0-1.7};
+            \item \PdQv{3.0.0-1.7};
+            \item \NdPv{3.0.0-1.7};
+            \item \textit{Manuale Sviluppatore 1.0.0-1.7};
+            \item \textit{Manuale Utente 1.0.0-1.7}.
+        \end{itemize}
+        Inoltre sono allegati anche i verbali esterni ed interni:
+        \begin{itemize}
+            \item \textit{Verbale esterno del 25-03-2021};
+            \item \textit{Verbale esterno del 22-04-2021};
+            \item \textit{Verbale interno del 10-03-2021};
+            \item \textit{Verbale interno del 16-03-2021};
+            \item \textit{Verbale interno del 24-03-2021};
+            \item \textit{Verbale interno del 10-04-2021}.
+        \end{itemize}
+        Il gruppo stima di consegnare il prodotto entro il 17-05-2020 con un preventivo di \euro{} 13.355,00, come specificato nel documento \PdPv{3.0.0-1.7}.\\
+        Per completezza, inseriamo di seguito la lista dei membri del gruppo, con nome, cognome, matricola e ruolo principale fino a questo momento.
+        {
+         	\rowcolors{2}{cPari}{cDispari}
+            \renewcommand{\arraystretch}{2}
+            \begin{longtable}{ C{4cm} C{4cm} C{4cm}}
+                \rowcolor{coloreRosso}
+                \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Matricola}} & \textcolor{white}{\textbf{Ruolo di progetto}}\\
+                \endhead 
+                \SG{} & 1187566 & Programmatore\\
+                \BM{} & 1193109 & Amministratore\\
+                \RA{} & 1187504 & Responsabile\\
+                \SH{} & 1102482 & Programmatore\\
+                \PA{} & 1193361 & Verificatore\\
+                \ZM{} & 1123576 & Progettista\\
+                \SP{} & 1161625 & Progettista\\
+            \end{longtable}
+        }
+        Cordiali saluti,
+        \begin{flushright}
+        	\closing{\RA{}, \\ \textit{\Responsabile{}} \\\includegraphics[width=.6\linewidth]{Utility/Images/firmaRA.png}} 
+        \end{flushright}
+    \end{letter}
+\end{document}

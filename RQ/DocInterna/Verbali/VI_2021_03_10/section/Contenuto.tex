@@ -1,0 +1,45 @@
+\section{Informazioni generali}
+\begin{itemize}
+\item \textbf{Motivo della riunione}: 
+\begin{itemize}
+\item Valutazione periodo precedente alla RP;
+\item Scelta dell'architettura del prodotto;
+\item Riutilizzo delle funzionalità del PoC;
+\item Divisione del lavoro nei prossimi giorni.
+\end{itemize}
+\item \textbf{Luogo riunione}: videoconferenza tramite server \glo{Discord}.
+\item \textbf{Data}: 10-03-2021;
+\item \textbf{Orario d'inizio}: 10:00;
+\item \textbf{Orario di fine}: 12:30;
+\item \textbf{Partecipanti}:
+	\begin{itemize}
+	\item \BM{}
+	\item \SG{}
+	\item \SP{}
+	\item \SH{}
+	\item \PA{}
+	\item \ZM{}
+	\item \RA{}
+	\end{itemize}
+\end{itemize}
+
+\newpage
+\section{Resoconto}
+\begin{itemize}
+	\item \textbf{Valutazioni sul lavoro svolto fino al periodo appena concluso}: il gruppo in seguito alla realizzazione del PoC e alla consegna della documentazione in RP si è considerato soddisfatto del lavoro svolto, specialmente per il fatto di essere riuscito a consegnare tutto in tempo rispetto a quanto dichiarato nel \PdP{}. Il rispetto delle scadenze prefissate ha portato sicuramente buon umore e voglia nel proseguire di questo passo con la successiva fase di progettazione di dettaglio e codifica.
+	\item \textbf{Scelta del design architetturale}: il secondo punto affrontato è stato quello di determinare quale fosse l'architettura migliore da utilizzare per l'applicazione. In seguito a un lungo confronto è stato scelto come design architetturale il \textit{Model-View-ViewModel (MVVM)}, design derivante dal più comune Model-View-Controller (MVC). \\
+	I motivi principali che hanno portato il gruppo ad optare per questa architettura rispetto all'MVC sono stati:
+	\begin{itemize}
+		\item MVVM permette una più forte separazione tra business logic e presentational logic. La vista infatti non è legata in alcun modo al modello, ma è il view-model che mette in comunicazione le due parti;
+		\item L'utilizzo di unico Controller (come accade nell'MVC) per gestire l'intera vista è risultato sfavorevole per due motivi: 
+		\begin{itemize}
+			\item In questo caso il controller dovrebbe essere il componente padre di tutta la vista. Questo porterebbe che un singolo cambiamento dello stato del controller causi la ri-renderizzazione di tutti i componenti della vista, con conseguenti rallentamenti nel normale utilizzo della web application; 
+			\item Avere l'intera application logic in unico file porterebbe gravi difficoltà di cooperazione tra i membri del gruppo nella codifica della vista. I componenti in React hanno infatti spesso una logica interna, che in questo caso dovrebbe essere spostata nell'unico controller. Così facendo se due membri lavorano contemporaneamente a due componenti della vista che richiedono una logica interna, entrambi dovranno modificare il file in cui è contenuto il controller, con conseguenti conflitti.
+		\end{itemize} 
+		\item In seguito a ricerche è risultato come MVVM sia un design architetturale molto diffuso per le web application realizzate con React per la maggiore facilità di implementazione.
+	\end{itemize}
+	\item \textbf{Riutilizzo del PoC}: il gruppo ha valutato positivamente la possibilità di riutilizzare alcune delle funzionalità già presenti nel PoC per velocizzare la fase di codifica;  
+	\item \textbf{Suddivisione del lavoro}: per concludere il gruppo si è diviso il lavoro da svolgere nei prossimi giorni, con l'obiettivo di ottenere un'architettura stabile per l'applicazione e un primo esempio di vista.
+\end{itemize}
+
+
