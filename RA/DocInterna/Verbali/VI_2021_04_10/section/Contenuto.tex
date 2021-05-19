@@ -1,0 +1,36 @@
+\section{Informazioni generali}
+\begin{itemize}
+\item \textbf{Motivo della riunione}: 
+\begin{itemize}
+	\item Discussione esito product baseline;
+	\item Organizzazione e suddivisione dei lavori.
+\end{itemize}
+\item \textbf{Luogo riunione}: videoconferenza tramite server \glo{Discord}.
+\item \textbf{Data}: \Data{};
+\item \textbf{Orario d'inizio}: 10:00;
+\item \textbf{Orario di fine}: 12:00;
+\item \textbf{Partecipanti}:
+	\begin{itemize}
+	\item \BM{}
+	\item \SG{}
+	\item \SP{}
+	\item \SH{}
+	\item \PA{}
+	\item \ZM{}
+	\item \RA{}
+	\end{itemize}
+\end{itemize}
+
+\newpage
+\section{Resoconto}
+\begin{itemize}
+	\item \textbf{Product baseline}: il team si è riunito per discutere in merito all'esito della presentazione sulle scelte architetturali, sostenuta in data 09-04-2021. Poiché sono state rilevate diverse problematiche, il gruppo dovrà sostenere un nuovo ricevimento con il prof. Cardin Riccardo per presentare le decisioni che sono state prese volte a sanare i difetti sollevati. \mbox{} \\
+
+Visti i numerosi aspetti positivi, il pattern architetturale rimane quello scelto nello scorso periodo, ovvero il \textit{Model-View-View-Model}. Per rispettare il \textit{single responsability principle}  il team ha deciso che ogni componente della view avrà il proprio view model; in questo modo non sarà più presente un unico view model per l'intero applicativo e tutta la logica che era presente nella vista viene spostata, agevolando così anche la stesura dei test d'unità. \\ Per separare ulteriormente la parte del modello, il gruppo ha deciso di seguire il cosiddetto \glo{\textit{root store pattern}}, individuato all'interno della documentazione di \glo{\textit{MobX}}. In questo modo lo store principale ne conterrà uno per ogni concetto del dominio applicativo. \mbox{} \\
+
+Per quanto riguarda gli errori rilevati sullo \textit{strategy pattern}, applicato al processo di riduzione dimensionale, il gruppo nei prossimi giorni proverà ad individuare delle possibili soluzioni.
+
+	\item \textbf{Suddivisione dei lavori}: tutte le decisioni prese durante quest'incontro dovranno essere testate per provarne la fattibilità. Il team ha quindi suddiviso le varie attività tra i membri, in modo da mettersi subito all'opera. In base all'andamento delle modifiche, il gruppo deciderà se contattare o meno la prossima settimana il prof. Cardin Riccardo per fissare un nuovo incontro.
+\end{itemize}
+
+\newpage

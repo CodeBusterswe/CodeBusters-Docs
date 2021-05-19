@@ -1,0 +1,311 @@
+\subsection{Test di unità}
+
+{
+
+\renewcommand{\arraystretch}{1.5}
+\renewcommand\extrarowheight{1.5pt}
+\setlength\arrayrulewidth{1pt}
+\begin{longtable}{ C{1.5cm} | C{12cm}| C{1.5cm} } 
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Codice}} & 
+		\textcolor{white}{\textbf{Descrizione}} & 
+		\textcolor{white}{\textbf{Stato}} \\
+		\endfirsthead
+		\rowcolor{white}\multicolumn{3}{c}{\textit{Continua nella pagina successiva...}}\\
+	    \endfoot
+	    \endlastfoot
+
+\textbf{TU1} & 
+Si verifica che venga visualizzato un messaggio d'errore se
+    i dati non sono stati inseriti nel sistema. & 
+S\\
+
+\textbf{TU2} & 
+Si verifica che i dati inseriti siano caricati nel sistema. & 
+S\\
+
+\textbf{TU3} & 
+Si verifica che la lettura del file CSV avvenga correttamente. & 
+S\\
+
+\textbf{TU4} & 
+Si verifica che il parsing del file CSV pulisca i dati non idonei alla visualizzazione. & 
+S\\
+
+\textbf{TU5} & 
+Si verifica che le matrici delle distanze vengano calcolate correttamente. & 
+S\\
+
+\textbf{TU6} & 
+Si verifica che il grafico Adjacency Matrix venga renderizzato correttamente. & 
+S\\
+
+\textbf{TU7} & 
+Si verifica che l'ordinamento dei dati per clustering avvenga correttamente. & 
+S\\
+
+\textbf{TU8} & 
+Si verifica che il grafico Force Field venga renderizzato correttamente. & 
+S\\
+
+\textbf{TU9} & 
+Si verifica che il grafico Heat Map venga renderizzato correttamente. & 
+S\\
+
+\textbf{TU10} & 
+Si verifica che il grafico Scatterplot Matrix venga renderizzato correttamente. & 
+S\\
+
+\textbf{TU11} & 
+Si verifica che il grafico Proiezione Lineare Multi Asse venga renderizzato correttamente. & 
+S\\
+
+\textbf{TU12} & 
+Si verifica che le preferenze dell'utente nel grafico Scatter Plot Matrix siano salvate correttamente nel sistema. & 
+S\\
+
+\textbf{TU13} & 
+Si verifica che le preferenze dell'utente nel grafico Heat Map siano salvate correttamente nel sistema. & 
+S\\
+
+\textbf{TU14} & 
+Si verifica che le preferenze dell'utente nel grafico Adjacency Matrix siano salvate correttamente nel sistema. & 
+S\\
+
+\textbf{TU15} & 
+Si verifica che le preferenze dell'utente nel grafico Force Field siano salvate correttamente nel sistema. & 
+S\\
+
+\textbf{TU16} & 
+Si verifica che le preferenze dell'utente nel grafico Proiezione Lineare Multi Asse siano salvate correttamente nel sistema. & 
+S\\
+
+\textbf{TU17} & 
+Si verifica che le dimensioni da visualizzare siano settate correttamente nel grafico \glo{PLMA}. & 
+S\\
+
+\textbf{TU18} & 
+Si verifica che le dimensioni del dataset siano caricate correttamente nel sistema. & 
+S\\
+
+\textbf{TU19} & 
+Si verifica che le dimensioni ottenute dalla riduzione dimensionale siano caricate correttamente nel sistema. & 
+S\\
+
+\textbf{TU20} & 
+Si verifica che le matrici delle distanze calcolate dall'utente siano caricate correttamente nel sistema. & 
+S\\
+
+\textbf{TU21} & 
+Si verifica che la riduzione dimensionale tramite algoritmo LLE avvenga correttamente. & 
+S\\
+
+\textbf{TU22} & 
+Si verifica che la riduzione dimensionale tramite algoritmo IsoMap avvenga correttamente. & 
+S\\
+
+\textbf{TU23} & 
+Si verifica che la riduzione dimensionale tramite algoritmo t-SNE avvenga correttamente. & 
+S\\
+
+\textbf{TU24} & 
+Si verifica che la riduzione dimensionale tramite algoritmo Fastmap avvenga correttamente. & 
+S\\
+
+\textbf{TU25} & 
+Si verifica che la riduzione dimensionale tramite distanza Euclidea avvenga correttamente. & 
+S\\
+
+\textbf{TU26} & 
+Si verifica che la riduzione dimensionale tramite distanza di Chebychev avvenga correttamente. & 
+S\\
+
+\textbf{TU27} & 
+Si verifica che la riduzione dimensionale tramite distanza di Canberra avvenga correttamente. & 
+S\\
+
+\textbf{TU28} & 
+Si verifica che la riduzione dimensionale tramite distanza di Manhattan avvenga correttamente. & 
+S\\
+
+\textbf{TU29} & 
+Si verifica che l'algoritmo sia settato correttamente nella Strategy. & 
+S\\
+
+\textbf{TU30} & 
+Si verifica il render della vista. & 
+S\\
+
+\textbf{TU31} & 
+Si verifica che i parametri degli algoritmi inseriti siano settati correttamente. & 
+S\\
+
+\textbf{TU32} & 
+Si verifica che il nome scelto per le dimensioni ridotte sia settato correttamente. & 
+S\\
+
+\textbf{TU33} & 
+Si verifica che il nome scelto per una nuova matrice delle distanze sia settato correttamente. & 
+S\\
+
+\textbf{TU34} & 
+Si verifica che le dimensioni categoriche vengano selezionate correttamente. & 
+S\\
+
+\textbf{TU35} & 
+Si verifica che le dimensioni numeriche vengano selezionate correttamente. & 
+S\\
+
+\textbf{TU36} & 
+Si verifica che la riduzione dimensionale tramite algoritmo PCA avvenga correttamente. & 
+S\\
+
+\textbf{TU37} & 
+Si verifica che la riduzione dimensionale tramite algoritmo UMAP avvenga correttamente. & 
+S\\
+
+\textbf{TU38} & 
+Si verifica che nel caso di errore durante la riduzione dimensionale venga notificato un errore. & 
+S\\
+
+\textbf{TU39} & 
+Si verifica che nel caso di successo nella riduzione dimensionale venga notificato un messaggio di successo. & 
+S\\
+
+\textbf{TU40} & 
+Si verifica che nel caso di nome delle dimensioni già utilizzato non venga effettuata la riduzione dimensionale. & 
+S\\
+
+\textbf{TU41} & 
+Si verifica che la normalizzazione dei dati per la riduzione dimensionale avvenga correttamente. & 
+S\\
+
+\textbf{TU42} & 
+Si verifica che la normalizzazione dei dati per il calcolo della matrice delle distanze avvenga correttamente. & 
+S\\
+
+\textbf{TU43} & 
+Si verifica che nel caso di errore durante il calcolo della matrice delle distanze venga notificato un errore. & 
+S\\
+
+\textbf{TU44} & 
+Si verifica che nel caso di nome delle dimensioni già utilizzato non venga effettuato il calcolo della matrice delle distanze. & 
+S\\
+
+\textbf{TU45} & 
+Si verifica che nel caso di successo di calcolo della matrice delle distanze venga notificato un messaggio di successo. & 
+S\\
+
+\textbf{TU46} & 
+Si verifica che si possa esportare correttamente la sessione. & 
+S\\
+
+\textbf{TU47} & 
+Si verifica che l'utente possa ripristinare una sessione. & 
+S\\
+
+\textbf{TU48} & 
+Si verifica che nel caso di ripristino di sessione fallito venga notificato un errore. & 
+S\\ 
+ 
+\textbf{TU49} & 
+Si verifica che nel caso di ripristino di sessione avvenuto con successo venga notificato all'utente un messaggio. & 
+S\\ 
+ 
+\rowcolor{white}\caption{Test d'unità}
+\label{testIntegrazione}
+\end{longtable}
+}
+
+\subsubsection{Tracciamento test d'unità}
+
+{
+
+\renewcommand{\arraystretch}{1.5}
+\renewcommand\extrarowheight{1.5pt}
+\setlength\arrayrulewidth{1pt}
+\begin{longtable}{C{1.1cm} | L{15cm}} 
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{ID}} & 
+		\textcolor{white}{\textbf{Metodo}} \\
+		\endfirsthead
+		\rowcolor{white}\multicolumn{2}{c}{\textit{Continua nella pagina successiva...}}\\
+	    \endfoot
+	    \endlastfoot
+	  		
+		\textbf{TU1} & src/components/UI/burgerMenuUI/ModalContent/LoadCsvVM.js : handleDismiss()\\
+		\textbf{TU2} & src/components/UI/burgerMenuUI/ModalContent/LoadCsvVM.js : loadDataAndDims()\\
+		\textbf{TU3} & src/components/UI/burgerMenuUI/ModalContent/CsvReaderVM.js : handleOnDrop()\\
+		\textbf{TU4} & src/components/UI/burgerMenuUI/ModalContent/CsvReaderVM.js : handleOnDrop()\\
+		\textbf{TU5} & src/components/UI/burgerMenuUI/ModalContent/DistanceCalcVM.js : handleSubmit()\\
+		\textbf{TU6} & src/components/UI/graphUI/charts/AmChartVM.js : renderChart()\\
+		\textbf{TU7} & src/components/UI/graphUI/charts/AmChartVM.js : sort()\\
+		\textbf{TU8} & src/components/UI/graphUI/charts/FfChartVM.js : renderChart()\\
+		\textbf{TU9} & src/components/UI/graphUI/charts/HmChartVM.js : renderChart()\\
+		\textbf{TU10} & src/components/UI/graphUI/charts/SpmChartVM.js : renderChart()\\
+		\textbf{TU11} & src/components/UI/graphUI/charts/PlmaChartVM.js : renderChart()\\
+		\textbf{TU12} & src/components/UI/graphUI/preferences/SpmPrefVM.js : handleSelectChange()\\
+		\textbf{TU13} & src/components/UI/graphUI/preferences/HmPrefVM.js : setHmPreferences(id,value)\\
+	\textbf{TU14} & src/components/UI/graphUI/preferences/SpmPrefVM.js : setAmPreferences(id,value)\\	
+	\textbf{TU15} & src/components/UI/graphUI/preferences/FfPrefVM.js : setFfPreferences(id,value)\\
+	\textbf{TU16} & src/components/UI/graphUI/preferences/PlmaPrefVM.js : setPlmaPreferences(id,value)\\
+\textbf{TU17} & src/components/UI/graphUI/preferences/PlmaPrefVM.js : handleMultiSelChange(id,val)\\
+\textbf{TU18} & src/stores/datasetStore.js : loadDimensions(dimensions)\\
+\textbf{TU19} & src/stores/datasetStore.js : addDimensionsToDataset(dimensions)\\
+\textbf{TU20} & src/stores/distancesMatrixStore.js : addDistanceMatrix(matrix)\\
+\textbf{TU21} & src/components/UI/burgerMenuUI/ModalContent/DimsRedVM.js : handleSubmit()\\
+\textbf{TU22} & src/components/UI/burgerMenuUI/ModalContent/DimsRedVM.js : handleSubmit()\\
+\textbf{TU23} & src/components/UI/burgerMenuUI/ModalContent/DimsRedVM.js : handleSubmit()\\
+\textbf{TU24} & src/components/UI/burgerMenuUI/ModalContent/DimsRedVM.js : handleSubmit()\\
+
+\textbf{TU25} & src/components/UI/burgerMenuUI/ModalContent/DistCalcVM.js : handleSubmit()\\
+\textbf{TU26} & src/components/UI/burgerMenuUI/ModalContent/DistCalcVM.js : handleSubmit()\\
+\textbf{TU27} & src/components/UI/burgerMenuUI/ModalContent/DistCalcVM.js : handleSubmit()\\
+\textbf{TU28} & src/components/UI/burgerMenuUI/ModalContent/DistCalcVM.js : handleSubmit()\\
+
+\textbf{TU29} & src/components/UI/burgerMenuUI/ModalContent/StrategyDimRed/DimRed.js : setStrategy(alg)\\
+
+\textbf{TU30} & src/components/View.jsx : render()\\
+
+\textbf{TU31} & src/components/UI/burgerMenuUI/ModalContent/StrategyDimRed/DimRed.js : executeStrategy(params, data)\\ 
+
+\textbf{TU32} & src/stores/datasetStore.js : getselectedDimensions()\\
+
+\textbf{TU33} & src/stores/distancesMatrixStore.js : getDistanceMatrixByName(name)\\
+
+\textbf{TU34} & src/stores/datasetStore.js : getCategoricCheckedDimensions()\\
+
+\textbf{TU35} & src/stores/datasetStore.js : getNumericDimensions()\\
+
+\textbf{TU36} & src/components/UI/burgerMenuUI/ModalContent/DimsRedVM.js : handleSubmit()\\
+
+\textbf{TU37} & src/components/UI/burgerMenuUI/ModalContent/DimsRedVM.js : handleSubmit()\\
+
+\textbf{TU38} & src/components/UI/burgerMenuUI/ModalContent/DimsRedVM.js : showDanger()\\
+
+\textbf{TU39} & src/components/UI/burgerMenuUI/ModalContent/DimsRedVM.js : showSuccess()\\
+
+\textbf{TU40} & src/components/UI/burgerMenuUI/ModalContent/DimsRedVM.js : handleSubmit()\\
+
+\textbf{TU41} & src/components/UI/burgerMenuUI/ModalContent/DimsRedVM.js : normalizeData(data)\\
+
+\textbf{TU42} & src/components/UI/burgerMenuUI/ModalContent/DistCalcVM.js : normalizeData(data)\\
+
+\textbf{TU43} & src/components/UI/burgerMenuUI/ModalContent/DistCalcVM.js : showDanger()\\
+
+\textbf{TU44} & src/components/UI/burgerMenuUI/ModalContent/DistCalcVM.js : handleSubmit()\\
+
+\textbf{TU45} & src/components/UI/burgerMenuUI/ModalContent/DistCalcVM.js : showSuccess()\\
+
+\textbf{TU46} & src/components/UI/burgerMenuUI/ModalContent/SessionVM.js : handleExport()\\	
+
+\textbf{TU47} & src/components/UI/burgerMenuUI/ModalContent/SessionVM.js : loadSession()\\	
+
+\textbf{TU48} & src/components/UI/burgerMenuUI/ModalContent/SessionVM.js : openAlertDanger()\\	
+
+\textbf{TU49} & src/components/UI/burgerMenuUI/ModalContent/SessionVM.js : openAlertSuccess()\\	
+
+		\rowcolor{white}
+		\caption{Tracciamento test d'unità - metodi}
+\end{longtable}
+}

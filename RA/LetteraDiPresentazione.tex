@@ -1,0 +1,104 @@
+\documentclass[11pt]{letter}
+\usepackage{eurosym}
+\usepackage[utf8]{inputenc}
+\usepackage{Utility/Template}
+\usepackage{float}
+\pagenumbering{gobble}
+\input{Utility/Strings.tex}
+
+
+%logo intestazione
+\rowcolors{2}{white}{white}
+\address{\\ \VT{} \\ \CR{} \\ Università degli Studi di Padova \\ Dipartimento di Matematica \\ Via Trieste, 63\\ 35121 Padova }
+
+
+\begin{document}
+    \begin{letter}
+        { Egregio \VT{},\\Egregio \CR{},}
+        \begin{minipage}{.4\textwidth}
+            \begin{flushleft}
+                \includegraphics[width=1.5\textwidth]{Utility/Images/logo2.png}
+            \end{flushleft}
+        \end{minipage}
+        \begin{minipage}{.5\textwidth}
+            \begin{flushright}
+                \includegraphics[width=.4\linewidth]{Utility/Images/logoUnipd.png}
+            \end{flushright}
+        \end{minipage}
+        {    
+        \begin{flushleft}
+            Corso di Ingegneria del Software\\ Gruppo \Gruppo{}\\ 
+        \end{flushleft}
+        }
+        \opening{ Con la presente il gruppo \Gruppo{} intende comunicarvi la partecipazione alla Revisione di Accettazione, al fine di esporvi il prodotto completo da voi commissionato, denominato:}
+        \begin{center}
+           \textbf{\NomeProgetto{}} 
+        \end{center}
+        proposto dall'azienda \textbf{\Proponente{}}.\\
+        Si allegano tutti i documenti, che trattano in maniera approfondita gli aspetti di pianificazione, normazione, qualifica e analisi:
+        \begin{itemize}
+        	\item \AdRv{4.0.0-1.8};
+            \item \Glossariov{4.0.0-1.8};
+            \item \PdPv{4.0.0-1.8};
+            \item \PdQv{4.0.0-1.8};
+            \item \NdPv{4.0.0-1.8};
+            \item \SdFv{1.0.0-1.8};
+            \item \textit{Manuale Sviluppatore 2.0.0-1.8};
+            \item \textit{Manuale Utente 2.0.0-1.8}.
+            \item Verbali interni:
+            \begin{itemize}
+            	\item \textit{Verbale interno del 27-10-2020};
+            	\item \textit{Verbale interno del 10-11-2020};
+            	\item \textit{Verbale interno del 26-11-2020};
+            	\item \textit{Verbale interno del 14-12-2020};
+           	 	\item \textit{Verbale interno del 20-12-2020};
+            	\item \textit{Verbale interno del 07-01-2021};
+            	\item \textit{Verbale interno del 08-02-2021};
+            	\item \textit{Verbale interno del 17-02-2021};
+            	\item \textit{Verbale interno del 23-02-2021};
+            	\item \textit{Verbale interno del 10-03-2021};
+           	 	\item \textit{Verbale interno del 16-03-2021};
+            	\item \textit{Verbale interno del 24-03-2021};
+            	\item \textit{Verbale interno del 10-04-2021};
+            	\item \textit{Verbale interno del 03-05-2021};
+            	\item \textit{Verbale interno del 15-05-2021}.
+            \end{itemize}
+            \item Verbali esterni:
+            \begin{itemize}
+            	\item \textit{Verbale esterno del 17-12-2020};
+            	\item \textit{Verbale esterno del 05-02-2021};
+            	\item \textit{Verbale esterno del 18-02-2021};
+            	\item \textit{Verbale esterno del 25-03-2021};
+            	\item \textit{Verbale esterno del 22-04-2021};
+            	\item \textit{Verbale esterno del 14-05-2021}.
+            	
+            \end{itemize}
+        \end{itemize}
+        Il codice del prodotto, è disponibile al seguente indirizzo, contenuto nella repository ufficiale del gruppo \Gruppo{}:
+        \begin{center}
+        \url{https://github.com/CodeBusterswe/CodeBusters-HDviz}
+        \end{center}
+        Il gruppo consegna il prodotto il giorno 20-05-2021 con relativo collaudo fissato per la medesima data.\\Come descritto nel documento \PdPv{4.0.0-1.8}, il costo finale del prodotto è di  \euro{} 13.349,00.\\
+        Per completezza, inseriamo di seguito la lista dei membri del gruppo, con nome, cognome, matricola e ruolo principale fino a questo momento.
+        {
+         	\rowcolors{2}{cPari}{cDispari}
+            \renewcommand{\arraystretch}{2}
+            \begin{longtable}{ C{4cm} C{4cm} C{4cm}}
+                \rowcolor{coloreRosso}
+                \textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Matricola}} & \textcolor{white}{\textbf{Ruolo di progetto}}\\
+                \endhead 
+                \SG{} & 1187566 & Verificatore\\
+                \BM{} & 1193109 & Verificatore\\
+                \RA{} & 1187504 & Amministratore\\
+                \SH{} & 1102482 & Programmatore\\
+                \PA{} & 1193361 & Verificatore\\
+                \ZM{} & 1123576 & Programmatore\\
+                \SP{} & 1161625 & Responsabile\\
+            \end{longtable}
+        }
+        Cordiali saluti,
+        \begin{flushright}
+        	\closing{\SP{}, \\ \textit{\Responsabile{}} \\\includegraphics[width=.6\linewidth]{Utility/Images/firmaSP.png}} 
+        \end{flushright}
+    \end{letter}
+\end{document}

@@ -1,0 +1,160 @@
+\subsection{Test di accettazione}
+%I test di accettazione rappresentano il collaudo del prodotto software, verificando che corrisponda con quello atteso dal proponente. Sono l'unione dei test di sistema già svolti dal gruppo durante lo sviluppo ed ulteriori test finali.
+%In questa prima versione del \PdQ{} il gruppo non è in grado di stilare dei test aggiuntivi oltre quelli di sistema già riportati nella tabella \ref{testSistema}.
+
+
+{
+\renewcommand{\arraystretch}{1.5}
+\renewcommand\extrarowheight{1.5pt}
+\setlength\arrayrulewidth{1pt}
+\begin{longtable}{ C{2cm} | C{12cm}| C{1.5cm} } 
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Codice}} & 
+		\textcolor{white}{\textbf{Descrizione}} & 
+		\textcolor{white}{\textbf{Stato}} \\
+		\endfirsthead
+		\rowcolor{white}\multicolumn{3}{c}{\textit{Continua nella pagina successiva...}}\\
+	    \endfoot
+	    \endlastfoot
+
+\textbf{TA1F1.1} & 
+L'utente deve poter caricare dei dati nel sistema tramite file \glo{CSV}. & 
+S\\
+
+\textbf{TA1F1.2} & 
+L'utente deve poter caricare dei dati nel sistema tramite interrogazione al \glo{database}. & 
+S\\
+
+\textbf{TA1F2} & 
+L'utente deve visualizzare a schermo un messaggio d'esito in merito al caricamento dei dati. & 
+S\\
+		
+\textbf{TA1F4} & 
+L'utente deve poter selezionare le dimensioni che desidera utilizzare per l'analisi del \glo{dataset} caricato. & 
+S\\	
+
+\textbf{TA1F5} & 
+L'utente deve poter scegliere le dimensioni, tra quelle caricate, e la distanza da usare per creare delle matrici delle distanze. & 
+S\\	
+
+\textbf{TA1F6.1} & 
+L'utente deve poter scegliere la distanza \textit{\glo{Euclidea}} per generare una matrice delle distanze. & 
+S\\
+
+\textbf{TA3F6.2} & 
+L'utente deve poter scegliere la distanza \textit{\glo{Manhattan}} per generare una matrice delle distanze. & 
+S\\
+
+\textbf{TA3F6.3} & 
+L'utente deve poter scegliere la distanza \textit{\glo{Canberra}} per generare una matrice delle distanze. & 
+S\\
+
+\textbf{TA3F6.4} & 
+L'utente deve poter scegliere la distanza \textit{\glo{Chebyshev}} per generare una matrice delle distanze. & 
+S\\
+
+\textbf{TA1F7.1} & 
+L'utente deve poter scegliere l'algoritmo \glo{\textit{IsoMap}} per applicare una riduzione dimensionale.  & 
+S\\
+
+\textbf{TA1F7.2} & 
+L'utente deve poter scegliere l'algoritmo \glo{\textit{LLE}} per applicare una riduzione dimensionale. & 
+S\\
+
+\textbf{TA1F7.3} & 
+L'utente deve poter scegliere l'algoritmo \glo{\textit{FastMap}} per applicare una riduzione dimensionale. & 
+S\\
+
+\textbf{TA1F7.4} & 
+L'utente deve poter scegliere l'algoritmo \glo{\textit{t-SNE}} per applicare una riduzione dimensionale. & 
+S\\
+
+\textbf{TA1F7.5} & 
+L'utente deve poter scegliere l'algoritmo \glo{\textit{UMAP}} per applicare una riduzione dimensionale. & 
+S\\
+
+\textbf{TA1F7.6} & 
+L'utente deve poter scegliere l'algoritmo \glo{\textit{PCA}} per applicare una riduzione dimensionale. & 
+S\\
+
+\textbf{TA2F8} & 
+L'utente deve poter decidere il numero di dimensioni da ottenere come risultato della riduzione dimensionale. & 
+S\\
+
+\textbf{TA1F9} & 
+L'utente deve poter associare un nome delle dimensioni create dalla riduzione dimensionale. & 
+S\\
+
+\textbf{TA3F10} & 
+L'utente deve poter settare i parametri di configurazione per il processo di riduzione dimensionale. & 
+S\\
+
+\textbf{TA1F11} & 
+L'utente deve poter visualizzare le dimensioni originali, ridotte e le distanze calcolate attraverso uno dei grafici disponibili. & 
+S\\
+
+\textbf{TA1F12} & 
+L'utente deve poter personalizzare lo stile della visualizzazione scelta osservando i cambiamenti al termine del calcolo. & 
+S\\
+
+\textbf{TA1F13.1} & 
+L'utente deve poter scegliere la visualizzazione \glo{\textit{Scatter Plot Matrix}}. & 
+S\\
+
+\textbf{TA1F13.2} & 
+In uno \glo{\textit{Scatter Plot Matrix}} l'utente deve poter associare le dimensioni agli assi e al colore dei punti. & 
+S\\
+
+\textbf{TA1F14.1} & 
+L'utente deve poter scegliere la visualizzazione \glo{\textit{Adjacency Matrix}}. & 
+S\\
+
+\textbf{TA1F14.2} & 
+In un \glo{\textit{Adjacency Matrix}} l'utente deve poter applicare l'algoritmo di ordinamento in modo da evidenziare le strutture presenti. & 
+S\\
+
+\textbf{TA1F14.3} & 
+In un \glo{\textit{Adjacency Matrix}} l'utente deve poter scegliere la distanza minima e massima tra i punti per la visualizzazione. & 
+S\\
+
+\textbf{TA1F15.1} & 
+L'utente deve poter scegliere la visualizzazione \glo{\textit{Force Field}}. & 
+S\\
+
+\textbf{TA1F15.2} & 
+In un \glo{\textit{Force Field}} l'utente deve poter scegliere la distanza minima e massima tra i punti per la visualizzazione. & 
+S\\
+
+\textbf{TA1F15.3} & 
+In un \glo{\textit{Force Field}} l'utente deve poter scegliere la dimensione d'associare al colore dei nodi. & 
+S\\
+
+\textbf{TA1F16.1} & 
+L'utente deve poter scegliere la visualizzazione \glo{\textit{Proiezione Lineare Multi Asse}}. & 
+S\\
+
+\textbf{TA1F16.2} & 
+Nella visualizzazione \glo{\textit{PLMA}} l'utente deve poter decidere quali dimensioni visualizzare. & 
+S\\
+
+\textbf{TA1F16.3} & 
+Nella visualizzazione \glo{\textit{PLMA}} l'utente deve poter spostare gli assi del grafico per migliorare l'analisi dei dati. & 
+S\\
+
+\textbf{TA2F17} & 
+L'utente deve avere a disposizione una guida introduttiva. & 
+S\\
+
+\textbf{TA3F18} & 
+L'utente deve poter normalizzare i dati prima di applicare una riduzione dimensionale. & 
+S\\
+
+\textbf{TA3F19} & 
+L'utente deve poter salvare e caricare una propria sessione di lavoro. & 
+S\\
+
+\rowcolor{white}\caption{Test di accettazione}
+\label{testSistema}
+\end{longtable}
+
+}

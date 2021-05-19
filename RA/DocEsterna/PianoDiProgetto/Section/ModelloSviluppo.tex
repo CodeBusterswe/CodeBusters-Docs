@@ -1,0 +1,86 @@
+\section{Modello di sviluppo}
+
+\subsection{Modello incrementale}
+Il modello incrementale prevede rilasci multipli e successivi, ciascuno dei quali realizza un incremento di funzionalità.
+È richiesta dunque una classificazione preliminare dei requisiti atta ad individuare i più importanti, i quali devono essere sviluppati nei primi incrementi, così da avere fin da subito un prodotto funzionante, che verrà via via integrato.
+L'adozione di questo modello comporta i seguenti vantaggi:
+\begin{itemize}
+\item Le funzionalità primarie hanno priorità nello sviluppo, così facendo queste vengono verificate più volte;
+\item L'avere un prodotto funzionante già dai primi incrementi permette subito al \glo{proponente} di valutarne le funzioni primarie;
+\item Ogni incremento riduce il rischio di fallimento, con un approccio predisposto ai cambiamenti;
+\item L'analisi dei requisiti può essere raffinata tramite la progettazione di dettaglio ad ogni incremento;
+\item Le modifiche e la correzione degli errori sono più economiche;
+\item Le fasi di verifica e test sono facilitate perché mirate a un singolo incremento.
+\end{itemize}
+
+\subsection{Incrementi individuati}
+In seguito è riportata la tabella con indicati gli incrementi individuati, con il rispettivo obiettivo e i requisiti ad esso associati. 
+I requisiti riportati includono tutti i requisiti figli. Tutti i requisiti non riportati sono da intendersi soddisfatti, in parte, da ogni incremento.
+Ogni requisito è individuato dal suo codice identificativo; per maggiori informazioni fare riferimento all'\AdR{}.
+
+\newpage
+{
+\setlength\arrayrulewidth{1pt}
+\setlength\colA{1.5cm}
+\setlength\colB{8cm}
+\setlength\colC{4cm}
+\setlength\colD{2cm}
+\setlength\total{\dimexpr\colA+\colB+\colC+\colD+6\tabcolsep\relax}
+\begin{longtable}{C{\colA} | C{\colB} | C{\colC} | C{\colD}}
+		\rowcolor{coloreRosso}
+		\textcolor{white}{\textbf{Incr.}} & 
+		\textcolor{white}{\textbf{Obiettivo}} & 
+		\textcolor{white}{\textbf{Requisiti}} & 
+		\textcolor{white}{\textbf{Casi d'uso}} \\
+		\endfirsthead
+	    \rowcolor{white}\multicolumn{4}{C{\total}}{\textit{Continua nella pagina successiva...}}\\
+	    \endfoot
+	    \rowcolor{white}\caption{Tabella degli incrementi}
+	    \endlastfoot
+
+%------------------------------------------
+I &
+Caricamento dati tramite file e selezione delle dimensioni da utilizzare.& 
+R1F1.1, R1F5 & 
+UC1.1.1 \newline UC2\\
+%------------------------------------------
+II &
+Visualizzazione \glo{Scatter Plot Matrix} e relativa personalizzazione.& 
+R1F7.1, R3F12, R3F13 & 
+UC6.1, UC8.1\\
+%------------------------------------------
+III & 
+Implementazione di una sezione per l'applicazione di una riduzione dimensionale dei dati. & 
+R1F15, R1F16, R1F18, R1F19, R1F20 &
+UC3, UC4, UC5\\
+%------------------------------------------
+IV & 
+Visualizzazione \glo{Adjacency Matrix} e relativa personalizzazione. & 
+R1F7.2, R3F12, R3F13 & 
+UC7.2, UC8.2\\
+%------------------------------------------
+V & 
+Visualizzazione \glo{Force Field} e relativa personalizzazione. & 
+R1F7.3, R3F12, R3F13& 
+UC7.1, UC8.3\\
+%------------------------------------------
+VI & 
+Visualizzazione \glo{Proiezione Lineare Multi Asse} e \glo{HeatMap} con relative personalizzazioni. & 
+R1F7.4, R1F7.7, R3F12, R3F13& 
+UC6.2, UC8.4, UC6.3, UC8.5\\
+%------------------------------------------
+VII & 
+Implementazione di un \glo{database} per il caricamento dati attraverso \glo{query}. & 
+R1F1.2 & 
+UC1.1.2\\
+
+%------------------------------------------
+VIII & 
+Gestione della sessione. & 
+R2F6 & 
+UC1.2, UC9\\
+%------------------------------------------
+
+
+\end{longtable}
+}

@@ -1,0 +1,29 @@
+\section{Architettura}
+L'architettura di \NomeProgetto{} è basata sul \glo{design pattern architetturale} \glo{\textit{Model-View-ViewModel (MVVM)}}, derivato dal più comune \glo{Model-View-Controller (MVC)}. 
+Abbiamo quindi sviluppato un \textit{ViewModel} per ogni componente React della \textit{View} che necessita di interagire con il \textit{Model}, e delegato a tali \textit{ViewModel} la modifica del \textit{Model} in base agli input dell'utente. 
+Il modello corrisponde al RootStore, che istanzia i tre diversi store utilizzati in \NomeProgetto{}. \\ \mbox{}\\
+È stato scelto il design MVVM per i seguenti motivi: 
+\begin{itemize}
+	\item Favorisce la separazione tra \glo{\textit{business logic}} e \glo{\textit{presentation logic}}, facendo comunicare \textit{Model} e \textit{View} solo attraverso un \textit{ViewModel};  
+	\item Permette di non avere un unico controller con cui dover gestire tutta l'\glo{\textit{application logic}}. Essa è infatti contenuta nei vari \textit{ViewModel} dei componenti della vista, fornendo diversi vantaggi: 
+	\begin{itemize}
+		\item Minor numero di conflitti in fase di codifica (non si deve accedere ad uno stesso file dove è contenuta tutta la logica);
+		\item Performance migliori (viene renderizzato solo il componente che effettivamente subisce modifiche del proprio \glo{stato interno}, gestito anch'esso nel rispettivo \textit{ViewModel}).
+	\end{itemize}
+	\item Adatto per le web application la cui interfaccia utente è sviluppata con React.
+\end{itemize}
+
+\begin{figure}[hb]
+\includegraphics[width=11.8cm,height=8cm]{Extra/MVVMPattern}
+\centering
+\caption{Model-View-ViewModel di \textit{HDViz}}
+\end{figure}
+
+\newpage
+\input{Section/Subsection/DiagrammaPackage.tex}
+\newpage
+\input{Section/Subsection/DiagrammaClassi.tex}
+\newpage
+\input{Section/Subsection/DiagrammaSequenza.tex}
+\newpage
+\input{Section/Subsection/ArchitetturaDettaglio.tex}
